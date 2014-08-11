@@ -3,9 +3,9 @@
     "description": "Official API documentation for primaERP",
     "links": {
         "home": null,
-        "about": null,
-        "issues": null,
-        "contribute": null,
+        "about": false,
+        "issues": false,
+        "contribute": false,
         "sharing": {
             "google": false,
             "facebook": false,
