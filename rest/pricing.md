@@ -1,0 +1,98 @@
+Time records pricing
+==
+
+## Price definition
+
+The Prices are defined via the price list. See [price lists resource](http://devdoc.primaerp.com/reference/v1/billing/time).
+
+E.g.: The hourly price for one user is stored in the pricelist below:
+
+{
+
+ "user" : { "id" : "d2463429-0f35-4dfc-b8f9-697ea3a64ef8" },
+
+ "price" : 100.0
+
+}
+
+## Price calculation
+
+The price is calculated based on the following priorities, where the higher number has the higher priority:
+
+1. One price for all
+2. Price per work type (activity)
+3. Price per user(employee)
+4. Price per user per work type
+5. Price per client
+6. Price per client per work type
+7. Price per project
+8. Price per project per work type
+9. Price per project per user
+10. Price per project per task
+
+E.g.: In this example there are two types of price lists. The first one has a set price per user per work type. The second one has a set price per project. Therefore the price will then be calculated by the second one.
+
+## Automated calculation
+
+It is used to calculate the price when saving the time record.
+
+### Syntax
+
+The time record can be stored or updated with the following query parameter
+
+/time/timerecords?calculate\_price=true
+
+/time/timerecords/{id}?calculate\_price=true
+
+### Example
+
+POST http://{tenant}.api.primaerp.com/v1/time/timerecords?calculate\_price=true
+
+PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate\_price=true
+
+The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.
+
+## Price update
+
+It is used to update the price when the price list was changed.
+
+### Syntax
+
+/time/timerecords/{id}/$updateprice
+
+Value:
+
+| {id} = | resource id |
+| --- | --- |
+
+### Example
+
+PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice
+
+The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.
+
+## Calculation on demand
+
+It is used in case you want to know the price of the time record before saving.
+
+### Syntax
+
+You can post the time record to
+#
+[ANNOTATION:  
+
+
+BY 'Deborah Baur'  
+ON '2014-08-08T23:13:00'DB  
+NOTE: 'Don't understand… with the method?']
+method
+
+/time/timerecords/$calculateprice
+
+### Example
+
+POST http://{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice
+
+This method returns the price which is calculated by the duration of the time record and its corresponding price list (according to the priorities).
+
+Note that a time record is NOT stored neither updated!
