@@ -1,0 +1,449 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Response | primaERP API - documentation</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="primaerp">
+        <meta name="description" content="Version: ~1.5.11">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../rest/options.html" />
+        
+        
+        <link rel="prev" href="../rest/README.html" />
+        
+
+        <meta property="og:title" content="Response | primaERP API - documentation">
+        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/primaerp">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    <div class="book" data-github="primaerp/api-doc" data-level="1.1" data-basepath=".." data-revision="1407746232627">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/primaerp/api-doc" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/primaerp/api-doc/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/primaerp/api-doc/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="../" >primaERP API - documentation</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/primaerp" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/primaerp/api-doc/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/primaerp/api-doc/edit/master/rest/response.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="rest/README.html">
+                
+                <a href="../rest/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Overview
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="rest/response.html">
+                            
+                            <a href="../rest/response.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Response
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="rest/options.html">
+                            
+                            <a href="../rest/options.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Query string options
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="rest/authentication.html">
+                            
+                            <a href="../rest/authentication.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Authentication
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="rest/registration.html">
+                            
+                            <a href="../rest/registration.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Registration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="rest/password.html">
+                            
+                            <a href="../rest/password.html">
+                                <i class="fa fa-check"></i> <b>1.5.</b> Password
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="rest/deleting.html">
+                            
+                            <a href="../rest/deleting.html">
+                                <i class="fa fa-check"></i> <b>1.6.</b> Deleting
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="rest/views.html">
+                            
+                            <a href="../rest/views.html">
+                                <i class="fa fa-check"></i> <b>1.7.</b> Views
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="rest/specials.html">
+                            
+                            <a href="../rest/specials.html">
+                                <i class="fa fa-check"></i> <b>1.8.</b> Specials
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.9" data-path="rest/metadata.html">
+                            
+                            <a href="../rest/metadata.html">
+                                <i class="fa fa-check"></i> <b>1.9.</b> Metadata
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.10" data-path="rest/errors.html">
+                            
+                            <a href="../rest/errors.html">
+                                <i class="fa fa-check"></i> <b>1.10.</b> Errors
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.11" data-path="rest/storage.html">
+                            
+                            <a href="../rest/storage.html">
+                                <i class="fa fa-check"></i> <b>1.11.</b> Storage
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.12" data-path="rest/pricing.html">
+                            
+                            <a href="../rest/pricing.html">
+                                <i class="fa fa-check"></i> <b>1.12.</b> Pricing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.13" data-path="rest/versioning.html">
+                            
+                            <a href="../rest/versioning.html">
+                                <i class="fa fa-check"></i> <b>1.13.</b> Versioning
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.14" data-path="rest/summaries.html">
+                            
+                            <a href="../rest/summaries.html">
+                                <i class="fa fa-check"></i> <b>1.14.</b> Summaries
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.15" data-path="rest/reports.html">
+                            
+                            <a href="../rest/reports.html">
+                                <i class="fa fa-check"></i> <b>1.15.</b> Reports
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.16" data-path="rest/batch.html">
+                            
+                            <a href="../rest/batch.html">
+                                <i class="fa fa-check"></i> <b>1.16.</b> Batch
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="resources/README.html">
+                
+                <a href="../resources/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Resources
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="resources/access.html">
+                            
+                            <a href="../resources/access.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Access
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 10.526315789473685%;min-width: 5.2631578947368425%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../rest/README.html" title="Overview" class="chapter done new-chapter" data-progress="1" style="left: 5.2631578947368425%;"></a>
+    
+        <a href="../rest/response.html" title="Response" class="chapter done " data-progress="1.1" style="left: 10.526315789473685%;"></a>
+    
+        <a href="../rest/errors.html" title="Errors" class="chapter  " data-progress="1.10" style="left: 15.789473684210526%;"></a>
+    
+        <a href="../rest/storage.html" title="Storage" class="chapter  " data-progress="1.11" style="left: 21.05263157894737%;"></a>
+    
+        <a href="../rest/pricing.html" title="Pricing" class="chapter  " data-progress="1.12" style="left: 26.31578947368421%;"></a>
+    
+        <a href="../rest/versioning.html" title="Versioning" class="chapter  " data-progress="1.13" style="left: 31.57894736842105%;"></a>
+    
+        <a href="../rest/summaries.html" title="Summaries" class="chapter  " data-progress="1.14" style="left: 36.8421052631579%;"></a>
+    
+        <a href="../rest/reports.html" title="Reports" class="chapter  " data-progress="1.15" style="left: 42.10526315789474%;"></a>
+    
+        <a href="../rest/batch.html" title="Batch" class="chapter  " data-progress="1.16" style="left: 47.36842105263158%;"></a>
+    
+        <a href="../rest/options.html" title="Query string options" class="chapter  " data-progress="1.2" style="left: 52.63157894736842%;"></a>
+    
+        <a href="../rest/authentication.html" title="Authentication" class="chapter  " data-progress="1.3" style="left: 57.89473684210526%;"></a>
+    
+        <a href="../rest/registration.html" title="Registration" class="chapter  " data-progress="1.4" style="left: 63.1578947368421%;"></a>
+    
+        <a href="../rest/password.html" title="Password" class="chapter  " data-progress="1.5" style="left: 68.42105263157895%;"></a>
+    
+        <a href="../rest/deleting.html" title="Deleting" class="chapter  " data-progress="1.6" style="left: 73.6842105263158%;"></a>
+    
+        <a href="../rest/views.html" title="Views" class="chapter  " data-progress="1.7" style="left: 78.94736842105263%;"></a>
+    
+        <a href="../rest/specials.html" title="Specials" class="chapter  " data-progress="1.8" style="left: 84.21052631578948%;"></a>
+    
+        <a href="../rest/metadata.html" title="Metadata" class="chapter  " data-progress="1.9" style="left: 89.47368421052632%;"></a>
+    
+        <a href="../resources/README.html" title="Resources" class="chapter  new-chapter" data-progress="2" style="left: 94.73684210526316%;"></a>
+    
+        <a href="../resources/access.html" title="Access" class="chapter  " data-progress="2.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_15">
+                    
+                        <h1 id="response">Response</h1>
+<h2 id="response-encoding">Response encoding</h2>
+<p>All responses from the API are encoded in UTF-8</p>
+<h2 id="response-format">Response format</h2>
+<p>primaERP API supports two response formats, JSON and XML, where the <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>format is the default one.</p>
+<p>Response format is defined by the HTTP header &quot; <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1" target="_blank">Accept</a>&quot;:</p>
+<h3 id="syntax">Syntax</h3>
+<ul>
+<li>JSON:Accept: application/json</li>
+<li>XML:Accept: application/xml</li>
+</ul>
+<p>If your HTTP client does not support sending the HTTP header &quot;Accept&quot; or it sends wrong types as such is the case with the JQuery, you can use an alternative method to define the response by using the query parameter &quot;format&quot;:</p>
+<h3 id="syntax">Syntax</h3>
+<ul>
+<li>JSON:/{resource}/?format=json</li>
+<li>XML:/{resource}/?format=xml</li>
+</ul>
+<p>Value:</p>
+<table>
+<thead>
+<tr>
+<th>{resource} =</th>
+<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<ul>
+<li>JSON:GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?format=json" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?format=json</a></li>
+<li>XML:GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?format=xml" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?format=xml</a></li>
+</ul>
+<h2 id="jsonp-json-with-padding-">JSONP (JSON with padding)</h2>
+<p>primaERP API also supportsthe <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">JSONP</a>pattern.</p>
+<p>To return the JSON padded, you should use the callback query parameter.</p>
+<h3 id="syntax">Syntax</h3>
+<p>/{resource}.json/?callback=functionName</p>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects.json?callback=projectList" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects.json?callback=projectList</a></p>
+<p>JSONP always returns the status code 200 in the following way:?suppress_response_code=true</p>
+<h2 id="date-format">Date format</h2>
+<p>PrimaERP uses the following date formatting:</p>
+<ul>
+<li>ISO 8601format for XML</li>
+<li>Microsoft AJAX alikeformat for JSON: &quot;/Date(1198908717056)/&quot;, where the number is in milliseconds since January 1st 1970.</li>
+</ul>
+<h2 id="response-collection">Response collection</h2>
+<p>The application via API returns a maximum of 1000 records. To retrieve the records after that, you should use <a href="http://devdoc.primaerp.com/rest/options#paging" target="_blank">pagination</a>.</p>
+<h2 id="response-object">Response object</h2>
+<p>POST and PUT methods may return an object which was created or updated. This feature should be enabled by a response_object query parameter.</p>
+<h3 id="syntax">Syntax</h3>
+<p>response_object=true</p>
+<h2 id="response-reduction">Response reduction</h2>
+<p>It is possible to reduce the API output.</p>
+<p>If a response reduction query parameter is used, then only a stub will be returned instead of an embedded object. A stub is composed of the ID, version and displayName fields.</p>
+<h3 id="syntax">Syntax</h3>
+<p>/{resource}/?no_expand=true</p>
+<p>Value:</p>
+<table>
+<thead>
+<tr>
+<th>{resource} =</th>
+<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Parameter</p>
+<p>Take into consideration that this query parameter is applicable to every &quot;GET&quot; request:</p>
+<ul>
+<li>list result (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true</a>)</li>
+<li>single result (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b?no\_expand=true</a>)</li>
+<li>@deleted view (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/@deleted?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/@deleted?no\_expand=true</a>)</li>
+<li>deleted object (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b/@deleted?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b/@deleted?no\_expand=true</a>)</li>
+</ul>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true</a></p>
+<p>&quot;project&quot; and &quot;author&quot; fields in the task below are stubs.</p>
+<p>{</p>
+<p> &quot;id&quot;:&quot;9a761c4b-2217-4c47-946e-2aae4a149c9b&quot;,</p>
+<p> &quot;version&quot;:0,</p>
+<p> &quot;createdAt&quot;:&quot;/Date(1378217576331)/&quot;,</p>
+<p> &quot;name&quot;:&quot;Task name&quot;,</p>
+<p> &quot;project&quot;:{</p>
+<p>  &quot;id&quot;:&quot;ac8057b3-738b-4e3b-9a53-96525a847f09&quot;,</p>
+<p>  &quot;version&quot;:0,</p>
+<p>  &quot;name&quot;:&quot;Project name&quot;,</p>
+<p>  &quot;begins&quot;:null,</p>
+<p>  &quot;ends&quot;:null,</p>
+<p>  &quot;owner&quot;:null,</p>
+<p>  &quot;client&quot;:null,</p>
+<p>  &quot;displayName&quot;:&quot;Project name&quot;</p>
+<p>  ...</p>
+<p> },</p>
+<p> &quot;author&quot;:{</p>
+<p>  &quot;id&quot;:&quot;6f0beb1b-8420-49a2-8e6a-ff47881a96a7&quot;,</p>
+<p>  &quot;version&quot;:2,</p>
+<p>  &quot;firstName&quot;:&quot;John&quot;,</p>
+<p>  &quot;lastName&quot;:&quot;Smith&quot;,</p>
+<p>  &quot;email&quot;:null,</p>
+<p>  &quot;phone&quot;:null,</p>
+<p>  &quot;displayName&quot;:&quot;Smith John&quot;</p>
+<p>  ...</p>
+<p> },</p>
+<p> ...</p>
+<p>}</p>
+<p>The single parts of the displayName, such as firstName and lastName, are stubs.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../rest/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../rest/options.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>

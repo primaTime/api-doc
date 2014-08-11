@@ -1,0 +1,589 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Reports | primaERP API - documentation</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="primaerp">
+        <meta name="description" content="Version: ~1.5.11">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../rest/batch.html" />
+        
+        
+        <link rel="prev" href="../rest/summaries.html" />
+        
+
+        <meta property="og:title" content="Reports | primaERP API - documentation">
+        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/primaerp">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+        <link rel="stylesheet" href="../gitbook/style.css">
+        
+        
+    <div class="book" data-github="primaerp/api-doc" data-level="1.15" data-basepath=".." data-revision="1407746232627">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/primaerp/api-doc" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/primaerp/api-doc/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/primaerp/api-doc/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="../" >primaERP API - documentation</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/primaerp" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/primaerp/api-doc/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/primaerp/api-doc/edit/master/rest/reports.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="rest/README.html">
+                
+                <a href="../rest/README.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Overview
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="rest/response.html">
+                            
+                            <a href="../rest/response.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Response
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.2" data-path="rest/options.html">
+                            
+                            <a href="../rest/options.html">
+                                <i class="fa fa-check"></i> <b>1.2.</b> Query string options
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.3" data-path="rest/authentication.html">
+                            
+                            <a href="../rest/authentication.html">
+                                <i class="fa fa-check"></i> <b>1.3.</b> Authentication
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.4" data-path="rest/registration.html">
+                            
+                            <a href="../rest/registration.html">
+                                <i class="fa fa-check"></i> <b>1.4.</b> Registration
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.5" data-path="rest/password.html">
+                            
+                            <a href="../rest/password.html">
+                                <i class="fa fa-check"></i> <b>1.5.</b> Password
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.6" data-path="rest/deleting.html">
+                            
+                            <a href="../rest/deleting.html">
+                                <i class="fa fa-check"></i> <b>1.6.</b> Deleting
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.7" data-path="rest/views.html">
+                            
+                            <a href="../rest/views.html">
+                                <i class="fa fa-check"></i> <b>1.7.</b> Views
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.8" data-path="rest/specials.html">
+                            
+                            <a href="../rest/specials.html">
+                                <i class="fa fa-check"></i> <b>1.8.</b> Specials
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.9" data-path="rest/metadata.html">
+                            
+                            <a href="../rest/metadata.html">
+                                <i class="fa fa-check"></i> <b>1.9.</b> Metadata
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.10" data-path="rest/errors.html">
+                            
+                            <a href="../rest/errors.html">
+                                <i class="fa fa-check"></i> <b>1.10.</b> Errors
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.11" data-path="rest/storage.html">
+                            
+                            <a href="../rest/storage.html">
+                                <i class="fa fa-check"></i> <b>1.11.</b> Storage
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.12" data-path="rest/pricing.html">
+                            
+                            <a href="../rest/pricing.html">
+                                <i class="fa fa-check"></i> <b>1.12.</b> Pricing
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.13" data-path="rest/versioning.html">
+                            
+                            <a href="../rest/versioning.html">
+                                <i class="fa fa-check"></i> <b>1.13.</b> Versioning
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.14" data-path="rest/summaries.html">
+                            
+                            <a href="../rest/summaries.html">
+                                <i class="fa fa-check"></i> <b>1.14.</b> Summaries
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.15" data-path="rest/reports.html">
+                            
+                            <a href="../rest/reports.html">
+                                <i class="fa fa-check"></i> <b>1.15.</b> Reports
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="1.16" data-path="rest/batch.html">
+                            
+                            <a href="../rest/batch.html">
+                                <i class="fa fa-check"></i> <b>1.16.</b> Batch
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="resources/README.html">
+                
+                <a href="../resources/README.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Resources
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="resources/access.html">
+                            
+                            <a href="../resources/access.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Access
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 42.10526315789474%;min-width: 36.8421052631579%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../rest/README.html" title="Overview" class="chapter done new-chapter" data-progress="1" style="left: 5.2631578947368425%;"></a>
+    
+        <a href="../rest/response.html" title="Response" class="chapter done " data-progress="1.1" style="left: 10.526315789473685%;"></a>
+    
+        <a href="../rest/errors.html" title="Errors" class="chapter done " data-progress="1.10" style="left: 15.789473684210526%;"></a>
+    
+        <a href="../rest/storage.html" title="Storage" class="chapter done " data-progress="1.11" style="left: 21.05263157894737%;"></a>
+    
+        <a href="../rest/pricing.html" title="Pricing" class="chapter done " data-progress="1.12" style="left: 26.31578947368421%;"></a>
+    
+        <a href="../rest/versioning.html" title="Versioning" class="chapter done " data-progress="1.13" style="left: 31.57894736842105%;"></a>
+    
+        <a href="../rest/summaries.html" title="Summaries" class="chapter done " data-progress="1.14" style="left: 36.8421052631579%;"></a>
+    
+        <a href="../rest/reports.html" title="Reports" class="chapter done " data-progress="1.15" style="left: 42.10526315789474%;"></a>
+    
+        <a href="../rest/batch.html" title="Batch" class="chapter  " data-progress="1.16" style="left: 47.36842105263158%;"></a>
+    
+        <a href="../rest/options.html" title="Query string options" class="chapter  " data-progress="1.2" style="left: 52.63157894736842%;"></a>
+    
+        <a href="../rest/authentication.html" title="Authentication" class="chapter  " data-progress="1.3" style="left: 57.89473684210526%;"></a>
+    
+        <a href="../rest/registration.html" title="Registration" class="chapter  " data-progress="1.4" style="left: 63.1578947368421%;"></a>
+    
+        <a href="../rest/password.html" title="Password" class="chapter  " data-progress="1.5" style="left: 68.42105263157895%;"></a>
+    
+        <a href="../rest/deleting.html" title="Deleting" class="chapter  " data-progress="1.6" style="left: 73.6842105263158%;"></a>
+    
+        <a href="../rest/views.html" title="Views" class="chapter  " data-progress="1.7" style="left: 78.94736842105263%;"></a>
+    
+        <a href="../rest/specials.html" title="Specials" class="chapter  " data-progress="1.8" style="left: 84.21052631578948%;"></a>
+    
+        <a href="../rest/metadata.html" title="Metadata" class="chapter  " data-progress="1.9" style="left: 89.47368421052632%;"></a>
+    
+        <a href="../resources/README.html" title="Resources" class="chapter  new-chapter" data-progress="2" style="left: 94.73684210526316%;"></a>
+    
+        <a href="../resources/access.html" title="Access" class="chapter  " data-progress="2.1" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_14">
+                    
+                        <h1 id="reporting-services">Reporting services</h1>
+<p>It provides data for various types of reports.</p>
+<h2 id="read-totals">Read totals</h2>
+<h3 id="syntax">Syntax</h3>
+<p>/time/reports/readtotals</p>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/readtotals" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/readtotals</a></p>
+<p>This example returns the summarized data from the time records. The data is structured according to the format below.</p>
+<p>It can be grouped according to the <a href="http://devdoc.primaerp.com/rest/summaries" target="_blank">Summary sub-resources</a>, <a href="http://devdoc.primaerp.com/rest/options#filtering" target="_blank">filtered</a>or <a href="http://devdoc.primaerp.com/resources/detail?entity=TimeRecord" target="_blank">TimeRecords</a>.</p>
+<p>{</p>
+<p> &quot;*&quot;:{</p>
+<p>   &quot;count&quot;:9,</p>
+<p>   &quot;time&quot;:87780000,</p>
+<p>   &quot;billableTime&quot;:52200000,</p>
+<p>   &quot;effectiveTime&quot;:15780000,</p>
+<p>   &quot;money&quot;:289.0,</p>
+<p>   &quot;averagePricePerHour&quot;:11.852358168163844,</p>
+<p>   &quot;averageTime&quot;:9753333</p>
+<p> }</p>
+<p>}</p>
+<p><strong>*</strong></p>
+<p>The grouping is done the same way as with the <a href="http://devdoc.primaerp.com/rest/summaries" target="_blank">Summary sub-resources</a>.</p>
+<p><strong>count</strong></p>
+<p>It counts the time record objects used for the reports.</p>
+<p><strong>time</strong></p>
+<p>It is the total time of the filtered time records (in milliseconds).</p>
+<p><strong>billableTime</strong></p>
+<p>It is the billable part of &quot;time&quot; (in milliseconds).</p>
+<p><strong>effectiveTime</strong></p>
+<p>It is the effective part of &quot;time&quot; (in milliseconds).</p>
+<p><strong>money</strong></p>
+<p>It is the sum of the time record prices.</p>
+<p><strong>averagePricePerHour</strong></p>
+<p>It is the average calculated from &quot;money&quot; and &quot;time&quot;.</p>
+<p><strong>averageTime</strong></p>
+<p>It is the average calculated from &quot;time&quot; and &quot;count&quot; (in milliseconds).</p>
+<h3 id="example">Example</h3>
+<p>The example below gives the KPI of the project.</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/readtotals?$filter=project/id" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/readtotals?$filter=project/id</a> eq &#39;fb1eacff-a17d-46d2-9fd9-2e04299a6503&#39;</p>
+<p>The response data:</p>
+<p>{</p>
+<p> &quot;*&quot;:{</p>
+<p>   &quot;count&quot;:9,</p>
+<p>   &quot;time&quot;:87780000,</p>
+<p>   &quot;billableTime&quot;:52200000,</p>
+<p>   &quot;effectiveTime&quot;:15780000,</p>
+<p>   &quot;money&quot;:289.0,</p>
+<p>   &quot;averagePricePerHour&quot;:11.852358168163844,</p>
+<p>   &quot;averageTime&quot;:9753333</p>
+<p> }</p>
+<p>}</p>
+<p>The KPI of all projects can be used for the summary parameter.</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/readtotals?summary=project/id" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/readtotals?summary=project/id</a>;</p>
+<p>Note: The semicolon at the end of the summary parameter is necessary.</p>
+<p>Response data:</p>
+<p>{</p>
+<p> &quot;17d9bebc-6b20-4d31-a3dc-11b9bc7c6e7d&quot;:{</p>
+<p>   &quot;count&quot;:2,</p>
+<p>   &quot;time&quot;:29640000,</p>
+<p>   &quot;billableTime&quot;:0,</p>
+<p>   &quot;effectiveTime&quot;:29640000,</p>
+<p>   &quot;money&quot;:0.0,</p>
+<p>   &quot;averagePricePerHour&quot;:0.0,</p>
+<p>   &quot;averageTime&quot;:14820000</p>
+<p> },</p>
+<p> &quot;18add50f-cbe3-4001-91e0-d68046932dc7&quot;:{</p>
+<p>   &quot;count&quot;:3,</p>
+<p>   &quot;time&quot;:21900000,</p>
+<p>   &quot;billableTime&quot;:21900000,</p>
+<p>   &quot;effectiveTime&quot;:0,</p>
+<p>   &quot;money&quot;:47.5,</p>
+<p>   &quot;averagePricePerHour&quot;:7.808219178124977,</p>
+<p>   &quot;averageTime&quot;:7300000</p>
+<p> },</p>
+<p> &quot;1fdcaf83-485c-4c17-8d9d-2d17450b5c19&quot;:{</p>
+<p>   &quot;count&quot;:10,</p>
+<p>   &quot;time&quot;:70080000,</p>
+<p>   &quot;billableTime&quot;:0,</p>
+<p>   &quot;effectiveTime&quot;:70080000,</p>
+<p>   &quot;money&quot;:0.0,</p>
+<p>   &quot;averagePricePerHour&quot;:0.0,</p>
+<p>   &quot;averageTime&quot;:7008000</p>
+<p> }</p>
+<p>}</p>
+<h2 id="grouped-totals">Grouped totals</h2>
+<h3 id="syntax">Syntax</h3>
+<p>time/reports/groupedtotals</p>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/groupedtotals" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/groupedtotals</a></p>
+<p>It extends the possibilities of &quot;readtotals&quot; service. The data can be customized by the query parameters <strong>range, range_from, range_to, offset</strong> . These parameters are described <a href="http://devdoc.primaerp.com/rest/reports#range" target="_blank">below</a>.</p>
+<p>The data can be similarly grouped as <a href="http://devdoc.primaerp.com/rest/summaries" target="_blank">Summary subresources</a>and <a href="http://devdoc.primaerp.com/rest/options#filtering" target="_blank">filtered</a>the same as <a href="http://devdoc.primaerp.com/resources/detail?entity=TimeRecord" target="_blank">TimeRecords</a>.</p>
+<h2 id="single-totals">Single totals</h2>
+<h3 id="syntax">Syntax</h3>
+<p>/time/reports/singletotals</p>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/singletotals" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/singletotals</a></p>
+<p>It will return a single result in the format below.</p>
+<p>{</p>
+<p> &quot;count&quot;:9,</p>
+<p> &quot;time&quot;:87780000,</p>
+<p> &quot;billableTime&quot;:52200000,</p>
+<p> &quot;effectiveTime&quot;:15780000,</p>
+<p> &quot;money&quot;:289.0,</p>
+<p> &quot;averagePricePerHour&quot;:11.852358168163844,</p>
+<p> &quot;averageTime&quot;:9753333</p>
+<p>}</p>
+<p>The data <strong>cannot be grouped</strong> .</p>
+<p>The data can be customized by the query parameters <strong>range, range_from, range_to, offset</strong> . These parameters are described <a href="http://devdoc.primaerp.com/rest/reports#range" target="_blank">below</a>.</p>
+<h2 id="trended-totals">Trended totals</h2>
+<h3 id="syntax">Syntax</h3>
+<p>/time/reports/trendedtotals</p>
+<h3 id="example">Example</h3>
+<p>It provides summarized data for a comparison with past data.</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/trendedtotals" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/trendedtotals</a></p>
+<p>The data can be customized by the query parameters <strong>range, range_from, range_to</strong> . These parameters are described <a href="http://devdoc.primaerp.com/rest/reports#range" target="_blank">below</a>.</p>
+<p>It can also be <a href="http://devdoc.primaerp.com/rest/options#filtering" target="_blank">filtered</a>the same way as with the <a href="http://devdoc.primaerp.com/resources/detail?entity=TimeRecord" target="_blank">TimeRecords</a>.</p>
+<p>A new important query parameter is <strong>depth,</strong> which determines the length of the period in the past. This parameter depends on <strong>range</strong> . The example below gets the data for a comparison of two months. One of them is defined by range. The second proceeds via <strong>depth=1</strong> parameter.</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/trendedtotals?range=31&amp;range\_from=2013-06-01&amp;range\_to=2013-06-30&amp;depth=1" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/trendedtotals?range=31&amp;range\_from=2013-06-01&amp;range\_to=2013-06-30&amp;depth=1</a></p>
+<p>[</p>
+<p> {</p>
+<p>  &quot;count&quot;:2,</p>
+<p>  &quot;time&quot;:34200000,</p>
+<p>  &quot;billableTime&quot;:34200000,</p>
+<p>  &quot;effectiveTime&quot;:7200000,</p>
+<p>  &quot;money&quot;:275.0,</p>
+<p>  &quot;averagePricePerHour&quot;:28.94736842105263,</p>
+<p>  &quot;averageTime&quot;:17100000</p>
+<p> },</p>
+<p> {</p>
+<p>  &quot;count&quot;:3,</p>
+<p>  &quot;time&quot;:21600000,</p>
+<p>  &quot;billableTime&quot;:18000000,</p>
+<p>  &quot;effectiveTime&quot;:3600000,</p>
+<p>  &quot;money&quot;:14.0,</p>
+<p>  &quot;averagePricePerHour&quot;:2.3333333333333335,</p>
+<p>  &quot;averageTime&quot;:7200000</p>
+<p> }</p>
+<p>]</p>
+<h2 id="single-slices">Single slices</h2>
+<h3 id="syntax">Syntax</h3>
+<p>/time/reports/singleslices</p>
+<h3 id="example">Example</h3>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/singleslices" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/singleslices</a></p>
+<p>It will return the data for the graphs. This data is structured according to the format below (list of slices).</p>
+<p>[</p>
+<p> {&quot;offset&quot;:0,&quot;time&quot;:279000000},</p>
+<p> {&quot;offset&quot;:1,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:2,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:3,&quot;time&quot;:90900000},</p>
+<p> {&quot;offset&quot;:4,&quot;time&quot;:222120000},</p>
+<p> {&quot;offset&quot;:5,&quot;time&quot;:18120000},</p>
+<p> {&quot;offset&quot;:6,&quot;time&quot;:39600000},</p>
+<p> {&quot;offset&quot;:7,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:8,&quot;time&quot;:40200000},</p>
+<p> {&quot;offset&quot;:9,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:10,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:11,&quot;time&quot;:0}</p>
+<p>]</p>
+<p><strong>offset</strong></p>
+<p>It is the chronological number of slices.</p>
+<p><strong>time</strong></p>
+<p>It is the time recorded in this part of period (in milliseconds).</p>
+<p>E.g. data interpretation<br> <img src="data:image/*;base64,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" alt=""></p>
+<p>The data should be <a href="http://devdoc.primaerp.com/rest/options#filtering" target="_blank">filtered</a>the same way as <a href="http://devdoc.primaerp.com/resources/detail?entity=TimeRecord" target="_blank">TimeRecords</a>. The filter can reduce the amount of &quot;time&quot;.</p>
+<p>E.g. time spent on project$filter=project/id eq &#39;fb1eacff-a17d-46d2-9fd9-2e04299a6503&#39;</p>
+<p>The form of slices may be affected by the following query parameters.</p>
+<p><strong>range</strong></p>
+<p>It is the time range of the graph. Possible values are:</p>
+<ul>
+<li>&quot;0&quot; - without limits</li>
+<li>&quot;1&quot; - day</li>
+<li>&quot;7&quot; - week</li>
+<li>&quot;31&quot; - month</li>
+<li>&quot;365&quot; - year</li>
+<li>&quot;999&quot; - specific date interval</li>
+</ul>
+<p><strong>range_from</strong></p>
+<p>It is the date when the range starts. The format is &quot;yyyy-MM-dd&quot;. For ranges 7, 31 and 365 it is modified automatically to the beginning of the corresponding week, month or year.</p>
+<p><strong>range_to</strong></p>
+<p>It is the date when the range ends. The format is &quot;yyyy-MM-dd&quot;. It is usable only for the 999 range. For ranges 7, 31 and 365 it is modified automatically to the end of the corresponding week, month or year.</p>
+<p><strong>offset</strong></p>
+<p>It determines the difference of the range. Possible values are:</p>
+<ul>
+<li>&quot;0&quot; - means the range is exactly as it was defined</li>
+<li>negative values – it&#39;s the same range as in the past (e.g. offset &quot;-1&quot; with range &quot;365&quot; means last year relative to the &quot;range_from&quot; date)</li>
+<li>positive values – it&#39;s the same range as in the future (e.g. offset &quot;1&quot; with range &quot;31&quot; means next month relative to the &quot;range_from&quot; date)</li>
+</ul>
+<p><strong>slice_by</strong></p>
+<p>It affects the amount of returned slices. Possible values are:</p>
+<ul>
+<li>&quot;1&quot; - range sliced by day (7 slices per week, 31 slices per month, ...)</li>
+<li>&quot;7&quot; - range sliced by week (5 slices per month, 53 slices per year, ...)</li>
+<li>&quot;31&quot; - range sliced by month (12 slices per year)</li>
+<li>&quot;365&quot; - range sliced by year</li>
+</ul>
+<p>The data on the above picture will be returned on request (year sliced by months):</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/singleslices?range=365&amp;range\_from=2013-01-01&amp;range\_to=2013-12-31&amp;offset=0&amp;slice\_by=31" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/singleslices?range=365&amp;range\_from=2013-01-01&amp;range\_to=2013-12-31&amp;offset=0&amp;slice\_by=31</a></p>
+<p>Similarly should be sliced by weeks:</p>
+<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/reports/singleslices?range=365&amp;range\_from=2013-01-01&amp;range\_to=2013-12-31&amp;offset=0&amp;slice\_by=7" target="_blank">http://{tenant}.api.primaerp.com/v1/time/reports/singleslices?range=365&amp;range\_from=2013-01-01&amp;range\_to=2013-12-31&amp;offset=0&amp;slice\_by=7</a></p>
+<p>Then the following data will be returned:</p>
+<p>[</p>
+<p> {&quot;offset&quot;:0,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:1,&quot;time&quot;:64800000},</p>
+<p> {&quot;offset&quot;:2,&quot;time&quot;:136800000},</p>
+<p> {&quot;offset&quot;:3,&quot;time&quot;:77400000},</p>
+<p> {&quot;offset&quot;:4,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:5,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:6,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:7,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:8,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:9,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:10,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:11,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:12,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:13,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:14,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:15,&quot;time&quot;:900000},</p>
+<p> {&quot;offset&quot;:16,&quot;time&quot;:45000000},</p>
+<p> {&quot;offset&quot;:17,&quot;time&quot;:199800000},</p>
+<p> {&quot;offset&quot;:18,&quot;time&quot;:67320000},</p>
+<p> {&quot;offset&quot;:19,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:20,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:21,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:22,&quot;time&quot;:120000},</p>
+<p> {&quot;offset&quot;:23,&quot;time&quot;:18000000},</p>
+<p> {&quot;offset&quot;:24,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:25,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:26,&quot;time&quot;:21600000},</p>
+<p> {&quot;offset&quot;:27,&quot;time&quot;:18000000},</p>
+<p> {&quot;offset&quot;:28,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:29,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:30,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:31,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:32,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:33,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:34,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:35,&quot;time&quot;:30900000},</p>
+<p> {&quot;offset&quot;:36,&quot;time&quot;:9300000},</p>
+<p> {&quot;offset&quot;:37,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:38,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:39,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:40,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:41,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:42,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:43,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:44,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:45,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:46,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:47,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:48,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:49,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:50,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:51,&quot;time&quot;:0},</p>
+<p> {&quot;offset&quot;:52,&quot;time&quot;:0}</p>
+<p>]</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../rest/summaries.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../rest/batch.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="../gitbook/app.js"></script>
+        
+    </body>
+</html>
