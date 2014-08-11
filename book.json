@@ -1,15 +1,20 @@
 {
-    "title": "devDOV",
-    "description": "primaERP API - documentation",
+    "title": "primaERP / API Documentation",
+    "description": "Official API documentation for primaERP",
+    "github": "primaerp/api-doc",
+    "githubHost": "https://github.com/",
     "links": {
-        "home": false,
-        "about": false,
+        "home": null,
+        "about": null,
         "issues": false,
         "contribute": false,
         "sharing": {
-            "google": false,
-            "facebook": false,
-            "twitter": false
+            "google": true,
+            "facebook": true,
+            "twitter": true
+        },
+        "custom": {
+            "www.primaerp.com": "http://www.primaerp.com"
         }
     }
 }
