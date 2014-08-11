@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         'gitbook': {
             development: {
                 input: "./",
-                github: "primaERP/devdoc"
+                github: "primaerp/api-doc"
             }
         },
         'gh-pages': {

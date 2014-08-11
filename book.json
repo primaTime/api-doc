@@ -1,8 +1,8 @@
 {
-    "title": "devDOV",
-    "description": "primaERP API - documentation",
+    "title": "primaERP / API Documentation",
+    "description": "Official API documentation for primaERP",
     "links": {
-        "home": false,
+        "home": null,
         "about": false,
         "issues": false,
         "contribute": false,
@@ -10,6 +10,9 @@
             "google": false,
             "facebook": false,
             "twitter": false
+        },
+        "custom": {
+            "www.primaerp.com": "http://www.primaerp.com"
         }
     }
 }
