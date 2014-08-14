@@ -23,4 +23,7 @@ To generating the base64 hash you can use an online tool: http://www.motobit.com
 
 Then you will receive an token and with that token you can ask our API for everything :-)
 
-eg. `http://{tenant}.api.primaerp.com/v1/projects?token={token}`
+Examples:
+
+List of projects: `http://{tenant}.api.primaerp.com/v1/time/projects?token={token}`
+List of clients: `http://{tenant}.api.primaerp.com/v1/time/clients?token={token}`
