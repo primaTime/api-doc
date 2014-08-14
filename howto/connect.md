@@ -25,5 +25,5 @@ Then you will receive an token and with that token you can ask our API for every
 
 Examples:
 
-List of projects: `http://{tenant}.api.primaerp.com/v1/time/projects?token={token}`
-List of clients: `http://{tenant}.api.primaerp.com/v1/time/clients?token={token}`
+* List of projects: `http://{tenant}.api.primaerp.com/v1/time/projects?token={token}`
+* List of clients: `http://{tenant}.api.primaerp.com/v1/time/clients?token={token}`
