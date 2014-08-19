@@ -1,34 +1,47 @@
-Access
+AccessToken
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/users/@self/accesstokens
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
+| accessToken | String    | read write | Unique access token obtained from provider.                                                         |
+| accountName | String    | read write | Account name identifies the user with the provider, i.e. e-mail address.                            |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
+| provider    | String    | read write | Access token provider.                                                                              |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
+| user        | User      | read write | Associated user.                                                                                    |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "AccessToken",
 	"fields" : [
 		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
+			"type" : "String",
+			"name" : "accessToken",
+			"description" : "Unique access token obtained from provider.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull",
+					"pattern" : null
+				}
+			]
+		},
+		{
+			"type" : "String",
+			"name" : "accountName",
+			"description" : "Account name identifies the user with the provider, i.e. e-mail address.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -68,9 +81,9 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
+			"type" : "String",
+			"name" : "provider",
+			"description" : "Access token provider.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -96,7 +109,7 @@ Access
 		{
 			"type" : "User",
 			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
+			"description" : "Associated user.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -128,15 +141,18 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
+	"id" : "2051ed57-bb4e-458f-9c81-246f6f2ba18f",
+	"createdAt" : "/Date(1408429745738)/",
+	"updatedAt" : "/Date(1408434725738)/",
+	"version" : 9,
+	"provider" : "google",
+	"accessToken" : "your-google-account-authentication-id",
+	"accountName" : "jsmith@gmail.com",
 	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
+		"id" : "484cc32d-4149-49fc-af77-4d5dc871efb6",
+		"createdAt" : "/Date(1408429565738)/",
+		"updatedAt" : "/Date(1408463525738)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -156,13 +172,11 @@ Access
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
+		"created" : "/Date(1408344725737)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"displayName" : "jsmith@gmail.com"
 }
 ```

@@ -1,42 +1,29 @@
-Access
+Department
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/departments
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
+| manager     | User      | read write | The user who is the manager of the department.                                                      |
+| name        | String    | read write | The department name.                                                                                |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "Department",
 	"fields" : [
-		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
@@ -68,16 +55,18 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
+			"type" : "User",
+			"name" : "manager",
+			"description" : "The user who is the manager of the department.",
 			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
+			"constraints" : [ ]
+		},
+		{
+			"type" : "String",
+			"name" : "name",
+			"description" : "The department name.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
 		},
 		{
 			"type" : "TrashItem",
@@ -94,18 +83,6 @@ Access
 			"constraints" : [ ]
 		},
 		{
-			"type" : "User",
-			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
-		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
@@ -117,7 +94,8 @@ Access
 		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
-				"TrashItem"
+				"TrashItem",
+				"DepartmentMember"
 			]
 		}
 	]
@@ -128,14 +106,15 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
-	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
+	"id" : "c3bec155-1454-4073-80b6-4f00997c0ebb",
+	"createdAt" : "/Date(1408427585131)/",
+	"updatedAt" : "/Date(1408485125131)/",
+	"version" : 8,
+	"name" : "Development",
+	"manager" : {
+		"id" : "ced668a2-4ab6-41ce-af23-1f153d581f48",
+		"createdAt" : "/Date(1408430585131)/",
+		"updatedAt" : "/Date(1408452725131)/",
 		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -156,13 +135,11 @@ Access
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
+		"created" : "/Date(1408344725131)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"displayName" : "Development"
 }
 ```

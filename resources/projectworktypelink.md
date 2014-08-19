@@ -1,42 +1,28 @@
-Access
+ProjectWorkTypeLink
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/time/projects/{id}/worktypelinks
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
 | version     | Long      | read write | Object version number.                                                                              |
+| workType    | WorkType  | read write | The work type which is linked with another object.                                                  |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "ProjectWorkTypeLink",
 	"fields" : [
-		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
@@ -68,18 +54,6 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
-		{
 			"type" : "TrashItem",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
@@ -94,9 +68,16 @@ Access
 			"constraints" : [ ]
 		},
 		{
-			"type" : "User",
-			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
+			"type" : "Long",
+			"name" : "version",
+			"description" : "Object version number.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
+		},
+		{
+			"type" : "WorkType",
+			"name" : "workType",
+			"description" : "The work type which is linked with another object.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -104,13 +85,6 @@ Access
 					"pattern" : null
 				}
 			]
-		},
-		{
-			"type" : "Long",
-			"name" : "version",
-			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
 		}
 	],
 	"cascades" : [
@@ -128,41 +102,33 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
-	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
-		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
-		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
-		"timeFormat" : "K:mm a",
-		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
-		"secretKey" : "userSecretKey",
-		"confirmed" : false,
-		"confirmedEmail" : false,
-		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
-		"admin" : false,
-		"projectManager" : false,
-		"displayName" : "Smith John"
+	"id" : "fb37c6b1-c709-43d2-8173-ce3eacb55cf7",
+	"createdAt" : "/Date(1408430885046)/",
+	"updatedAt" : "/Date(1408452725046)/",
+	"version" : 0,
+	"workType" : {
+		"id" : "b3d10f29-e08a-4131-85a1-cc7fc79a19e8",
+		"createdAt" : "/Date(1408429205046)/",
+		"updatedAt" : "/Date(1408445525046)/",
+		"version" : 1,
+		"externalSystem" : {
+			"id" : "47512a93-0f4f-44fe-81e1-700bb23d9606",
+			"createdAt" : "/Date(1408430525046)/",
+			"updatedAt" : "/Date(1408495925046)/",
+			"version" : 9,
+			"name" : "Vendor system",
+			"integrationPlugin" : "vendor",
+			"displayName" : "Vendor system"
+		},
+		"externalResourceId" : "wt-058",
+		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
+		"externalSyncedAt" : "/Date(1408431125046)/",
+		"externalSynced" : true,
+		"name" : "Software development",
+		"code" : "SW",
+		"active" : true,
+		"displayName" : "Software development"
 	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"displayName" : "Software development"
 }
 ```
