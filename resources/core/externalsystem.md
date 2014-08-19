@@ -3,7 +3,7 @@ ExternalSystem
 
 ## URL
 
-	http://api.primaerp.com/v1/externalsystems
+	https://api.primaerp.com/v1/externalsystems
 
 ## Properties
 
@@ -105,10 +105,10 @@ ExternalSystem
 
 ```JSON
 {
-	"id" : "e0f4086b-b26b-47ae-8b6c-536b50b6d372",
-	"createdAt" : "/Date(1408430643680)/",
-	"updatedAt" : "/Date(1408495923680)/",
-	"version" : 4,
+	"id" : "78e043f8-e7bf-4acf-a502-f6bb5c6d8f25",
+	"createdAt" : "/Date(1408461475396)/",
+	"updatedAt" : "/Date(1408539115396)/",
+	"version" : 5,
 	"name" : "My BaseCamp account",
 	"integrationPlugin" : "basecamp",
 	"displayName" : "My BaseCamp account"

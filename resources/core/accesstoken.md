@@ -3,7 +3,7 @@ AccessToken
 
 ## URL
 
-	http://api.primaerp.com/v1/users/@self/accesstokens
+	https://api.primaerp.com/v1/users/@self/accesstokens
 
 ## Properties
 
@@ -141,18 +141,18 @@ AccessToken
 
 ```JSON
 {
-	"id" : "2051ed57-bb4e-458f-9c81-246f6f2ba18f",
-	"createdAt" : "/Date(1408429745738)/",
-	"updatedAt" : "/Date(1408434725738)/",
-	"version" : 9,
+	"id" : "e262852f-0e7c-4447-afbe-f8e3a3f23068",
+	"createdAt" : "/Date(1408461834178)/",
+	"updatedAt" : "/Date(1408467114178)/",
+	"version" : 6,
 	"provider" : "google",
 	"accessToken" : "your-google-account-authentication-id",
 	"accountName" : "jsmith@gmail.com",
 	"user" : {
-		"id" : "484cc32d-4149-49fc-af77-4d5dc871efb6",
-		"createdAt" : "/Date(1408429565738)/",
-		"updatedAt" : "/Date(1408463525738)/",
-		"version" : 1,
+		"id" : "3bacfc16-6baf-40d3-84f2-fcafbdb1f2d8",
+		"createdAt" : "/Date(1408462434178)/",
+		"updatedAt" : "/Date(1408517514178)/",
+		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -172,7 +172,7 @@ AccessToken
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344725737)/",
+		"created" : "/Date(1408377114178)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

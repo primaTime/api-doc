@@ -3,7 +3,7 @@ UserRole
 
 ## URL
 
-	http://api.primaerp.com/v1/userroles
+	https://api.primaerp.com/v1/userroles
 
 ## Properties
 
@@ -115,15 +115,15 @@ UserRole
 
 ```JSON
 {
-	"id" : "e3297aad-3b13-4d16-83ce-41983099576d",
-	"createdAt" : "/Date(1408429624293)/",
-	"updatedAt" : "/Date(1408513924293)/",
-	"version" : 5,
+	"id" : "b326a6da-c6a4-4e73-9f80-ce05e3cf22ba",
+	"createdAt" : "/Date(1408459973250)/",
+	"updatedAt" : "/Date(1408499513250)/",
+	"version" : 9,
 	"user" : {
-		"id" : "ce5a7da7-4197-4266-9964-4291c86fd218",
-		"createdAt" : "/Date(1408430104293)/",
-		"updatedAt" : "/Date(1408488724293)/",
-		"version" : 6,
+		"id" : "6e866794-6a8f-4851-8875-57284ba876f3",
+		"createdAt" : "/Date(1408460093250)/",
+		"updatedAt" : "/Date(1408528313250)/",
+		"version" : 0,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -143,16 +143,16 @@ UserRole
 		"birthdayRemind" : "/Date(1410300000000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344724293)/",
+		"created" : "/Date(1408377113249)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"role" : {
-		"id" : "6f7f3e54-ce8c-43f9-ab3d-3b3016334482",
-		"createdAt" : "/Date(1408427704293)/",
-		"updatedAt" : "/Date(1408495924293)/",
-		"version" : 1,
+		"id" : "d84a6f10-c7d3-457d-b45d-ecdd9b3df2e9",
+		"createdAt" : "/Date(1408461173250)/",
+		"updatedAt" : "/Date(1408492313250)/",
+		"version" : 8,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",

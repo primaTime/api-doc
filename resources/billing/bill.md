@@ -3,7 +3,7 @@ Bill
 
 ## URL
 
-	http://api.primaerp.com/v1/billing/billitems/{id}/bills
+	https://api.primaerp.com/v1/billing/bills
 
 ## Properties
 
@@ -188,13 +188,13 @@ Bill
 	],
 	"cascades" : [
 		{
-			"cascadeType" : "PERSIST",
+			"cascadeType" : "MERGE",
 			"objectTypes" : [
 				"BillItem"
 			]
 		},
 		{
-			"cascadeType" : "MERGE",
+			"cascadeType" : "PERSIST",
 			"objectTypes" : [
 				"BillItem"
 			]
@@ -214,35 +214,35 @@ Bill
 
 ```JSON
 {
-	"id" : "abc17671-e7dc-4d56-81f8-24ee6eaebc76",
-	"createdAt" : "/Date(1408430525852)/",
-	"updatedAt" : "/Date(1408481525852)/",
-	"version" : 2,
+	"id" : "825cedb7-7d6e-40a7-9e4d-c6ee2a4c50b6",
+	"createdAt" : "/Date(1408462615129)/",
+	"updatedAt" : "/Date(1408463515129)/",
+	"version" : 8,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1408431125851)/",
-	"vatDate" : "/Date(1408431125851)/",
+	"docDate" : "/Date(1408463515129)/",
+	"vatDate" : "/Date(1408463515129)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"header" : "",
 	"footer" : "",
 	"totalPrice" : 1500.0,
 	"client" : {
-		"id" : "e8c98e04-15a3-4368-a93e-fddc2cf03cc6",
-		"createdAt" : "/Date(1408427705853)/",
-		"updatedAt" : "/Date(1408441925853)/",
-		"version" : 0,
+		"id" : "a09390bf-8f45-469e-90dc-746e46cb7065",
+		"createdAt" : "/Date(1408461235130)/",
+		"updatedAt" : "/Date(1408477915130)/",
+		"version" : 4,
 		"externalSystem" : {
-			"id" : "697d8260-b0b7-4967-a540-247972eaa1d1",
-			"createdAt" : "/Date(1408430765853)/",
-			"updatedAt" : "/Date(1408510325853)/",
-			"version" : 0,
+			"id" : "287ccf13-ea44-48d9-91b0-68bf87e8bbc8",
+			"createdAt" : "/Date(1408462075130)/",
+			"updatedAt" : "/Date(1408524715130)/",
+			"version" : 2,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1408431125851)/",
+		"externalSyncedAt" : "/Date(1408463515129)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -262,32 +262,32 @@ Bill
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "a81786ba-db9f-4607-9158-8b701feb7e23",
-		"createdAt" : "/Date(1408429385853)/",
-		"updatedAt" : "/Date(1408485125853)/",
-		"version" : 2,
+		"id" : "60fd6661-94cd-42cd-b016-90be55a56177",
+		"createdAt" : "/Date(1408462075130)/",
+		"updatedAt" : "/Date(1408524715130)/",
+		"version" : 8,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "e8c98e04-15a3-4368-a93e-fddc2cf03cc6",
-			"createdAt" : "/Date(1408427705853)/",
-			"updatedAt" : "/Date(1408441925853)/",
-			"version" : 0,
+			"id" : "a09390bf-8f45-469e-90dc-746e46cb7065",
+			"createdAt" : "/Date(1408461235130)/",
+			"updatedAt" : "/Date(1408477915130)/",
+			"version" : 4,
 			"externalSystem" : {
-				"id" : "697d8260-b0b7-4967-a540-247972eaa1d1",
-				"createdAt" : "/Date(1408430765853)/",
-				"updatedAt" : "/Date(1408510325853)/",
-				"version" : 0,
+				"id" : "287ccf13-ea44-48d9-91b0-68bf87e8bbc8",
+				"createdAt" : "/Date(1408462075130)/",
+				"updatedAt" : "/Date(1408524715130)/",
+				"version" : 2,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1408431125851)/",
+			"externalSyncedAt" : "/Date(1408463515129)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -311,10 +311,10 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "e20ed728-8cb1-4f69-9cff-799f44b81dd1",
-			"createdAt" : "/Date(1408429265852)/",
-			"updatedAt" : "/Date(1408474325852)/",
-			"version" : 6,
+			"id" : "45c60607-ff81-4685-afda-415b20e440cf",
+			"createdAt" : "/Date(1408462495130)/",
+			"updatedAt" : "/Date(1408513915130)/",
+			"version" : 9,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
@@ -323,9 +323,9 @@ Bill
 			"displayName" : "#0"
 		},
 		{
-			"id" : "3fd1c1f4-be43-4536-870b-5504faff86f6",
-			"createdAt" : "/Date(1408427825853)/",
-			"updatedAt" : "/Date(1408495925853)/",
+			"id" : "9f282131-216c-496a-9346-ff9d1237e283",
+			"createdAt" : "/Date(1408461175130)/",
+			"updatedAt" : "/Date(1408495915130)/",
 			"version" : 2,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
@@ -336,10 +336,10 @@ Bill
 		}
 	],
 	"author" : {
-		"id" : "1f198984-cacc-4757-913e-efb4a39df37a",
-		"createdAt" : "/Date(1408429025852)/",
-		"updatedAt" : "/Date(1408481525852)/",
-		"version" : 1,
+		"id" : "681c998e-78aa-4df4-abd7-79a5c3c27a39",
+		"createdAt" : "/Date(1408460215130)/",
+		"updatedAt" : "/Date(1408488715130)/",
+		"version" : 7,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -359,7 +359,7 @@ Bill
 		"birthdayRemind" : "/Date(1410300000000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344725851)/",
+		"created" : "/Date(1408377115129)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"

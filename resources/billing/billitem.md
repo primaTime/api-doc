@@ -3,7 +3,7 @@ BillItem
 
 ## URL
 
-	http://api.primaerp.com/v1/billing/bills/{billId}/items
+	https://api.primaerp.com/v1/billing/bills/{billId}/items
 
 ## Properties
 
@@ -134,10 +134,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "2061177b-f040-499a-bf42-10a55c9a790f",
-	"createdAt" : "/Date(1408429924069)/",
-	"updatedAt" : "/Date(1408449124069)/",
-	"version" : 4,
+	"id" : "3b513386-3f99-428a-8877-b9a675a28656",
+	"createdAt" : "/Date(1408461833079)/",
+	"updatedAt" : "/Date(1408477913079)/",
+	"version" : 8,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

@@ -3,7 +3,7 @@ Relation
 
 ## URL
 
-	http://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations
+	https://api.primaerp.com/v1/relations
 
 ## Properties
 
@@ -131,14 +131,14 @@ Relation
 
 ```JSON
 {
-	"id" : "908c2ed6-5fa0-4acc-afc2-87600d11746b",
-	"createdAt" : "/Date(1408427764985)/",
-	"updatedAt" : "/Date(1408459924985)/",
+	"id" : "ee2fb418-de89-427c-90f3-061266a855b4",
+	"createdAt" : "/Date(1408462495214)/",
+	"updatedAt" : "/Date(1408542715214)/",
 	"version" : 6,
-	"inboundId" : "2fb6d561-45ec-4b39-9332-8e89b9065077",
+	"inboundId" : "dc7e94e9-619f-47b0-ae31-9e1c3ba0492f",
 	"inboundType" : "user",
-	"outboundId" : "205cf154-9d94-4e2e-8397-fbb5b036903f",
+	"outboundId" : "2d09c4c9-cbc0-4688-a720-2826b2ec1cf5",
 	"outboundType" : "timerecord",
-	"displayName" : "user 2fb6d561-45ec-4b39-9332-8e89b9065077 -> timerecord 205cf154-9d94-4e2e-8397-fbb5b036903f"
+	"displayName" : "user dc7e94e9-619f-47b0-ae31-9e1c3ba0492f -> timerecord 2d09c4c9-cbc0-4688-a720-2826b2ec1cf5"
 }
 ```

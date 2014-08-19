@@ -1,7 +1,21 @@
-CORE resources
-==
-
-| Resource          | Description                                                                                         |
-|-------------------|-----------------------------------------------------------------------------------------------------|
-| [account](account.md)           | An account information                                                                              |
-| account/admin     | A list of account's admins                                                                          |
+| Name             | URL                                                    |
+|------------------|--------------------------------------------------------|
+| [UserRole](resources/core/userrole.md) | `https://api.primaerp.com/v1/userroles`                |
+| [TrashItem](resources/core/trashitem.md) | `https://api.primaerp.com/v1/trash`                    |
+| [AccountAdmin](resources/core/accountadmin.md) | `https://api.primaerp.com/v1/accountadmins`            |
+| [Department](resources/core/department.md) | `https://api.primaerp.com/v1/departments`              |
+| [License](resources/core/license.md) | `https://api.primaerp.com/v1/licenses`                 |
+| [Account](resources/core/account.md) | `https://api.primaerp.com/v1/accounts`                 |
+| [Role](resources/core/role.md) | `https://api.primaerp.com/v1/roles`                    |
+| [DepartmentMember](resources/core/departmentmember.md) | `https://api.primaerp.com/v1/departmentmembers`        |
+| [AccessToken](resources/core/accesstoken.md) | `https://api.primaerp.com/v1/users/@self/accesstokens` |
+| [User](resources/core/user.md) | `https://api.primaerp.com/v1/users`                    |
+| [Feature](resources/core/feature.md) | `https://api.primaerp.com/v1/features`                 |
+| [SpendingTimeUnit](resources/core/spendingtimeunit.md) | `https://api.primaerp.com/v1/spendingtime`             |
+| [Relation](resources/core/relation.md) | `https://api.primaerp.com/v1/relations`                |
+| [SecretKey](resources/core/secretkey.md) | `https://api.primaerp.com/v1/users/@self/secretkeys`   |
+| [ExternalSystem](resources/core/externalsystem.md) | `https://api.primaerp.com/v1/externalsystems`          |
+| [RoleCompetency](resources/core/rolecompetency.md) | `https://api.primaerp.com/v1/rolecompetencies`         |
+| [Access](resources/core/access.md) | `https://api.primaerp.com/v1/accesses`                 |
+| [AuthObject](resources/core/authobject.md) | `https://api.primaerp.com/v1/null`                     |
+| [FileMetadata](resources/core/filemetadata.md) | `https://api.primaerp.com/v1/null`                     |

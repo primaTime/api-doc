@@ -3,7 +3,7 @@ SpendingTimeUnit
 
 ## URL
 
-	http://api.primaerp.com/v1/spendingtime
+	https://api.primaerp.com/v1/spendingtime
 
 ## Properties
 
@@ -126,15 +126,15 @@ SpendingTimeUnit
 
 ```JSON
 {
-	"id" : "e0392cc8-06c2-49a8-99c7-f6582a0a2a12",
-	"createdAt" : "/Date(1408431004919)/",
-	"updatedAt" : "/Date(1408506724919)/",
-	"version" : 1,
+	"id" : "5dd31956-69b2-48cc-a4e4-79b44a737b8e",
+	"createdAt" : "/Date(1408460754955)/",
+	"updatedAt" : "/Date(1408492314955)/",
+	"version" : 2,
 	"user" : {
-		"id" : "40e62ebd-9105-4a6b-b9c9-da095a8ee016",
-		"createdAt" : "/Date(1408429564919)/",
-		"updatedAt" : "/Date(1408431124919)/",
-		"version" : 9,
+		"id" : "5495b539-46e7-4b9d-a8e9-be0350c14faa",
+		"createdAt" : "/Date(1408460814955)/",
+		"updatedAt" : "/Date(1408546314955)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -154,13 +154,13 @@ SpendingTimeUnit
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344724918)/",
+		"created" : "/Date(1408377114954)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"begin" : "/Date(1408402324918)/",
-	"end" : "/Date(1408428244918)/",
+	"begin" : "/Date(1408434714955)/",
+	"end" : "/Date(1408460634955)/",
 	"duration" : 1200000,
 	"displayName" : "20m"
 }

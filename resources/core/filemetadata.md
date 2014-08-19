@@ -1,10 +1,6 @@
 FileMetadata
 ==
 
-## URL
-
-	http://api.primaerp.com/v1/filemetadatas
-
 ## Properties
 
 | Name        | Type   | Access     | Description            |
@@ -57,10 +53,10 @@ FileMetadata
 
 ```JSON
 {
-	"id" : "2fde9b55-70dd-40cd-bc99-0708b29bb954",
-	"createdAt" : "/Date(1408428126685)/",
-	"updatedAt" : "/Date(1408477926685)/",
-	"version" : 9,
+	"id" : "5a6cf923-d082-4515-a48d-beab4fc2c1f2",
+	"createdAt" : "/Date(1408461175730)/",
+	"updatedAt" : "/Date(1408467115730)/",
+	"version" : 0,
 	"fileName" : "mysignature.jpeg",
 	"contentType" : "image/jpeg",
 	"contentSize" : 13114,

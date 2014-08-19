@@ -3,7 +3,7 @@ Feature
 
 ## URL
 
-	http://api.primaerp.com/v1/features
+	https://api.primaerp.com/v1/features
 
 ## Properties
 
@@ -118,10 +118,10 @@ Feature
 
 ```JSON
 {
-	"id" : "8b1cce60-38c1-42c9-8b02-cc333769a841",
-	"createdAt" : "/Date(1408428544801)/",
-	"updatedAt" : "/Date(1408459924801)/",
-	"version" : 6,
+	"id" : "b1b2b94b-51d5-4b0c-ae10-ceceee5faf31",
+	"createdAt" : "/Date(1408460694902)/",
+	"updatedAt" : "/Date(1408531914903)/",
+	"version" : 2,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,

@@ -3,7 +3,7 @@ User
 
 ## URL
 
-	http://api.primaerp.com/v1/users
+	https://api.primaerp.com/v1/users
 
 ## Properties
 
@@ -316,10 +316,10 @@ User
 
 ```JSON
 {
-	"id" : "58f04e78-c11a-41ea-bf37-714b216b4610",
-	"createdAt" : "/Date(1408429686009)/",
-	"updatedAt" : "/Date(1408456326009)/",
-	"version" : 3,
+	"id" : "32948cb7-36a7-4f7f-b36c-fde9c5c6f5f7",
+	"createdAt" : "/Date(1408462854248)/",
+	"updatedAt" : "/Date(1408481514248)/",
+	"version" : 2,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -339,7 +339,7 @@ User
 	"birthdayRemind" : "/Date(1409263200000)/",
 	"workingTimeStart" : "/Date(1408428000000)/",
 	"workingTimeEnd" : "/Date(1408460400000)/",
-	"created" : "/Date(1408344726009)/",
+	"created" : "/Date(1408377114248)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"
