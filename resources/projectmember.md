@@ -1,42 +1,28 @@
-Access
+ProjectMember
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/time/projects/{id}/members
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
+| user        | User      | read write | User who is a member.                                                                               |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "ProjectMember",
 	"fields" : [
-		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
@@ -68,18 +54,6 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
-		{
 			"type" : "TrashItem",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
@@ -96,7 +70,7 @@ Access
 		{
 			"type" : "User",
 			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
+			"description" : "User who is a member.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -128,15 +102,15 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
+	"id" : "68b1729b-4183-4f19-892e-a8529aa9cf57",
+	"createdAt" : "/Date(1408428605443)/",
+	"updatedAt" : "/Date(1408485125443)/",
+	"version" : 5,
 	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
+		"id" : "abbbe248-695c-45f3-95c7-84713aecbc93",
+		"createdAt" : "/Date(1408430165443)/",
+		"updatedAt" : "/Date(1408456325443)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -156,13 +130,11 @@ Access
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
+		"created" : "/Date(1408344725443)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"displayName" : "Smith John"
 }
 ```

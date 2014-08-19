@@ -1,41 +1,38 @@
-Access
+BillItem
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/billing/bills/{billId}/items
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
+| attributes  | String    | read write | Describes form of item aggregation.                                                                 |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
+| docIndex    | Integer   | read write | Sequence number of item in bill.                                                                    |
+| duration    | Long      | read write | Duration of work (in milliseconds).                                                                 |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
+| itemGroup   | String    | read write | Name of aggregating itemGroup.                                                                      |
+| price       | Double    | read write | Price of item.                                                                                      |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "BillItem",
 	"fields" : [
 		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
+			"type" : "String",
+			"name" : "attributes",
+			"description" : "Describes form of item aggregation.",
 			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
+			"constraints" : [ ]
 		},
 		{
 			"type" : "Date",
@@ -50,6 +47,25 @@ Access
 			"description" : "Describes an object in human readable form.",
 			"access" : "READ_ONLY",
 			"constraints" : [ ]
+		},
+		{
+			"type" : "Integer",
+			"name" : "docIndex",
+			"description" : "Sequence number of item in bill.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
+		},
+		{
+			"type" : "Long",
+			"name" : "duration",
+			"description" : "Duration of work (in milliseconds).",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Min",
+					"pattern" : null
+				}
+			]
 		},
 		{
 			"type" : "String",
@@ -68,16 +84,18 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
+			"type" : "String",
+			"name" : "itemGroup",
+			"description" : "Name of aggregating itemGroup.",
 			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
+			"constraints" : [ ]
+		},
+		{
+			"type" : "Double",
+			"name" : "price",
+			"description" : "Price of item.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
 		},
 		{
 			"type" : "TrashItem",
@@ -92,18 +110,6 @@ Access
 			"description" : "Last modified date.",
 			"access" : "READ_ONLY",
 			"constraints" : [ ]
-		},
-		{
-			"type" : "User",
-			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
 		},
 		{
 			"type" : "Long",
@@ -128,41 +134,15 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
-	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
-		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
-		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
-		"timeFormat" : "K:mm a",
-		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
-		"secretKey" : "userSecretKey",
-		"confirmed" : false,
-		"confirmedEmail" : false,
-		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
-		"admin" : false,
-		"projectManager" : false,
-		"displayName" : "Smith John"
-	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"id" : "2061177b-f040-499a-bf42-10a55c9a790f",
+	"createdAt" : "/Date(1408429924069)/",
+	"updatedAt" : "/Date(1408449124069)/",
+	"version" : 4,
+	"attributes" : "{\"project\":\"name\"}",
+	"itemGroup" : "Content management system",
+	"docIndex" : 0,
+	"duration" : 3600000,
+	"price" : 500.0,
+	"displayName" : "#0"
 }
 ```

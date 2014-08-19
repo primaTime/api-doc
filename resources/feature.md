@@ -1,42 +1,30 @@
-Access
+Feature
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/features
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
+| enabled     | Boolean   | read write | Determines whether the feature is enabled.                                                          |
+| featureId   | String    | read write | Unique feature id.                                                                                  |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
+| product     | Product   | read write | The feature is applied to this product.                                                             |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "Feature",
 	"fields" : [
-		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
@@ -50,6 +38,25 @@ Access
 			"description" : "Describes an object in human readable form.",
 			"access" : "READ_ONLY",
 			"constraints" : [ ]
+		},
+		{
+			"type" : "Boolean",
+			"name" : "enabled",
+			"description" : "Determines whether the feature is enabled.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
+		},
+		{
+			"type" : "String",
+			"name" : "featureId",
+			"description" : "Unique feature id.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull",
+					"pattern" : null
+				}
+			]
 		},
 		{
 			"type" : "String",
@@ -70,14 +77,9 @@ Access
 		{
 			"type" : "Product",
 			"name" : "product",
-			"description" : "Access is granted to this product.",
+			"description" : "The feature is applied to this product.",
 			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
+			"constraints" : [ ]
 		},
 		{
 			"type" : "TrashItem",
@@ -92,18 +94,6 @@ Access
 			"description" : "Last modified date.",
 			"access" : "READ_ONLY",
 			"constraints" : [ ]
-		},
-		{
-			"type" : "User",
-			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
 		},
 		{
 			"type" : "Long",
@@ -128,41 +118,13 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
-	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
-		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
-		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
-		"timeFormat" : "K:mm a",
-		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
-		"secretKey" : "userSecretKey",
-		"confirmed" : false,
-		"confirmedEmail" : false,
-		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
-		"admin" : false,
-		"projectManager" : false,
-		"displayName" : "Smith John"
-	},
+	"id" : "8b1cce60-38c1-42c9-8b02-cc333769a841",
+	"createdAt" : "/Date(1408428544801)/",
+	"updatedAt" : "/Date(1408459924801)/",
+	"version" : 6,
+	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"enabled" : true,
+	"displayName" : "9c217672-8847-4408-8d85-031c95190274"
 }
 ```

@@ -1,42 +1,29 @@
-Access
+UserRole
 ==
 
 ## URL
 
-	http://api.primaerp.com/v1/accesses
+	http://api.primaerp.com/v1/userroles
 
 ## Properties
 
 | Name        | Type      | Access     | Description                                                                                         |
 |-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
+| role        | Role      | read write | Role which has an user.                                                                             |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
+| user        | User      | read write | User who has a role.                                                                                |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Access",
+	"type" : "UserRole",
 	"fields" : [
-		{
-			"type" : "Date",
-			"name" : "created",
-			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
-		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
@@ -68,9 +55,9 @@ Access
 			]
 		},
 		{
-			"type" : "Product",
-			"name" : "product",
-			"description" : "Access is granted to this product.",
+			"type" : "Role",
+			"name" : "role",
+			"description" : "Role which has an user.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -96,7 +83,7 @@ Access
 		{
 			"type" : "User",
 			"name" : "user",
-			"description" : "Provides info about the user for whom the access is granted.",
+			"description" : "User who has a role.",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -128,41 +115,50 @@ Access
 
 ```JSON
 {
-	"id" : "82687b94-d0ec-46b8-889b-1eb7e4a75f93",
-	"createdAt" : "/Date(1408428426077)/",
-	"updatedAt" : "/Date(1408485126077)/",
-	"version" : 7,
+	"id" : "e3297aad-3b13-4d16-83ce-41983099576d",
+	"createdAt" : "/Date(1408429624293)/",
+	"updatedAt" : "/Date(1408513924293)/",
+	"version" : 5,
 	"user" : {
-		"id" : "193c3327-f6d3-439f-a0d4-d3da98146856",
-		"createdAt" : "/Date(1408429146077)/",
-		"updatedAt" : "/Date(1408488726077)/",
-		"version" : 9,
+		"id" : "ce5a7da7-4197-4266-9964-4291c86fd218",
+		"createdAt" : "/Date(1408430104293)/",
+		"updatedAt" : "/Date(1408488724293)/",
+		"version" : 6,
 		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
+		"lastName" : "Doe",
+		"nickName" : "Johny D.",
+		"email" : "john.doe@example.com",
+		"phone" : "55 234 555 678",
+		"position" : "Senior developer",
 		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
+		"dateFormat" : "yyyy-MM-dd",
 		"timeFormat" : "K:mm a",
 		"weekStart" : 7,
-		"language" : "en_US",
+		"language" : "pt_BR",
 		"password" : "",
 		"secretKey" : "userSecretKey",
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
+		"birthdayRemind" : "/Date(1410300000000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726077)/",
+		"created" : "/Date(1408344724293)/",
 		"admin" : false,
 		"projectManager" : false,
-		"displayName" : "Smith John"
+		"displayName" : "Doe John"
 	},
-	"product" : "TIME",
-	"created" : "/Date(1408431126077)/",
-	"displayName" : "TIME"
+	"role" : {
+		"id" : "6f7f3e54-ce8c-43f9-ab3d-3b3016334482",
+		"createdAt" : "/Date(1408427704293)/",
+		"updatedAt" : "/Date(1408495924293)/",
+		"version" : 1,
+		"name" : "Admin",
+		"builtInRole" : "ADMIN",
+		"roleType" : "EXPLICIT",
+		"product" : "CORE",
+		"displayName" : "ADMIN"
+	},
+	"displayName" : "Doe John [ADMIN]"
 }
 ```
