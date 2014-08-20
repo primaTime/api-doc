@@ -3,7 +3,7 @@ Department
 
 ## URL
 
-	http://api.primaerp.com/v1/departments
+	https://api.primaerp.com/v1/departments
 
 ## Properties
 
@@ -106,16 +106,16 @@ Department
 
 ```JSON
 {
-	"id" : "c3bec155-1454-4073-80b6-4f00997c0ebb",
-	"createdAt" : "/Date(1408427585131)/",
-	"updatedAt" : "/Date(1408485125131)/",
-	"version" : 8,
+	"id" : "c342bd0e-54ff-4ddb-a6a3-91368ed15b21",
+	"createdAt" : "/Date(1408461533750)/",
+	"updatedAt" : "/Date(1408477913750)/",
+	"version" : 6,
 	"name" : "Development",
 	"manager" : {
-		"id" : "ced668a2-4ab6-41ce-af23-1f153d581f48",
-		"createdAt" : "/Date(1408430585131)/",
-		"updatedAt" : "/Date(1408452725131)/",
-		"version" : 9,
+		"id" : "45913fce-091b-4401-bc83-c4235abd8908",
+		"createdAt" : "/Date(1408461053750)/",
+		"updatedAt" : "/Date(1408485113750)/",
+		"version" : 7,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -135,7 +135,7 @@ Department
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344725131)/",
+		"created" : "/Date(1408377113750)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

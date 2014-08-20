@@ -1,9 +1,9 @@
-Tag
+ProjectMember
 ==
 
 ## URL
 
-	https://api.primaerp.com/v1/time/tags
+	https://api.primaerp.com/v1/time/projects/{id}/members
 
 ## Properties
 
@@ -12,16 +12,16 @@ Tag
 | createdAt   | Date      | read only  | Date of creation.                                                                                   |
 | displayName | String    | read only  | Describes an object in human readable form.                                                         |
 | id          | String    | read write | Unique object identifier.                                                                           |
-| name        | String    | read write | Name of tag                                                                                         |
 | trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | Last modified date.                                                                                 |
+| user        | User      | read write | User who is a member.                                                                               |
 | version     | Long      | read write | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "Tag",
+	"type" : "ProjectMember",
 	"fields" : [
 		{
 			"type" : "Date",
@@ -54,13 +54,6 @@ Tag
 			]
 		},
 		{
-			"type" : "String",
-			"name" : "name",
-			"description" : "Name of tag",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
 			"type" : "TrashItem",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
@@ -73,6 +66,18 @@ Tag
 			"description" : "Last modified date.",
 			"access" : "READ_ONLY",
 			"constraints" : [ ]
+		},
+		{
+			"type" : "User",
+			"name" : "user",
+			"description" : "User who is a member.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull",
+					"pattern" : null
+				}
+			]
 		},
 		{
 			"type" : "Long",
@@ -97,11 +102,39 @@ Tag
 
 ```JSON
 {
-	"id" : "30ee5e04-eff1-411a-8dc4-42787569c916",
-	"createdAt" : "/Date(1408460754450)/",
-	"updatedAt" : "/Date(1408521114451)/",
-	"version" : 0,
-	"name" : "SW",
-	"displayName" : "SW"
+	"id" : "17fea59d-c57c-4a03-9d97-3f7a8b875a9a",
+	"createdAt" : "/Date(1408460635025)/",
+	"updatedAt" : "/Date(1408531915025)/",
+	"version" : 2,
+	"user" : {
+		"id" : "2d784b6d-38cc-425a-bb0f-7332ebfca06e",
+		"createdAt" : "/Date(1408462675025)/",
+		"updatedAt" : "/Date(1408539115025)/",
+		"version" : 4,
+		"firstName" : "John",
+		"lastName" : "Smith",
+		"nickName" : "Smith, J.",
+		"email" : "john.smith@example.com",
+		"phone" : "55 123 444 567",
+		"position" : "Chief developer",
+		"timeZone" : "America/Sao_Paulo",
+		"dateFormat" : "dd/MM/yyyy",
+		"timeFormat" : "K:mm a",
+		"weekStart" : 7,
+		"language" : "en_US",
+		"password" : "",
+		"secretKey" : "userSecretKey",
+		"confirmed" : false,
+		"confirmedEmail" : false,
+		"active" : false,
+		"birthdayRemind" : "/Date(1409263200000)/",
+		"workingTimeStart" : "/Date(1408428000000)/",
+		"workingTimeEnd" : "/Date(1408460400000)/",
+		"created" : "/Date(1408377115025)/",
+		"admin" : false,
+		"projectManager" : false,
+		"displayName" : "Smith John"
+	},
+	"displayName" : "Smith John"
 }
 ```

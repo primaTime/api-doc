@@ -3,7 +3,7 @@ TrashItem
 
 ## URL
 
-	http://api.primaerp.com/v1/trash
+	https://api.primaerp.com/v1/trash
 
 ## Properties
 
@@ -123,10 +123,10 @@ TrashItem
 
 ```JSON
 {
-	"id" : "72e28093-830b-4a66-a096-1b996343c512",
-	"createdAt" : "/Date(1408430165946)/",
-	"updatedAt" : "/Date(1408431125946)/",
-	"version" : 6,
+	"id" : "942d0442-87bc-45aa-814f-b2c53fdcadff",
+	"createdAt" : "/Date(1408461713577)/",
+	"updatedAt" : "/Date(1408528313577)/",
+	"version" : 0,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"groupId" : "ffaf67e7-051d-4a58-a71a-8e39353a93b4",

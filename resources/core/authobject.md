@@ -1,10 +1,6 @@
 AuthObject
 ==
 
-## URL
-
-	http://api.primaerp.com/v1/authobjects
-
 ## Properties
 
 | Name              | Type   | Access     | Description                                          |
@@ -57,9 +53,9 @@ AuthObject
 
 ```JSON
 {
-	"token" : "2d219518-66c8-4c3f-a0b3-fafbd24a2128",
-	"expiration" : "/Date(1408434726672)/",
-	"refreshToken" : "46cac76b-8f53-4937-818f-e586d1e49912",
-	"refreshExpiration" : "/Date(1409035926672)/"
+	"token" : "d401e2cf-b445-4990-be65-df07c12224a7",
+	"expiration" : "/Date(1408467115718)/",
+	"refreshToken" : "7eea2f9d-2751-4892-8db0-7e8301b90dca",
+	"refreshExpiration" : "/Date(1409068315718)/"
 }
 ```

@@ -3,7 +3,7 @@ RoleCompetency
 
 ## URL
 
-	http://api.primaerp.com/v1/rolecompetencies
+	https://api.primaerp.com/v1/rolecompetencies
 
 ## Properties
 
@@ -105,15 +105,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "e569c350-a017-4891-9d39-a5369c7e83da",
-	"createdAt" : "/Date(1408428064521)/",
-	"updatedAt" : "/Date(1408495924521)/",
-	"version" : 4,
+	"id" : "d691a1a3-ef2e-4cb2-ad04-c453cf23a022",
+	"createdAt" : "/Date(1408460275445)/",
+	"updatedAt" : "/Date(1408510315445)/",
+	"version" : 2,
 	"role" : {
-		"id" : "1a50f181-582a-497b-b26b-54bb3273dec3",
-		"createdAt" : "/Date(1408429684521)/",
-		"updatedAt" : "/Date(1408495924521)/",
-		"version" : 6,
+		"id" : "8172efc0-a65c-40ce-a689-f77c8528978d",
+		"createdAt" : "/Date(1408460155445)/",
+		"updatedAt" : "/Date(1408535515445)/",
+		"version" : 4,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",
@@ -121,6 +121,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@7786352b[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=1a50f181-582a-497b-b26b-54bb3273dec3,tenantId=<null>,trashItem=<null>,createdAt=Tue Aug 19 08:28:04 CEST 2014,updatedAt=Wed Aug 20 02:52:04 CEST 2014,version=6][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@40ce2345[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=8172efc0-a65c-40ce-a689-f77c8528978d,tenantId=<null>,trashItem=<null>,createdAt=Tue Aug 19 16:55:55 CEST 2014,updatedAt=Wed Aug 20 13:51:55 CEST 2014,version=4][ACCOUNT_ADMIN]"
 }
 ```

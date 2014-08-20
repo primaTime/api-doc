@@ -3,7 +3,7 @@ DepartmentMember
 
 ## URL
 
-	http://api.primaerp.com/v1/departmentmembers
+	https://api.primaerp.com/v1/departmentmembers
 
 ## Properties
 
@@ -115,15 +115,15 @@ DepartmentMember
 
 ```JSON
 {
-	"id" : "b9fd9231-dd75-4dc9-8a8e-92791cc2ce41",
-	"createdAt" : "/Date(1408428486552)/",
-	"updatedAt" : "/Date(1408441926552)/",
-	"version" : 2,
+	"id" : "2cd05ce8-a7be-4f73-8683-3713734977ff",
+	"createdAt" : "/Date(1408462554097)/",
+	"updatedAt" : "/Date(1408521114097)/",
+	"version" : 7,
 	"user" : {
-		"id" : "c3ef3e5f-0fbb-4b37-8efd-11bbe5a8f6e5",
-		"createdAt" : "/Date(1408428006552)/",
-		"updatedAt" : "/Date(1408445526552)/",
-		"version" : 0,
+		"id" : "d2bd52a8-edd1-4088-8506-d3e32e4ea1a5",
+		"createdAt" : "/Date(1408462734097)/",
+		"updatedAt" : "/Date(1408470714097)/",
+		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -143,22 +143,22 @@ DepartmentMember
 		"birthdayRemind" : "/Date(1410300000000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726552)/",
+		"created" : "/Date(1408377114097)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"department" : {
-		"id" : "76314e6e-1c42-47af-88dd-ca049ac03abb",
-		"createdAt" : "/Date(1408428726552)/",
-		"updatedAt" : "/Date(1408503126552)/",
-		"version" : 0,
+		"id" : "d15e5ff0-85da-463a-9559-b5d594e5fc40",
+		"createdAt" : "/Date(1408460694097)/",
+		"updatedAt" : "/Date(1408535514097)/",
+		"version" : 6,
 		"name" : "Development",
 		"manager" : {
-			"id" : "db48956e-6bad-4a3f-8a11-762919fcac8a",
-			"createdAt" : "/Date(1408429986552)/",
-			"updatedAt" : "/Date(1408441926552)/",
-			"version" : 4,
+			"id" : "5ffcde43-b497-4e06-961b-8dfae1ec3ab9",
+			"createdAt" : "/Date(1408462014097)/",
+			"updatedAt" : "/Date(1408524714097)/",
+			"version" : 9,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -178,7 +178,7 @@ DepartmentMember
 			"birthdayRemind" : "/Date(1409263200000)/",
 			"workingTimeStart" : "/Date(1408428000000)/",
 			"workingTimeEnd" : "/Date(1408460400000)/",
-			"created" : "/Date(1408344726551)/",
+			"created" : "/Date(1408377114097)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"

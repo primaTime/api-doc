@@ -3,7 +3,7 @@ Account
 
 ## URL
 
-	http://api.primaerp.com/v1/accounts
+	https://api.primaerp.com/v1/accounts
 
 ## Properties
 
@@ -350,15 +350,15 @@ Account
 
 ```JSON
 {
-	"id" : "baf23435-d805-4276-bbaa-287f24c6a1c0",
-	"createdAt" : "/Date(1408427823784)/",
-	"updatedAt" : "/Date(1408485123784)/",
+	"id" : "1f34b8e7-28f5-478e-a17a-aedd7416400a",
+	"createdAt" : "/Date(1408460213970)/",
+	"updatedAt" : "/Date(1408499513970)/",
 	"version" : 1,
 	"owner" : {
-		"id" : "5e6556d6-8e5f-49d9-84de-fa98ea4dcc0e",
-		"createdAt" : "/Date(1408428123784)/",
-		"updatedAt" : "/Date(1408499523784)/",
-		"version" : 4,
+		"id" : "658ef4a9-680b-47a5-9a32-82136eef2feb",
+		"createdAt" : "/Date(1408462193970)/",
+		"updatedAt" : "/Date(1408513913970)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -378,7 +378,7 @@ Account
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344723783)/",
+		"created" : "/Date(1408377113970)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -404,10 +404,10 @@ Account
 	"currency" : "USD",
 	"workingTimeStart" : "/Date(1408428000000)/",
 	"workingTimeEnd" : "/Date(1408460400000)/",
-	"created" : "/Date(1408344723783)/",
+	"created" : "/Date(1408377113970)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1408431123784)/",
+	"deactivationRequestedAt" : "/Date(1408463513970)/",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

@@ -3,7 +3,7 @@ SecretKey
 
 ## URL
 
-	http://api.primaerp.com/v1/users/@self/secretkeys
+	https://api.primaerp.com/v1/users/@self/secretkeys
 
 ## Properties
 
@@ -142,15 +142,15 @@ SecretKey
 
 ```JSON
 {
-	"id" : "880a1747-4b72-418d-8b8f-886ce4233bfc",
-	"createdAt" : "/Date(1408427585656)/",
-	"updatedAt" : "/Date(1408434725656)/",
-	"version" : 6,
+	"id" : "dcb68712-223e-4a3b-8207-ee8538024f8b",
+	"createdAt" : "/Date(1408460035271)/",
+	"updatedAt" : "/Date(1408542715271)/",
+	"version" : 2,
 	"user" : {
-		"id" : "85c7158e-5b86-46ff-a3a2-3cade66bf40c",
-		"createdAt" : "/Date(1408428005656)/",
-		"updatedAt" : "/Date(1408463525656)/",
-		"version" : 4,
+		"id" : "a97ae450-027b-4b8c-9f11-b05887138b82",
+		"createdAt" : "/Date(1408461655271)/",
+		"updatedAt" : "/Date(1408506715271)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -170,16 +170,16 @@ SecretKey
 		"birthdayRemind" : "/Date(1409263200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344725656)/",
+		"created" : "/Date(1408377115271)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"secretKey" : "b745b3ad-467a-4cdd-8a68-3a8a1d75c575",
+	"secretKey" : "3080ee31-d42e-4f15-91ad-fd772dfe8fc5",
 	"name" : "Chrome plugin",
 	"senderId" : "6248151342",
 	"registrationId" : "HPRgkF3VZjC9KtT8OvPVGJ-hQMRKRrZuDELjzEvxwYv7hH5OFEeco8ohsN5PjL1iC2dNtk2BAokeMCg2ZXKqpc8FXKmhX94kIxQ",
-	"expiration" : "/Date(1410850325656)/",
-	"displayName" : "Chrome plugin (b745b3ad-467a-4cdd-8a68-3a8a1d75c575)"
+	"expiration" : "/Date(1410882715271)/",
+	"displayName" : "Chrome plugin (3080ee31-d42e-4f15-91ad-fd772dfe8fc5)"
 }
 ```

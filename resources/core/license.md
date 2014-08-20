@@ -3,7 +3,7 @@ License
 
 ## URL
 
-	http://api.primaerp.com/v1/licenses
+	https://api.primaerp.com/v1/licenses
 
 ## Properties
 
@@ -161,20 +161,20 @@ License
 
 ```JSON
 {
-	"id" : "1ed5b381-f9f7-427d-af6d-3d1222467f63",
-	"createdAt" : "/Date(1408430464427)/",
-	"updatedAt" : "/Date(1408470724427)/",
-	"version" : 7,
+	"id" : "20b4f9a2-6ed3-47d5-8fe4-eaf8df559334",
+	"createdAt" : "/Date(1408460513847)/",
+	"updatedAt" : "/Date(1408470713847)/",
+	"version" : 3,
 	"account" : {
-		"id" : "7cb81abc-3118-463f-a620-2bb29870301f",
-		"createdAt" : "/Date(1408428904427)/",
-		"updatedAt" : "/Date(1408485124427)/",
-		"version" : 1,
+		"id" : "5f766aaa-0fb2-48ec-9ed3-348d6728392d",
+		"createdAt" : "/Date(1408462853847)/",
+		"updatedAt" : "/Date(1408506713847)/",
+		"version" : 7,
 		"owner" : {
-			"id" : "67ef5ffb-eab0-4b4d-8b6b-652a8949b5e1",
-			"createdAt" : "/Date(1408429624427)/",
-			"updatedAt" : "/Date(1408499524427)/",
-			"version" : 5,
+			"id" : "3cc060d1-c0d6-47b7-8894-e299a11be498",
+			"createdAt" : "/Date(1408460393847)/",
+			"updatedAt" : "/Date(1408481513847)/",
+			"version" : 0,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -194,7 +194,7 @@ License
 			"birthdayRemind" : "/Date(1409263200000)/",
 			"workingTimeStart" : "/Date(1408428000000)/",
 			"workingTimeEnd" : "/Date(1408460400000)/",
-			"created" : "/Date(1408344724427)/",
+			"created" : "/Date(1408377113846)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -220,13 +220,13 @@ License
 		"currency" : "USD",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344724427)/",
+		"created" : "/Date(1408377113846)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1408431124427)/",
+		"deactivationRequestedAt" : "/Date(1408463513846)/",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
-	"licenseNumber" : "293810a9-1038-4401-bf20-e0772c559063",
+	"licenseNumber" : "15d6548a-1cdc-4372-8bf2-34370c303339",
 	"usersCount" : 5,
 	"validFrom" : "/Date(1408226400000)/",
 	"validTo" : "/Date(1410904800000)/",
@@ -234,6 +234,6 @@ License
 	"product" : "TIME",
 	"type" : "BUY",
 	"purchaseInfo" : "{\"purchase_id\":\"1154795\"}",
-	"displayName" : "293810a9-1038-4401-bf20-e0772c559063"
+	"displayName" : "15d6548a-1cdc-4372-8bf2-34370c303339"
 }
 ```

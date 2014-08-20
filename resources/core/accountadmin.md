@@ -3,7 +3,7 @@ AccountAdmin
 
 ## URL
 
-	http://api.primaerp.com/v1/accountadmins
+	https://api.primaerp.com/v1/accountadmins
 
 ## Properties
 
@@ -115,19 +115,19 @@ AccountAdmin
 
 ```JSON
 {
-	"id" : "5ba8ac4e-8c27-4851-a2aa-7cbc73ad0499",
-	"createdAt" : "/Date(1408430826450)/",
-	"updatedAt" : "/Date(1408470726450)/",
-	"version" : 5,
+	"id" : "96a047a1-92d3-4974-a2be-adbdb23f8357",
+	"createdAt" : "/Date(1408460213663)/",
+	"updatedAt" : "/Date(1408524713663)/",
+	"version" : 6,
 	"account" : {
-		"id" : "8fe0d13e-adb8-438a-a344-01ad78363bcf",
-		"createdAt" : "/Date(1408430106450)/",
-		"updatedAt" : "/Date(1408449126450)/",
-		"version" : 4,
+		"id" : "5b874d4a-3311-4a3d-bf2c-8d5ba08911ee",
+		"createdAt" : "/Date(1408462013663)/",
+		"updatedAt" : "/Date(1408521113663)/",
+		"version" : 5,
 		"owner" : {
-			"id" : "9a58fb99-2a9e-4dcf-9a2a-55f0ca030a7d",
-			"createdAt" : "/Date(1408429626450)/",
-			"updatedAt" : "/Date(1408445526450)/",
+			"id" : "b7222f9f-7602-48b1-a05f-ecaaaf91e1f7",
+			"createdAt" : "/Date(1408463213663)/",
+			"updatedAt" : "/Date(1408470713663)/",
 			"version" : 6,
 			"firstName" : "John",
 			"lastName" : "Smith",
@@ -148,7 +148,7 @@ AccountAdmin
 			"birthdayRemind" : "/Date(1409263200000)/",
 			"workingTimeStart" : "/Date(1408428000000)/",
 			"workingTimeEnd" : "/Date(1408460400000)/",
-			"created" : "/Date(1408344726450)/",
+			"created" : "/Date(1408377113663)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -174,17 +174,17 @@ AccountAdmin
 		"currency" : "USD",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726450)/",
+		"created" : "/Date(1408377113663)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1408431126450)/",
+		"deactivationRequestedAt" : "/Date(1408463513663)/",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
 	"user" : {
-		"id" : "eb5d75bd-c75a-40a1-8954-f71d81bce8ed",
-		"createdAt" : "/Date(1408428666450)/",
-		"updatedAt" : "/Date(1408495926450)/",
-		"version" : 1,
+		"id" : "9420ef7a-dc54-497d-942c-dc2807008067",
+		"createdAt" : "/Date(1408462013664)/",
+		"updatedAt" : "/Date(1408470713664)/",
+		"version" : 5,
 		"firstName" : "Charles",
 		"lastName" : "Johnson",
 		"nickName" : "Charlie",
@@ -204,7 +204,7 @@ AccountAdmin
 		"birthdayRemind" : "/Date(1409695200000)/",
 		"workingTimeStart" : "/Date(1408428000000)/",
 		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408344726450)/",
+		"created" : "/Date(1408377113663)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Johnson Charles"

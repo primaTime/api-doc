@@ -3,7 +3,7 @@ Role
 
 ## URL
 
-	http://api.primaerp.com/v1/roles
+	https://api.primaerp.com/v1/roles
 
 ## Properties
 
@@ -121,10 +121,10 @@ Role
 
 ```JSON
 {
-	"id" : "aa6df0bb-c273-4edf-ab10-b53620122725",
-	"createdAt" : "/Date(1408430885518)/",
-	"updatedAt" : "/Date(1408474325518)/",
-	"version" : 1,
+	"id" : "17b3397d-a921-44a9-add1-faed2ace6fb5",
+	"createdAt" : "/Date(1408460874026)/",
+	"updatedAt" : "/Date(1408506714026)/",
+	"version" : 3,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",
