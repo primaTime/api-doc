@@ -11,7 +11,7 @@ When a request is successful, the API returns a HTTP Status Code (2xx).
 
 In case of any problems, will the API return the following HTTP status codes in the response header:
 
-| **HTTP Status Code** | **Description** |
+| HTTP Status Code | Description |
 | --- | --- |
 | 401 | Unauthorized. Wrong or missing credentials. |
 | 400 | Bad format. Incorrect parameter or query string. |
@@ -28,98 +28,71 @@ In case of any problems, will the API return the following HTTP status codes in 
 
 Listed below are special errors, which may arise during the interaction with API:
 
-| **API error Code** | **HTTP Status Code** | **Description** |
-| --- | --- | --- |
-| [PE01-1001](http://devdoc.primaerp.com/rest/errors/PE01-1001) | 401 | Unauthorized |
-| [PE01-1002](http://devdoc.primaerp.com/rest/errors/PE01-1002) | 400 | Token missing |
-| [PE01-1003](http://devdoc.primaerp.com/rest/errors/PE01-1003) | 400 | Tenant missing |
-| [PE01-1004](http://devdoc.primaerp.com/rest/errors/PE01-1004) | 409 | Tenant conflict |
-| [PE01-1005](http://devdoc.primaerp.com/rest/errors/PE01-1005) | 401 | Tenant unknown |
-| [PE01-1006](http://devdoc.primaerp.com/rest/errors/PE01-1006) | 400 | Confirmation invalid |
-| [PE01-1007](http://devdoc.primaerp.com/rest/errors/PE01-1007) | 401 | Object not confirmed |
-| [PE01-1008](http://devdoc.primaerp.com/rest/errors/PE01-1008) | 403 | Access denied |
-| [PE01-1009](http://devdoc.primaerp.com/rest/errors/PE01-1009) | 403 | You've reached your account's user limit. |
-| [PE01-1010](http://devdoc.primaerp.com/rest/errors/PE01-1010) | 401 | Token is invalid or expired |
-| [PE01-1011](http://devdoc.primaerp.com/rest/errors/PE01-1011) | 401 | Refresh token is invalid or expired |
-| [PE01-1101](http://devdoc.primaerp.com/rest/errors/PE01-1101) | 404 | Object not found |
-| [PE01-1102](http://devdoc.primaerp.com/rest/errors/PE01-1102) | 409 | Object already exists |
-| [PE01-1103](http://devdoc.primaerp.com/rest/errors/PE01-1103) | 400 | Operation not allowed |
-| [PE01-1104](http://devdoc.primaerp.com/rest/errors/PE01-1104) | 412 | Validation error |
-| [PE01-1105](http://devdoc.primaerp.com/rest/errors/PE01-1105) | 400 | Wrong parameters |
-| [PE01-1106](http://devdoc.primaerp.com/rest/errors/PE01-1106) | 412 | Illegal state |
-| [PE01-1107](http://devdoc.primaerp.com/rest/errors/PE01-1107) | 409 | Version stale |
-| [PE01-1108](http://devdoc.primaerp.com/rest/errors/PE01-1108) | 424 | Transaction error |
-| [PE01-1109](http://devdoc.primaerp.com/rest/errors/PE01-1109) | 412 | File size limit exceeded. |
-| [PE01-9000](http://devdoc.primaerp.com/rest/errors/PE01-9000) | 500 | Other error |
-| [PE01-9001](http://devdoc.primaerp.com/rest/errors/PE01-9001) | 500 | Unhandled error |
-| [PE01-9002](http://devdoc.primaerp.com/rest/errors/PE01-9002) | 503 | Limit exceeded |
-| [PE01-9003](http://devdoc.primaerp.com/rest/errors/PE01-9003) | 404 | Resource not found |
-| [PE01-9004](http://devdoc.primaerp.com/rest/errors/PE01-9004) | 400 | Unrecognized request |
-| [PE01-9005](http://devdoc.primaerp.com/rest/errors/PE01-9005) | 406 | You've requested an incompatible content type |
+| API error Code | HTTP Status Code | Description                                |
+|----------------|------------------|--------------------------------------------|
+| PE01-1001      | 401              | Unauthorized                               |
+| PE01-1002      | 400              | Token missing                              |
+| PE01-1003      | 400              | Tenant missing                             |
+| PE01-1004      | 409              | Tenant conflict                            |
+| PE01-1005      | 401              | Tenant unknown                             |
+| PE01-1006      | 400              | Confirmation invalid                       |
+| PE01-1007      | 401              | Object not confirmed                       |
+| PE01-1008      | 403              | Access denied                              |
+| PE01-1009      | 403              | You've reached your account's user limit.  |
+| PE01-1010      | 401              | Token is invalid or expired                |
+| PE01-1011      | 401              | Refresh token is invalid or expired        |
+| PE01-1101      | 404              | Object not found                           |
+| PE01-1102      | 409              | Object already exists                      |
+| PE01-1103      | 400              | Operation not allowed                      |
+| PE01-1104      | 412              | Validation error                           |
+| PE01-1105      | 400              | Wrong parameters                           |
+| PE01-1106      | 412              | Illegal state                              |
+| PE01-1107      | 409              | Version stale                              |
+| PE01-1108      | 424              | Transaction error                          |
+| PE01-1109      | 412              | File size limit exceeded.                  |
+| PE01-9000      | 500              | Other error                                |
+| PE01-9001      | 500              | Unhandled error                            |
+| PE01-9002      | 503              | Limit exceeded                             |
+| PE01-9003      | 404              | Resource not found                         |
+| PE01-9004      | 400              | Unrecognized request                       |
+| PE01-9005      | 406              | You've requested uncompatible content type |
 
 ## Error object
 
 The response contains detailed information about the error.
 
-### Syntax
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Example
+#### Example
 
 A validation error:
 
-- JSON:
-- {
--  "status":412,
--  "code":"PE01-1104",
--  "message":"Validation error",
--  "description":"Project.owner - NotNull(may not be null)",
--  "constraintViolations":[
--   {
--    "entityPath":"",
--    "entityType":"eu.abra.primaerp.api.beans.time.Project",
--    "field":"owner",
--    "constraint":"NotNull",
--    "message":"may not be null"
--   }
--  ]
-- }
+```JSON
+{
+	"status":412,
+	"code":"PE01-1104",
+	"message":"Validation error",
+	"description":"Project.owner - NotNull(may not be null)",
+	"constraintViolations":[
+		{
+			"entityPath":"",
+			"entityType":"eu.abra.primaerp.api.beans.time.Project",
+			"field":"owner",
+			"constraint":"NotNull",
+			"message":"may not be null"
+		}
+	]
+}
+```
 
 ## Suppress response code
 
 It is possible to suppress the response code for the primaERP API by adding a query parameter.
 
-### Syntax
+#### Syntax
 
-?suppress\_response\_code=true
+		?suppress_response_code=true
 
 If this parameter is set, the API will always return status 200 and the response will contain the error object with more information.
 
 This option should be used with a limited functions client e.g. Flash or JavaScript.
 
-Ifit is an [JSONP](http://devdoc.primaerp.com/rest/response#jsonp), theAPI should always use the error object query. Rendering the JSONP without this functionality will make the API unreliable.
+If it is an [JSONP](response.md#jsonp-json-with-padding), the API should always use the error object query. Rendering the JSONP without this functionality will make the API unreliable.

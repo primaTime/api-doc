@@ -9,29 +9,29 @@ The deleted resources are moved to the trash.
 
 In order to delete a resource you should use the "DELETE" request. This way the deleted resources are going to be moved to the trash.
 
-### Syntax
+#### Syntax
 
-/{resource}/{id}
+		/{resource}/{id}
 
-### Example
+#### Example
 
-DELETE http://{tenant}.api.primaerp.com/v1/users/{id}
+		DELETE http://{tenant}.api.primaerp.com/v1/users/{id}
 
-Note that it's only possible to retrieve the resources from the trash by using the @deleted view query.
+Note that it's only possible to retrieve the resources from the trash by using the `@deleted` view.
 
-### Syntax
+#### Syntax
 
-/{resource}/@deleted
+		/{resource}/@deleted
 
-/{resource}/{id}/@deleted
+		/{resource}/{id}/@deleted
 
-### Examples
+#### Examples
 
-GET http://{tenant}.api.primaerp.com/v1/users/@deleted
+		GET http://{tenant}.api.primaerp.com/v1/users/@deleted
 
 Returns all deleted users.
 
-GET http://{tenant}.api.primaerp.com/v1/users/{id}/@deleted
+		GET http://{tenant}.api.primaerp.com/v1/users/{id}/@deleted
 
 Returns a deleted user with a given id.
 
@@ -39,31 +39,32 @@ Returns a deleted user with a given id.
 
 Only after removing the resources from the trash are they going to be deleted from the database.
 
-### Syntax
+#### Syntax
 
-/trash/{id}
+		/trash/{id}
 
-### Example
+#### Example
 
-DELETE http://{tenant}.api.primaerp.com/v1/trash/{id}
+		DELETE http://{tenant}.api.primaerp.com/v1/trash/{id}
 
-Note: An {id} means a [TrashItem](http://devdoc.primaerp.com/resources/detail?entity=TrashItem)id, not a deletedObjectId.
+Note: An `{id}` means a [TrashItem](/resources/core/trashitem.md) ID, not a "deletedObjectId".
 
 ## Hard deleting
 
 The entities can be deleted in a hard way, which means that the resources are not going to be stored in the trash, but deleted straight from the database.
 
-### Syntax
+#### Syntax
 
-/{resource}/{id}?hard=true
+		/{resource}/{id}?hard=true
 
-| {resource} = | Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user |
-| --- | --- |
-| {id} = | Resource id |
+Values:
 
-### Example
+- `{resource}` - a module resource such as: `time/projects`, `time/timerecords`, `time/tasks`, etc. Or a global resource such as `user`
+- `{id}` - a resource ID
 
-DELETE http://{tenant}.api.primaerp.com/v1/time/projects/{id}?hard=true
+#### Example
+
+		DELETE http://{tenant}.api.primaerp.com/v1/time/projects/{id}?hard=true
 
 ## Cascade deleting
 
@@ -75,22 +76,23 @@ This ensures that by recovering the parent resource, it will also recover all th
 
 Note: This functionality is currently implemented only for the following resources:
 
-- Bill- relatedBillItemwill be deleted together
-- Client- relatedBill,ContactPersonwill be deleted together
-- Department- relatedDepartmentMemberwill be deleted together
-- Project- relatedProjectMember,TimeRecord,Taskwill be deleted together
-- User- relatedSpendingTimeUnit,SecretKey,Accesswill be deleted together
+- [Bill](resources/billing/bill.md) - related BillItem will be deleted together
+- [Project](resources/time/project.md) - related Impulse, ProjectMember, ProjectWorkTypeLink, Task, TimeRecord will be deleted together
+- [Client](resources/time/client.md) - related Bill, ContactPerson will be deleted together
+- [WorkType](resources/time/worktype.md) - related ProjectWorkTypeLink will be deleted together
+- [Department](resources/core/department.md) - related DepartmentMember will be deleted together
+- [User](resources/core/user.md) - related Access, SecretKey, SpendingTimeUnit will be deleted together
 
 ## Restoring resources from the trash
 
 The primaERP API allows to restore the deleted resources which are in the trash.
 
-### Syntax
+#### Syntax
 
-trash/{id}/$restore
+		/trash/{id}/$restore
 
-### Example
+#### Example
 
-GET http://{tenant}.api.primaerp.com/v1/trash/{id}/$restore
+		GET http://{tenant}.api.primaerp.com/v1/trash/{id}/$restore
 
-Note: An {id} means a [TrashItem](http://devdoc.primaerp.com/resources/detail?entity=TrashItem)id. Not a deletedObjectId.
+Note: An `{id}` means a [TrashItem](/resources/core/trashitem.md) ID, not a "deletedObjectId".

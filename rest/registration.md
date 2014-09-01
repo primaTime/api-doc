@@ -11,83 +11,82 @@ A more detailed description is presented in each method.
 
 ## Check URL
 
-This method checks if a URL exists using the "url" parameter.
+This method checks if a URL exists using the `url` parameter.
 
-### Syntax
+#### Syntax
 
-/register/checkurl?url={url\_prefix}&apikey={apikey}
+		/register/checkurl?url={url_prefix}&apikey={apikey}
 
-values:
+Where `{url_prefix}` is the part of the URL before ".primaerp.com" (e.g. myaccount.primaerp.com) Check if a particular URL account exists.
 
-{url\_prefix} The part of the URL before ".primaerp.com" (e.g. myaccount.primaerp.com) Check if a particular URL account exists.
+#### Example
 
-### Example
-
-GET http://api.primaerp.com/v1/register/checkurl?url=myaccount&apikey={apikey}
+		GET http://api.primaerp.com/v1/register/checkurl?url=myaccount&apikey={apikey}
 
 ## Check e-mail
 
 This method checks if an e-mail address exists using the "email" query parameter.
 
-### Syntax
+#### Syntax
 
-/register/checkemail?email={email}&apikey={apikey}
+		/register/checkemail?email={email}&apikey={apikey}
 
-values:
+Where `{email}` is an address to check if the particular e-mail exists
 
-{email} check if the particular e-mail exists
+#### Example
 
-### Example
-
-GET http://api.primaerp.com/v1/register/checkemail?email=info@example.com&apikey={apikey}
+		GET http://api.primaerp.com/v1/register/checkemail?email=info@example.com&apikey={apikey}
 
 ## Sign up
 
-The "sign up" method creates a new account and returns its' ID for subsequent confirmation using the "confirm" method.
+The "sign up" method creates a new account and returns its ID for subsequent confirmation using the "confirm" method.
 
-The account data is sent in the body of a request which contains information about the [Account](http://devdoc.primaerp.com/resources/detail?entity=Account)and the [User](http://devdoc.primaerp.com/resources/detail?entity=User), who is the owner of the account. The sign up object can contain a list of users who will be registered under one account.
+The account data is sent in the body of a request which contains information about 
+the [account](/resources/core/account.md) and the [user](/resources/core/user.md), who is the owner of the account. 
+The sign up object can contain a list of users (optional) who will be registered under one account.
 
-### Syntax
+#### Syntax
 
-register/signup
+		/register/signup
 
-### Example
+#### Example
 
-POST http://api.primaerp.com/v1/register/signup
+		POST http://api.primaerp.com/v1/register/signup
 
-- JSON:
-- {
--  "account": { ... },
--  "owner": { ... },
--  "users": [
--   { ... },
--   { ... },
--   .
--   .
--   .
--  ]
+```JSON
+{
+	"account": { ... },
+	"owner": { ... },
+	"users": [
+	 { ... },
+	 { ... },
+	 .
+	 .
+	 .
+	]
 }
+```
 
 ## Confirm
 
 This method confirms a new user by using the query parameter "id" obtained from the "sign up" method.
 
-### Syntax
+#### Syntax
 
-auth/confirm?id={id}
+		/auth/confirm/{id}
 
-### Example
+#### Example
 
-POST http://{tenant}.api.primaerp.com/v1/auth/confirm?id={id}
+		POST http://{tenant}.api.primaerp.com/v1/auth/confirm/{id}
 
 ## Find URL
 
-The following method looks for an URL address using the "email" query parameter.
+The following method looks for an URL address using the `email` query parameter.
 
-### Syntax
+#### Syntax
 
-register/findurl?email={email}&apikey={apikey}
+		register/findurl?email={email}&apikey={apikey}
 
-### Example
+#### Example
 
-GET http://api.primaerp.com/v1/register/findurl?email={email}&apikey={apikey}
+		GET http://api.primaerp.com/v1/register/findurl?email={email}&apikey={apikey}
