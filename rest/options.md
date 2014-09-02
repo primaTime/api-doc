@@ -12,7 +12,7 @@ The primaERP API supports CRUD (Create, Read, Update, Delete) operations via the
 | Update (Modify) | [UPDATE](http://en.wikipedia.org/wiki/Update_(SQL)) | [PUT](http://en.wikipedia.org/wiki/PUT_(HTTP)) |
 | Delete (Destroy) | [DELETE](http://en.wikipedia.org/wiki/Delete_(SQL)) | [DELETE](http://en.wikipedia.org/wiki/DELETE_(HTTP)) |
 
-In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation from the query parameters: "?method"
+In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation by the query parameter `?method`.
 
 #### Syntax
 
@@ -216,7 +216,7 @@ It sets the membersCount property on all returned [projects](/resources/time/pro
 
 		GET http://{tenant}.api.primaerp.com/v1/projects/?append=members-count
 
-It sets the billsCount property on all returned [clients](/resources/time/clients.md). 
+It sets the billsCount property on all returned [clients](/resources/time/client.md). 
 
 		GET http://{tenant}.api.primaerp.com/v1/clients/?append=bills-count
 		
