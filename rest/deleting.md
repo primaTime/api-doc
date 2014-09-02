@@ -76,12 +76,12 @@ This ensures that by recovering the parent resource, it will also recover all th
 
 Note: This functionality is currently implemented only for the following resources:
 
-- [Bill](resources/billing/bill.md) - related BillItem will be deleted together
-- [Project](resources/time/project.md) - related Impulse, ProjectMember, ProjectWorkTypeLink, Task, TimeRecord will be deleted together
-- [Client](resources/time/client.md) - related Bill, ContactPerson will be deleted together
-- [WorkType](resources/time/worktype.md) - related ProjectWorkTypeLink will be deleted together
-- [Department](resources/core/department.md) - related DepartmentMember will be deleted together
-- [User](resources/core/user.md) - related Access, SecretKey, SpendingTimeUnit will be deleted together
+- [Bill](/resources/billing/bill.md) - related BillItem will be deleted together
+- [Project](/resources/time/project.md) - related Impulse, ProjectMember, ProjectWorkTypeLink, Task, TimeRecord will be deleted together
+- [Client](/resources/time/client.md) - related Bill, ContactPerson will be deleted together
+- [WorkType](/resources/time/worktype.md) - related ProjectWorkTypeLink will be deleted together
+- [Department](/resources/core/department.md) - related DepartmentMember will be deleted together
+- [User](/resources/core/user.md) - related Access, SecretKey, SpendingTimeUnit will be deleted together
 
 ## Restoring resources from the trash
 

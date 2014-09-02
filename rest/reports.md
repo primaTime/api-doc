@@ -256,7 +256,7 @@ It is the time recorded in this part of period (in milliseconds).
 
 E.g. data interpretation
   
-![Slices per year](images/slices_year.png)
+![Slices per year](/images/slices_year.png)
  
 The data can be [filtered](options.md#filtering) the same way as [time records](/resources/time/timerecord.md). 
 The filter can reduce the amount of "time".

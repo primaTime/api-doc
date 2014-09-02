@@ -7,7 +7,7 @@ This API feature allows one to activate or deactivate an object by using a singl
 
 This method eliminates the need of getting, changing and putting the object back.
 
-This functionality is possible to use for the [Project](/resources/time/project) resources only.
+This functionality is possible to use for the [Project](/resources/time/project.md) resources only.
 
 #### Syntax
 
