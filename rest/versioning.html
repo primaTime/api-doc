@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Versioning | primaERP API - documentation</title>
+        <title>Versioning | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/pricing.html" />
         
 
-        <meta property="og:title" content="Versioning | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Versioning | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.13" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.13" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -335,21 +335,22 @@
                     <section class="normal" id="section-gitbook_22">
                     
                         <h1 id="objects-version">Objects version</h1>
-<p>Each object has a &quot;version&quot; field. It is used to determine whether a user is working with the latest object version. The API returns an error after the PUT of the stale object, see the following example:</p>
-<p>{</p>
-<p> &quot;status&quot;:409,</p>
-<p> &quot;code&quot;:&quot;PE01-1107&quot;,</p>
-<p> &quot;message&quot;:&quot;Version stale&quot;,</p>
-<p> &quot;description&quot;:</p>
-<p>   &quot;Some fields in conflict.</p>
-<p>   Field &#39;begins&#39; old value: Fri Aug 09 14:25:41 CEST 2013</p>
-<p>   Field &#39;begins&#39; new value: Fri Aug 09 14:26:41 CEST 2013</p>
-<p>   Field &#39;note&#39; old value: Change from first user.</p>
-<p>   Field &#39;note&#39; new value: Change from second user.&quot;,</p>
-<p> &quot;constraintViolations&quot;:[]</p>
-<p>}</p>
-<p>This error is possible to suppress by using the query parameterversion_ignore=true. The object will be overwritten regardless of the version.</p>
-<p>If <a href="http://devdoc.primaerp.com/rest/options#set" target="_blank">$set method</a>is used, then it is possible to add a &quot;version&quot; field with the current value. An equivalent of version_ignore=true is to omit a &quot;version&quot; field.</p>
+<p>Each object has a <code>version</code> field. It is used to determine whether a user is working with the latest object version. The API returns an error after the PUT of the stale object, see the following example:</p>
+<pre><code class="lang-JSON">{
+    &quot;status&quot;:409,
+    &quot;code&quot;:&quot;PE01-1107&quot;,
+    &quot;message&quot;:&quot;Version stale&quot;,
+    &quot;description&quot;:
+        &quot;Some fields in conflict.
+        Field &#39;begins&#39; old value: Fri Aug 09 14:25:41 CEST 2013
+        Field &#39;begins&#39; new value: Fri Aug 09 14:26:41 CEST 2013
+        Field &#39;note&#39; old value: Change from first user.
+        Field &#39;note&#39; new value: Change from second user.&quot;,
+    &quot;constraintViolations&quot;:[]
+}
+</code></pre>
+<p>This error is possible to suppress by using the query parameter <code>version_ignore=true</code>. The object will be overwritten regardless of the version.</p>
+<p>If <a href="/rest/options.md#set">$set method</a> is used, then it is possible to add a <code>version</code> field with the current value. An equivalent of <code>version_ignore=true</code> is to omit a <code>version</code> field.</p>
 
                     
                     </section>

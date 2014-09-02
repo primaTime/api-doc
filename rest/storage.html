@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Storage | primaERP API - documentation</title>
+        <title>Storage | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/errors.html" />
         
 
-        <meta property="og:title" content="Storage | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Storage | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.11" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.11" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -337,46 +337,46 @@
                         <h1 id="nosql-storage">NoSQL storage</h1>
 <p>It allows the storing of text data for up to 16384 characters encoded in UTF-8.</p>
 <p>It is possible to specify the content type via the HTTP header &quot;Content-Type&quot;</p>
-<h3 id="example-">Example:</h3>
-<p>Content-Type: application/json</p>
-<p>Content-Type: text/plain</p>
-<p>The retrieved data will have the same content type.</p>
+<h4 id="example-">Example:</h4>
+<pre><code>    Content-Type: application/json
+
+    Content-Type: text/plain
+</code></pre><p>The retrieved data will have the same content type.</p>
 <p>The data is stored in keys and structured into groups. It also possible to determine the scope of visibility.</p>
-<p>The Scope can be<em>private</em>(default) or<em>public</em>.</p>
+<p>The Scope can be <code>private</code>(default) or <code>public</code>.</p>
 <p>Private data is visible only for the currently logged in user.</p>
 <p>Public data is shared between all users.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/storage/{group}/{key}/{scope}</p>
-<h2 id="examples">Examples</h2>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /storage/{group}/{key}/{scope}
+</code></pre><h2 id="examples">Examples</h2>
 <p>If you send the following request:</p>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey" target="_blank">http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey</a></p>
-<p>With the content type in the header</p>
-<blockquote>
-<p>Content-Type: text/plain</p>
-</blockquote>
-<p>Together with some content in the body</p>
-<blockquote>
-<p>Some data.</p>
-</blockquote>
-<p>Then you will receive it back with the same content type in the response.</p>
-<h3 id="example-">Example:</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey" target="_blank">http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey</a></p>
-<p>&lt; Content-Type: text/plain</p>
-<p>&lt; Some data.</p>
-<p>Public data can be stored via the following request.</p>
-<h3 id="example-">Example:</h3>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/storage/exampleGroup/anotherKey/public" target="_blank">http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/anotherKey/public</a></p>
-<blockquote>
-<p>Content-Type: text/plain</p>
-<p>Some public data.</p>
-</blockquote>
-<p>If you have more items in the same group, then you can get a simple list of them.</p>
-<h3 id="example-">Example:</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/storage/exampleGroup" target="_blank">http://{tenant}.api.primaerp.com/v1/storage/exampleGroup</a></p>
-<p>[</p>
-<p> {&quot;itemKey&quot;:&quot;someKey&quot;,&quot;publicScope&quot;:false,&quot;contentType&quot;:&quot;text/plain&quot;},</p>
-<p> {&quot;itemKey&quot;:&quot;anotherKey&quot;,&quot;publicScope&quot;:true,&quot;contentType&quot;:&quot;text/plain&quot;}</p>
-<p>]</p>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey
+</code></pre><p>With the content type in the header</p>
+<pre><code>    &gt; Content-Type: text/plain
+</code></pre><p>Together with some content in the body</p>
+<pre><code>    &gt; Some data.
+</code></pre><p>Then you will receive it back with the same content type in the response.</p>
+<h4 id="example-">Example:</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/someKey
+
+    &lt; Content-Type: text/plain
+
+    &lt; Some data.
+</code></pre><p>Public data can be stored via the following request.</p>
+<h4 id="example-">Example:</h4>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/storage/exampleGroup/anotherKey/public
+
+    &gt; Content-Type: text/plain
+
+    &gt; Some public data.
+</code></pre><p>If you have more items in the same group, then you can get a simple list of them.</p>
+<h4 id="example-">Example:</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/storage/exampleGroup
+</code></pre><pre><code class="lang-JSON">[
+    {"<span class="hljs-attribute">itemKey</span>":<span class="hljs-value"><span class="hljs-string">"someKey"</span></span>,"<span class="hljs-attribute">publicScope</span>":<span class="hljs-value"><span class="hljs-literal">false</span></span>,"<span class="hljs-attribute">contentType</span>":<span class="hljs-value"><span class="hljs-string">"text/plain"</span></span>},
+    {"<span class="hljs-attribute">itemKey</span>":<span class="hljs-value"><span class="hljs-string">"anotherKey"</span></span>,"<span class="hljs-attribute">publicScope</span>":<span class="hljs-value"><span class="hljs-literal">true</span></span>,"<span class="hljs-attribute">contentType</span>":<span class="hljs-value"><span class="hljs-string">"text/plain"</span></span>}
+]
+</code></pre>
 
                     
                     </section>

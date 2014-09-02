@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Registration | primaERP API - documentation</title>
+        <title>Registration | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/authentication.html" />
         
 
-        <meta property="og:title" content="Registration | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Registration | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.4" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.4" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -340,55 +340,53 @@
 <p>For a successful authentication, it should be called the &quot;sign up&quot; and &quot;confirm&quot; methods.</p>
 <p>A more detailed description is presented in each method.</p>
 <h2 id="check-url">Check URL</h2>
-<p>This method checks if a URL exists using the &quot;url&quot; parameter.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/register/checkurl?url={url_prefix}&amp;apikey={apikey}</p>
-<p>values:</p>
-<p>{url_prefix} The part of the URL before &quot;.primaerp.com&quot; (e.g. myaccount.primaerp.com) Check if a particular URL account exists.</p>
-<h3 id="example">Example</h3>
-<p>GET <a href="http://api.primaerp.com/v1/register/checkurl?url=myaccount&amp;apikey={apikey}" target="_blank">http://api.primaerp.com/v1/register/checkurl?url=myaccount&amp;apikey={apikey}</a></p>
-<h2 id="check-e-mail">Check e-mail</h2>
+<p>This method checks if a URL exists using the <code>url</code> parameter.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /register/checkurl?url={url_prefix}&amp;apikey={apikey}
+</code></pre><p>Where <code>{url_prefix}</code> is the part of the URL before &quot;.primaerp.com&quot; (e.g. myaccount.primaerp.com) Check if a particular URL account exists.</p>
+<h4 id="example">Example</h4>
+<pre><code>    GET http://api.primaerp.com/v1/register/checkurl?url=myaccount&amp;apikey={apikey}
+</code></pre><h2 id="check-e-mail">Check e-mail</h2>
 <p>This method checks if an e-mail address exists using the &quot;email&quot; query parameter.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/register/checkemail?email={email}&amp;apikey={apikey}</p>
-<p>values:</p>
-<p>{email} check if the particular e-mail exists</p>
-<h3 id="example">Example</h3>
-<p>GET <a href="http://api.primaerp.com/v1/register/checkemail?email=info@example.com&amp;apikey={apikey}" target="_blank">http://api.primaerp.com/v1/register/checkemail?email=info@example.com&amp;apikey={apikey}</a></p>
-<h2 id="sign-up">Sign up</h2>
-<p>The &quot;sign up&quot; method creates a new account and returns its&#39; ID for subsequent confirmation using the &quot;confirm&quot; method.</p>
-<p>The account data is sent in the body of a request which contains information about the <a href="http://devdoc.primaerp.com/resources/detail?entity=Account" target="_blank">Account</a>and the <a href="http://devdoc.primaerp.com/resources/detail?entity=User" target="_blank">User</a>, who is the owner of the account. The sign up object can contain a list of users who will be registered under one account.</p>
-<h3 id="syntax">Syntax</h3>
-<p>register/signup</p>
-<h3 id="example">Example</h3>
-<p>POST <a href="http://api.primaerp.com/v1/register/signup" target="_blank">http://api.primaerp.com/v1/register/signup</a></p>
-<ul>
-<li>JSON:</li>
-<li>{</li>
-<li>&quot;account&quot;: { ... },</li>
-<li>&quot;owner&quot;: { ... },</li>
-<li>&quot;users&quot;: [</li>
-<li>{ ... },</li>
-<li>{ ... },</li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-<li>]
-}</li>
-</ul>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /register/checkemail?email={email}&amp;apikey={apikey}
+</code></pre><p>Where <code>{email}</code> is an address to check if the particular e-mail exists</p>
+<h4 id="example">Example</h4>
+<pre><code>    GET http://api.primaerp.com/v1/register/checkemail?email=info@example.com&amp;apikey={apikey}
+</code></pre><h2 id="sign-up">Sign up</h2>
+<p>The &quot;sign up&quot; method creates a new account and returns its ID for subsequent confirmation using the &quot;confirm&quot; method.</p>
+<p>The account data is sent in the body of a request which contains information about 
+the <a href="/resources/core/account.md">account</a> and the <a href="/resources/core/user.md">user</a>, who is the owner of the account. 
+The sign up object can contain a list of users (optional) who will be registered under one account.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /register/signup
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    POST http://api.primaerp.com/v1/register/signup
+</code></pre><pre><code class="lang-JSON">{
+    &quot;account&quot;: { ... },
+    &quot;owner&quot;: { ... },
+    &quot;users&quot;: [
+     { ... },
+     { ... },
+     .
+     .
+     .
+    ]
+}
+</code></pre>
 <h2 id="confirm">Confirm</h2>
 <p>This method confirms a new user by using the query parameter &quot;id&quot; obtained from the &quot;sign up&quot; method.</p>
-<h3 id="syntax">Syntax</h3>
-<p>auth/confirm?id={id}</p>
-<h3 id="example">Example</h3>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/auth/confirm?id={id}" target="_blank">http://{tenant}.api.primaerp.com/v1/auth/confirm?id={id}</a></p>
-<h2 id="find-url">Find URL</h2>
-<p>The following method looks for an URL address using the &quot;email&quot; query parameter.</p>
-<h3 id="syntax">Syntax</h3>
-<p>register/findurl?email={email}&amp;apikey={apikey}</p>
-<h3 id="example">Example</h3>
-<p>GET <a href="http://api.primaerp.com/v1/register/findurl?email={email}&amp;apikey={apikey}" target="_blank">http://api.primaerp.com/v1/register/findurl?email={email}&amp;apikey={apikey}</a></p>
-
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /auth/confirm/{id}
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/auth/confirm/{id}
+</code></pre><h2 id="find-url">Find URL</h2>
+<p>The following method looks for an URL address using the <code>email</code> query parameter.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    register/findurl?email={email}&amp;apikey={apikey}
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    GET http://api.primaerp.com/v1/register/findurl?email={email}&amp;apikey={apikey}
+</code></pre>
                     
                     </section>
                 

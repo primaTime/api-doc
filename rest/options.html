@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Query string options | primaERP API - documentation</title>
+        <title>Query string options | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/response.html" />
         
 
-        <meta property="og:title" content="Query string options | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Query string options | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.2" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.2" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -336,7 +336,7 @@
                     
                         <h1 id="query-string-options">Query string options</h1>
 <h2 id="crud-operations">CRUD operations</h2>
-<p>primaERP supports CRUD (Create, Read, Update, Delete) operations via the HTTP Header.</p>
+<p>The primaERP API supports CRUD (Create, Read, Update, Delete) operations via the HTTP Header.</p>
 <table>
 <thead>
 <tr>
@@ -359,7 +359,7 @@
 <tr>
 <td>Update (Modify)</td>
 <td><a href="http://en.wikipedia.org/wiki/Update_(SQL" target="_blank">UPDATE</a>)</td>
-<td><a href="http://en.wikipedia.org/wiki/PUT_(HTTP" target="_blank">PUT</a>)/ <a href="http://en.wikipedia.org/wiki/PATCH_(HTTP" target="_blank">PATCH</a>)</td>
+<td><a href="http://en.wikipedia.org/wiki/PUT_(HTTP" target="_blank">PUT</a>)</td>
 </tr>
 <tr>
 <td>Delete (Destroy)</td>
@@ -368,114 +368,87 @@
 </tr>
 </tbody>
 </table>
-<p>In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation from the query parameters: &quot;?method&quot;</p>
-<h3 id="syntax">Syntax</h3>
-<p>PUT =?method=PUT</p>
-<p>DELETE =?method=DELETE</p>
+<p>In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation by the query parameter <code>?method</code>.</p>
+<h4 id="syntax">Syntax</h4>
+<ul>
+<li>PUT = <code>?method=PUT</code></li>
+<li>DELETE = <code>?method=DELETE</code></li>
+</ul>
 <h2 id="-set">$set</h2>
-<p>This is a special case used to give values to the object&#39;s fields. This query can be used with multiple parameters.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}/{id}/$set?object_field1=value1&amp;object_field2=value2</p>
-<p>Value:</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>{id} =</td>
-<td>resource id</td>
-</tr>
-</tbody>
-</table>
-<h3 id="example">Example</h3>
+<p>This is a special case used to set values to the object&#39;s fields. This query can be used with multiple parameters.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/{id}/$set?object_field1=value1&amp;object_field2=value2
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code></li>
+<li><code>{id}</code> - a resource ID</li>
+</ul>
+<h4 id="example">Example</h4>
 <p>For a single field.</p>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP</a></p>
-<p>For multiple fields.</p>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP¬e=important" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP¬e=important</a></p>
-<h2 id="order-response-data">Order response data</h2>
-<p>The primaERP API provides the query string option to sort the entries collection. It also supports multi sorting by changing the field names.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}/$orderby = object_field1 {parameter1}, object_field2 {parameter2}</p>
-<p>Value:</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Parameter</p>
-<table>
-<thead>
-<tr>
-<th>asc</th>
-<th>It sorts the fields in ascending order</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>desc</td>
-<td>It sorts the fields in descending order</td>
-</tr>
-</tbody>
-</table>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP
+</code></pre><p>For multiple fields.</p>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/time/projects/d18ae895-7266-4e9f-87f2-1a426f7e29ec/$set?name=primaERP&amp;note=important
+</code></pre><h2 id="inner-collections">Inner Collections</h2>
+<p>The API can provide the inner collections for some resources.</p>
+<h4 id="syntax-">Syntax:</h4>
+<pre><code>    /{resource}/{id}/{inner collection}
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as <code>time/projects</code> or a global resource such as <code>user</code>.</li>
+<li><code>{inner collection}</code> - an inner resource such as <code>tasks</code> or <code>timerecords</code>.</li>
+</ul>
+<h4 id="example-">Example:</h4>
+<p>The project contains a collection of tasks.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/{id}/tasks
+</code></pre><h2 id="order-response-data">Order response data</h2>
+<p>The primaERP API provides the query string option to sort the entries collection. It also supports multi sorting by chaining the field names.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/$orderby = object_field1 {order}, object_field2 {order}
+</code></pre><p>Value:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as <code>time/projects</code> or a global resource such as <code>user</code>.</li>
+<li><code>{order}</code> - <code>asc</code> (ascending order), <code>desc</code> (descending order) </li>
+</ul>
 <p>* Note that the default order is ascendant.</p>
-<h3 id="example">Example</h3>
-<p>This code sorts the projects by name</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?$orderby=name" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?$orderby=name</a></p>
-<p>This code sorts the projects by name in a descending order.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?$orderby=name" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?$orderby=name</a> desc</p>
-<p>For multi sorting.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords?$orderby=start" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords?$orderby=start</a> desc, description asc</p>
-<h2 id="paging">Paging</h2>
+<h4 id="example">Example</h4>
+<p>This request sorts the projects by name</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects?$orderby=name
+</code></pre><p>This request sorts the projects by name in a descending order.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects?$orderby=name desc
+</code></pre><p>For multi sorting.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/timerecords?$orderby=start desc, description asc
+</code></pre><h2 id="paging">Paging</h2>
 <p>The primaERP API returns up to 1000 records. Paging parameters can be used for paging records in the table.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}/?$top = number_of_records</p>
-<p>/{resource}/?$skip = number_of_records</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example">Example</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?$top=10-" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?$top=10-</a> returns the first 10 records</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?$skip=10&amp;top=10-" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?$skip=10&amp;top=10-</a> returns the next 10 records starting with the 11th</p>
-<h2 id="filtering">Filtering</h2>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/?$top = number_of_records
+
+    /{resource}/?$skip = number_of_records
+</code></pre><p>Where <code>{resource}</code> is a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code>.</p>
+<h4 id="example">Example</h4>
+<p>This request returns the first 10 records</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects?$top=10
+</code></pre><p>This request returns the next 10 records starting with the 11th</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects?$skip=10&amp;top=10
+</code></pre><h2 id="filtering">Filtering</h2>
 <p>The API supports filtering by fields:</p>
 <table>
 <thead>
 <tr>
-<th><strong>Operator</strong></th>
-<th><strong>Description</strong></th>
-<th><strong>Example</strong></th>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Logical Operators</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Eq</td>
 <td>Equal</td>
-<td><strong>String</strong> /time/projects?$filter=name eq &#39;Project one&#39; <strong>Inner object</strong> /time/projects?$filter=owner/firstName eq &#39;John&#39; <strong>Boolean</strong> /time/projects?$filter=billable eq true <strong>Number</strong> /time/projects?$filter=priceBudget eq 100 <strong>Date and time</strong> /time/projects?$filter=begins eq datetime&#39;2013-06-15T00:00:00.000Z&#39;</td>
+<td><strong>String</strong> <br />/time/projects?$filter=name eq &#39;Project one&#39; <br /><strong>Inner object</strong> <br />/time/projects?$filter=owner/firstName eq &#39;John&#39; <br /><strong>Boolean</strong> <br />/time/projects?$filter=billable eq true <br /><strong>Number</strong> <br />/time/projects?$filter=priceBudget eq 100 <br /><strong>Date and time</strong> <br />/time/projects?$filter=begins eq datetime&#39;2013-06-15T00:00:00.000Z&#39;</td>
 </tr>
 <tr>
 <td>Ne</td>
@@ -519,6 +492,8 @@
 </tr>
 <tr>
 <td><strong>Arithmetic Operators</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>Add</td>
@@ -547,9 +522,11 @@
 </tr>
 <tr>
 <td><strong>Grouping Operators</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><input name='quiz-row-12-31' type='radio'/></td>
+<td><input name='quiz-row-12-23' type='radio'/></td>
 <td>Precedence grouping</td>
 <td>/time/projects?$filter=(priceBudget sub 5) gt 10</td>
 </tr>
@@ -559,13 +536,14 @@
 <table>
 <thead>
 <tr>
-<th><strong>Function</strong></th>
-<th><strong>Example</strong></th>
+<th>Function</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>String function</strong></td>
+<td></td>
 </tr>
 <tr>
 <td>substring( fieldName, index )</td>
@@ -610,60 +588,49 @@
 </tbody>
 </table>
 <h3 id="complex-examples">Complex examples</h3>
-<p>The following example searches active <a href="http://devdoc.primaerp.com/resources/detail?entity=User" target="_blank">users</a>whose first name is John.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/users/?$filter=active" target="_blank">http://{tenant}.api.primaerp.com/v1/users/?$filter=active</a> eq true and substringof(&#39;john&#39;,tolower(firstName)) eq true</p>
-<p>The following example returns active <a href="http://devdoc.primaerp.com/resources/detail?entity=Project" target="_blank">projects</a>which are processed for a given client.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/?$filter=active" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=active</a> eq true and client/id eq &#39;2a1e546a-81a6-4af6-bfb4-65c57ad15a9f&#39;</p>
-<p>The following example returns <a href="http://devdoc.primaerp.com/resources/detail?entity=TimeRecord" target="_blank">time records</a>which were recorded in January by a given user.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords/?$filter=start" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords/?$filter=start</a> ge datetime&#39;2014-01-01T00:00:00Z&#39; and start lt datetime&#39;2014-01-31T23:59:59Z&#39; and user/id eq &#39;cc41790b-59f4-4520-81e1-ac10c74e9454&#39;</p>
-<p>The following example returns <a href="http://devdoc.primaerp.com/resources/detail?entity=Project" target="_blank">projects</a>which were updated or created on a given date (e.g. since the last synchronization).</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/?$filter=(updatedAt" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=(updatedAt</a> gt datetime&#39;2012-12-31T23:00:00Z&#39;) or (createdAt gt datetime&#39;2012-12-31T23:00:00Z&#39;)</p>
-<p>The following example returns the undone <a href="http://devdoc.primaerp.com/resources/detail?entity=Task" target="_blank">tasks</a>of a given user. Please note, these tasks are from the active projects only.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/?$filter=(done" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/?$filter=(done</a> eq false or done eq null) and owner/id eq &#39;cc41790b-59f4-4520-81e1-ac10c74e9454&#39; and project/active eq true</p>
-<h2 id="counting-records">Counting records</h2>
+<p>The following example searches active <a href="/resources/core/user.md">users</a> whose first name is John.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/users/?$filter=active eq true and substringof(&#39;john&#39;,tolower(firstName)) eq true
+</code></pre><p>The following example returns active <a href="/resources/time/project.md">projects</a> which are processed for a given client.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=active eq true and client/id eq &#39;2a1e546a-81a6-4af6-bfb4-65c57ad15a9f&#39;
+</code></pre><p>The following example returns <a href="/resources/time/timerecord.md">time records</a> which were recorded in January by a given user.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/timerecords/?$filter=start ge datetime&#39;2014-01-01T00:00:00Z&#39; and start lt datetime&#39;2014-01-31T23:59:59Z&#39; and user/id eq &#39;cc41790b-59f4-4520-81e1-ac10c74e9454&#39;
+</code></pre><p>The following example returns <a href="/resources/time/project.md">projects</a> which were updated or created on a given date (e.g. since the last synchronization).</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=(updatedAt gt datetime&#39;2012-12-31T23:00:00Z&#39;) or (createdAt gt datetime&#39;2012-12-31T23:00:00Z&#39;)
+</code></pre><p>The following example returns the undone <a href="/resources/time/task.md">tasks</a> of a given user. Please note, these tasks are from the active projects only.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/tasks/?$filter=(done eq false or done eq null) and owner/id eq &#39;cc41790b-59f4-4520-81e1-ac10c74e9454&#39; and project/active eq true
+</code></pre><h2 id="counting-records">Counting records</h2>
 <p>The primaERP API provides a special method for returning a text/plain response with the amount of requested records.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}/$count</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example">Example</h3>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/$count
+</code></pre><p>Where <code>{resource}</code> is a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code>.</p>
+<h4 id="example">Example</h4>
 <p>This example will return the amount of projects.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/$count" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/$count</a></p>
-<p>Note that the method$countsupports also additional queries:</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/$count/?$filter=priceBudget" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/$count/?$filter=priceBudget</a> ge 10</p>
-<h2 id="aggregating-records">Aggregating records</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/$count
+</code></pre><p>Note that the method <code>$count</code> supports also additional queries:</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/$count/?$filter=priceBudget ge 10
+</code></pre><h2 id="aggregating-records">Aggregating records</h2>
 <p>The API allows the use of aggregation functions over resources for the simplification of the client&#39;s applications.</p>
 <p>It&#39;s possible to return multiple functions in one request to the API. The list of aggregated functions is still fixed and cannot be used for any entity or any field.</p>
-<ul>
-<li>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/?append=timerecords-count" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/?append=timerecords-count</a></li>
-<li>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/?append=tasks-count" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count</a></li>
-<li><p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/?append=members-count" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/?append=members-count</a></p>
-</li>
-<li><p>GET <a href="http:///{tenant}.api.primaerp.com/v1/clients/?append=bills-count" target="_blank">http://{tenant}.api.primaerp.com/v1/clients/?append=bills-count</a></p>
-</li>
-<li>GET <a href="http:///{tenant}.api.primaerp.com/v1/clients/?append=projects-count" target="_blank">http://{tenant}.api.primaerp.com/v1/clients/?append=projects-count</a></li>
-</ul>
-<p>Example of chaining aggregated functions</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/?append=tasks-count,members-count" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count,members-count</a></p>
-<h2 id="dummy-objects">Dummy objects</h2>
+<p>It sets the timeRecordsCount property on all returned <a href="/resources/time/project.md">projects</a>.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/?append=timerecords-count
+</code></pre><p> It sets the tasksCount property on all returned <a href="/resources/time/project.md">projects</a>.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count
+</code></pre><p>It sets the membersCount property on all returned <a href="/resources/time/project.md">projects</a>. </p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/?append=members-count
+</code></pre><p>It sets the billsCount property on all returned <a href="/resources/time/client.md">clients</a>. </p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/clients/?append=bills-count
+</code></pre><p>It sets the projectsCount property on all returned <a href="/resources/time/client.md">clients</a>.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/clients/?append=projects-count
+</code></pre><p>It sets the tasksCount and the membersCount properties on all returned <a href="/resources/time/project.md">projects</a> (example of chaining aggregated functions). </p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count,members-count
+</code></pre><h2 id="dummy-objects">Dummy objects</h2>
 <p>The API provides a method for generating a sample object with random values.</p>
 <p>Types of returned objects are either JSON or XML according to the HTTP &quot;Accept&quot; Header.</p>
-<h3 id="syntax">Syntax</h3>
-<p>$dummy</p>
-<h3 id="example">Example</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/$dummy" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/$dummy</a></p>
-
+<h4 id="syntax">Syntax</h4>
+<pre><code>    $dummy
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/$dummy
+</code></pre>
                     
                     </section>
                 

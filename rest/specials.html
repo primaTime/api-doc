@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Specials | primaERP API - documentation</title>
+        <title>Specials | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/views.html" />
         
 
-        <meta property="og:title" content="Specials | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Specials | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.8" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.8" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -336,19 +336,19 @@
                     
                         <h1 id="specials">Specials</h1>
 <h2 id="activating-and-deactivating-an-object">Activating and deactivating an object</h2>
-<p>This API feature allows one to activate or deactivatean object by using a single request.</p>
+<p>This API feature allows one to activate or deactivate an object by using a single request.</p>
 <p>This method eliminates the need of getting, changing and putting the object back.</p>
-<h2 id="syntax-for-activate">Syntax for Activate</h2>
-<p>$activate</p>
-<h2 id="syntax-for-deactivate">Syntax for Deactivate</h2>
-<p>$deactivate</p>
-<h3 id="example">Example</h3>
-<p>Activating objects:</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/{id}/$activate" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/{id}/$activate</a></p>
-<p>Deactivating objects</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/projects/{id}/$deactivate" target="_blank">http://{tenant}.api.primaerp.com/v1/projects/{id}/$deactivate</a></p>
-<p>This functionality is possible to use for the <a href="http://devdoc.primaerp.com/resources/detail?entity=Project" target="_blank">Project</a>resources only.</p>
+<p>This functionality is possible to use for the <a href="/resources/time/project.md">Project</a> resources only.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    $activate
 
+    $deactivate
+</code></pre><h4 id="example">Example</h4>
+<p>Activating objects:</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$activate
+</code></pre><p>Deactivating objects</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$deactivate
+</code></pre>
                     
                     </section>
                 

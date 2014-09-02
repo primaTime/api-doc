@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Views | primaERP API - documentation</title>
+        <title>Views | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/deleting.html" />
         
 
-        <meta property="og:title" content="Views | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Views | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.7" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.7" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -337,31 +337,31 @@
                         <h1 id="views">Views</h1>
 <h2 id="overview">Overview</h2>
 <p>The views help to simply affect the right set of records.</p>
-<p>The API returns records by using &quot;Views&quot; in relation to the authorized user.</p>
+<p>The API returns records by using &quot;views&quot; in relation to the authorized user.</p>
 <h2 id="impulses">Impulses</h2>
 <p>The API returns all impulses where the mode is set to STOPWATCH.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/impulses/@stopwatch" target="_blank">http://{tenant}.api.primaerp.com/v1/time/impulses/@stopwatch</a></p>
-<h2 id="projects">Projects</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/impulses/@stopwatch
+</code></pre><h2 id="projects">Projects</h2>
 <p>The API returns all projects where the user is set as a member.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/@member" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/@member</a></p>
-<p>The API returns all projects where the user is set as an owner.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/@own" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/@own</a></p>
-<h2 id="departments">Departments</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/@member
+</code></pre><p>The API returns all projects where the user is set as an owner.</p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/@own
+</code></pre><h2 id="departments">Departments</h2>
 <p>The API returns all departments where the user is set as a member.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/departments/@member" target="_blank">http://{tenant}.api.primaerp.com/v1/departments/@member</a></p>
-<h2 id="users">Users</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/departments/@member
+</code></pre><h2 id="users">Users</h2>
 <p>The API returns the authorized user.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/users/@self" target="_blank">http://{tenant}.api.primaerp.com/v1/users/@self</a></p>
-<h2 id="accounts">Accounts</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/users/@self
+</code></pre><h2 id="accounts">Accounts</h2>
 <p>The API returns the object of the account.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/accounts/@own" target="_blank">http://{tenant}.api.primaerp.com/v1/accounts/@own</a></p>
-<h2 id="accesses">Accesses</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/accounts/@own
+</code></pre><h2 id="accesses">Accesses</h2>
 <p>The API returns all accesses which exceed the license limit.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/accesses/@exceeded" target="_blank">http://{tenant}.api.primaerp.com/v1/accesses/@exceeded</a></p>
-<h2 id="deleted-resources">Deleted resources</h2>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/accesses/@exceeded
+</code></pre><h2 id="deleted-resources">Deleted resources</h2>
 <p>The API returns resources which were deleted and placed in the trash.</p>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects/@deleted" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects/@deleted</a></p>
-<p>To find out more, check on the <a href="http://devdoc.primaerp.com/rest/deleting#deleted" target="_blank">Deleting page.</a></p>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects/@deleted
+</code></pre><p>To find out more, check on the <a href="/rest/deleting.md">Deleting page.</a></p>
 
                     
                     </section>

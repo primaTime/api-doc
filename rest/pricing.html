@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Pricing | primaERP API - documentation</title>
+        <title>Pricing | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/storage.html" />
         
 
-        <meta property="og:title" content="Pricing | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Pricing | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.12" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.12" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -336,22 +336,23 @@
                     
                         <h1 id="time-records-pricing">Time records pricing</h1>
 <h2 id="price-definition">Price definition</h2>
-<p>The Prices are defined via the price list. See <a href="http://devdoc.primaerp.com/reference/v1/billing/time" target="_blank">price lists resource</a>.</p>
+<p>The Prices are defined via the price list. See <a href="/resources/billing/timepricelist.md">price lists resource</a>.</p>
 <p>E.g.: The hourly price for one user is stored in the pricelist below:</p>
-<p>{</p>
-<p> &quot;user&quot; : { &quot;id&quot; : &quot;d2463429-0f35-4dfc-b8f9-697ea3a64ef8&quot; },</p>
-<p> &quot;price&quot; : 100.0</p>
-<p>}</p>
+<pre><code class="lang-JSON">{
+    "<span class="hljs-attribute">user</span>" : <span class="hljs-value">{ "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d2463429-0f35-4dfc-b8f9-697ea3a64ef8"</span> </span>}</span>,
+    "<span class="hljs-attribute">price</span>" : <span class="hljs-value"><span class="hljs-number">100.0</span>
+</span>}
+</code></pre>
 <h2 id="price-calculation">Price calculation</h2>
 <p>The price is calculated based on the following priorities, where the higher number has the higher priority:</p>
 <ol>
 <li>One price for all</li>
 <li>Price per work type (activity)</li>
-<li>Price per user(employee)</li>
+<li>Price per <strong>user</strong> (employee)</li>
 <li>Price per user per work type</li>
-<li>Price per client</li>
+<li>Price per <strong>client</strong></li>
 <li>Price per client per work type</li>
-<li>Price per project</li>
+<li>Price per <strong>project</strong></li>
 <li>Price per project per work type</li>
 <li>Price per project per user</li>
 <li>Price per project per task</li>
@@ -359,47 +360,32 @@
 <p>E.g.: In this example there are two types of price lists. The first one has a set price per user per work type. The second one has a set price per project. Therefore the price will then be calculated by the second one.</p>
 <h2 id="automated-calculation">Automated calculation</h2>
 <p>It is used to calculate the price when saving the time record.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <p>The time record can be stored or updated with the following query parameter</p>
-<p>/time/timerecords?calculate_price=true</p>
-<p>/time/timerecords/{id}?calculate_price=true</p>
-<h3 id="example">Example</h3>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords?calculate\_price=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords?calculate\_price=true</a></p>
-<p>PUT <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate\_price=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate\_price=true</a></p>
-<p>The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.</p>
+<pre><code>    /time/timerecords?calculate_price=true
+
+    /time/timerecords/{id}?calculate_price=true
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/time/timerecords?calculate_price=true
+
+    PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate_price=true
+</code></pre><p>The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.</p>
 <h2 id="price-update">Price update</h2>
 <p>It is used to update the price when the price list was changed.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/time/timerecords/{id}/$updateprice</p>
-<p>Value:</p>
-<table>
-<thead>
-<tr>
-<th>{id} =</th>
-<th>resource id</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example">Example</h3>
-<p>PUT <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice</a></p>
-<p>The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /time/timerecords/{id}/$updateprice
+</code></pre><p>Where <code>{resource}</code> is a resource ID.</p>
+<h4 id="example">Example</h4>
+<pre><code>    PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice
+</code></pre><p>The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.</p>
 <h2 id="calculation-on-demand">Calculation on demand</h2>
 <p>It is used in case you want to know the price of the time record before saving.</p>
-<h3 id="syntax">Syntax</h3>
-<p>You can post the time record to
-#
-[ANNOTATION:  </p>
-<p>BY &#39;Deborah Baur&#39;<br>ON &#39;2014-08-08T23:13:00&#39;DB<br>NOTE: &#39;Don&#39;t understand… with the method?&#39;]
-method</p>
-<p>/time/timerecords/$calculateprice</p>
-<h3 id="example">Example</h3>
-<p>POST <a href="http:///{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice" target="_blank">http://{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice</a></p>
-<p>This method returns the price which is calculated by the duration of the time record and its corresponding price list (according to the priorities).</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /time/timerecords/$calculateprice
+</code></pre><h4 id="example">Example</h4>
+<p>You can post the time record </p>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice
+</code></pre><p>This method returns the price which is calculated by the duration of the time record and its corresponding price list (according to the priorities).</p>
 <p>Note that a time record is NOT stored neither updated!</p>
 
                     

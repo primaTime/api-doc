@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Response | primaERP API - documentation</title>
+        <title>Response | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/README.html" />
         
 
-        <meta property="og:title" content="Response | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Response | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.1" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.1" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -338,117 +338,91 @@
 <h2 id="response-encoding">Response encoding</h2>
 <p>All responses from the API are encoded in UTF-8</p>
 <h2 id="response-format">Response format</h2>
-<p>primaERP API supports two response formats, JSON and XML, where the <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a>format is the default one.</p>
-<p>Response format is defined by the HTTP header &quot; <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1" target="_blank">Accept</a>&quot;:</p>
-<h3 id="syntax">Syntax</h3>
+<p>The primaERP API supports two response formats, JSON and XML, where the <a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> format is the default one.</p>
+<p>Response format is defined by the HTTP header <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1" target="_blank">Accept</a>:</p>
+<h4 id="syntax">Syntax</h4>
 <ul>
-<li>JSON:Accept: application/json</li>
-<li>XML:Accept: application/xml</li>
+<li>JSON: <code>Accept: application/json</code></li>
+<li>XML: <code>Accept: application/xml</code></li>
 </ul>
 <p>If your HTTP client does not support sending the HTTP header &quot;Accept&quot; or it sends wrong types as such is the case with the JQuery, you can use an alternative method to define the response by using the query parameter &quot;format&quot;:</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <ul>
-<li>JSON:/{resource}/?format=json</li>
-<li>XML:/{resource}/?format=xml</li>
+<li>JSON: <code>/{resource}/?format=json</code></li>
+<li>XML: <code>/{resource}/?format=xml</code></li>
 </ul>
-<p>Value:</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example">Example</h3>
+<p>Where <code>{resource}</code> is a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code>.</p>
+<h4 id="example">Example</h4>
 <ul>
-<li>JSON:GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?format=json" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?format=json</a></li>
-<li>XML:GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects?format=xml" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects?format=xml</a></li>
+<li>JSON: <code>GET http://{tenant}.api.primaerp.com/v1/time/projects?format=json</code></li>
+<li>XML: <code>GET http://{tenant}.api.primaerp.com/v1/time/projects?format=xml</code></li>
 </ul>
 <h2 id="jsonp-json-with-padding-">JSONP (JSON with padding)</h2>
-<p>primaERP API also supportsthe <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">JSONP</a>pattern.</p>
+<p>The primaERP API also supports the <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">JSONP</a> pattern.</p>
 <p>To return the JSON padded, you should use the callback query parameter.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}.json/?callback=functionName</p>
-<h3 id="example">Example</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/projects.json?callback=projectList" target="_blank">http://{tenant}.api.primaerp.com/v1/time/projects.json?callback=projectList</a></p>
-<p>JSONP always returns the status code 200 in the following way:?suppress_response_code=true</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}.json/?callback=functionName
+</code></pre><h4 id="example">Example</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects.json?callback=projectList
+</code></pre><p>JSONP always returns the status code 200 in the following way: <code>?suppress_response_code=true</code></p>
 <h2 id="date-format">Date format</h2>
 <p>PrimaERP uses the following date formatting:</p>
 <ul>
-<li>ISO 8601format for XML</li>
-<li>Microsoft AJAX alikeformat for JSON: &quot;/Date(1198908717056)/&quot;, where the number is in milliseconds since January 1st 1970.</li>
+<li>[ISO 8601] (<a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">http://en.wikipedia.org/wiki/ISO_8601</a>) format for XML</li>
+<li>[Microsoft AJAX alike] (<a href="http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx" target="_blank">http://weblogs.asp.net/bleroy/archive/2008/01/18/dates-and-json.aspx</a>) format for JSON.
+&quot;/Date(1198908717056)/&quot;, where the number is in milliseconds since January 1st 1970.</li>
 </ul>
 <h2 id="response-collection">Response collection</h2>
-<p>The application via API returns a maximum of 1000 records. To retrieve the records after that, you should use <a href="http://devdoc.primaerp.com/rest/options#paging" target="_blank">pagination</a>.</p>
+<p>The application via API returns a maximum of 1000 records. To retrieve the records after that, you should use <a href="options.md#paging">pagination</a>.</p>
 <h2 id="response-object">Response object</h2>
 <p>POST and PUT methods may return an object which was created or updated. This feature should be enabled by a response_object query parameter.</p>
-<h3 id="syntax">Syntax</h3>
-<p>response_object=true</p>
-<h2 id="response-reduction">Response reduction</h2>
-<p>It is possible to reduce the API output.</p>
-<p>If a response reduction query parameter is used, then only a stub will be returned instead of an embedded object. A stub is composed of the ID, version and displayName fields.</p>
-<h3 id="syntax">Syntax</h3>
-<p>/{resource}/?no_expand=true</p>
-<p>Value:</p>
-<table>
-<thead>
-<tr>
-<th>{resource} =</th>
-<th>Module resources such as: time/projects, time/timerecords, time/tasks, etcOr global resources such as: user</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Parameter</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    response_object=true
+</code></pre><h2 id="response-reduction">Response reduction</h2>
+<p>It is possible to reduce the API output. If a response reduction query parameter is used, then only a stub will be returned instead of an embedded object. A stub is composed of the <code>id</code>, <code>version</code> and <code>displayName</code> fields.</p>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/?no_expand=true
+</code></pre><p>Where <code>{resource}</code> is a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code>.</p>
 <p>Take into consideration that this query parameter is applicable to every &quot;GET&quot; request:</p>
 <ul>
-<li>list result (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true</a>)</li>
-<li>single result (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b?no\_expand=true</a>)</li>
-<li>@deleted view (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/@deleted?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/@deleted?no\_expand=true</a>)</li>
-<li>deleted object (e.g.GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b/@deleted?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b/@deleted?no\_expand=true</a>)</li>
+<li>list result (e.g. <code>GET http://{tenant}.api.primaerp.com/v1/time/tasks?no_expand=true</code>)</li>
+<li>single result (e.g. <code>GET http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b?no_expand=true</code>)</li>
+<li>@deleted view (e.g. <code>GET http://{tenant}.api.primaerp.com/v1/time/tasks/@deleted?no_expand=true</code>)</li>
+<li>deleted object (e.g. <code>GET http://{tenant}.api.primaerp.com/v1/time/tasks/9a761c4b-2217-4c47-946e-2aae4a149c9b/@deleted?no_expand=true</code>)</li>
 </ul>
-<h3 id="example">Example</h3>
-<p>GET <a href="http:///{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true" target="_blank">http://{tenant}.api.primaerp.com/v1/time/tasks?no\_expand=true</a></p>
-<p>&quot;project&quot; and &quot;author&quot; fields in the task below are stubs.</p>
-<p>{</p>
-<p> &quot;id&quot;:&quot;9a761c4b-2217-4c47-946e-2aae4a149c9b&quot;,</p>
-<p> &quot;version&quot;:0,</p>
-<p> &quot;createdAt&quot;:&quot;/Date(1378217576331)/&quot;,</p>
-<p> &quot;name&quot;:&quot;Task name&quot;,</p>
-<p> &quot;project&quot;:{</p>
-<p>  &quot;id&quot;:&quot;ac8057b3-738b-4e3b-9a53-96525a847f09&quot;,</p>
-<p>  &quot;version&quot;:0,</p>
-<p>  &quot;name&quot;:&quot;Project name&quot;,</p>
-<p>  &quot;begins&quot;:null,</p>
-<p>  &quot;ends&quot;:null,</p>
-<p>  &quot;owner&quot;:null,</p>
-<p>  &quot;client&quot;:null,</p>
-<p>  &quot;displayName&quot;:&quot;Project name&quot;</p>
-<p>  ...</p>
-<p> },</p>
-<p> &quot;author&quot;:{</p>
-<p>  &quot;id&quot;:&quot;6f0beb1b-8420-49a2-8e6a-ff47881a96a7&quot;,</p>
-<p>  &quot;version&quot;:2,</p>
-<p>  &quot;firstName&quot;:&quot;John&quot;,</p>
-<p>  &quot;lastName&quot;:&quot;Smith&quot;,</p>
-<p>  &quot;email&quot;:null,</p>
-<p>  &quot;phone&quot;:null,</p>
-<p>  &quot;displayName&quot;:&quot;Smith John&quot;</p>
-<p>  ...</p>
-<p> },</p>
-<p> ...</p>
-<p>}</p>
-<p>The single parts of the displayName, such as firstName and lastName, are stubs.</p>
+<h4 id="example">Example</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/tasks?no_expand=true
+</code></pre><p>&quot;project&quot; and &quot;author&quot; fields in the task below are stubs.</p>
+<pre><code class="lang-JSON">{
+     &quot;id&quot;:&quot;9a761c4b-2217-4c47-946e-2aae4a149c9b&quot;,
+    &quot;version&quot;:0,
+    &quot;createdAt&quot;:&quot;/Date(1378217576331)/&quot;,
+    &quot;name&quot;:&quot;Task name&quot;,
+    &quot;project&quot;:{
+        &quot;id&quot;:&quot;ac8057b3-738b-4e3b-9a53-96525a847f09&quot;,
+        &quot;version&quot;:0,
+        &quot;name&quot;:&quot;Project name&quot;,
+        &quot;begins&quot;:null,
+        &quot;ends&quot;:null,
+        &quot;owner&quot;:null,
+        &quot;client&quot;:null,
+        &quot;displayName&quot;:&quot;Project name&quot;
+        ...
+    },
+    &quot;author&quot;:{
+        &quot;id&quot;:&quot;6f0beb1b-8420-49a2-8e6a-ff47881a96a7&quot;,
+        &quot;version&quot;:2,
+        &quot;firstName&quot;:&quot;John&quot;,
+        &quot;lastName&quot;:&quot;Smith&quot;,
+        &quot;email&quot;:null,
+        &quot;phone&quot;:null,
+        &quot;displayName&quot;:&quot;Smith John&quot;
+        ...
+    },
+    ...
+}
+</code></pre>
+<p>The single parts of the displayName, such as firstName and lastName, are parts of the stub.</p>
 
                     
                     </section>

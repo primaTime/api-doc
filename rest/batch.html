@@ -3,12 +3,12 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Batch | primaERP API - documentation</title>
+        <title>Batch | Introduction to the primaERP API</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
         <meta name="author" content="primaerp">
-        <meta name="description" content="Version: ~1.5.11">
+        <meta name="description" content="Current version: ~1.5.11">
         <meta name="keywords" content="gitbook,github" >
         <meta name="generator" content="www.gitbook.io">
 
@@ -19,8 +19,8 @@
         <link rel="prev" href="../rest/reports.html" />
         
 
-        <meta property="og:title" content="Batch | primaERP API - documentation">
-        <meta property="og:site_name" content="primaERP API - documentation">
+        <meta property="og:title" content="Batch | Introduction to the primaERP API">
+        <meta property="og:site_name" content="Introduction to the primaERP API">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
 
@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="../gitbook/style.css">
         
         
-    <div class="book" data-github="primaerp/api-doc" data-level="1.16" data-basepath=".." data-revision="1408522641424">
+    <div class="book" data-github="primaerp/api-doc" data-level="1.16" data-basepath=".." data-revision="1409649231755">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -59,7 +59,7 @@
     
 
     <!-- Title -->
-    <h1><a href="../" >primaERP API - documentation</a></h1>
+    <h1><a href="../" >Introduction to the primaERP API</a></h1>
 </div>
 
     <div class="book-summary">
@@ -335,9 +335,13 @@
                     <section class="normal" id="section-gitbook_9">
                     
                         <h1 id="batch-requests">Batch requests</h1>
-<p>The API clients must execute a number of sequential requests to the API in specific scenarios such as: data imports, reporting, syncing etc. Each request spends some time on connecting to the server, the network communication or the request parsing. This time can be omitted when several object requests are processed in one batch request.</p>
+<p>The API clients must execute a number of sequential requests to the API in specific scenarios such as: 
+data imports, reporting, syncing etc. Each request spends some time on connecting to the server, 
+the network communication or the request parsing. This time can be omitted when several object requests are processed 
+in one batch request.</p>
 <h2 id="overview">Overview</h2>
-<p>There is a resource on the path/v1/batch. The resource consumes POST requests of JSON content with a list of the objects. Each object represents a single request and has the following properties:</p>
+<p>There is a resource on the path <code>/v1/batch</code>. The resource consumes POST requests of JSON content with a list of the
+objects. Each object represents a single request and has the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -379,7 +383,8 @@
 </tr>
 </tbody>
 </table>
-<p>When the server processes each request in a batch, it returns a status code 200 and a JSON response body content with a list of objects. Each object represents a response to the original request object and has the following properties:</p>
+<p>When the server processes each request in a batch, it returns a status code 200 and a JSON response body content with 
+a list of objects. Each object represents a response to the original request object and has the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -411,48 +416,61 @@
 </tr>
 </tbody>
 </table>
-<p>Request example:</p>
-<p>GET /v1/batch?token=46e5ae5d-9ff2-4d3a-b73f-a79a8e17cae6</p>
-<p>Host: tenant.api.primaerp.com</p>
-<p>Content-Type: application/json</p>
-<p>Accept: application/json</p>
-<p>[</p>
-<p> {</p>
-<p>  id : &quot;1&quot;,</p>
-<p>  method : &quot;GET&quot;,</p>
-<p>  headers : &quot;Content-Type: application/json&quot;</p>
-<p>  path : &quot;/v1/time/timerecords?$filter=(duration eq 1000)&quot;</p>
-<p> },</p>
-<p> {</p>
-<p>  id : &quot;2&quot;</p>
-<p>  method : &quot;PUT&quot;,</p>
-<p>  headers : &quot;Content-Type : application/json \n Accept : application/json&quot;</p>
-<p>  path : &quot;/v1/time/projects/bb4acd88-a855-40cb-afc8-973ec6d858c2?response_object=true&quot;,</p>
-<p>  body : &quot;{ name : \&quot;New name\&quot; }&quot;</p>
-<p> }</p>
-<p>]</p>
-<p>Response will be:</p>
-<p>HTTP/1.1 200 OK</p>
-<p>Date: Thu, 26 Sep 2013 03:52:49 GMT</p>
-<p>Server: Tomcat 7</p>
-<p>[</p>
-<p> {</p>
-<p>  id : &quot;1&quot;,</p>
-<p>  code : 200,</p>
-<p>  body : &quot;[]&quot;</p>
-<p> },</p>
-<p> {</p>
-<p>  id : &quot;2&quot;,</p>
-<p>  code : 404,</p>
-<p>  body : &quot;{ status: 404, code : \&quot;PE01-1101\&quot;, message : \&quot;Object not found\&quot;, description : null, constraintViolation : null }&quot;</p>
-<p> }</p>
-<p>]</p>
+<h4 id="example">Example</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/batch?token=46e5ae5d-9ff2-4d3a-b73f-a79a8e17cae6
+
+    &gt; Host: tenant.api.primaerp.com
+
+    &gt; Content-Type: application/json
+
+    &gt; Accept: application/json
+</code></pre><pre><code class="lang-JSON">[
+    {
+        id : &quot;1&quot;,
+        method : &quot;GET&quot;,
+        headers : &quot;Content-Type: application/json&quot;
+        path : &quot;/v1/time/timerecords?$filter=(duration eq 1000)&quot;
+    },
+    {
+        id : &quot;2&quot;
+        method : &quot;PUT&quot;,
+        headers : &quot;Content-Type : application/json \n Accept : application/json&quot;
+        path : &quot;/v1/time/projects/bb4acd88-a855-40cb-afc8-973ec6d858c2?response_object=true&quot;,
+        body : &quot;{ &quot;name&quot; : &quot;New name&quot; }&quot;
+    }
+]
+</code></pre>
+<p>The response will be:</p>
+<pre><code>    HTTP/1.1 200 OK
+
+    &lt; Date: Thu, 26 Sep 2013 03:52:49 GMT
+
+    &lt; Server: Tomcat 7
+</code></pre><pre><code class="lang-JSON">[
+    {
+        id : &quot;1&quot;,
+        code : 200,
+        body : &quot;[]&quot;
+    },
+    {
+        id : &quot;2&quot;,
+        code : 404,
+        body : &quot;{ status: 404, code : &quot;PE01-1101&quot;, message : &quot;Object not found&quot;, description : null, constraintViolation : null }&quot;
+    }
+
+]
+</code></pre>
 <h2 id="headers-handling">Headers handling</h2>
-<p>If the headers are not specified for the requested objects, then all headers from the batch requested will be applied. In other words: you do not need to specify the <strong>headers</strong> property for each requested object, because by default it is going to get them from the batch request header.</p>
+<p>If the headers are not specified for the requested objects, then all headers from the batch requested will be applied. 
+In other words: you do not need to specify the <code>headers</code> property for each requested object, because by default 
+it is going to get them from the batch request header.</p>
 <h2 id="token-handling">Token handling</h2>
-<p>The token passed as a query parameter to the batch resource is always used for processing each requested object. Users can specify another token as a query parameter in the <strong>path</strong> property for each requested object.</p>
+<p>The token passed as a query parameter to the batch resource is always used for processing each requested object. 
+Users can specify another token as a query parameter in the <code>path</code> property for each requested object.</p>
 <h2 id="transaction-handling">Transaction handling</h2>
-<p>By default each request in the batch is processed with its own transaction. Users can specify which requests are going to be processed together in a separate transaction; these requested objects must have their <strong>transaction</strong> property set to the same id.</p>
+<p>By default each request in the batch is processed with its own transaction. Users can specify which requests 
+are going to be processed together in a separate transaction; these requested objects must have their 
+<code>transaction</code> property set to the same id.</p>
 <h2 id="limitations">Limitations</h2>
 <ul>
 <li>The user has to be authorized and pass a valid token to the batch resource</li>
