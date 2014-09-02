@@ -6,42 +6,43 @@ Password
 The process of changing the password follows two steps:
 
 - Get a confirmation ID
-- TheBasic access authentication.
+- The [Basic access authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)
 
 ## First step:
 
 Get a confirmation ID via an authorized or unauthorized request. Both alternatives are equivalent.
 
-### Syntax
+#### Syntax
 
 Unauthorized request
 
-requestconfirmation?apikey={apikey}&email={email}
+		/requestconfirmation?apikey={apikey}&email={email}
 
 Authorized request
 
-users/{id}/$confirmation?token={token}
+		/users/{id}/$confirmation?token={token}
 
-### Example
+#### Example
 
 ## Unauthorized request
 
-POST http://api.primaerp.com/v1/users/requestconfirmation?apikey={apikey}&email={email}
+		POST http://api.primaerp.com/v1/users/requestconfirmation?apikey={apikey}&email={email}
 
 ## Authorized request
 
-POST http://{tenant}.api.primaerp.com/v1/users/{id}/$confirmation?token={token}
+		POST http://{tenant}.api.primaerp.com/v1/users/{id}/$confirmation?token={token}
 
 ## Second step:
 
-Send a confirmation ID with the "Authorization" header including the [Basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)and password only (in Base64).
+Send a confirmation ID with the "Authorization" header including 
+the [Basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) and password only (in Base64).
 
-### Syntax
+#### Syntax
 
-auth/confirm/{confirmation\_id}?apikey={apikey}
+		/auth/confirm/{confirmation_id}?apikey={apikey}
 
-### Example
+#### Example
 
-POST http://api.primaerp.com/v1/auth/confirm/{confirmation\_id}?apikey={apikey}
+		POST http://api.primaerp.com/v1/auth/confirm/{confirmation_id}?apikey={apikey}
 
-Header in Base64:Authorization: Basic :{password}
+Header in Base64: `Authorization: Basic :{password}`

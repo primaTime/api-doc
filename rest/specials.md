@@ -3,26 +3,24 @@ Specials
 
 ## Activating and deactivating an object
 
-This API feature allows one to activate or deactivatean object by using a single request.
+This API feature allows one to activate or deactivate an object by using a single request.
 
 This method eliminates the need of getting, changing and putting the object back.
 
-## Syntax for Activate
+This functionality is possible to use for the [Project](/resources/time/project) resources only.
 
-$activate
+#### Syntax
 
-## Syntax for Deactivate
+		$activate
 
-$deactivate
+		$deactivate
 
-### Example
+#### Example
 
 Activating objects:
 
-GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$activate
+		GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$activate
 
 Deactivating objects
 
-GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$deactivate
-
-This functionality is possible to use for the [Project](http://devdoc.primaerp.com/resources/detail?entity=Project)resources only.
+		GET http://{tenant}.api.primaerp.com/v1/projects/{id}/$deactivate

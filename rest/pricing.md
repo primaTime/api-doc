@@ -3,17 +3,16 @@ Time records pricing
 
 ## Price definition
 
-The Prices are defined via the price list. See [price lists resource](http://devdoc.primaerp.com/reference/v1/billing/time).
+The Prices are defined via the price list. See [price lists resource](/resources/billing/timepricelist.md).
 
 E.g.: The hourly price for one user is stored in the pricelist below:
 
+```JSON
 {
-
- "user" : { "id" : "d2463429-0f35-4dfc-b8f9-697ea3a64ef8" },
-
- "price" : 100.0
-
+	"user" : { "id" : "d2463429-0f35-4dfc-b8f9-697ea3a64ef8" },
+	"price" : 100.0
 }
+```
 
 ## Price calculation
 
@@ -21,11 +20,11 @@ The price is calculated based on the following priorities, where the higher numb
 
 1. One price for all
 2. Price per work type (activity)
-3. Price per user(employee)
+3. Price per **user** (employee)
 4. Price per user per work type
-5. Price per client
+5. Price per **client**
 6. Price per client per work type
-7. Price per project
+7. Price per **project**
 8. Price per project per work type
 9. Price per project per user
 10. Price per project per task
@@ -36,19 +35,19 @@ E.g.: In this example there are two types of price lists. The first one has a se
 
 It is used to calculate the price when saving the time record.
 
-### Syntax
+#### Syntax
 
 The time record can be stored or updated with the following query parameter
 
-/time/timerecords?calculate\_price=true
+		/time/timerecords?calculate_price=true
 
-/time/timerecords/{id}?calculate\_price=true
+		/time/timerecords/{id}?calculate_price=true
 
-### Example
+#### Example
 
-POST http://{tenant}.api.primaerp.com/v1/time/timerecords?calculate\_price=true
+		POST http://{tenant}.api.primaerp.com/v1/time/timerecords?calculate_price=true
 
-PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate\_price=true
+		PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}?calculate_price=true
 
 The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.
 
@@ -56,18 +55,15 @@ The price will be calculated by the duration of the time record and its correspo
 
 It is used to update the price when the price list was changed.
 
-### Syntax
+#### Syntax
 
-/time/timerecords/{id}/$updateprice
+		/time/timerecords/{id}/$updateprice
 
-Value:
+Where `{resource}` is a resource ID.
 
-| {id} = | resource id |
-| --- | --- |
+#### Example
 
-### Example
-
-PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice
+		PUT http://{tenant}.api.primaerp.com/v1/time/timerecords/{id}/$updateprice
 
 The price will be calculated by the duration of the time record and its corresponding price list (according to the above priorities). At the end, the time record is saved with the calculated price.
 
@@ -75,23 +71,15 @@ The price will be calculated by the duration of the time record and its correspo
 
 It is used in case you want to know the price of the time record before saving.
 
-### Syntax
+#### Syntax
 
-You can post the time record to
-#
-[ANNOTATION:  
+		/time/timerecords/$calculateprice
 
+#### Example
 
-BY 'Deborah Baur'  
-ON '2014-08-08T23:13:00'DB  
-NOTE: 'Don't understand… with the method?']
-method
+You can post the time record 
 
-/time/timerecords/$calculateprice
-
-### Example
-
-POST http://{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice
+		POST http://{tenant}.api.primaerp.com/v1/time/timerecords/$calculateprice
 
 This method returns the price which is calculated by the duration of the time record and its corresponding price list (according to the priorities).
 

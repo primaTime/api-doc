@@ -1,15 +1,15 @@
 Overview
 ==
 
-primaERP API is built using the [RESTful architecture](http://en.wikipedia.org/wiki/Restful)style, which provides full access to the main resources.
+primaERP API is built using the [RESTful architecture](http://en.wikipedia.org/wiki/Restful) style, which provides full access to the main resources.
 
 ## Response format
 
-primaERP API supports two [response formats](http://devdoc.primaerp.com/rest/response),JSON and XML, where the JSON format is the default.
+primaERP API supports two [response formats](response.md), JSON and XML, where the JSON format is the default.
 
 ## Response status
 
-The [response status](http://devdoc.primaerp.com/rest/errors)specifies the value of the status code returned by the server. Status values are defined in the HTTP specification and can be used either to identify an error or to confirm a successful operation.
+The [response status](errors.md) specifies the value of the status code returned by the server. Status values are defined in the HTTP specification and can be used either to identify an error or to confirm a successful operation.
 
 ## Rate limiting
 
@@ -27,8 +27,8 @@ API is also accessible on the HTTPS protocol.
 
 Each primaERP account has its own endpoint
 
-Syntax:
+#### Syntax
 
-`http://{tenant}.api.primaerp.com/v1/``
+		https://{tenant}.api.primaerp.com/v1/
 
 Where `{tenant}` is the name of the primaERP account
