@@ -17,6 +17,5 @@
 | [ExternalSystem](externalsystem.md) | `https://api.primaerp.com/v1/externalsystems`          |
 | [RoleCompetency](rolecompetency.md) | `https://api.primaerp.com/v1/rolecompetencies`         |
 | [Access](access.md) | `https://api.primaerp.com/v1/accesses`                 |
-| [AuthObject](authobject.md) | `https://api.primaerp.com/v1/null`                     |
-| [FileMetadata](filemetadata.md) | `https://api.primaerp.com/v1/null`                     |
-| [Tag](tag.md) | `https://api.primaerp.com/v1/time/tags`                        |
+| [AuthObject](authobject.md) | `https://api.primaerp.com/v1/`                     |
+| [FileMetadata](filemetadata.md) | `https://api.primaerp.com/v1/`                     |

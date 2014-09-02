@@ -39,7 +39,6 @@
         * [externalsystem](resources/core/externalsystem.md)
         * [rolecompetency](resources/core/rolecompetency.md)
         * [relation](resources/core/relation.md)
-        * [tag](resources/time/tag.md)
     * [TIME](resources/time/README.md)
         * [project](resources/time/project.md)
         * [projectmember](resources/time/projectmember.md)
