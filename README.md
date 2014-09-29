@@ -1,7 +1,7 @@
 primaERP API - documentation
 ==
 
-Version: ~1.5.11
+Version: ~1.5.20
 
 ## Tools
 

@@ -102,15 +102,15 @@ ProjectMember
 
 ```JSON
 {
-	"id" : "17fea59d-c57c-4a03-9d97-3f7a8b875a9a",
-	"createdAt" : "/Date(1408460635025)/",
-	"updatedAt" : "/Date(1408531915025)/",
-	"version" : 2,
+	"id" : "a6edc37e-0cb3-424b-b223-50a1d817c734",
+	"createdAt" : "/Date(1412000647820)/",
+	"updatedAt" : "/Date(1412008087820)/",
+	"version" : 7,
 	"user" : {
-		"id" : "2d784b6d-38cc-425a-bb0f-7332ebfca06e",
-		"createdAt" : "/Date(1408462675025)/",
-		"updatedAt" : "/Date(1408539115025)/",
-		"version" : 4,
+		"id" : "4c517476-e42c-4daa-be20-3614f1fd09aa",
+		"createdAt" : "/Date(1411997887820)/",
+		"updatedAt" : "/Date(1412000887820)/",
+		"version" : 7,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -127,10 +127,10 @@ ProjectMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408377115025)/",
+		"birthdayRemind" : "/Date(1412805600000)/",
+		"workingTimeStart" : "/Date(1411970400000)/",
+		"workingTimeEnd" : "/Date(1412002800000)/",
+		"created" : "/Date(1411914487820)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

@@ -30,10 +30,8 @@ Project
 | owner                | User           | read write | Identifies the project owner.                                                                       |
 | personal             | Boolean        | read write | Determines whether the project is available, only for the owner.                                    |
 | priceBudget          | Double         | read write | Amount of money available for the project.                                                          |
-| priceBudgetWarn      | Byte           | read write | Value in percentage of the budgeted price. It is useful to warning the owner.                       |
 | tasksCount           | Long           | read only  | Counts the number of tasks that belong to the project and which have not been done.                 |
 | timeBudget           | Long           | read write | Amount of milliseconds available for the project.                                                   |
-| timeBudgetWarn       | Byte           | read write | Value in percentage of the budgeted time. It is useful to warning the owner.                        |
 | timeRecordsCount     | Long           | read only  | Counts the number of time records in the project.                                                   |
 | trashItem            | TrashItem      | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | Last modified date.                                                                                 |
@@ -217,22 +215,6 @@ Project
 			"constraints" : [ ]
 		},
 		{
-			"type" : "Byte",
-			"name" : "priceBudgetWarn",
-			"description" : "Value in percentage of the budgeted price. It is useful to warning the owner.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "Min",
-					"pattern" : null
-				},
-				{
-					"type" : "Max",
-					"pattern" : null
-				}
-			]
-		},
-		{
 			"type" : "Long",
 			"name" : "tasksCount",
 			"description" : "Counts the number of tasks that belong to the project and which have not been done.",
@@ -245,22 +227,6 @@ Project
 			"description" : "Amount of milliseconds available for the project.",
 			"access" : "READ_WRITE",
 			"constraints" : [ ]
-		},
-		{
-			"type" : "Byte",
-			"name" : "timeBudgetWarn",
-			"description" : "Value in percentage of the budgeted time. It is useful to warning the owner.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "Min",
-					"pattern" : null
-				},
-				{
-					"type" : "Max",
-					"pattern" : null
-				}
-			]
 		},
 		{
 			"type" : "Long",
@@ -311,39 +277,37 @@ Project
 
 ```JSON
 {
-	"id" : "b8605001-012d-452b-b223-af8fed7d8b1b",
-	"createdAt" : "/Date(1408460634327)/",
-	"updatedAt" : "/Date(1408481514327)/",
-	"version" : 5,
+	"id" : "a54b721b-6805-4f84-8521-e024c3c30869",
+	"createdAt" : "/Date(1411998188413)/",
+	"updatedAt" : "/Date(1412022488413)/",
+	"version" : 2,
 	"externalSystem" : {
-		"id" : "ceb03777-91a4-46ca-a633-7b4574a33212",
-		"createdAt" : "/Date(1408460514328)/",
-		"updatedAt" : "/Date(1408485114328)/",
-		"version" : 8,
+		"id" : "84186b95-66d7-4ff7-884c-8a94688d2612",
+		"createdAt" : "/Date(1411999508413)/",
+		"updatedAt" : "/Date(1412044088414)/",
+		"version" : 4,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1408463514327)/",
+	"externalSyncedAt" : "/Date(1412000888413)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1408377114327)/",
-	"ends" : "/Date(1408549914327)/",
-	"timeBudget" : 86400000,
-	"timeBudgetWarn" : 75,
+	"begins" : "/Date(1411914488413)/",
+	"ends" : "/Date(1412087288413)/",
+	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
-	"priceBudgetWarn" : 80,
 	"active" : true,
 	"personal" : false,
 	"owner" : {
-		"id" : "ff9b45b6-fe5e-4e8a-9f82-027e6f604a2a",
-		"createdAt" : "/Date(1408461954327)/",
-		"updatedAt" : "/Date(1408521114327)/",
-		"version" : 9,
+		"id" : "6ecf6257-7c79-4c6c-b737-b3657d3cd5d8",
+		"createdAt" : "/Date(1411999508413)/",
+		"updatedAt" : "/Date(1412065688413)/",
+		"version" : 0,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -360,31 +324,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1410300000000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408377114327)/",
+		"birthdayRemind" : "/Date(1413842400000)/",
+		"workingTimeStart" : "/Date(1411970400000)/",
+		"workingTimeEnd" : "/Date(1412002800000)/",
+		"created" : "/Date(1411914488413)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "8d0d3d3e-ffa4-44b4-a2b4-8188b03c0f89",
-		"createdAt" : "/Date(1408463514328)/",
-		"updatedAt" : "/Date(1408531914328)/",
-		"version" : 3,
+		"id" : "c87f8aea-8b06-47c4-aa84-b6e1cd4bb768",
+		"createdAt" : "/Date(1412000768413)/",
+		"updatedAt" : "/Date(1412054888413)/",
+		"version" : 0,
 		"externalSystem" : {
-			"id" : "93ed38d4-0a9b-4811-8958-e8ebd2afeb2a",
-			"createdAt" : "/Date(1408462374328)/",
-			"updatedAt" : "/Date(1408513914328)/",
-			"version" : 6,
+			"id" : "f9ad8016-7251-48c5-9c2c-19099f67b3b7",
+			"createdAt" : "/Date(1411999148413)/",
+			"updatedAt" : "/Date(1412022488413)/",
+			"version" : 3,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1408463514327)/",
+		"externalSyncedAt" : "/Date(1412000888413)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",

@@ -28,34 +28,34 @@ In case of any problems, will the API return the following HTTP status codes in 
 
 Listed below are special errors, which may arise during the interaction with API:
 
-| API error Code | HTTP Status Code | Description                                |
-|----------------|------------------|--------------------------------------------|
-| PE01-1001      | 401              | Unauthorized                               |
-| PE01-1002      | 400              | Token missing                              |
-| PE01-1003      | 400              | Tenant missing                             |
-| PE01-1004      | 409              | Tenant conflict                            |
-| PE01-1005      | 401              | Tenant unknown                             |
-| PE01-1006      | 400              | Confirmation invalid                       |
-| PE01-1007      | 401              | Object not confirmed                       |
-| PE01-1008      | 403              | Access denied                              |
-| PE01-1009      | 403              | You've reached your account's user limit.  |
-| PE01-1010      | 401              | Token is invalid or expired                |
-| PE01-1011      | 401              | Refresh token is invalid or expired        |
-| PE01-1101      | 404              | Object not found                           |
-| PE01-1102      | 409              | Object already exists                      |
-| PE01-1103      | 400              | Operation not allowed                      |
-| PE01-1104      | 412              | Validation error                           |
-| PE01-1105      | 400              | Wrong parameters                           |
-| PE01-1106      | 412              | Illegal state                              |
-| PE01-1107      | 409              | Version stale                              |
-| PE01-1108      | 424              | Transaction error                          |
-| PE01-1109      | 412              | File size limit exceeded.                  |
-| PE01-9000      | 500              | Other error                                |
-| PE01-9001      | 500              | Unhandled error                            |
-| PE01-9002      | 503              | Limit exceeded                             |
-| PE01-9003      | 404              | Resource not found                         |
-| PE01-9004      | 400              | Unrecognized request                       |
-| PE01-9005      | 406              | You've requested uncompatible content type |
+| API error Code | HTTP Status Code | Description                                   |
+|----------------|------------------|-----------------------------------------------|
+| PE01-1001      | 401              | Unauthorized                                  |
+| PE01-1002      | 400              | Token missing                                 |
+| PE01-1003      | 400              | Tenant missing                                |
+| PE01-1004      | 409              | Tenant conflict                               |
+| PE01-1005      | 401              | Tenant unknown                                |
+| PE01-1006      | 400              | Confirmation invalid                          |
+| PE01-1007      | 401              | Object not confirmed                          |
+| PE01-1008      | 403              | Access denied                                 |
+| PE01-1009      | 403              | You've reached your account's user limit      |
+| PE01-1010      | 401              | Token is invalid or expired                   |
+| PE01-1011      | 401              | Refresh token is invalid or expired           |
+| PE01-1101      | 404              | Object not found                              |
+| PE01-1102      | 409              | Object already exists                         |
+| PE01-1103      | 400              | Operation not allowed                         |
+| PE01-1104      | 412              | Validation error                              |
+| PE01-1105      | 400              | Wrong parameters                              |
+| PE01-1106      | 412              | Illegal state                                 |
+| PE01-1107      | 409              | Version stale                                 |
+| PE01-1108      | 424              | Transaction error                             |
+| PE01-1109      | 412              | File size limit exceeded                      |
+| PE01-9000      | 500              | Other error                                   |
+| PE01-9001      | 500              | Unhandled error                               |
+| PE01-9002      | 503              | Limit exceeded                                |
+| PE01-9003      | 404              | Resource not found                            |
+| PE01-9004      | 400              | Unrecognized request                          |
+| PE01-9005      | 406              | You've requested an incompatible content type |
 
 ## Error object
 

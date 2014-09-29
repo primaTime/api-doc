@@ -105,14 +105,14 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "d691a1a3-ef2e-4cb2-ad04-c453cf23a022",
-	"createdAt" : "/Date(1408460275445)/",
-	"updatedAt" : "/Date(1408510315445)/",
+	"id" : "ba6b8b5e-ae34-4cf0-85a5-bb40c05a0843",
+	"createdAt" : "/Date(1411997887868)/",
+	"updatedAt" : "/Date(1412062087868)/",
 	"version" : 2,
 	"role" : {
-		"id" : "8172efc0-a65c-40ce-a689-f77c8528978d",
-		"createdAt" : "/Date(1408460155445)/",
-		"updatedAt" : "/Date(1408535515445)/",
+		"id" : "d155cc62-9cc3-479f-b499-e2df35522fec",
+		"createdAt" : "/Date(1411999087869)/",
+		"updatedAt" : "/Date(1412047687869)/",
 		"version" : 4,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
@@ -121,6 +121,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@40ce2345[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=8172efc0-a65c-40ce-a689-f77c8528978d,tenantId=<null>,trashItem=<null>,createdAt=Tue Aug 19 16:55:55 CEST 2014,updatedAt=Wed Aug 20 13:51:55 CEST 2014,version=4][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@1c1c9645[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=d155cc62-9cc3-479f-b499-e2df35522fec,tenantId=<null>,trashItem=<null>,createdAt=Mon Sep 29 15:58:07 CEST 2014,updatedAt=Tue Sep 30 05:28:07 CEST 2014,version=4][ACCOUNT_ADMIN]"
 }
 ```

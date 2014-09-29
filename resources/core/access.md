@@ -128,15 +128,15 @@ Access
 
 ```JSON
 {
-	"id" : "64a8dc18-26b3-482b-b125-2a437f0c76b7",
-	"createdAt" : "/Date(1408461715693)/",
-	"updatedAt" : "/Date(1408503115693)/",
-	"version" : 6,
+	"id" : "9870a8f1-c961-4d7d-9124-36be5369fde9",
+	"createdAt" : "/Date(1411997468805)/",
+	"updatedAt" : "/Date(1412015288805)/",
+	"version" : 5,
 	"user" : {
-		"id" : "f61ca938-4e18-465d-99af-3a7ba64aec13",
-		"createdAt" : "/Date(1408462135693)/",
-		"updatedAt" : "/Date(1408521115693)/",
-		"version" : 3,
+		"id" : "8f5a8aa8-c1e9-41fd-adff-abb94e9fc499",
+		"createdAt" : "/Date(1411999988806)/",
+		"updatedAt" : "/Date(1412065688806)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -153,16 +153,16 @@ Access
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1409263200000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408377115693)/",
+		"birthdayRemind" : "/Date(1412805600000)/",
+		"workingTimeStart" : "/Date(1411970400000)/",
+		"workingTimeEnd" : "/Date(1412002800000)/",
+		"created" : "/Date(1411914488805)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"product" : "TIME",
-	"created" : "/Date(1408463515693)/",
+	"created" : "/Date(1412000888805)/",
 	"displayName" : "TIME"
 }
 ```
