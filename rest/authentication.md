@@ -40,7 +40,7 @@ Once you have been authorized via the Basic access authentication, you should us
 
 The secret key is an alternative authentication solution which does not require the user's credentials. It is sent via the basic authentication where it replaces the username. A password is not needed.
 
-The secret key is created via the [secretkey resource](/resources/core/secretkey.md)
+The secret key is created via the [secretkey resource](../resources/core/secretkey.md)
 
 #### Syntax
 

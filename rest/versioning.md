@@ -20,4 +20,4 @@ Each object has a `version` field. It is used to determine whether a user is wor
 
 This error is possible to suppress by using the query parameter `version_ignore=true`. The object will be overwritten regardless of the version.
 
-If [$set method](/rest/options.md#set) is used, then it is possible to add a `version` field with the current value. An equivalent of `version_ignore=true` is to omit a `version` field.
+If [$set method](../rest/options.md#set) is used, then it is possible to add a `version` field with the current value. An equivalent of `version_ignore=true` is to omit a `version` field.

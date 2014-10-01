@@ -3,7 +3,7 @@ Time records pricing
 
 ## Price definition
 
-The Prices are defined via the price list. See [price lists resource](/resources/billing/timepricelist.md).
+The Prices are defined via the price list. See [price lists resource](../resources/billing/timepricelist.md).
 
 E.g.: The hourly price for one user is stored in the pricelist below:
 
@@ -19,15 +19,23 @@ E.g.: The hourly price for one user is stored in the pricelist below:
 The price is calculated based on the following priorities, where the higher number has the higher priority:
 
 1. One price for all
-2. Price per work type (activity)
-3. Price per **user** (employee)
-4. Price per user per work type
-5. Price per **client**
-6. Price per client per work type
-7. Price per **project**
-8. Price per project per work type
-9. Price per project per user
-10. Price per project per task
+1. Price per work type (activity)
+1. Price per **user** (employee)
+1. Price per user per work type
+1. Price per **client**
+1. Price per client per work type
+1. Price per client per user
+1. Price per client per user per work type
+1. Price per **project**
+1. Price per project per client
+1. Price per project per work type
+1. Price per project per user
+1. Price per project per user per work type
+1. Price per **task**
+1. Price per task per project
+1. Price per task per project per work type
+1. Price per task per project per user
+1. Price per task per project per work type
 
 E.g.: In this example there are two types of price lists. The first one has a set price per user per work type. The second one has a set price per project. Therefore the price will then be calculated by the second one.
 

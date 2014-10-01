@@ -53,4 +53,4 @@ The API returns resources which were deleted and placed in the trash.
 
 		GET http://{tenant}.api.primaerp.com/v1/time/projects/@deleted
 
-To find out more, check on the [Deleting page.](/rest/deleting.md)
+To find out more, check on the [Deleting page.](../rest/deleting.md)

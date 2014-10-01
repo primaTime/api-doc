@@ -42,7 +42,7 @@ Where `{email}` is an address to check if the particular e-mail exists
 The "sign up" method creates a new account and returns its ID for subsequent confirmation using the "confirm" method.
 
 The account data is sent in the body of a request which contains information about 
-the [account](/resources/core/account.md) and the [user](/resources/core/user.md), who is the owner of the account. 
+the [account](../resources/core/account.md) and the [user](../resources/core/user.md), who is the owner of the account. 
 The sign up object can contain a list of users (optional) who will be registered under one account.
 
 #### Syntax

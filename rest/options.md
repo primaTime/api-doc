@@ -7,10 +7,10 @@ The primaERP API supports CRUD (Create, Read, Update, Delete) operations via the
 
 | Operation | SQL | HTTP |
 | --- | --- | --- |
-| Create | [INSERT](http://en.wikipedia.org/wiki/Insert_(SQL)) | [POST](http://en.wikipedia.org/wiki/POST_(HTTP)) |
-| Read (Retrieve) | [SELECT](http://en.wikipedia.org/wiki/Select_(SQL)) | [GET](http://en.wikipedia.org/wiki/GET_(HTTP)) |
-| Update (Modify) | [UPDATE](http://en.wikipedia.org/wiki/Update_(SQL)) | [PUT](http://en.wikipedia.org/wiki/PUT_(HTTP)) |
-| Delete (Destroy) | [DELETE](http://en.wikipedia.org/wiki/Delete_(SQL)) | [DELETE](http://en.wikipedia.org/wiki/DELETE_(HTTP)) |
+| Create			| [INSERT](http://en.wikipedia.org/wiki/Insert_%28SQL%29) | [POST](http://en.wikipedia.org/wiki/POST_%28HTTP%29) |
+| Read (Retrieve)	| [SELECT](http://en.wikipedia.org/wiki/Select_%28SQL%29) | [GET](http://en.wikipedia.org/wiki/GET_%28HTTP%29) |
+| Update (Modify)	| [UPDATE](http://en.wikipedia.org/wiki/Update_%28SQL%29) | [PUT](http://en.wikipedia.org/wiki/PUT_%28HTTP%29) |
+| Delete (Destroy)	| [DELETE](http://en.wikipedia.org/wiki/Delete_%28SQL%29) | [DELETE](http://en.wikipedia.org/wiki/DELETE_%28HTTP%29) |
 
 In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation by the query parameter `?method`.
 
@@ -158,23 +158,23 @@ API also supports filtering by string functions:
 
 ### Complex examples
 
-The following example searches active [users](/resources/core/user.md) whose first name is John.
+The following example searches active [users](../resources/core/user.md) whose first name is John.
 
 		GET http://{tenant}.api.primaerp.com/v1/users/?$filter=active eq true and substringof('john',tolower(firstName)) eq true
 
-The following example returns active [projects](/resources/time/project.md) which are processed for a given client.
+The following example returns active [projects](../resources/time/project.md) which are processed for a given [client](../resources/time/client.md).
 
 		GET http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=active eq true and client/id eq '2a1e546a-81a6-4af6-bfb4-65c57ad15a9f'
 
-The following example returns [time records](/resources/time/timerecord.md) which were recorded in January by a given user.
+The following example returns [time records](../resources/time/timerecord.md) which were recorded in January by a given [user](../resources/core/user.md).
 
 		GET http://{tenant}.api.primaerp.com/v1/time/timerecords/?$filter=start ge datetime'2014-01-01T00:00:00Z' and start lt datetime'2014-01-31T23:59:59Z' and user/id eq 'cc41790b-59f4-4520-81e1-ac10c74e9454'
 
-The following example returns [projects](/resources/time/project.md) which were updated or created on a given date (e.g. since the last synchronization).
+The following example returns [projects](../resources/time/project.md) which were updated or created on a given date (e.g. since the last synchronization).
 
 		GET http://{tenant}.api.primaerp.com/v1/time/projects/?$filter=(updatedAt gt datetime'2012-12-31T23:00:00Z') or (createdAt gt datetime'2012-12-31T23:00:00Z')
 
-The following example returns the undone [tasks](/resources/time/task.md) of a given user. Please note, these tasks are from the active projects only.
+The following example returns the undone [tasks](../resources/time/task.md) of a given [user](../resources/core/user.md). Please note, these tasks are from the active [projects](../resources/time/project.md) only.
 
 		GET http://{tenant}.api.primaerp.com/v1/time/tasks/?$filter=(done eq false or done eq null) and owner/id eq 'cc41790b-59f4-4520-81e1-ac10c74e9454' and project/active eq true
 
@@ -190,7 +190,7 @@ Where `{resource}` is a module resource such as: `time/projects`, `time/timereco
 
 #### Example
 
-This example will return the amount of projects.
+This example will return the amount of [projects](../resources/time/project.md).
 
 		GET http://{tenant}.api.primaerp.com/v1/projects/$count
 
@@ -204,27 +204,27 @@ The API allows the use of aggregation functions over resources for the simplific
 
 It's possible to return multiple functions in one request to the API. The list of aggregated functions is still fixed and cannot be used for any entity or any field.
 
-It sets the timeRecordsCount property on all returned [projects](/resources/time/project.md).
+It sets the timeRecordsCount property on all returned [projects](../resources/time/project.md).
 
 		GET http://{tenant}.api.primaerp.com/v1/projects/?append=timerecords-count
 
- It sets the tasksCount property on all returned [projects](/resources/time/project.md).
+ It sets the tasksCount property on all returned [projects](../resources/time/project.md).
 		
 		GET http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count
 
-It sets the membersCount property on all returned [projects](/resources/time/project.md). 
+It sets the membersCount property on all returned [projects](../resources/time/project.md). 
 
 		GET http://{tenant}.api.primaerp.com/v1/projects/?append=members-count
 
-It sets the billsCount property on all returned [clients](/resources/time/client.md). 
+It sets the billsCount property on all returned [clients](../resources/time/client.md). 
 
 		GET http://{tenant}.api.primaerp.com/v1/clients/?append=bills-count
 		
-It sets the projectsCount property on all returned [clients](/resources/time/client.md).
+It sets the projectsCount property on all returned [clients](../resources/time/client.md).
  	
 		GET http://{tenant}.api.primaerp.com/v1/clients/?append=projects-count
 
-It sets the tasksCount and the membersCount properties on all returned [projects](/resources/time/project.md) (example of chaining aggregated functions). 
+It sets the tasksCount and the membersCount properties on all returned [projects](../resources/time/project.md) (example of chaining aggregated functions). 
 
 		GET http://{tenant}.api.primaerp.com/v1/projects/?append=tasks-count,members-count
  

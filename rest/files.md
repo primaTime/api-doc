@@ -48,7 +48,7 @@ change signatures of all users.
 
 #### File metadata
 
-Besides file downloading is it possible to get a [FileMetadata](/resources/core/filemetadata.md) object.
+Besides file downloading is it possible to get a [FileMetadata](../resources/core/filemetadata.md) object.
 
 		GET http://{tenant}.api.primaerp.com/v1/users/@self/signature
 

@@ -16,7 +16,7 @@ It provides data for various types of reports.
 This example returns the summarized data from the time records. The data is structured according to the format below.
 
 It can be similarly grouped as [Summary sub-resources](summaries.md) and [filtered](options.md#filtering) the same as 
-[time records](/resources/time/timerecord.md).
+[time records](../resources/time/timerecord.md).
 
 
 ```JSON
@@ -139,7 +139,7 @@ It extends the possibilities of "readtotals" service. The data can be customized
 **range**, **range_from**, **range_to** and **offset**. These parameters are described [below](reports.md#single-slices).
 
 The data can be similarly grouped as [Summary sub-resources](summaries.md) and [filtered](options.md#filtering) 
-the same as [time records](/resources/time/timerecord.md).
+the same as [time records](../resources/time/timerecord.md).
 
 ## Single totals
 
@@ -185,7 +185,7 @@ It provides summarized data for a comparison with past data.
 The data can be customized by the query parameters **range**, **range_from**, **range_to** and **offset**. 
 These parameters are described [below](reports.md#single-slices).
 
-It can also be [filtered](options.md#filtering) the same way as the [time records](/resources/time/timerecord.md).
+It can also be [filtered](options.md#filtering) the same way as the [time records](../resources/time/timerecord.md).
 
 A new important query parameter is **depth,** which determines the length of the period in the past. This parameter 
 depends on **range**. The example below gets the data for a comparison of two months. One of them is defined by "range". 
@@ -256,9 +256,9 @@ It is the time recorded in this part of period (in milliseconds).
 
 E.g. data interpretation
   
-![Slices per year](/images/slices_year.png)
+![Slices per year](../images/slices_year.png)
  
-The data can be [filtered](options.md#filtering) the same way as [time records](/resources/time/timerecord.md). 
+The data can be [filtered](options.md#filtering) the same way as [time records](../resources/time/timerecord.md). 
 The filter can reduce the amount of "time".
 
 E.g. time spent on project `$filter=project/id eq 'fb1eacff-a17d-46d2-9fd9-2e04299a6503'`

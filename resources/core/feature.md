@@ -118,9 +118,9 @@ Feature
 
 ```JSON
 {
-	"id" : "b1b2b94b-51d5-4b0c-ae10-ceceee5faf31",
-	"createdAt" : "/Date(1408460694902)/",
-	"updatedAt" : "/Date(1408531914903)/",
+	"id" : "091c885c-949b-407f-a060-75aa776bba1e",
+	"createdAt" : "/Date(1412167848307)/",
+	"updatedAt" : "/Date(1412200608307)/",
 	"version" : 2,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
