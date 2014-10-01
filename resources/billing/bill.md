@@ -188,6 +188,13 @@ Bill
 	],
 	"cascades" : [
 		{
+			"cascadeType" : "REMOVE",
+			"objectTypes" : [
+				"TrashItem",
+				"BillItem"
+			]
+		},
+		{
 			"cascadeType" : "MERGE",
 			"objectTypes" : [
 				"BillItem"
@@ -196,13 +203,6 @@ Bill
 		{
 			"cascadeType" : "PERSIST",
 			"objectTypes" : [
-				"BillItem"
-			]
-		},
-		{
-			"cascadeType" : "REMOVE",
-			"objectTypes" : [
-				"TrashItem",
 				"BillItem"
 			]
 		}
@@ -214,35 +214,35 @@ Bill
 
 ```JSON
 {
-	"id" : "825cedb7-7d6e-40a7-9e4d-c6ee2a4c50b6",
-	"createdAt" : "/Date(1408462615129)/",
-	"updatedAt" : "/Date(1408463515129)/",
-	"version" : 8,
+	"id" : "92c3d38f-983b-4e41-94a6-76310dec9196",
+	"createdAt" : "/Date(1412164847464)/",
+	"updatedAt" : "/Date(1412229407464)/",
+	"version" : 5,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1408463515129)/",
-	"vatDate" : "/Date(1408463515129)/",
+	"docDate" : "/Date(1412168207464)/",
+	"vatDate" : "/Date(1412168207464)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"header" : "",
 	"footer" : "",
 	"totalPrice" : 1500.0,
 	"client" : {
-		"id" : "a09390bf-8f45-469e-90dc-746e46cb7065",
-		"createdAt" : "/Date(1408461235130)/",
-		"updatedAt" : "/Date(1408477915130)/",
-		"version" : 4,
+		"id" : "fd61b5b0-d12e-4209-8e1f-2a28cb86b06e",
+		"createdAt" : "/Date(1412167487465)/",
+		"updatedAt" : "/Date(1412233007465)/",
+		"version" : 0,
 		"externalSystem" : {
-			"id" : "287ccf13-ea44-48d9-91b0-68bf87e8bbc8",
-			"createdAt" : "/Date(1408462075130)/",
-			"updatedAt" : "/Date(1408524715130)/",
-			"version" : 2,
+			"id" : "e0770f5b-adab-4dfe-817d-40126f657e58",
+			"createdAt" : "/Date(1412165507465)/",
+			"updatedAt" : "/Date(1412207807465)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1408463515129)/",
+		"externalSyncedAt" : "/Date(1412168207464)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -262,32 +262,32 @@ Bill
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "60fd6661-94cd-42cd-b016-90be55a56177",
-		"createdAt" : "/Date(1408462075130)/",
-		"updatedAt" : "/Date(1408524715130)/",
-		"version" : 8,
+		"id" : "fe620d8a-61b3-4b97-82ac-ba14932bdca7",
+		"createdAt" : "/Date(1412164967464)/",
+		"updatedAt" : "/Date(1412211407464)/",
+		"version" : 2,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "a09390bf-8f45-469e-90dc-746e46cb7065",
-			"createdAt" : "/Date(1408461235130)/",
-			"updatedAt" : "/Date(1408477915130)/",
-			"version" : 4,
+			"id" : "fd61b5b0-d12e-4209-8e1f-2a28cb86b06e",
+			"createdAt" : "/Date(1412167487465)/",
+			"updatedAt" : "/Date(1412233007465)/",
+			"version" : 0,
 			"externalSystem" : {
-				"id" : "287ccf13-ea44-48d9-91b0-68bf87e8bbc8",
-				"createdAt" : "/Date(1408462075130)/",
-				"updatedAt" : "/Date(1408524715130)/",
-				"version" : 2,
+				"id" : "e0770f5b-adab-4dfe-817d-40126f657e58",
+				"createdAt" : "/Date(1412165507465)/",
+				"updatedAt" : "/Date(1412207807465)/",
+				"version" : 8,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1408463515129)/",
+			"externalSyncedAt" : "/Date(1412168207464)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -311,10 +311,10 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "45c60607-ff81-4685-afda-415b20e440cf",
-			"createdAt" : "/Date(1408462495130)/",
-			"updatedAt" : "/Date(1408513915130)/",
-			"version" : 9,
+			"id" : "26981c94-7169-41fd-83e1-7d2e4390f3a5",
+			"createdAt" : "/Date(1412166167464)/",
+			"updatedAt" : "/Date(1412168207464)/",
+			"version" : 3,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
@@ -323,10 +323,10 @@ Bill
 			"displayName" : "#0"
 		},
 		{
-			"id" : "9f282131-216c-496a-9346-ff9d1237e283",
-			"createdAt" : "/Date(1408461175130)/",
-			"updatedAt" : "/Date(1408495915130)/",
-			"version" : 2,
+			"id" : "c00cb8fe-bdba-4dfc-8d27-fc03372f3b27",
+			"createdAt" : "/Date(1412166167464)/",
+			"updatedAt" : "/Date(1412233007464)/",
+			"version" : 0,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 1,
@@ -336,9 +336,9 @@ Bill
 		}
 	],
 	"author" : {
-		"id" : "681c998e-78aa-4df4-abd7-79a5c3c27a39",
-		"createdAt" : "/Date(1408460215130)/",
-		"updatedAt" : "/Date(1408488715130)/",
+		"id" : "20008f8a-5542-46d9-87ba-f975b14ea536",
+		"createdAt" : "/Date(1412164727464)/",
+		"updatedAt" : "/Date(1412182607464)/",
 		"version" : 7,
 		"firstName" : "John",
 		"lastName" : "Doe",
@@ -356,10 +356,10 @@ Bill
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1410300000000)/",
-		"workingTimeStart" : "/Date(1408428000000)/",
-		"workingTimeEnd" : "/Date(1408460400000)/",
-		"created" : "/Date(1408377115129)/",
+		"birthdayRemind" : "/Date(1414015200000)/",
+		"workingTimeStart" : "/Date(1412143200000)/",
+		"workingTimeEnd" : "/Date(1412175600000)/",
+		"created" : "/Date(1412081807464)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
