@@ -2,18 +2,18 @@ var path = require("path");
 
 module.exports = function (grunt) {
 
-    grunt.loadNpmTasks('grunt-gitbook');
+//    grunt.loadNpmTasks('grunt-gitbook');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
-        'gitbook': {
-            development: {
-                input: "./",
-                github: "primaerp/api-doc"
-            }
-        },
+//        'gitbook': {
+//            development: {
+//                input: "./",
+//                github: "primaerp/api-doc"
+//            }
+//        },
         'gh-pages': {
             options: {
                 base: '_book'
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('publish', [
-        'gitbook',
+//        'gitbook',
         'gh-pages',
         'clean'
     ]);
