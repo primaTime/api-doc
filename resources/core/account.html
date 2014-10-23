@@ -7,7 +7,7 @@
         <title>account | primaERP / API Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 1.0.2">
+        <meta name="generator" content="GitBook 1.1.0">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,8 +16,6 @@
         <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
         
     
-    
-    <meta name="author" content="primaERP">
     
     
     <link rel="next" href="../../resources/core/access.html" />
@@ -35,7 +33,7 @@
 
 
         
-    <div class="book" data-github="primaERP/api-doc" data-level="2.2.14" data-basepath="../.." data-revision="1413319024008">
+    <div class="book" data-level="2.2.14" data-basepath="../.." data-revision="1414056280787">
     
 
 <div class="book-summary">
@@ -1082,6 +1080,12 @@
 <td>Any additional informations related to the address.</td>
 </tr>
 <tr>
+<td>affiliateId</td>
+<td>String</td>
+<td>read write</td>
+<td>An identification of the subject who has contributed to the account registration.</td>
+</tr>
+<tr>
 <td>apiKey</td>
 <td>String</td>
 <td>read write</td>
@@ -1277,6 +1281,13 @@
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"additionalAddressInfo"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Any additional informations related to the address."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
+            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"affiliateId"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"An identification of the subject who has contributed to the account registration."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
         </span>},
@@ -1572,15 +1583,15 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"0af216e3-6c15-47c8-aa13-9f690c0d6532"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412167967855)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412197007855)/"</span></span>,
-    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"c2488fcb-ea9d-40ae-ac18-71a1de45bb23"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413983460110)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1414004940110)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
     "<span class="hljs-attribute">owner</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"1a9ca0ee-2d1c-46b2-8afc-a205df4bdafa"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412167007855)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412251007855)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"61d25f8c-9397-4b31-b8c8-6815112b529e"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413985620110)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413994140110)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
         "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
         "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
         "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith, J."</span></span>,
@@ -1597,10 +1608,10 @@
         "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412978400000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412143200000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412175600000)/"</span></span>,
-        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412081807855)/"</span></span>,
+        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1414796400000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413957600000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413990000000)/"</span></span>,
+        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413900540109)/"</span></span>,
         "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith John"</span>
@@ -1624,12 +1635,13 @@
     "<span class="hljs-attribute">apiKey</span>" : <span class="hljs-value"><span class="hljs-string">"0165e7d3-c99f-41b5-bf8c-03222edcf681"</span></span>,
     "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">currency</span>" : <span class="hljs-value"><span class="hljs-string">"USD"</span></span>,
-    "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412143200000)/"</span></span>,
-    "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412175600000)/"</span></span>,
-    "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412081807855)/"</span></span>,
+    "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413957600000)/"</span></span>,
+    "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413990000000)/"</span></span>,
+    "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413900540109)/"</span></span>,
     "<span class="hljs-attribute">source</span>" : <span class="hljs-value"><span class="hljs-string">"LINKEDIN"</span></span>,
     "<span class="hljs-attribute">campaign</span>" : <span class="hljs-value"><span class="hljs-string">"LINKEDIN-2013-C1"</span></span>,
-    "<span class="hljs-attribute">deactivationRequestedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1412168207855)/"</span></span>,
+    "<span class="hljs-attribute">deactivationRequestedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413986940110)/"</span></span>,
+    "<span class="hljs-attribute">affiliateId</span>" : <span class="hljs-value"><span class="hljs-string">"a263719f-f312-4dd7-b5e5-7975d49c5e13"</span></span>,
     "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd. (example-ltd)"</span>
 </span>}
 </code></pre>
@@ -1655,7 +1667,7 @@
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     

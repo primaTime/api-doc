@@ -7,7 +7,7 @@
         <title>Registration | primaERP / API Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 1.0.2">
+        <meta name="generator" content="GitBook 1.1.0">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,8 +16,6 @@
         <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
     
-    
-    <meta name="author" content="primaERP">
     
     
     <link rel="next" href="../rest/password.html" />
@@ -35,7 +33,7 @@
 
 
         
-    <div class="book" data-github="primaERP/api-doc" data-level="1.4" data-basepath=".." data-revision="1413319024008">
+    <div class="book" data-level="1.4" data-basepath=".." data-revision="1414056280787">
     
 
 <div class="book-summary">
@@ -1083,22 +1081,14 @@
 </code></pre><h2 id="sign-up">Sign up</h2>
 <p>The &quot;sign up&quot; method creates a new account and returns its ID for subsequent confirmation using the &quot;confirm&quot; method.</p>
 <p>The account data is sent in the body of a request which contains information about 
-the <a href="../resources/core/account.html">account</a> and the <a href="../resources/core/user.html">user</a>, who is the owner of the account. 
-The sign up object can contain a list of users (optional) who will be registered under one account.</p>
+the <a href="../resources/core/account.html">account</a> and the <a href="../resources/core/user.html">user</a>, who is the owner of the account. </p>
 <h4 id="syntax">Syntax</h4>
 <pre><code>    /register/signup
 </code></pre><h4 id="example">Example</h4>
 <pre><code>    POST http://api.primaerp.com/v1/register/signup
 </code></pre><pre><code class="lang-JSON">{
     &quot;account&quot;: { ... },
-    &quot;owner&quot;: { ... },
-    &quot;users&quot;: [
-     { ... },
-     { ... },
-     .
-     .
-     .
-    ]
+    &quot;owner&quot;: { ... }
 }
 </code></pre>
 <h2 id="confirm">Confirm</h2>
@@ -1135,7 +1125,7 @@ The sign up object can contain a list of users (optional) who will be registered
 <script src="../gitbook/app.js"></script>
 
     
-    <script src="https://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
     
