@@ -41,6 +41,7 @@ Listed below are special errors, which may arise during the interaction with API
 | PE01-1009      | 403              | You've reached your account's user limit      |
 | PE01-1010      | 401              | Token is invalid or expired                   |
 | PE01-1011      | 401              | Refresh token is invalid or expired           |
+| PE01-1012      | 301              | Tenant is registered on other endpoint.       |
 | PE01-1101      | 404              | Object not found                              |
 | PE01-1102      | 409              | Object already exists                         |
 | PE01-1103      | 400              | Operation not allowed                         |
@@ -52,7 +53,7 @@ Listed below are special errors, which may arise during the interaction with API
 | PE01-1109      | 412              | File size limit exceeded                      |
 | PE01-9000      | 500              | Other error                                   |
 | PE01-9001      | 500              | Unhandled error                               |
-| PE01-9002      | 503              | Limit exceeded                                |
+| PE01-9002      | 412              | Limit exceeded                                |
 | PE01-9003      | 404              | Resource not found                            |
 | PE01-9004      | 400              | Unrecognized request                          |
 | PE01-9005      | 406              | You've requested an incompatible content type |

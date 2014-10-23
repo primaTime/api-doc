@@ -316,10 +316,10 @@ User
 
 ```JSON
 {
-	"id" : "8c3c5807-6ab0-4049-9c28-104bad511948",
-	"createdAt" : "/Date(1412165927747)/",
-	"updatedAt" : "/Date(1412179007747)/",
-	"version" : 6,
+	"id" : "afb996ba-0fb3-4de7-a7a5-4bcdcc77f52d",
+	"createdAt" : "/Date(1413985680492)/",
+	"updatedAt" : "/Date(1414037340492)/",
+	"version" : 1,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -336,10 +336,10 @@ User
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1412978400000)/",
-	"workingTimeStart" : "/Date(1412143200000)/",
-	"workingTimeEnd" : "/Date(1412175600000)/",
-	"created" : "/Date(1412081807747)/",
+	"birthdayRemind" : "/Date(1414796400000)/",
+	"workingTimeStart" : "/Date(1413957600000)/",
+	"workingTimeEnd" : "/Date(1413990000000)/",
+	"created" : "/Date(1413900540492)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"

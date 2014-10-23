@@ -123,9 +123,9 @@ TrashItem
 
 ```JSON
 {
-	"id" : "cb303b85-93cd-4f81-a664-3715edd5c854",
-	"createdAt" : "/Date(1412166948675)/",
-	"updatedAt" : "/Date(1412240208675)/",
+	"id" : "f3f6689c-704d-4c28-b4b9-a305642d4623",
+	"createdAt" : "/Date(1413986401009)/",
+	"updatedAt" : "/Date(1414019341009)/",
 	"version" : 1,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",

@@ -10,6 +10,7 @@ Account
 | Name                    | Type      | Access     | Description                                                                                                                   |
 |-------------------------|-----------|------------|-------------------------------------------------------------------------------------------------------------------------------|
 | additionalAddressInfo   | String    | read write | Any additional informations related to the address.                                                                           |
+| affiliateId             | String    | read write | An identification of the subject who has contributed to the account registration.                                             |
 | apiKey                  | String    | read write | Unique key for access the application.                                                                                        |
 | campaign                | String    | read write | The marketing campaign from which the account originates from. For internal use only.                                         |
 | city                    | String    | read write | Name of the city.                                                                                                             |
@@ -52,6 +53,13 @@ Account
 			"type" : "String",
 			"name" : "additionalAddressInfo",
 			"description" : "Any additional informations related to the address.",
+			"access" : "READ_WRITE",
+			"constraints" : [ ]
+		},
+		{
+			"type" : "String",
+			"name" : "affiliateId",
+			"description" : "An identification of the subject who has contributed to the account registration.",
 			"access" : "READ_WRITE",
 			"constraints" : [ ]
 		},
@@ -350,15 +358,15 @@ Account
 
 ```JSON
 {
-	"id" : "0af216e3-6c15-47c8-aa13-9f690c0d6532",
-	"createdAt" : "/Date(1412167967855)/",
-	"updatedAt" : "/Date(1412197007855)/",
-	"version" : 0,
+	"id" : "c2488fcb-ea9d-40ae-ac18-71a1de45bb23",
+	"createdAt" : "/Date(1413983460110)/",
+	"updatedAt" : "/Date(1414004940110)/",
+	"version" : 2,
 	"owner" : {
-		"id" : "1a9ca0ee-2d1c-46b2-8afc-a205df4bdafa",
-		"createdAt" : "/Date(1412167007855)/",
-		"updatedAt" : "/Date(1412251007855)/",
-		"version" : 4,
+		"id" : "61d25f8c-9397-4b31-b8c8-6815112b529e",
+		"createdAt" : "/Date(1413985620110)/",
+		"updatedAt" : "/Date(1413994140110)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -375,10 +383,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1412978400000)/",
-		"workingTimeStart" : "/Date(1412143200000)/",
-		"workingTimeEnd" : "/Date(1412175600000)/",
-		"created" : "/Date(1412081807855)/",
+		"birthdayRemind" : "/Date(1414796400000)/",
+		"workingTimeStart" : "/Date(1413957600000)/",
+		"workingTimeEnd" : "/Date(1413990000000)/",
+		"created" : "/Date(1413900540109)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -402,12 +410,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1412143200000)/",
-	"workingTimeEnd" : "/Date(1412175600000)/",
-	"created" : "/Date(1412081807855)/",
+	"workingTimeStart" : "/Date(1413957600000)/",
+	"workingTimeEnd" : "/Date(1413990000000)/",
+	"created" : "/Date(1413900540109)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1412168207855)/",
+	"deactivationRequestedAt" : "/Date(1413986940110)/",
+	"affiliateId" : "a263719f-f312-4dd7-b5e5-7975d49c5e13",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

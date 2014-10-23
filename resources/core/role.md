@@ -121,10 +121,10 @@ Role
 
 ```JSON
 {
-	"id" : "96ddfdd9-eb57-46fb-8cc8-b62fe40c3d9e",
-	"createdAt" : "/Date(1412167128342)/",
-	"updatedAt" : "/Date(1412207808342)/",
-	"version" : 8,
+	"id" : "b51cd059-d161-4f78-9a33-05a57dc57e71",
+	"createdAt" : "/Date(1413985680296)/",
+	"updatedAt" : "/Date(1414004940296)/",
+	"version" : 0,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",
