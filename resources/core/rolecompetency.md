@@ -23,27 +23,25 @@ RoleCompetency
 ```JSON
 {
 	"type" : "RoleCompetency",
+	"path" : "/v1/rolecompetencies",
 	"fields" : [
 		{
 			"type" : "Competency",
 			"name" : "competency",
 			"description" : "If it is set, then the role is generated automatically and cannot be edited.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -63,31 +61,29 @@ RoleCompetency
 		},
 		{
 			"type" : "Role",
+			"path" : "/v1/roles",
 			"name" : "role",
 			"description" : "The role of an custom user's role. Built-in roles do not have a role.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -105,15 +101,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "36fcda2c-e653-4baa-8d6f-f2a305f514a0",
-	"createdAt" : "/Date(1413983460411)/",
-	"updatedAt" : "/Date(1414026540411)/",
-	"version" : 4,
+	"id" : "0d000b03-9abf-46ef-8abc-c7c60f86e338",
+	"createdAt" : "/Date(1416912837363)/",
+	"updatedAt" : "/Date(1416959517363)/",
+	"version" : 9,
 	"role" : {
-		"id" : "165d385b-a902-47e9-8dd6-e2266a182a22",
-		"createdAt" : "/Date(1413986460411)/",
-		"updatedAt" : "/Date(1413997740411)/",
-		"version" : 7,
+		"id" : "029b77ad-1cdd-4030-a5ab-bf246e87690c",
+		"createdAt" : "/Date(1416914697363)/",
+		"updatedAt" : "/Date(1416930717363)/",
+		"version" : 1,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",
@@ -121,6 +117,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@11013c4b[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=165d385b-a902-47e9-8dd6-e2266a182a22,tenantId=<null>,trashItem=<null>,createdAt=Wed Oct 22 16:01:00 CEST 2014,updatedAt=Wed Oct 22 19:09:00 CEST 2014,version=7][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@406b7c3a[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=029b77ad-1cdd-4030-a5ab-bf246e87690c,tenantId=<null>,trashItem=<null>,createdAt=Tue Nov 25 12:24:57 CET 2014,updatedAt=Tue Nov 25 16:51:57 CET 2014,version=1][ACCOUNT_ADMIN]"
 }
 ```

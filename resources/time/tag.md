@@ -22,20 +22,19 @@ Tag
 ```JSON
 {
 	"type" : "Tag",
+	"path" : "/v1/time/tags",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -57,29 +56,26 @@ Tag
 			"type" : "String",
 			"name" : "name",
 			"description" : "Name of tag",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -97,10 +93,10 @@ Tag
 
 ```JSON
 {
-	"id" : "8474bafb-f841-4acf-807a-d0bb5968d410",
-	"createdAt" : "/Date(1413984299362)/",
-	"updatedAt" : "/Date(1414058939362)/",
-	"version" : 8,
+	"id" : "09565459-5e13-4de4-8022-3e9f6260ddca",
+	"createdAt" : "/Date(1416916017683)/",
+	"updatedAt" : "/Date(1416927117683)/",
+	"version" : 3,
 	"name" : "SW",
 	"displayName" : "SW"
 }

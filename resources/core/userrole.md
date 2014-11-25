@@ -23,20 +23,19 @@ UserRole
 ```JSON
 {
 	"type" : "UserRole",
+	"path" : "/v1/userroles",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -56,6 +55,7 @@ UserRole
 		},
 		{
 			"type" : "Role",
+			"path" : "/v1/roles",
 			"name" : "role",
 			"description" : "Role which has an user.",
 			"access" : "READ_WRITE",
@@ -68,20 +68,20 @@ UserRole
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "User who has a role.",
 			"access" : "READ_WRITE",
@@ -96,8 +96,7 @@ UserRole
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -115,15 +114,15 @@ UserRole
 
 ```JSON
 {
-	"id" : "7a749ddb-a7b5-47af-a544-ab35ace15594",
-	"createdAt" : "/Date(1413983999412)/",
-	"updatedAt" : "/Date(1413997739412)/",
-	"version" : 0,
+	"id" : "ba21a061-24cc-43f3-9450-ce68c6ab10f5",
+	"createdAt" : "/Date(1416914337839)/",
+	"updatedAt" : "/Date(1416991917839)/",
+	"version" : 1,
 	"user" : {
-		"id" : "9ec6dead-8724-4c93-aea9-dd79590f008e",
-		"createdAt" : "/Date(1413984299412)/",
-		"updatedAt" : "/Date(1414019339412)/",
-		"version" : 3,
+		"id" : "4b462ad2-5295-4e6c-807c-471305b9a508",
+		"createdAt" : "/Date(1416914217839)/",
+		"updatedAt" : "/Date(1416955917839)/",
+		"version" : 8,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -140,19 +139,19 @@ UserRole
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1415833200000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900539412)/",
+		"birthdayRemind" : "/Date(1418770800000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917839)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"role" : {
-		"id" : "84d519a2-5433-4eaa-94c2-a7dc053a9afc",
-		"createdAt" : "/Date(1413985679412)/",
-		"updatedAt" : "/Date(1414048139412)/",
-		"version" : 0,
+		"id" : "d5fa4d30-d39e-49be-b586-c0906fca0f55",
+		"createdAt" : "/Date(1416915777839)/",
+		"updatedAt" : "/Date(1416995517839)/",
+		"version" : 7,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",

@@ -25,27 +25,25 @@ Role
 ```JSON
 {
 	"type" : "Role",
+	"path" : "/v1/roles",
 	"fields" : [
 		{
 			"type" : "BuiltInRole",
 			"name" : "builtInRole",
 			"description" : "If it is set, then the role is generated automatically and cannot be edited.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -67,43 +65,38 @@ Role
 			"type" : "String",
 			"name" : "name",
 			"description" : "The name of an custom user's role. Built-in roles do not have a name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Product",
 			"name" : "product",
 			"description" : "Product, only custom roles can be edited.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "RoleType",
 			"name" : "roleType",
 			"description" : "Role type, only custom roles can be edited.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -121,10 +114,10 @@ Role
 
 ```JSON
 {
-	"id" : "b51cd059-d161-4f78-9a33-05a57dc57e71",
-	"createdAt" : "/Date(1413985680296)/",
-	"updatedAt" : "/Date(1414004940296)/",
-	"version" : 0,
+	"id" : "cad2f7d6-a221-4e70-aedf-13496e53304a",
+	"createdAt" : "/Date(1416912778925)/",
+	"updatedAt" : "/Date(1416930718925)/",
+	"version" : 5,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",

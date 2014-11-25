@@ -20,32 +20,27 @@ FileMetadata
 			"type" : "Long",
 			"name" : "contentsize",
 			"description" : "Content size in bytes.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "contenttype",
 			"description" : "MIME content type.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "filename",
 			"description" : "Original file name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "storagepath",
 			"description" : "Path on file storage.",
-			"access" : "DENIED",
-			"constraints" : [ ]
+			"access" : "DENIED"
 		}
-	],
-	"cascades" : [ ]
+	]
 }
 ```
 
@@ -53,10 +48,10 @@ FileMetadata
 
 ```JSON
 {
-	"id" : "42a68fbc-73b8-48fc-ab05-f5332f186851",
-	"createdAt" : "/Date(1413983701071)/",
-	"updatedAt" : "/Date(1414051741071)/",
-	"version" : 6,
+	"id" : "3aa9a57a-dd22-4ed3-ab56-dc685a4bfd82",
+	"createdAt" : "/Date(1416914578989)/",
+	"updatedAt" : "/Date(1416988318989)/",
+	"version" : 3,
 	"fileName" : "mysignature.jpeg",
 	"contentType" : "image/jpeg",
 	"contentSize" : 13114,

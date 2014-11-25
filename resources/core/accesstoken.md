@@ -25,6 +25,7 @@ AccessToken
 ```JSON
 {
 	"type" : "AccessToken",
+	"path" : "/v1/users/@self/accesstokens",
 	"fields" : [
 		{
 			"type" : "String",
@@ -54,15 +55,13 @@ AccessToken
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -94,20 +93,20 @@ AccessToken
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "Associated user.",
 			"access" : "READ_WRITE",
@@ -122,8 +121,7 @@ AccessToken
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -141,18 +139,18 @@ AccessToken
 
 ```JSON
 {
-	"id" : "b434727c-a13f-4822-8cc9-03735f5dda9f",
-	"createdAt" : "/Date(1413983700739)/",
-	"updatedAt" : "/Date(1414040940739)/",
-	"version" : 0,
+	"id" : "8a2efe3a-70df-4995-bdf5-beee62337ea7",
+	"createdAt" : "/Date(1416913377989)/",
+	"updatedAt" : "/Date(1416973917989)/",
+	"version" : 5,
 	"provider" : "google",
 	"accessToken" : "your-google-account-authentication-id",
 	"accountName" : "jsmith@gmail.com",
 	"user" : {
-		"id" : "f7a4fb43-cf2a-4826-b157-ea72d10c15a7",
-		"createdAt" : "/Date(1413984300739)/",
-		"updatedAt" : "/Date(1414044540739)/",
-		"version" : 2,
+		"id" : "b8eda06f-89b5-4cb9-bb40-7da742bd36f5",
+		"createdAt" : "/Date(1416913977989)/",
+		"updatedAt" : "/Date(1416941517989)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -169,10 +167,10 @@ AccessToken
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540739)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917989)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

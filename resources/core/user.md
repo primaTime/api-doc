@@ -43,13 +43,13 @@ User
 ```JSON
 {
 	"type" : "User",
+	"path" : "/v1/users",
 	"fields" : [
 		{
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether or not the user is active. Only active user can be logged into his account.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
@@ -67,22 +67,19 @@ User
 			"type" : "Date",
 			"name" : "birthdayRemind",
 			"description" : "Date which reminds the user of the birthday of another person.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "confirmed",
 			"description" : "User confirmed his registration. Only confirmed users can log into the account.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "confirmedEmail",
 			"description" : "User confirmed his email address.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Date",
@@ -100,8 +97,7 @@ User
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -119,8 +115,7 @@ User
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -142,8 +137,7 @@ User
 			"type" : "String",
 			"name" : "firstName",
 			"description" : "User's first name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -165,43 +159,37 @@ User
 			"type" : "String",
 			"name" : "language",
 			"description" : "Preferred language.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "lastName",
 			"description" : "User's last name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "nickName",
 			"description" : "User's nick name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "password",
 			"description" : "The password in plain text. It is used only for changing the password.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"access" : "WRITE_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "phone",
 			"description" : "User's contact phone.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "position",
 			"description" : "User's job position.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
@@ -219,8 +207,7 @@ User
 			"type" : "String",
 			"name" : "secretKey",
 			"description" : "Unique authentication key. Can be used instead of the user’s credentials.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -248,24 +235,22 @@ User
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Byte",
@@ -287,15 +272,13 @@ User
 			"type" : "Date",
 			"name" : "workingTimeEnd",
 			"description" : "Time when the work usually ends.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "workingTimeStart",
 			"description" : "Time when the work usually starts.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -316,10 +299,10 @@ User
 
 ```JSON
 {
-	"id" : "afb996ba-0fb3-4de7-a7a5-4bcdcc77f52d",
-	"createdAt" : "/Date(1413985680492)/",
-	"updatedAt" : "/Date(1414037340492)/",
-	"version" : 1,
+	"id" : "ed626fda-efba-4cbe-b971-f1d00fc1c9fd",
+	"createdAt" : "/Date(1416915536976)/",
+	"updatedAt" : "/Date(1416937916976)/",
+	"version" : 6,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -336,10 +319,10 @@ User
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1414796400000)/",
-	"workingTimeStart" : "/Date(1413957600000)/",
-	"workingTimeEnd" : "/Date(1413990000000)/",
-	"created" : "/Date(1413900540492)/",
+	"birthdayRemind" : "/Date(1417734000000)/",
+	"workingTimeStart" : "/Date(1416898800000)/",
+	"workingTimeEnd" : "/Date(1416931200000)/",
+	"created" : "/Date(1416829916975)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"

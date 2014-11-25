@@ -41,34 +41,31 @@ Client
 ```JSON
 {
 	"type" : "Client",
+	"path" : "/v1/time/clients",
 	"fields" : [
 		{
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the client is currently active.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "additionalAddressInfo",
 			"description" : "Any additional information related to the address.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "billsCount",
 			"description" : "Counts the number of bills which were issued for the client.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "city",
 			"description" : "Name of the city.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -102,15 +99,13 @@ Client
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -128,36 +123,32 @@ Client
 			"type" : "String",
 			"name" : "externalBrowsableUrl",
 			"description" : "Human accessible link in external system.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "externalResourceId",
 			"description" : "Unique external system identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "externalSynced",
 			"description" : "Determines whether an object was synced with the external system.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"access" : "WRITE_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "externalSyncedAt",
 			"description" : "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "ExternalSystem",
+			"path" : "/v1/externalsystems",
 			"name" : "externalSystem",
 			"description" : "External system which maintains this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -179,78 +170,68 @@ Client
 			"type" : "String",
 			"name" : "name",
 			"description" : "Client name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "phone",
 			"description" : "Telephone number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "projectsCount",
 			"description" : "Counts the number of projects being done for the client.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "state",
 			"description" : "Name of the state or province.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "streetAddress",
 			"description" : "Street name with the house number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "vatId",
 			"description" : "VAT identification number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "website",
 			"description" : "Website URL.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "zipCode",
 			"description" : "ZIP or postal code.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -270,22 +251,22 @@ Client
 
 ```JSON
 {
-	"id" : "914f9f83-bcff-4608-a87c-0934d93ef014",
-	"createdAt" : "/Date(1413984001048)/",
-	"updatedAt" : "/Date(1414040941048)/",
-	"version" : 8,
+	"id" : "e7597148-9288-45d3-b90d-9859c4a14035",
+	"createdAt" : "/Date(1416914817774)/",
+	"updatedAt" : "/Date(1416955917774)/",
+	"version" : 3,
 	"externalSystem" : {
-		"id" : "f90b6ae7-b90f-4abb-89a4-1e229ea18e64",
-		"createdAt" : "/Date(1413984241048)/",
-		"updatedAt" : "/Date(1414066141048)/",
-		"version" : 4,
+		"id" : "95bb20f7-a3ec-4461-81bc-1dbec34e16cb",
+		"createdAt" : "/Date(1416913977774)/",
+		"updatedAt" : "/Date(1416934317774)/",
+		"version" : 8,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1413986941048)/",
+	"externalSyncedAt" : "/Date(1416916317774)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",

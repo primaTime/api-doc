@@ -23,20 +23,19 @@ Department
 ```JSON
 {
 	"type" : "Department",
+	"path" : "/v1/departments",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -56,38 +55,35 @@ Department
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "manager",
 			"description" : "The user who is the manager of the department.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "name",
 			"description" : "The department name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -106,15 +102,15 @@ Department
 
 ```JSON
 {
-	"id" : "937329a3-8693-4d84-b0da-e56ddf5a826f",
-	"createdAt" : "/Date(1413985199119)/",
-	"updatedAt" : "/Date(1414051739119)/",
-	"version" : 6,
+	"id" : "075d77cd-b3f3-46a4-b346-3aaf7bf8a941",
+	"createdAt" : "/Date(1416914337317)/",
+	"updatedAt" : "/Date(1416988317317)/",
+	"version" : 7,
 	"name" : "Development",
 	"manager" : {
-		"id" : "4e75ffb1-509b-455c-b4ac-839cd7442072",
-		"createdAt" : "/Date(1413986219119)/",
-		"updatedAt" : "/Date(1414012139119)/",
+		"id" : "54fae6fc-45b8-4ab5-8a61-c3a7a8a1d881",
+		"createdAt" : "/Date(1416915477317)/",
+		"updatedAt" : "/Date(1416923517317)/",
 		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -132,10 +128,10 @@ Department
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900539118)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917317)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

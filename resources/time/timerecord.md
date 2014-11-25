@@ -43,55 +43,50 @@ TimeRecord
 ```JSON
 {
 	"type" : "TimeRecord",
+	"path" : "/v1/time/timerecords/{id}/relations",
 	"fields" : [
 		{
 			"type" : "Boolean",
 			"name" : "approved",
 			"description" : "Determines whether the record was approved.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "billable",
 			"description" : "Determines whether the time record can be billed. A price will be stored only if the value is 'true'.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "billed",
 			"description" : "Determines whether the record was billed.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Client",
+			"path" : "/v1/time/clients",
 			"name" : "client",
 			"description" : "A client belongs to this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "description",
 			"description" : "Some description of the record.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
@@ -121,36 +116,32 @@ TimeRecord
 			"type" : "String",
 			"name" : "externalBrowsableUrl",
 			"description" : "Human accessible link in external system.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "externalResourceId",
 			"description" : "Unique external system identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "externalSynced",
 			"description" : "Determines whether an object was synced with the external system.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"access" : "WRITE_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "externalSyncedAt",
 			"description" : "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "ExternalSystem",
+			"path" : "/v1/externalsystems",
 			"name" : "externalSystem",
 			"description" : "External system which maintains this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -172,74 +163,68 @@ TimeRecord
 			"type" : "Double",
 			"name" : "price",
 			"description" : "The price of the time record is calculated by the formula: 'unitPrice * duration'. ",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "priceAutoCalculation",
 			"description" : "deprecated",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "priceModified",
 			"description" : "If the value is 'true', the price won't be calculated by the price list.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Project",
+			"path" : "/v1/time/projects",
 			"name" : "project",
 			"description" : "Task belongs to this project.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "start",
 			"description" : "Date when recording starts.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "stop",
 			"description" : "Date when recording stops.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Task",
+			"path" : "/v1/time/tasks",
 			"name" : "task",
 			"description" : "A task belonging to this project.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Double",
 			"name" : "unitPrice",
 			"description" : "The unit price is the price per hour.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "The user for whom the time on the task is recorded.",
 			"access" : "READ_WRITE",
@@ -254,15 +239,14 @@ TimeRecord
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "WorkType",
+			"path" : "/v1/time/worktypes",
 			"name" : "workType",
 			"description" : "User which time on task is recorded.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -280,28 +264,28 @@ TimeRecord
 
 ```JSON
 {
-	"id" : "565c06d6-3812-4f24-9513-1f9afef75a8f",
-	"createdAt" : "/Date(1413984540618)/",
-	"updatedAt" : "/Date(1414048140618)/",
-	"version" : 9,
+	"id" : "ccc0094b-ec0a-49e7-82ca-b4141cb6d89f",
+	"createdAt" : "/Date(1416914098262)/",
+	"updatedAt" : "/Date(1416923518262)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "a87dd6d7-aeb8-427b-8d49-061c6e139885",
-		"createdAt" : "/Date(1413986400619)/",
-		"updatedAt" : "/Date(1414058940619)/",
-		"version" : 2,
+		"id" : "d622ff92-b07b-4bc7-8795-c0f8969e286b",
+		"createdAt" : "/Date(1416913798263)/",
+		"updatedAt" : "/Date(1416984718263)/",
+		"version" : 4,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "time-55567",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334/time/55567",
-	"externalSyncedAt" : "/Date(1413986940618)/",
+	"externalSyncedAt" : "/Date(1416916318262)/",
 	"externalSynced" : true,
 	"user" : {
-		"id" : "7dff5853-a4a4-4eee-b77e-a2c0b81fe2e8",
-		"createdAt" : "/Date(1413986220618)/",
-		"updatedAt" : "/Date(1414033740618)/",
-		"version" : 1,
+		"id" : "d77868ca-e7d1-4c30-8eb9-2bf3e6918464",
+		"createdAt" : "/Date(1416913558263)/",
+		"updatedAt" : "/Date(1416934318263)/",
+		"version" : 8,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -318,23 +302,23 @@ TimeRecord
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540617)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829918262)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"project" : {
-		"id" : "a72dd302-e2ff-43a7-8dd4-d1c1d5141f65",
-		"createdAt" : "/Date(1413984540619)/",
-		"updatedAt" : "/Date(1414012140619)/",
-		"version" : 2,
+		"id" : "a4a26fd6-ccb7-40c2-b61d-fceeee66d31b",
+		"createdAt" : "/Date(1416915058263)/",
+		"updatedAt" : "/Date(1416988318263)/",
+		"version" : 5,
 		"externalSystem" : {
-			"id" : "697ef5f6-d94a-44b8-a252-d39ff78e26a5",
-			"createdAt" : "/Date(1413985740619)/",
-			"updatedAt" : "/Date(1414048140619)/",
+			"id" : "bbc95230-42f8-4dcb-ba6f-246095d344d7",
+			"createdAt" : "/Date(1416914158263)/",
+			"updatedAt" : "/Date(1416973918263)/",
 			"version" : 3,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
@@ -342,22 +326,22 @@ TimeRecord
 		},
 		"externalResourceId" : "project-221",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-		"externalSyncedAt" : "/Date(1413986940618)/",
+		"externalSyncedAt" : "/Date(1416916318262)/",
 		"externalSynced" : true,
 		"name" : "Content management system",
 		"code" : "CMS",
 		"note" : "core feature",
-		"begins" : "/Date(1413900540618)/",
-		"ends" : "/Date(1414073340618)/",
+		"begins" : "/Date(1416829918262)/",
+		"ends" : "/Date(1417002718262)/",
 		"timeBudget" : 604800000,
 		"priceBudget" : 100000.0,
 		"active" : true,
 		"personal" : true,
 		"owner" : {
-			"id" : "1dc7173d-2e51-4a26-9d9f-3fd951bd4bbd",
-			"createdAt" : "/Date(1413983460619)/",
-			"updatedAt" : "/Date(1414012140619)/",
-			"version" : 9,
+			"id" : "7e0bf9f1-7c1c-44ea-ba78-627b3ae7a971",
+			"createdAt" : "/Date(1416913078263)/",
+			"updatedAt" : "/Date(1416916318263)/",
+			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
@@ -374,31 +358,31 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1415833200000)/",
-			"workingTimeStart" : "/Date(1413957600000)/",
-			"workingTimeEnd" : "/Date(1413990000000)/",
-			"created" : "/Date(1413900540617)/",
+			"birthdayRemind" : "/Date(1418770800000)/",
+			"workingTimeStart" : "/Date(1416898800000)/",
+			"workingTimeEnd" : "/Date(1416931200000)/",
+			"created" : "/Date(1416829918262)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"client" : {
-			"id" : "da7fd5ca-c004-4b81-a511-258ae867b90b",
-			"createdAt" : "/Date(1413984180619)/",
-			"updatedAt" : "/Date(1414055340619)/",
-			"version" : 0,
+			"id" : "84fd56ea-d04b-482f-8df5-47980b399eb8",
+			"createdAt" : "/Date(1416916018263)/",
+			"updatedAt" : "/Date(1416937918263)/",
+			"version" : 6,
 			"externalSystem" : {
-				"id" : "1437c831-5984-4810-8f71-9060fef4331e",
-				"createdAt" : "/Date(1413985860619)/",
-				"updatedAt" : "/Date(1414055340619)/",
-				"version" : 8,
+				"id" : "fcfab220-5105-4ac9-9700-4e6a6ad90a1a",
+				"createdAt" : "/Date(1416916258263)/",
+				"updatedAt" : "/Date(1416952318263)/",
+				"version" : 9,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1413986940618)/",
+			"externalSyncedAt" : "/Date(1416916318262)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -424,32 +408,32 @@ TimeRecord
 		"displayName" : "Content management system"
 	},
 	"task" : {
-		"id" : "85f77c9f-1a8c-4c3b-888e-278d8d00a162",
-		"createdAt" : "/Date(1413986820618)/",
-		"updatedAt" : "/Date(1414051740618)/",
+		"id" : "8ac73931-b777-49c5-a542-446716b891c9",
+		"createdAt" : "/Date(1416915958263)/",
+		"updatedAt" : "/Date(1416973918263)/",
 		"version" : 1,
 		"externalSystem" : {
-			"id" : "051fa1d8-e9bf-491b-bd96-d2b60fff0de1",
-			"createdAt" : "/Date(1413986640618)/",
-			"updatedAt" : "/Date(1413994140619)/",
-			"version" : 2,
+			"id" : "81df9a7e-88c3-4269-83c4-5e123a5d636d",
+			"createdAt" : "/Date(1416914278263)/",
+			"updatedAt" : "/Date(1416948718263)/",
+			"version" : 0,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "task-334",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334",
-		"externalSyncedAt" : "/Date(1413986940618)/",
+		"externalSyncedAt" : "/Date(1416916318262)/",
 		"externalSynced" : true,
 		"project" : {
-			"id" : "a72dd302-e2ff-43a7-8dd4-d1c1d5141f65",
-			"createdAt" : "/Date(1413984540619)/",
-			"updatedAt" : "/Date(1414012140619)/",
-			"version" : 2,
+			"id" : "a4a26fd6-ccb7-40c2-b61d-fceeee66d31b",
+			"createdAt" : "/Date(1416915058263)/",
+			"updatedAt" : "/Date(1416988318263)/",
+			"version" : 5,
 			"externalSystem" : {
-				"id" : "697ef5f6-d94a-44b8-a252-d39ff78e26a5",
-				"createdAt" : "/Date(1413985740619)/",
-				"updatedAt" : "/Date(1414048140619)/",
+				"id" : "bbc95230-42f8-4dcb-ba6f-246095d344d7",
+				"createdAt" : "/Date(1416914158263)/",
+				"updatedAt" : "/Date(1416973918263)/",
 				"version" : 3,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
@@ -457,22 +441,22 @@ TimeRecord
 			},
 			"externalResourceId" : "project-221",
 			"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-			"externalSyncedAt" : "/Date(1413986940618)/",
+			"externalSyncedAt" : "/Date(1416916318262)/",
 			"externalSynced" : true,
 			"name" : "Content management system",
 			"code" : "CMS",
 			"note" : "core feature",
-			"begins" : "/Date(1413900540618)/",
-			"ends" : "/Date(1414073340618)/",
+			"begins" : "/Date(1416829918262)/",
+			"ends" : "/Date(1417002718262)/",
 			"timeBudget" : 604800000,
 			"priceBudget" : 100000.0,
 			"active" : true,
 			"personal" : true,
 			"owner" : {
-				"id" : "1dc7173d-2e51-4a26-9d9f-3fd951bd4bbd",
-				"createdAt" : "/Date(1413983460619)/",
-				"updatedAt" : "/Date(1414012140619)/",
-				"version" : 9,
+				"id" : "7e0bf9f1-7c1c-44ea-ba78-627b3ae7a971",
+				"createdAt" : "/Date(1416913078263)/",
+				"updatedAt" : "/Date(1416916318263)/",
+				"version" : 4,
 				"firstName" : "John",
 				"lastName" : "Doe",
 				"nickName" : "Johny D.",
@@ -489,31 +473,31 @@ TimeRecord
 				"confirmed" : false,
 				"confirmedEmail" : false,
 				"active" : false,
-				"birthdayRemind" : "/Date(1415833200000)/",
-				"workingTimeStart" : "/Date(1413957600000)/",
-				"workingTimeEnd" : "/Date(1413990000000)/",
-				"created" : "/Date(1413900540617)/",
+				"birthdayRemind" : "/Date(1418770800000)/",
+				"workingTimeStart" : "/Date(1416898800000)/",
+				"workingTimeEnd" : "/Date(1416931200000)/",
+				"created" : "/Date(1416829918262)/",
 				"admin" : false,
 				"projectManager" : false,
 				"displayName" : "Doe John"
 			},
 			"client" : {
-				"id" : "da7fd5ca-c004-4b81-a511-258ae867b90b",
-				"createdAt" : "/Date(1413984180619)/",
-				"updatedAt" : "/Date(1414055340619)/",
-				"version" : 0,
+				"id" : "84fd56ea-d04b-482f-8df5-47980b399eb8",
+				"createdAt" : "/Date(1416916018263)/",
+				"updatedAt" : "/Date(1416937918263)/",
+				"version" : 6,
 				"externalSystem" : {
-					"id" : "1437c831-5984-4810-8f71-9060fef4331e",
-					"createdAt" : "/Date(1413985860619)/",
-					"updatedAt" : "/Date(1414055340619)/",
-					"version" : 8,
+					"id" : "fcfab220-5105-4ac9-9700-4e6a6ad90a1a",
+					"createdAt" : "/Date(1416916258263)/",
+					"updatedAt" : "/Date(1416952318263)/",
+					"version" : 9,
 					"name" : "Vendor system",
 					"integrationPlugin" : "vendor",
 					"displayName" : "Vendor system"
 				},
 				"externalResourceId" : "customer-996",
 				"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-				"externalSyncedAt" : "/Date(1413986940618)/",
+				"externalSyncedAt" : "/Date(1416916318262)/",
 				"externalSynced" : true,
 				"name" : "Example Ltd.",
 				"code" : "EXL",
@@ -539,13 +523,14 @@ TimeRecord
 			"displayName" : "Content management system"
 		},
 		"name" : "Article editation",
+		"code" : "ART",
 		"note" : "form with validation",
 		"done" : false,
 		"author" : {
-			"id" : "1dc7173d-2e51-4a26-9d9f-3fd951bd4bbd",
-			"createdAt" : "/Date(1413983460619)/",
-			"updatedAt" : "/Date(1414012140619)/",
-			"version" : 9,
+			"id" : "7e0bf9f1-7c1c-44ea-ba78-627b3ae7a971",
+			"createdAt" : "/Date(1416913078263)/",
+			"updatedAt" : "/Date(1416916318263)/",
+			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
@@ -562,19 +547,19 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1415833200000)/",
-			"workingTimeStart" : "/Date(1413957600000)/",
-			"workingTimeEnd" : "/Date(1413990000000)/",
-			"created" : "/Date(1413900540617)/",
+			"birthdayRemind" : "/Date(1418770800000)/",
+			"workingTimeStart" : "/Date(1416898800000)/",
+			"workingTimeEnd" : "/Date(1416931200000)/",
+			"created" : "/Date(1416829918262)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"owner" : {
-			"id" : "7dff5853-a4a4-4eee-b77e-a2c0b81fe2e8",
-			"createdAt" : "/Date(1413986220618)/",
-			"updatedAt" : "/Date(1414033740618)/",
-			"version" : 1,
+			"id" : "d77868ca-e7d1-4c30-8eb9-2bf3e6918464",
+			"createdAt" : "/Date(1416913558263)/",
+			"updatedAt" : "/Date(1416934318263)/",
+			"version" : 8,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -591,10 +576,10 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1414796400000)/",
-			"workingTimeStart" : "/Date(1413957600000)/",
-			"workingTimeEnd" : "/Date(1413990000000)/",
-			"created" : "/Date(1413900540617)/",
+			"birthdayRemind" : "/Date(1417734000000)/",
+			"workingTimeStart" : "/Date(1416898800000)/",
+			"workingTimeEnd" : "/Date(1416931200000)/",
+			"created" : "/Date(1416829918262)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -604,22 +589,22 @@ TimeRecord
 		"displayName" : "Article editation"
 	},
 	"workType" : {
-		"id" : "bf9e2c61-a0ec-436f-8579-6b50fe594f1c",
-		"createdAt" : "/Date(1413986640619)/",
-		"updatedAt" : "/Date(1414022940619)/",
-		"version" : 2,
+		"id" : "54ce5859-d7db-4b2c-b4db-f15304b26366",
+		"createdAt" : "/Date(1416913018263)/",
+		"updatedAt" : "/Date(1416930718263)/",
+		"version" : 6,
 		"externalSystem" : {
-			"id" : "2045a5a2-50c1-4d30-8379-03a9d58fd360",
-			"createdAt" : "/Date(1413986520619)/",
-			"updatedAt" : "/Date(1413990540619)/",
-			"version" : 1,
+			"id" : "5f10ac12-7be5-48bf-9a6e-d30aa3b0a01b",
+			"createdAt" : "/Date(1416915478263)/",
+			"updatedAt" : "/Date(1416999118263)/",
+			"version" : 7,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "wt-058",
 		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1413986940618)/",
+		"externalSyncedAt" : "/Date(1416916318262)/",
 		"externalSynced" : true,
 		"name" : "Software development",
 		"code" : "SW",
@@ -627,22 +612,22 @@ TimeRecord
 		"displayName" : "Software development"
 	},
 	"client" : {
-		"id" : "da7fd5ca-c004-4b81-a511-258ae867b90b",
-		"createdAt" : "/Date(1413984180619)/",
-		"updatedAt" : "/Date(1414055340619)/",
-		"version" : 0,
+		"id" : "84fd56ea-d04b-482f-8df5-47980b399eb8",
+		"createdAt" : "/Date(1416916018263)/",
+		"updatedAt" : "/Date(1416937918263)/",
+		"version" : 6,
 		"externalSystem" : {
-			"id" : "1437c831-5984-4810-8f71-9060fef4331e",
-			"createdAt" : "/Date(1413985860619)/",
-			"updatedAt" : "/Date(1414055340619)/",
-			"version" : 8,
+			"id" : "fcfab220-5105-4ac9-9700-4e6a6ad90a1a",
+			"createdAt" : "/Date(1416916258263)/",
+			"updatedAt" : "/Date(1416952318263)/",
+			"version" : 9,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1413986940618)/",
+		"externalSyncedAt" : "/Date(1416916318262)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -661,8 +646,8 @@ TimeRecord
 		"website" : "http://www.example.com/",
 		"displayName" : "Example Ltd."
 	},
-	"start" : "/Date(1413900540618)/",
-	"stop" : "/Date(1413922140618)/",
+	"start" : "/Date(1416829918262)/",
+	"stop" : "/Date(1416851518262)/",
 	"duration" : 21600000,
 	"description" : "Form validations and CRUD.",
 	"billable" : true,

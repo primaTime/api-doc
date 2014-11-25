@@ -42,34 +42,32 @@ Project
 ```JSON
 {
 	"type" : "Project",
+	"path" : "/v1/time/projects",
 	"fields" : [
 		{
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the project is currently active.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "begins",
 			"description" : "Date and time when the project begins.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "billable",
 			"description" : "Determines whether the project will be billed to the client.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Client",
+			"path" : "/v1/time/clients",
 			"name" : "client",
 			"description" : "Provides info about the client for whom the project is realized.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -87,15 +85,13 @@ Project
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Boolean",
@@ -113,43 +109,38 @@ Project
 			"type" : "Date",
 			"name" : "ends",
 			"description" : "Date and time of project completion.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "externalBrowsableUrl",
 			"description" : "Human accessible link in external system.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "externalResourceId",
 			"description" : "Unique external system identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "externalSynced",
 			"description" : "Determines whether an object was synced with the external system.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"access" : "WRITE_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "externalSyncedAt",
 			"description" : "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "ExternalSystem",
+			"path" : "/v1/externalsystems",
 			"name" : "externalSystem",
 			"description" : "External system which maintains this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -171,25 +162,23 @@ Project
 			"type" : "Long",
 			"name" : "membersCount",
 			"description" : "Counts the number of members working on the project.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "name",
 			"description" : "Project name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "note",
 			"description" : "Note about the project.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "owner",
 			"description" : "Identifies the project owner.",
 			"access" : "READ_WRITE",
@@ -204,57 +193,50 @@ Project
 			"type" : "Boolean",
 			"name" : "personal",
 			"description" : "Determines whether the project is available, only for the owner.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Double",
 			"name" : "priceBudget",
 			"description" : "Amount of money available for the project.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "tasksCount",
 			"description" : "Counts the number of tasks that belong to the project and which have not been done.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "timeBudget",
 			"description" : "Amount of milliseconds available for the project.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "timeRecordsCount",
 			"description" : "Counts the number of time records in the project.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -277,14 +259,14 @@ Project
 
 ```JSON
 {
-	"id" : "e04e2d61-a99d-4b82-b722-e0ffd2a73183",
-	"createdAt" : "/Date(1413984420912)/",
-	"updatedAt" : "/Date(1414040940912)/",
-	"version" : 1,
+	"id" : "f876b20c-1214-45bc-bb8a-9759f00371db",
+	"createdAt" : "/Date(1416914697096)/",
+	"updatedAt" : "/Date(1416952317096)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "390c027f-e301-43b1-83b2-2994510d193e",
-		"createdAt" : "/Date(1413983640914)/",
-		"updatedAt" : "/Date(1414037340914)/",
+		"id" : "bec1db51-be24-47bc-ae32-15404f1e7e3b",
+		"createdAt" : "/Date(1416914757097)/",
+		"updatedAt" : "/Date(1416930717097)/",
 		"version" : 4,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -292,22 +274,22 @@ Project
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1413986940912)/",
+	"externalSyncedAt" : "/Date(1416916317096)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1413900540912)/",
-	"ends" : "/Date(1414073340912)/",
+	"begins" : "/Date(1416829917096)/",
+	"ends" : "/Date(1417002717096)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
 	"active" : true,
 	"personal" : false,
 	"owner" : {
-		"id" : "087f04f5-654f-4452-8069-24a751c20516",
-		"createdAt" : "/Date(1413984660913)/",
-		"updatedAt" : "/Date(1414066140913)/",
-		"version" : 8,
+		"id" : "a2fdc201-6535-4b57-928b-75d6c4b31fba",
+		"createdAt" : "/Date(1416916257097)/",
+		"updatedAt" : "/Date(1416984717097)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -324,31 +306,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1415833200000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540912)/",
+		"birthdayRemind" : "/Date(1418770800000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917096)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "7dd24843-fef5-470b-b1e6-5d362a6e05cf",
-		"createdAt" : "/Date(1413986040913)/",
-		"updatedAt" : "/Date(1414048140913)/",
-		"version" : 3,
+		"id" : "0800b887-78e4-4b6d-8caf-d5e727b5f589",
+		"createdAt" : "/Date(1416915777096)/",
+		"updatedAt" : "/Date(1416941517096)/",
+		"version" : 9,
 		"externalSystem" : {
-			"id" : "e456ea7c-bd47-49ff-8d80-ec4357f8a03c",
-			"createdAt" : "/Date(1413984600913)/",
-			"updatedAt" : "/Date(1414012140913)/",
-			"version" : 9,
+			"id" : "81d85af0-c7b2-471d-9afe-272351c37a36",
+			"createdAt" : "/Date(1416914337096)/",
+			"updatedAt" : "/Date(1416977517096)/",
+			"version" : 5,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1413986940912)/",
+		"externalSyncedAt" : "/Date(1416916317096)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",

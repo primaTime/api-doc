@@ -26,34 +26,31 @@ BillItem
 ```JSON
 {
 	"type" : "BillItem",
+	"path" : "/v1/billing/bills/{billId}/items",
 	"fields" : [
 		{
 			"type" : "String",
 			"name" : "attributes",
 			"description" : "Describes form of item aggregation.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Integer",
 			"name" : "docIndex",
 			"description" : "Sequence number of item in bill.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
@@ -87,36 +84,32 @@ BillItem
 			"type" : "String",
 			"name" : "itemGroup",
 			"description" : "Name of aggregating itemGroup.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Double",
 			"name" : "price",
 			"description" : "Price of item.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -134,10 +127,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "8ebac7c9-fc8c-40e5-93ee-2286dcd1c1cb",
-	"createdAt" : "/Date(1413984300324)/",
-	"updatedAt" : "/Date(1413997740324)/",
-	"version" : 9,
+	"id" : "71a7ebfe-2ad7-4e56-a36a-bdcf5e3e91dc",
+	"createdAt" : "/Date(1416916257650)/",
+	"updatedAt" : "/Date(1416952317650)/",
+	"version" : 6,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

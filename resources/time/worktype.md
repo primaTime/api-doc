@@ -30,13 +30,13 @@ WorkType
 ```JSON
 {
 	"type" : "WorkType",
+	"path" : "/v1/time/worktypes",
 	"fields" : [
 		{
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the work type is currently active.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -54,15 +54,13 @@ WorkType
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Boolean",
@@ -80,36 +78,32 @@ WorkType
 			"type" : "String",
 			"name" : "externalBrowsableUrl",
 			"description" : "Human accessible link in external system.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "externalResourceId",
 			"description" : "Unique external system identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "externalSynced",
 			"description" : "Determines whether an object was synced with the external system.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"access" : "WRITE_ONLY"
 		},
 		{
 			"type" : "Date",
 			"name" : "externalSyncedAt",
 			"description" : "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "ExternalSystem",
+			"path" : "/v1/externalsystems",
 			"name" : "externalSystem",
 			"description" : "External system which maintains this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -131,29 +125,26 @@ WorkType
 			"type" : "String",
 			"name" : "name",
 			"description" : "Name of the work type.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -172,22 +163,22 @@ WorkType
 
 ```JSON
 {
-	"id" : "6603a22a-6c90-4583-8422-b0e8f57adf02",
-	"createdAt" : "/Date(1413986220212)/",
-	"updatedAt" : "/Date(1414069740212)/",
-	"version" : 8,
+	"id" : "615bc345-5b59-4c41-9d11-bbcd5c398ad7",
+	"createdAt" : "/Date(1416916017450)/",
+	"updatedAt" : "/Date(1416984717450)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "27cde8a5-4bfb-4aba-8deb-0c9f13b48fce",
-		"createdAt" : "/Date(1413985200212)/",
-		"updatedAt" : "/Date(1413990540212)/",
-		"version" : 2,
+		"id" : "317bfb2a-0efe-41e5-92c1-4e292379b470",
+		"createdAt" : "/Date(1416915117451)/",
+		"updatedAt" : "/Date(1416970317451)/",
+		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1413986940212)/",
+	"externalSyncedAt" : "/Date(1416916317450)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",

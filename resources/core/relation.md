@@ -25,20 +25,19 @@ Relation
 ```JSON
 {
 	"type" : "Relation",
+	"path" : "/v1/relations",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -72,8 +71,7 @@ Relation
 			"type" : "String",
 			"name" : "inboundType",
 			"description" : "Inbound bean type. Lowercase simple class name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -91,29 +89,26 @@ Relation
 			"type" : "String",
 			"name" : "outboundType",
 			"description" : "Outbound bean type. Lowercase simple class name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -131,14 +126,14 @@ Relation
 
 ```JSON
 {
-	"id" : "33f09e30-cb90-4162-92fa-c707954f75ea",
-	"createdAt" : "/Date(1413986819328)/",
-	"updatedAt" : "/Date(1414040939328)/",
-	"version" : 9,
-	"inboundId" : "ed957db4-98bd-4ab0-a8ac-d49a2d76ad84",
+	"id" : "2b80b659-1983-4fc4-980b-6677ead0f517",
+	"createdAt" : "/Date(1416914937407)/",
+	"updatedAt" : "/Date(1416930717407)/",
+	"version" : 2,
+	"inboundId" : "3f7ce337-e9a4-4b44-9068-f7a86bef94bf",
 	"inboundType" : "user",
-	"outboundId" : "21d53ba7-2417-4be9-b899-aee3136941f3",
+	"outboundId" : "92c0b1ef-b105-4358-b535-0da7423fa48f",
 	"outboundType" : "timerecord",
-	"displayName" : "user ed957db4-98bd-4ab0-a8ac-d49a2d76ad84 -> timerecord 21d53ba7-2417-4be9-b899-aee3136941f3"
+	"displayName" : "user 3f7ce337-e9a4-4b44-9068-f7a86bef94bf -> timerecord 92c0b1ef-b105-4358-b535-0da7423fa48f"
 }
 ```

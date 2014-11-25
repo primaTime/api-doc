@@ -22,20 +22,19 @@ ProjectWorkTypeLink
 ```JSON
 {
 	"type" : "ProjectWorkTypeLink",
+	"path" : "/v1/time/projects/{id}/worktypelinks",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -55,27 +54,26 @@ ProjectWorkTypeLink
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "WorkType",
+			"path" : "/v1/time/worktypes",
 			"name" : "workType",
 			"description" : "The work type which is linked with another object.",
 			"access" : "READ_WRITE",
@@ -102,27 +100,27 @@ ProjectWorkTypeLink
 
 ```JSON
 {
-	"id" : "86f7cb26-80f2-4f02-a056-1a982446f3d5",
-	"createdAt" : "/Date(1413985680251)/",
-	"updatedAt" : "/Date(1413994140251)/",
-	"version" : 0,
+	"id" : "cd9c4832-f8bb-4372-a653-ac11569f6305",
+	"createdAt" : "/Date(1416915778518)/",
+	"updatedAt" : "/Date(1416984718518)/",
+	"version" : 4,
 	"workType" : {
-		"id" : "90b0fc60-199f-450e-8ae7-b3ead4552e19",
-		"createdAt" : "/Date(1413985740251)/",
-		"updatedAt" : "/Date(1414033740251)/",
+		"id" : "e5477733-0166-4f3c-b222-6a3e6c27289c",
+		"createdAt" : "/Date(1416913678518)/",
+		"updatedAt" : "/Date(1416945118518)/",
 		"version" : 5,
 		"externalSystem" : {
-			"id" : "7d2b0931-ec68-4f52-abf2-1b04add5b70f",
-			"createdAt" : "/Date(1413986880251)/",
-			"updatedAt" : "/Date(1414051740251)/",
-			"version" : 6,
+			"id" : "d4c25195-5f96-4f45-aecb-6bc9a6f25e7e",
+			"createdAt" : "/Date(1416914038518)/",
+			"updatedAt" : "/Date(1416984718518)/",
+			"version" : 5,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "wt-058",
 		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1413986940250)/",
+		"externalSyncedAt" : "/Date(1416916318518)/",
 		"externalSynced" : true,
 		"name" : "Software development",
 		"code" : "SW",

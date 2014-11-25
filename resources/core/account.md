@@ -48,48 +48,43 @@ Account
 ```JSON
 {
 	"type" : "Account",
+	"path" : "/v1/accounts",
 	"fields" : [
 		{
 			"type" : "String",
 			"name" : "additionalAddressInfo",
 			"description" : "Any additional informations related to the address.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "affiliateId",
 			"description" : "An identification of the subject who has contributed to the account registration.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "apiKey",
 			"description" : "Unique key for access the application.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "campaign",
 			"description" : "The marketing campaign from which the account originates from. For internal use only.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "city",
 			"description" : "Name of the city.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Boolean",
 			"name" : "confirmed",
 			"description" : "The account is confirmed. Users can log into confirmed account only.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -123,15 +118,13 @@ Account
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "currency",
 			"description" : "Default currency for the account.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -149,15 +142,13 @@ Account
 			"type" : "Date",
 			"name" : "deactivationRequestedAt",
 			"description" : "The date and time when the account owner requested deactivation.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -179,8 +170,7 @@ Account
 			"type" : "String",
 			"name" : "language",
 			"description" : "Preferred language.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -196,38 +186,34 @@ Account
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "owner",
 			"description" : "The user who has created the account.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "phone",
 			"description" : "Telephone number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "source",
 			"description" : "The account sources for marketing purposes. For internal use only.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "state",
 			"description" : "Name of the state or province.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "streetAddress",
 			"description" : "The street name with the house number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -255,17 +241,16 @@ Account
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -287,22 +272,19 @@ Account
 			"type" : "String",
 			"name" : "vatId",
 			"description" : "VAT identification number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "website",
 			"description" : "The website URL.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Byte",
@@ -324,22 +306,19 @@ Account
 			"type" : "Date",
 			"name" : "workingTimeEnd",
 			"description" : "The time when the work day usually end.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "workingTimeStart",
 			"description" : "The time when the work day usually start.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "zipCode",
 			"description" : "ZIP or postal code.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -358,15 +337,15 @@ Account
 
 ```JSON
 {
-	"id" : "c2488fcb-ea9d-40ae-ac18-71a1de45bb23",
-	"createdAt" : "/Date(1413983460110)/",
-	"updatedAt" : "/Date(1414004940110)/",
-	"version" : 2,
+	"id" : "95af0356-1388-4370-9f90-115b709c6541",
+	"createdAt" : "/Date(1416913438646)/",
+	"updatedAt" : "/Date(1416923518646)/",
+	"version" : 4,
 	"owner" : {
-		"id" : "61d25f8c-9397-4b31-b8c8-6815112b529e",
-		"createdAt" : "/Date(1413985620110)/",
-		"updatedAt" : "/Date(1413994140110)/",
-		"version" : 1,
+		"id" : "1cd1c4ab-ec56-4941-9ef0-f126c9b366b4",
+		"createdAt" : "/Date(1416916198646)/",
+		"updatedAt" : "/Date(1416963118646)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -383,10 +362,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540109)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829918646)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -410,13 +389,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1413957600000)/",
-	"workingTimeEnd" : "/Date(1413990000000)/",
-	"created" : "/Date(1413900540109)/",
+	"workingTimeStart" : "/Date(1416898800000)/",
+	"workingTimeEnd" : "/Date(1416931200000)/",
+	"created" : "/Date(1416829918646)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1413986940110)/",
-	"affiliateId" : "a263719f-f312-4dd7-b5e5-7975d49c5e13",
+	"deactivationRequestedAt" : "/Date(1416916318646)/",
+	"affiliateId" : "2fdc8f84-b74c-4f52-ae86-6641a07ad01b",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

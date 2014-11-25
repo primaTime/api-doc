@@ -22,20 +22,19 @@ ProjectMember
 ```JSON
 {
 	"type" : "ProjectMember",
+	"path" : "/v1/time/projects/{id}/members",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -55,20 +54,20 @@ ProjectMember
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "User who is a member.",
 			"access" : "READ_WRITE",
@@ -83,8 +82,7 @@ ProjectMember
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -102,15 +100,15 @@ ProjectMember
 
 ```JSON
 {
-	"id" : "6a58d1d6-9d03-41f7-b60b-52900338dc40",
-	"createdAt" : "/Date(1413985680365)/",
-	"updatedAt" : "/Date(1414044540365)/",
-	"version" : 6,
+	"id" : "b20a954c-c713-4ab5-a610-51ab5f41decd",
+	"createdAt" : "/Date(1416915358867)/",
+	"updatedAt" : "/Date(1416923518867)/",
+	"version" : 2,
 	"user" : {
-		"id" : "87c848b2-788c-43b0-9f02-80d901428532",
-		"createdAt" : "/Date(1413983400365)/",
-		"updatedAt" : "/Date(1414022940365)/",
-		"version" : 6,
+		"id" : "318f2b02-c222-4a8f-8436-9a6fabbdfb4b",
+		"createdAt" : "/Date(1416913558867)/",
+		"updatedAt" : "/Date(1416970318867)/",
+		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -127,10 +125,10 @@ ProjectMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540365)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829918867)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

@@ -24,13 +24,13 @@ TrashItem
 ```JSON
 {
 	"type" : "TrashItem",
+	"path" : "/v1/trash",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Class",
@@ -60,15 +60,13 @@ TrashItem
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "groupId",
 			"description" : "Groups all the objects which were deleted together.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -88,24 +86,22 @@ TrashItem
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -123,10 +119,10 @@ TrashItem
 
 ```JSON
 {
-	"id" : "f3f6689c-704d-4c28-b4b9-a305642d4623",
-	"createdAt" : "/Date(1413986401009)/",
-	"updatedAt" : "/Date(1414019341009)/",
-	"version" : 1,
+	"id" : "2c783b0d-6b9c-4a9c-8d6c-62ea461ab0be",
+	"createdAt" : "/Date(1416914638693)/",
+	"updatedAt" : "/Date(1416930718693)/",
+	"version" : 9,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"groupId" : "ffaf67e7-051d-4a58-a71a-8e39353a93b4",

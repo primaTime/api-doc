@@ -25,41 +25,37 @@ SpendingTimeUnit
 ```JSON
 {
 	"type" : "SpendingTimeUnit",
+	"path" : "/v1/spendingtime",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "begin",
 			"description" : "Time when user begins spending his time.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "duration",
 			"description" : "Length of the activity between the beginning and the end (in milliseconds). Can also be just a part of the time between the beginning and the end.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "end",
 			"description" : "Time when user ends spending his time.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -79,20 +75,20 @@ SpendingTimeUnit
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "User who spends time.",
 			"access" : "READ_WRITE",
@@ -107,8 +103,7 @@ SpendingTimeUnit
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -126,15 +121,15 @@ SpendingTimeUnit
 
 ```JSON
 {
-	"id" : "67274330-3b8d-457a-97dc-af2ffb658506",
-	"createdAt" : "/Date(1413986100159)/",
-	"updatedAt" : "/Date(1414040940159)/",
-	"version" : 3,
+	"id" : "f6696b2a-4afa-4a9c-a50c-c9099889774f",
+	"createdAt" : "/Date(1416914157718)/",
+	"updatedAt" : "/Date(1416966717718)/",
+	"version" : 6,
 	"user" : {
-		"id" : "aab0c532-aafb-4563-85d8-7b239adf09f5",
-		"createdAt" : "/Date(1413986160159)/",
-		"updatedAt" : "/Date(1414012140159)/",
-		"version" : 5,
+		"id" : "33f66ab7-853d-4887-a282-cc3c06199211",
+		"createdAt" : "/Date(1416914337718)/",
+		"updatedAt" : "/Date(1416973917718)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -151,16 +146,16 @@ SpendingTimeUnit
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1414796400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540158)/",
+		"birthdayRemind" : "/Date(1417734000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917718)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"begin" : "/Date(1413958140159)/",
-	"end" : "/Date(1413984060159)/",
+	"begin" : "/Date(1416887517718)/",
+	"end" : "/Date(1416913437718)/",
 	"duration" : 1200000,
 	"displayName" : "20m"
 }

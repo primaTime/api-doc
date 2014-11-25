@@ -23,16 +23,17 @@ DepartmentMember
 ```JSON
 {
 	"type" : "DepartmentMember",
+	"path" : "/v1/departmentmembers",
 	"fields" : [
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Department",
+			"path" : "/v1/departments",
 			"name" : "department",
 			"description" : "The department of the account member.",
 			"access" : "READ_WRITE",
@@ -47,8 +48,7 @@ DepartmentMember
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -68,20 +68,20 @@ DepartmentMember
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "User who is a member.",
 			"access" : "READ_WRITE",
@@ -96,8 +96,7 @@ DepartmentMember
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -115,15 +114,15 @@ DepartmentMember
 
 ```JSON
 {
-	"id" : "54208a7d-d125-468f-89e3-378320758618",
-	"createdAt" : "/Date(1413985920971)/",
-	"updatedAt" : "/Date(1413997740971)/",
-	"version" : 0,
+	"id" : "1fe46c89-e697-43e5-a949-ea663c719e83",
+	"createdAt" : "/Date(1416915777919)/",
+	"updatedAt" : "/Date(1416984717919)/",
+	"version" : 3,
 	"user" : {
-		"id" : "11a3eb1c-d65d-4df9-93e6-9c66ebe11b66",
-		"createdAt" : "/Date(1413986460971)/",
-		"updatedAt" : "/Date(1414066140971)/",
-		"version" : 9,
+		"id" : "2819d03b-7e98-407d-85fc-ce52d292c1d1",
+		"createdAt" : "/Date(1416913437920)/",
+		"updatedAt" : "/Date(1416934317920)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -140,25 +139,25 @@ DepartmentMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1415833200000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540971)/",
+		"birthdayRemind" : "/Date(1418770800000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829917919)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"department" : {
-		"id" : "c77e1f7e-dcdd-4bc2-a593-936484d8244d",
-		"createdAt" : "/Date(1413986700971)/",
-		"updatedAt" : "/Date(1414051740971)/",
-		"version" : 9,
+		"id" : "8b3ab56b-1186-4125-a3e5-e3447af110f3",
+		"createdAt" : "/Date(1416915477919)/",
+		"updatedAt" : "/Date(1416941517919)/",
+		"version" : 6,
 		"name" : "Development",
 		"manager" : {
-			"id" : "877c05a3-cfc5-4a6a-83ba-d3d7fa9c40d2",
-			"createdAt" : "/Date(1413985800971)/",
-			"updatedAt" : "/Date(1414044540971)/",
-			"version" : 3,
+			"id" : "5329f67d-ed07-4593-99bd-416c2b5d39d4",
+			"createdAt" : "/Date(1416915117920)/",
+			"updatedAt" : "/Date(1416937917920)/",
+			"version" : 5,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -175,10 +174,10 @@ DepartmentMember
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1414796400000)/",
-			"workingTimeStart" : "/Date(1413957600000)/",
-			"workingTimeEnd" : "/Date(1413990000000)/",
-			"created" : "/Date(1413900540971)/",
+			"birthdayRemind" : "/Date(1417734000000)/",
+			"workingTimeStart" : "/Date(1416898800000)/",
+			"workingTimeEnd" : "/Date(1416931200000)/",
+			"created" : "/Date(1416829917919)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"

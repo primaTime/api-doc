@@ -23,9 +23,11 @@ AccountAdmin
 ```JSON
 {
 	"type" : "AccountAdmin",
+	"path" : "/v1/accountadmins",
 	"fields" : [
 		{
 			"type" : "Account",
+			"path" : "/v1/accounts",
 			"name" : "account",
 			"description" : "Determines which account is administered.",
 			"access" : "READ_WRITE",
@@ -40,15 +42,13 @@ AccountAdmin
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -68,20 +68,20 @@ AccountAdmin
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "User",
+			"path" : "/v1/users",
 			"name" : "user",
 			"description" : "The user who is the account administrator.",
 			"access" : "READ_WRITE",
@@ -96,8 +96,7 @@ AccountAdmin
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -115,19 +114,19 @@ AccountAdmin
 
 ```JSON
 {
-	"id" : "eb1bc985-a2a6-4786-a4f3-cab8e18fdf75",
-	"createdAt" : "/Date(1413985380014)/",
-	"updatedAt" : "/Date(1414040940014)/",
-	"version" : 6,
+	"id" : "5ed5cda0-c01c-4086-bb46-9a5dea8f85a2",
+	"createdAt" : "/Date(1416915538575)/",
+	"updatedAt" : "/Date(1416945118575)/",
+	"version" : 0,
 	"account" : {
-		"id" : "d9aab7e4-d039-4fc3-9708-cc6411935a31",
-		"createdAt" : "/Date(1413983940014)/",
-		"updatedAt" : "/Date(1414033740014)/",
+		"id" : "0daf4de9-f1fa-4f49-ab0e-6d5169c4b5cd",
+		"createdAt" : "/Date(1416916138575)/",
+		"updatedAt" : "/Date(1416916318575)/",
 		"version" : 7,
 		"owner" : {
-			"id" : "88dfa68b-e736-4be9-bb05-316344fdbe3f",
-			"createdAt" : "/Date(1413985560014)/",
-			"updatedAt" : "/Date(1414033740014)/",
+			"id" : "3d7d1822-7b7a-44ff-9102-3df461e3a197",
+			"createdAt" : "/Date(1416913918575)/",
+			"updatedAt" : "/Date(1416977518575)/",
 			"version" : 9,
 			"firstName" : "John",
 			"lastName" : "Smith",
@@ -145,10 +144,10 @@ AccountAdmin
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1414796400000)/",
-			"workingTimeStart" : "/Date(1413957600000)/",
-			"workingTimeEnd" : "/Date(1413990000000)/",
-			"created" : "/Date(1413900540014)/",
+			"birthdayRemind" : "/Date(1417734000000)/",
+			"workingTimeStart" : "/Date(1416898800000)/",
+			"workingTimeEnd" : "/Date(1416931200000)/",
+			"created" : "/Date(1416829918574)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -172,20 +171,20 @@ AccountAdmin
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540014)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829918574)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1413986940014)/",
-		"affiliateId" : "aa1a5160-9749-471a-a041-99440e159b87",
+		"deactivationRequestedAt" : "/Date(1416916318574)/",
+		"affiliateId" : "2b69b165-1d04-46b4-b967-b05f4ee9313a",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
 	"user" : {
-		"id" : "309516fd-ccf3-406c-81d7-93976a6aa366",
-		"createdAt" : "/Date(1413984600014)/",
-		"updatedAt" : "/Date(1414040940014)/",
-		"version" : 8,
+		"id" : "ed4ef251-0b39-488f-afa8-5101eec066d1",
+		"createdAt" : "/Date(1416916198575)/",
+		"updatedAt" : "/Date(1416923518575)/",
+		"version" : 7,
 		"firstName" : "Charles",
 		"lastName" : "Johnson",
 		"nickName" : "Charlie",
@@ -202,10 +201,10 @@ AccountAdmin
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1415228400000)/",
-		"workingTimeStart" : "/Date(1413957600000)/",
-		"workingTimeEnd" : "/Date(1413990000000)/",
-		"created" : "/Date(1413900540014)/",
+		"birthdayRemind" : "/Date(1418166000000)/",
+		"workingTimeStart" : "/Date(1416898800000)/",
+		"workingTimeEnd" : "/Date(1416931200000)/",
+		"created" : "/Date(1416829918574)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Johnson Charles"

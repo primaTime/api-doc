@@ -27,27 +27,26 @@ ContactPerson
 ```JSON
 {
 	"type" : "ContactPerson",
+	"path" : "/v1/time/clients/{id}/contacts",
 	"fields" : [
 		{
 			"type" : "Client",
+			"path" : "/v1/time/clients",
 			"name" : "client",
 			"description" : "Provides info about client for which person works.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "createdAt",
 			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -65,8 +64,7 @@ ContactPerson
 			"type" : "String",
 			"name" : "firstName",
 			"description" : "Contact person's first name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -88,43 +86,38 @@ ContactPerson
 			"type" : "String",
 			"name" : "jobTitle",
 			"description" : "Describes the job position held by a person.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "lastName",
 			"description" : "Contact person's last name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
 			"name" : "phone",
 			"description" : "Contact person's phone number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "TrashItem",
+			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
 			"name" : "updatedAt",
 			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -142,32 +135,32 @@ ContactPerson
 
 ```JSON
 {
-	"id" : "92927a86-854f-4cbb-9404-1426f1a21d98",
-	"createdAt" : "/Date(1413985740540)/",
-	"updatedAt" : "/Date(1414058940540)/",
-	"version" : 4,
+	"id" : "a4263cb3-4f08-4b51-ae86-f65e1bedfc63",
+	"createdAt" : "/Date(1416916078042)/",
+	"updatedAt" : "/Date(1416930718042)/",
+	"version" : 8,
 	"firstName" : "Pedro",
 	"lastName" : "Examplo",
 	"email" : "pedro@example.com",
 	"phone" : "66 234 555 678",
 	"jobTitle" : "deputy director",
 	"client" : {
-		"id" : "ad55949a-5ed6-4fde-a0de-51569939122b",
-		"createdAt" : "/Date(1413984600540)/",
-		"updatedAt" : "/Date(1414012140540)/",
-		"version" : 1,
+		"id" : "91420cf6-c9ac-44c0-bc25-dc5991e14b92",
+		"createdAt" : "/Date(1416912898042)/",
+		"updatedAt" : "/Date(1416955918042)/",
+		"version" : 4,
 		"externalSystem" : {
-			"id" : "c8da1270-646f-4477-bc61-6ed960c35c00",
-			"createdAt" : "/Date(1413985800540)/",
-			"updatedAt" : "/Date(1414026540540)/",
-			"version" : 6,
+			"id" : "69a709c1-72d8-4d64-ab6e-f2c8f75ac199",
+			"createdAt" : "/Date(1416913198042)/",
+			"updatedAt" : "/Date(1416952318042)/",
+			"version" : 1,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1413986940540)/",
+		"externalSyncedAt" : "/Date(1416916318042)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
