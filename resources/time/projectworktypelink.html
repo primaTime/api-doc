@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.3.4" data-basepath="../.." data-revision="1414056280787">
+    <div class="book" data-level="2.3.4" data-basepath="../.." data-revision="1416922567730">
     
 
 <div class="book-summary">
@@ -1120,20 +1120,19 @@
 <h2 id="metadata">Metadata</h2>
 <pre><code class="lang-JSON">{
     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"ProjectWorkTypeLink"</span></span>,
+    "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/projects/{id}/worktypelinks"</span></span>,
     "<span class="hljs-attribute">fields</span>" : <span class="hljs-value">[
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"createdAt"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Date of creation."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"displayName"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Describes an object in human readable form."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
@@ -1153,27 +1152,26 @@
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"TrashItem"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/trash"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"trashItem"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Informs whether an object is in the trash. An object is in the trash if a trash item was specified."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"updatedAt"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Last modified date."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Long"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"version"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Object version number."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[ ]
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"WorkType"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/worktypes"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"workType"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The work type which is linked with another object."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
@@ -1197,27 +1195,27 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"86f7cb26-80f2-4f02-a056-1a982446f3d5"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413985680251)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413994140251)/"</span></span>,
-    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"cd9c4832-f8bb-4372-a653-ac11569f6305"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416915778518)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416984718518)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
     "<span class="hljs-attribute">workType</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"90b0fc60-199f-450e-8ae7-b3ead4552e19"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413985740251)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1414033740251)/"</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"e5477733-0166-4f3c-b222-6a3e6c27289c"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416913678518)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416945118518)/"</span></span>,
         "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">5</span></span>,
         "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"7d2b0931-ec68-4f52-abf2-1b04add5b70f"</span></span>,
-            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413986880251)/"</span></span>,
-            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1414051740251)/"</span></span>,
-            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d4c25195-5f96-4f45-aecb-6bc9a6f25e7e"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914038518)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416984718518)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">5</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
             "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
             "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
         </span>}</span>,
         "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"wt-058"</span></span>,
         "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/worktypes/058"</span></span>,
-        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1413986940250)/"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416916318518)/"</span></span>,
         "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
         "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Software development"</span></span>,
         "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"SW"</span></span>,
