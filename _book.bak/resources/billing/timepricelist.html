@@ -1,0 +1,1692 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>timepricelist | primaERP / API Documentation</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.1.0">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../../resources/billing/billitem.html" />
+    
+    
+    <link rel="prev" href="../../resources/billing/bill.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="2.4.2" data-basepath="../.." data-revision="1417531148768">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="rest/README.html">
+            
+                
+                    <a href="../../rest/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Overview
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="rest/response.html">
+            
+                
+                    <a href="../../rest/response.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         Response
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="rest/options.html">
+            
+                
+                    <a href="../../rest/options.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         Query string options
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.3" data-path="rest/authentication.html">
+            
+                
+                    <a href="../../rest/authentication.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                         Authentication
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.4" data-path="rest/registration.html">
+            
+                
+                    <a href="../../rest/registration.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                         Registration
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.5" data-path="rest/password.html">
+            
+                
+                    <a href="../../rest/password.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                         Password
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.6" data-path="rest/deleting.html">
+            
+                
+                    <a href="../../rest/deleting.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                         Deleting
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.7" data-path="rest/views.html">
+            
+                
+                    <a href="../../rest/views.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                         Views
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.8" data-path="rest/specials.html">
+            
+                
+                    <a href="../../rest/specials.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                         Specials
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.9" data-path="rest/metadata.html">
+            
+                
+                    <a href="../../rest/metadata.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                         Metadata
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.10" data-path="rest/errors.html">
+            
+                
+                    <a href="../../rest/errors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                         Errors
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.11" data-path="rest/storage.html">
+            
+                
+                    <a href="../../rest/storage.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                         Storage
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.12" data-path="rest/pricing.html">
+            
+                
+                    <a href="../../rest/pricing.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.12.</b>
+                        
+                         Pricing
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.13" data-path="rest/versioning.html">
+            
+                
+                    <a href="../../rest/versioning.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.13.</b>
+                        
+                         Versioning
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.14" data-path="rest/summaries.html">
+            
+                
+                    <a href="../../rest/summaries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.14.</b>
+                        
+                         Summaries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.15" data-path="rest/reports.html">
+            
+                
+                    <a href="../../rest/reports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.15.</b>
+                        
+                         Reports
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.16" data-path="rest/batch.html">
+            
+                
+                    <a href="../../rest/batch.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.16.</b>
+                        
+                         Batch
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.17" data-path="rest/files.html">
+            
+                
+                    <a href="../../rest/files.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.17.</b>
+                        
+                         Files
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="resources/README.html">
+            
+                
+                    <a href="../../resources/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Resources
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="resources/general.html">
+            
+                
+                    <a href="../../resources/general.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         General information
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="resources/core/README.html">
+            
+                
+                    <a href="../../resources/core/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         CORE
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.2.1" data-path="resources/core/accountadmin.html">
+            
+                
+                    <a href="../../resources/core/accountadmin.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                         accountadmin
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.2" data-path="resources/core/filemetadata.html">
+            
+                
+                    <a href="../../resources/core/filemetadata.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                         filemetadata
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.3" data-path="resources/core/role.html">
+            
+                
+                    <a href="../../resources/core/role.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                         role
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.4" data-path="resources/core/trashitem.html">
+            
+                
+                    <a href="../../resources/core/trashitem.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                         trashitem
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.5" data-path="resources/core/department.html">
+            
+                
+                    <a href="../../resources/core/department.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                         department
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.6" data-path="resources/core/license.html">
+            
+                
+                    <a href="../../resources/core/license.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                         license
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.7" data-path="resources/core/accesstoken.html">
+            
+                
+                    <a href="../../resources/core/accesstoken.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.7.</b>
+                        
+                         accesstoken
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.8" data-path="resources/core/authobject.html">
+            
+                
+                    <a href="../../resources/core/authobject.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.8.</b>
+                        
+                         authobject
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.9" data-path="resources/core/spendingtimeunit.html">
+            
+                
+                    <a href="../../resources/core/spendingtimeunit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.9.</b>
+                        
+                         spendingtimeunit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.10" data-path="resources/core/departmentmember.html">
+            
+                
+                    <a href="../../resources/core/departmentmember.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.10.</b>
+                        
+                         departmentmember
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.11" data-path="resources/core/secretkey.html">
+            
+                
+                    <a href="../../resources/core/secretkey.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.11.</b>
+                        
+                         secretkey
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.12" data-path="resources/core/userrole.html">
+            
+                
+                    <a href="../../resources/core/userrole.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.12.</b>
+                        
+                         userrole
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.13" data-path="resources/core/user.html">
+            
+                
+                    <a href="../../resources/core/user.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.13.</b>
+                        
+                         user
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.14" data-path="resources/core/account.html">
+            
+                
+                    <a href="../../resources/core/account.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.14.</b>
+                        
+                         account
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.15" data-path="resources/core/access.html">
+            
+                
+                    <a href="../../resources/core/access.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.15.</b>
+                        
+                         access
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.16" data-path="resources/core/feature.html">
+            
+                
+                    <a href="../../resources/core/feature.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.16.</b>
+                        
+                         feature
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.17" data-path="resources/core/externalsystem.html">
+            
+                
+                    <a href="../../resources/core/externalsystem.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.17.</b>
+                        
+                         externalsystem
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.18" data-path="resources/core/rolecompetency.html">
+            
+                
+                    <a href="../../resources/core/rolecompetency.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.18.</b>
+                        
+                         rolecompetency
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2.19" data-path="resources/core/relation.html">
+            
+                
+                    <a href="../../resources/core/relation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.19.</b>
+                        
+                         relation
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3" data-path="resources/time/README.html">
+            
+                
+                    <a href="../../resources/time/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                         TIME
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.3.1" data-path="resources/time/project.html">
+            
+                
+                    <a href="../../resources/time/project.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                         project
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.2" data-path="resources/time/projectmember.html">
+            
+                
+                    <a href="../../resources/time/projectmember.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                         projectmember
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.3" data-path="resources/time/worktype.html">
+            
+                
+                    <a href="../../resources/time/worktype.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                         worktype
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.4" data-path="resources/time/projectworktypelink.html">
+            
+                
+                    <a href="../../resources/time/projectworktypelink.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.4.</b>
+                        
+                         projectworktypelink
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.5" data-path="resources/time/tag.html">
+            
+                
+                    <a href="../../resources/time/tag.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.5.</b>
+                        
+                         tag
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.6" data-path="resources/time/contactperson.html">
+            
+                
+                    <a href="../../resources/time/contactperson.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.6.</b>
+                        
+                         contactperson
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.7" data-path="resources/time/client.html">
+            
+                
+                    <a href="../../resources/time/client.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.7.</b>
+                        
+                         client
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.8" data-path="resources/time/task.html">
+            
+                
+                    <a href="../../resources/time/task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.8.</b>
+                        
+                         task
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.9" data-path="resources/time/impulse.html">
+            
+                
+                    <a href="../../resources/time/impulse.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.9.</b>
+                        
+                         impulse
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.3.10" data-path="resources/time/timerecord.html">
+            
+                
+                    <a href="../../resources/time/timerecord.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.10.</b>
+                        
+                         timerecord
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.4" data-path="resources/billing/README.html">
+            
+                
+                    <a href="../../resources/billing/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                         BILLING
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.4.1" data-path="resources/billing/bill.html">
+            
+                
+                    <a href="../../resources/billing/bill.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                         bill
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="2.4.2" data-path="resources/billing/timepricelist.html">
+            
+                
+                    <a href="../../resources/billing/timepricelist.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                         timepricelist
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.4.3" data-path="resources/billing/billitem.html">
+            
+                
+                    <a href="../../resources/billing/billitem.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                         billitem
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >primaERP / API Documentation</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_174">
+                    
+                        <h1 id="timepricelist">TimePriceList</h1>
+<h2 id="url">URL</h2>
+<pre><code>https://api.primaerp.com/v1/billing/pricelists/time
+</code></pre><h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Access</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>client</td>
+<td>Client</td>
+<td>read write</td>
+<td>no</td>
+<td>The client for whom the work is performed.</td>
+</tr>
+<tr>
+<td>createdAt</td>
+<td>Date</td>
+<td>read only</td>
+<td>no</td>
+<td>Date of creation.</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td>String</td>
+<td>read only</td>
+<td>no</td>
+<td>Describes an object in human readable form.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>read write</td>
+<td>no</td>
+<td>Unique object identifier.</td>
+</tr>
+<tr>
+<td>note</td>
+<td>String</td>
+<td>read write</td>
+<td>no</td>
+<td>Some reason why the price was set.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Double</td>
+<td>read write</td>
+<td>no</td>
+<td>Price of the performed work.</td>
+</tr>
+<tr>
+<td>project</td>
+<td>Project</td>
+<td>read write</td>
+<td>no</td>
+<td>The project where the work is performed.</td>
+</tr>
+<tr>
+<td>task</td>
+<td>Task</td>
+<td>read write</td>
+<td>no</td>
+<td>The task where the work is performed.</td>
+</tr>
+<tr>
+<td>trashItem</td>
+<td>TrashItem</td>
+<td>read write</td>
+<td>no</td>
+<td>Informs whether an object is in the trash. An object is in the trash if a trash item was specified.</td>
+</tr>
+<tr>
+<td>updatedAt</td>
+<td>Date</td>
+<td>read only</td>
+<td>no</td>
+<td>Last modified date.</td>
+</tr>
+<tr>
+<td>user</td>
+<td>User</td>
+<td>read write</td>
+<td>no</td>
+<td>The user who owns the priced work</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Long</td>
+<td>read write</td>
+<td>no</td>
+<td>Object version number.</td>
+</tr>
+<tr>
+<td>workType</td>
+<td>WorkType</td>
+<td>read write</td>
+<td>no</td>
+<td>Type of the priced work.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="metadata">Metadata</h2>
+<pre><code class="lang-JSON">{
+    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"TimePriceList"</span></span>,
+    "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/billing/pricelists/time"</span></span>,
+    "<span class="hljs-attribute">fields</span>" : <span class="hljs-value">[
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Client"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/clients"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"client"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The client for whom the work is performed."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"createdAt"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Date of creation."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"displayName"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Describes an object in human readable form."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"id"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Unique object identifier."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
+            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
+                {
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                </span>},
+                {
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
+                </span>}
+            ]
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"note"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Some reason why the price was set."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Double"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"price"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Price of the performed work."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Project"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/projects"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"project"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The project where the work is performed."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Task"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/tasks"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"task"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The task where the work is performed."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"TrashItem"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/trash"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"trashItem"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Informs whether an object is in the trash. An object is in the trash if a trash item was specified."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"updatedAt"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Last modified date."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/users"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"user"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The user who owns the priced work"</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Long"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"version"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Object version number."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"WorkType"</span></span>,
+            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/time/worktypes"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"workType"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Type of the priced work."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
+        </span>}
+    ]</span>,
+    "<span class="hljs-attribute">cascades</span>" : <span class="hljs-value">[
+        {
+            "<span class="hljs-attribute">cascadeType</span>" : <span class="hljs-value"><span class="hljs-string">"REMOVE"</span></span>,
+            "<span class="hljs-attribute">objectTypes</span>" : <span class="hljs-value">[
+                <span class="hljs-string">"TrashItem"</span>
+            ]
+        </span>}
+    ]
+</span>}
+</code></pre>
+<h2 id="dummy-data">Dummy data</h2>
+<pre><code class="lang-JSON">{
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"02430aab-1846-4770-b87e-445566b363dd"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519421030)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417554101030)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">3</span></span>,
+    "<span class="hljs-attribute">price</span>" : <span class="hljs-value"><span class="hljs-number">100.0</span></span>,
+    "<span class="hljs-attribute">note</span>" : <span class="hljs-value"><span class="hljs-string">"Price with a special discount for the best client."</span></span>,
+    "<span class="hljs-attribute">user</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"3c4b50c0-55c6-4ce0-96ab-d31174446386"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519301030)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417590101030)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+        "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
+        "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith, J."</span></span>,
+        "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.smith@example.com"</span></span>,
+        "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 123 444 567"</span></span>,
+        "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Chief developer"</span></span>,
+        "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
+        "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"dd/MM/yyyy"</span></span>,
+        "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
+        "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+        "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
+        "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+        "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
+        "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418338800000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301030)/"</span></span>,
+        "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith John"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">workType</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d811e6ff-3a69-45eb-97bd-646530351e6c"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521341031)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417525301031)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+        "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"86083fdc-0a29-4e63-8c33-cc255674d812"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519601031)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417572101031)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+            "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"wt-058"</span></span>,
+        "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/worktypes/058"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+        "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Software development"</span></span>,
+        "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"SW"</span></span>,
+        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Software development"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">project</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"08ef1056-d90e-4bf8-8269-a71d8e5e5f5f"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518941030)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417528901030)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"55f4d7cd-14dd-43f5-8111-21f939f1786d"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518281031)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701031)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">9</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+            "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"project-221"</span></span>,
+        "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/projects/221"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+        "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span></span>,
+        "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"CMS"</span></span>,
+        "<span class="hljs-attribute">note</span>" : <span class="hljs-value"><span class="hljs-string">"core feature"</span></span>,
+        "<span class="hljs-attribute">begins</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301029)/"</span></span>,
+        "<span class="hljs-attribute">ends</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417608101029)/"</span></span>,
+        "<span class="hljs-attribute">timeBudget</span>" : <span class="hljs-value"><span class="hljs-number">604800000</span></span>,
+        "<span class="hljs-attribute">priceBudget</span>" : <span class="hljs-value"><span class="hljs-number">100000.0</span></span>,
+        "<span class="hljs-attribute">personal</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+        "<span class="hljs-attribute">owner</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"1c7cda9e-1893-44ee-96b5-01aabf9647eb"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520921030)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417539701030)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+            "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+            "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe"</span></span>,
+            "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Johny D."</span></span>,
+            "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.doe@example.com"</span></span>,
+            "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 234 555 678"</span></span>,
+            "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Senior developer"</span></span>,
+            "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
+            "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"yyyy-MM-dd"</span></span>,
+            "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
+            "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+            "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"pt_BR"</span></span>,
+            "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+            "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
+            "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1419375600000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+            "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301030)/"</span></span>,
+            "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe John"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">client</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d66b71e1-9ec5-47e3-807f-1e5071e1f418"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518641030)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417597301030)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
+            "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"cbd737f9-4e1d-4b75-8f57-0bf14d93afd4"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518881031)/"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417525301031)/"</span></span>,
+                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">5</span></span>,
+                "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+                "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+                "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"customer-996"</span></span>,
+            "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/customers/996"</span></span>,
+            "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+            "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
+            "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"EXL"</span></span>,
+            "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"info@example.com"</span></span>,
+            "<span class="hljs-attribute">billsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">projectsCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+            "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Rua 123 Sul Avenida Lo 15"</span></span>,
+            "<span class="hljs-attribute">additionalAddressInfo</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+            "<span class="hljs-attribute">zipCode</span>" : <span class="hljs-value"><span class="hljs-string">"89020-000"</span></span>,
+            "<span class="hljs-attribute">city</span>" : <span class="hljs-value"><span class="hljs-string">"Palmas"</span></span>,
+            "<span class="hljs-attribute">state</span>" : <span class="hljs-value"><span class="hljs-string">"Tocantins"</span></span>,
+            "<span class="hljs-attribute">countryCode</span>" : <span class="hljs-value"><span class="hljs-string">"BRA"</span></span>,
+            "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"+66 987 654 321"</span></span>,
+            "<span class="hljs-attribute">vatId</span>" : <span class="hljs-value"><span class="hljs-string">"23.456.789/0001-77"</span></span>,
+            "<span class="hljs-attribute">website</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.example.com/"</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">billable</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">membersCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">tasksCount</span>" : <span class="hljs-value"><span class="hljs-number">3</span></span>,
+        "<span class="hljs-attribute">timeRecordsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">task</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"f56d04a1-4e7e-4a10-9ac2-644b1db529b0"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520981030)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417525301030)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+        "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"fe9c540f-a49b-4fbb-bb8c-9b3763e11b4a"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520561031)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417539701031)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+            "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"task-556"</span></span>,
+        "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/projects/221/tasks/556"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+        "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">project</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"08ef1056-d90e-4bf8-8269-a71d8e5e5f5f"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518941030)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417528901030)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"55f4d7cd-14dd-43f5-8111-21f939f1786d"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518281031)/"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701031)/"</span></span>,
+                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">9</span></span>,
+                "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+                "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+                "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"project-221"</span></span>,
+            "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/projects/221"</span></span>,
+            "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+            "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span></span>,
+            "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"CMS"</span></span>,
+            "<span class="hljs-attribute">note</span>" : <span class="hljs-value"><span class="hljs-string">"core feature"</span></span>,
+            "<span class="hljs-attribute">begins</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301029)/"</span></span>,
+            "<span class="hljs-attribute">ends</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417608101029)/"</span></span>,
+            "<span class="hljs-attribute">timeBudget</span>" : <span class="hljs-value"><span class="hljs-number">604800000</span></span>,
+            "<span class="hljs-attribute">priceBudget</span>" : <span class="hljs-value"><span class="hljs-number">100000.0</span></span>,
+            "<span class="hljs-attribute">personal</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">owner</span>" : <span class="hljs-value">{
+                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"1c7cda9e-1893-44ee-96b5-01aabf9647eb"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520921030)/"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417539701030)/"</span></span>,
+                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+                "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+                "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe"</span></span>,
+                "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Johny D."</span></span>,
+                "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.doe@example.com"</span></span>,
+                "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 234 555 678"</span></span>,
+                "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Senior developer"</span></span>,
+                "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
+                "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"yyyy-MM-dd"</span></span>,
+                "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
+                "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+                "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"pt_BR"</span></span>,
+                "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
+                "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+                "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+                "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+                "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1419375600000)/"</span></span>,
+                "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+                "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+                "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301030)/"</span></span>,
+                "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+                "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+                "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe John"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">client</span>" : <span class="hljs-value">{
+                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d66b71e1-9ec5-47e3-807f-1e5071e1f418"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518641030)/"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417597301030)/"</span></span>,
+                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
+                "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+                    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"cbd737f9-4e1d-4b75-8f57-0bf14d93afd4"</span></span>,
+                    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518881031)/"</span></span>,
+                    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417525301031)/"</span></span>,
+                    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">5</span></span>,
+                    "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+                    "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+                    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"customer-996"</span></span>,
+                "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/customers/996"</span></span>,
+                "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+                "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+                "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
+                "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"EXL"</span></span>,
+                "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"info@example.com"</span></span>,
+                "<span class="hljs-attribute">billsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+                "<span class="hljs-attribute">projectsCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+                "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Rua 123 Sul Avenida Lo 15"</span></span>,
+                "<span class="hljs-attribute">additionalAddressInfo</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                "<span class="hljs-attribute">zipCode</span>" : <span class="hljs-value"><span class="hljs-string">"89020-000"</span></span>,
+                "<span class="hljs-attribute">city</span>" : <span class="hljs-value"><span class="hljs-string">"Palmas"</span></span>,
+                "<span class="hljs-attribute">state</span>" : <span class="hljs-value"><span class="hljs-string">"Tocantins"</span></span>,
+                "<span class="hljs-attribute">countryCode</span>" : <span class="hljs-value"><span class="hljs-string">"BRA"</span></span>,
+                "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"+66 987 654 321"</span></span>,
+                "<span class="hljs-attribute">vatId</span>" : <span class="hljs-value"><span class="hljs-string">"23.456.789/0001-77"</span></span>,
+                "<span class="hljs-attribute">website</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.example.com/"</span></span>,
+                "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">billable</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+            "<span class="hljs-attribute">membersCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+            "<span class="hljs-attribute">tasksCount</span>" : <span class="hljs-value"><span class="hljs-number">3</span></span>,
+            "<span class="hljs-attribute">timeRecordsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Article editation"</span></span>,
+        "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"ART"</span></span>,
+        "<span class="hljs-attribute">note</span>" : <span class="hljs-value"><span class="hljs-string">"form with validation"</span></span>,
+        "<span class="hljs-attribute">done</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">author</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"7b66313f-9d01-4da3-a528-09f37c85d1e3"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519481031)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417528901031)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">8</span></span>,
+            "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+            "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe"</span></span>,
+            "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Johny D."</span></span>,
+            "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.doe@example.com"</span></span>,
+            "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 234 555 678"</span></span>,
+            "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Senior developer"</span></span>,
+            "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
+            "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"yyyy-MM-dd"</span></span>,
+            "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
+            "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+            "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"pt_BR"</span></span>,
+            "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+            "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
+            "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1419375600000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+            "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301030)/"</span></span>,
+            "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe John"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">owner</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"3c4b50c0-55c6-4ce0-96ab-d31174446386"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519301030)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417590101030)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+            "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
+            "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith, J."</span></span>,
+            "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.smith@example.com"</span></span>,
+            "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 123 444 567"</span></span>,
+            "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Chief developer"</span></span>,
+            "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
+            "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"dd/MM/yyyy"</span></span>,
+            "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
+            "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+            "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
+            "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+            "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
+            "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418338800000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+            "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+            "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301030)/"</span></span>,
+            "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith John"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">timeBudget</span>" : <span class="hljs-value"><span class="hljs-number">86400000</span></span>,
+        "<span class="hljs-attribute">priceBudget</span>" : <span class="hljs-value"><span class="hljs-number">1000.0</span></span>,
+        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Article editation"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">client</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"64169681-7bbe-4372-9425-dff23ad38b09"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518521030)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417582901030)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+        "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"7527fa60-1cf6-4fbb-a21d-8a845eef9c5d"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518281030)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417604501030)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
+            "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
+            "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"customer-996"</span></span>,
+        "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/customers/996"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701029)/"</span></span>,
+        "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
+        "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"EXL"</span></span>,
+        "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"info@example.com"</span></span>,
+        "<span class="hljs-attribute">billsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">projectsCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Rua 123 Sul Avenida Lo 15"</span></span>,
+        "<span class="hljs-attribute">additionalAddressInfo</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
+        "<span class="hljs-attribute">zipCode</span>" : <span class="hljs-value"><span class="hljs-string">"89020-000"</span></span>,
+        "<span class="hljs-attribute">city</span>" : <span class="hljs-value"><span class="hljs-string">"Palmas"</span></span>,
+        "<span class="hljs-attribute">state</span>" : <span class="hljs-value"><span class="hljs-string">"Tocantins"</span></span>,
+        "<span class="hljs-attribute">countryCode</span>" : <span class="hljs-value"><span class="hljs-string">"BRA"</span></span>,
+        "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"+66 987 654 321"</span></span>,
+        "<span class="hljs-attribute">vatId</span>" : <span class="hljs-value"><span class="hljs-string">"23.456.789/0001-77"</span></span>,
+        "<span class="hljs-attribute">website</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.example.com/"</span></span>,
+        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"100.0"</span>
+</span>}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../resources/billing/bill.html" class="navigation navigation-prev " aria-label="Previous page: bill"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../resources/billing/billitem.html" class="navigation navigation-next " aria-label="Next page: billitem"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":4}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

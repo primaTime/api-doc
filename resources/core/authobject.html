@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.2.8" data-basepath="../.." data-revision="1416994175001">
+    <div class="book" data-level="2.2.8" data-basepath="../.." data-revision="1417531250234">
     
 
 <div class="book-summary">
@@ -1067,6 +1067,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Access</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1075,24 +1076,28 @@
 <td>expiration</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Expiration of the authentication token.</td>
 </tr>
 <tr>
 <td>refreshexpiration</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Expiration of the authentication token.</td>
 </tr>
 <tr>
 <td>refreshtoken</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Refresh the token for the authetication token renew.</td>
 </tr>
 <tr>
 <td>token</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Authentication token for the current user.</td>
 </tr>
 </tbody>
@@ -1130,10 +1135,10 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">token</span>" : <span class="hljs-value"><span class="hljs-string">"3a710ee9-3f35-4b2c-bb21-9ae5d8345717"</span></span>,
-    "<span class="hljs-attribute">expiration</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416919918979)/"</span></span>,
-    "<span class="hljs-attribute">refreshToken</span>" : <span class="hljs-value"><span class="hljs-string">"674ec005-4eb0-447e-8d97-4b7ea51b68d0"</span></span>,
-    "<span class="hljs-attribute">refreshExpiration</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521118979)/"</span>
+    "<span class="hljs-attribute">token</span>" : <span class="hljs-value"><span class="hljs-string">"42090cbd-dd24-4de4-9c65-14a22989ea6c"</span></span>,
+    "<span class="hljs-attribute">expiration</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417525301906)/"</span></span>,
+    "<span class="hljs-attribute">refreshToken</span>" : <span class="hljs-value"><span class="hljs-string">"6e47daf5-6046-4ffb-a463-18675123417f"</span></span>,
+    "<span class="hljs-attribute">refreshExpiration</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418126501906)/"</span>
 </span>}
 </code></pre>
 
@@ -1167,7 +1172,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":1}};
     gitbook.start(config);
 });
 </script>

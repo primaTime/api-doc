@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.2.19" data-basepath="../.." data-revision="1416994175001">
+    <div class="book" data-level="2.2.19" data-basepath="../.." data-revision="1417531250234">
     
 
 <div class="book-summary">
@@ -1069,6 +1069,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Access</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1077,60 +1078,70 @@
 <td>createdAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Date of creation.</td>
 </tr>
 <tr>
 <td>displayName</td>
 <td>String</td>
 <td>read only</td>
+<td>no</td>
 <td>Describes an object in human readable form.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Unique object identifier.</td>
 </tr>
 <tr>
 <td>inboundId</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Unique id of inbound side object.</td>
 </tr>
 <tr>
 <td>inboundType</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Inbound bean type. Lowercase simple class name.</td>
 </tr>
 <tr>
 <td>outboundId</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Unique id of outbound side object.</td>
 </tr>
 <tr>
 <td>outboundType</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Outbound bean type. Lowercase simple class name.</td>
 </tr>
 <tr>
 <td>trashItem</td>
 <td>TrashItem</td>
 <td>read write</td>
+<td>no</td>
 <td>Informs whether an object is in the trash. An object is in the trash if a trash item was specified.</td>
 </tr>
 <tr>
 <td>updatedAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Last modified date.</td>
 </tr>
 <tr>
 <td>version</td>
 <td>Long</td>
 <td>read write</td>
+<td>no</td>
 <td>Object version number.</td>
 </tr>
 </tbody>
@@ -1160,11 +1171,10 @@
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
                 {
                     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-string">"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
                 </span>},
                 {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-literal">null</span>
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
                 </span>}
             ]
         </span>},
@@ -1176,7 +1186,7 @@
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
                 {
                     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-string">"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
                 </span>}
             ]
         </span>},
@@ -1194,7 +1204,7 @@
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
                 {
                     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-string">"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
                 </span>}
             ]
         </span>},
@@ -1236,15 +1246,15 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"2b80b659-1983-4fc4-980b-6677ead0f517"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914937407)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416930717407)/"</span></span>,
-    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
-    "<span class="hljs-attribute">inboundId</span>" : <span class="hljs-value"><span class="hljs-string">"3f7ce337-e9a4-4b44-9068-f7a86bef94bf"</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"481b9685-9f62-41d4-b349-cf6917b406f5"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701837)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417557701837)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+    "<span class="hljs-attribute">inboundId</span>" : <span class="hljs-value"><span class="hljs-string">"138c7856-ca5d-4d04-8d5a-4185526dc756"</span></span>,
     "<span class="hljs-attribute">inboundType</span>" : <span class="hljs-value"><span class="hljs-string">"user"</span></span>,
-    "<span class="hljs-attribute">outboundId</span>" : <span class="hljs-value"><span class="hljs-string">"92c0b1ef-b105-4358-b535-0da7423fa48f"</span></span>,
+    "<span class="hljs-attribute">outboundId</span>" : <span class="hljs-value"><span class="hljs-string">"981597af-5bc4-4130-9dd4-c934465a120a"</span></span>,
     "<span class="hljs-attribute">outboundType</span>" : <span class="hljs-value"><span class="hljs-string">"timerecord"</span></span>,
-    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"user 3f7ce337-e9a4-4b44-9068-f7a86bef94bf -&gt; timerecord 92c0b1ef-b105-4358-b535-0da7423fa48f"</span>
+    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"user 138c7856-ca5d-4d04-8d5a-4185526dc756 -&gt; timerecord 981597af-5bc4-4130-9dd4-c934465a120a"</span>
 </span>}
 </code></pre>
 
@@ -1278,7 +1288,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":1}};
     gitbook.start(config);
 });
 </script>

@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.2.18" data-basepath="../.." data-revision="1416994175001">
+    <div class="book" data-level="2.2.18" data-basepath="../.." data-revision="1417531250234">
     
 
 <div class="book-summary">
@@ -1069,6 +1069,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Access</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1077,48 +1078,56 @@
 <td>competency</td>
 <td>Competency</td>
 <td>read only</td>
+<td>no</td>
 <td>If it is set, then the role is generated automatically and cannot be edited.</td>
 </tr>
 <tr>
 <td>createdAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Date of creation.</td>
 </tr>
 <tr>
 <td>displayName</td>
 <td>String</td>
 <td>read only</td>
+<td>no</td>
 <td>Describes an object in human readable form.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Unique object identifier.</td>
 </tr>
 <tr>
 <td>role</td>
 <td>Role</td>
 <td>read write</td>
+<td>no</td>
 <td>The role of an custom user&#39;s role. Built-in roles do not have a role.</td>
 </tr>
 <tr>
 <td>trashItem</td>
 <td>TrashItem</td>
 <td>read write</td>
+<td>no</td>
 <td>Informs whether an object is in the trash. An object is in the trash if a trash item was specified.</td>
 </tr>
 <tr>
 <td>updatedAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Last modified date.</td>
 </tr>
 <tr>
 <td>version</td>
 <td>Long</td>
 <td>read write</td>
+<td>no</td>
 <td>Object version number.</td>
 </tr>
 </tbody>
@@ -1154,11 +1163,10 @@
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
                 {
                     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-string">"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
                 </span>},
                 {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-literal">null</span>
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
                 </span>}
             ]
         </span>},
@@ -1201,15 +1209,15 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"0d000b03-9abf-46ef-8abc-c7c60f86e338"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416912837363)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416959517363)/"</span></span>,
-    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">9</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"3cd7a11c-0a59-4b01-ae02-fb08fce87e0d"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521580870)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417564900870)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
     "<span class="hljs-attribute">role</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"029b77ad-1cdd-4030-a5ab-bf246e87690c"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914697363)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416930717363)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"40e488fb-15fc-4f38-88d2-2f8eec93bb93"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521340870)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417550500870)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
         "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Admin"</span></span>,
         "<span class="hljs-attribute">builtInRole</span>" : <span class="hljs-value"><span class="hljs-string">"ADMIN"</span></span>,
         "<span class="hljs-attribute">roleType</span>" : <span class="hljs-value"><span class="hljs-string">"EXPLICIT"</span></span>,
@@ -1217,7 +1225,7 @@
         "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"ADMIN"</span>
     </span>}</span>,
     "<span class="hljs-attribute">competency</span>" : <span class="hljs-value"><span class="hljs-string">"ACCOUNT_ADMIN"</span></span>,
-    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"eu.abra.primaerp.api.beans.system.permissions.Role@406b7c3a[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=029b77ad-1cdd-4030-a5ab-bf246e87690c,tenantId=&lt;null&gt;,trashItem=&lt;null&gt;,createdAt=Tue Nov 25 12:24:57 CET 2014,updatedAt=Tue Nov 25 16:51:57 CET 2014,version=1][ACCOUNT_ADMIN]"</span>
+    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"eu.abra.primaerp.api.beans.system.permissions.Role@292ed8e1[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=40e488fb-15fc-4f38-88d2-2f8eec93bb93,tenantId=&lt;null&gt;,trashItem=&lt;null&gt;,createdAt=Tue Dec 02 12:55:40 CET 2014,updatedAt=Tue Dec 02 21:01:40 CET 2014,version=6][ACCOUNT_ADMIN]"</span>
 </span>}
 </code></pre>
 
@@ -1251,7 +1259,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":1}};
     gitbook.start(config);
 });
 </script>

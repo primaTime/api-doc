@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.4.1" data-basepath="../.." data-revision="1416994175001">
+    <div class="book" data-level="2.4.1" data-basepath="../.." data-revision="1417531250234">
     
 
 <div class="book-summary">
@@ -1069,6 +1069,7 @@
 <th>Name</th>
 <th>Type</th>
 <th>Access</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1077,138 +1078,161 @@
 <td>approved</td>
 <td>Boolean</td>
 <td>read write</td>
+<td>no</td>
 <td>Approval status by client.</td>
 </tr>
 <tr>
 <td>author</td>
 <td>User</td>
 <td>read write</td>
+<td>no</td>
 <td>Issuer of the bill.</td>
 </tr>
 <tr>
 <td>client</td>
 <td>Client</td>
 <td>read write</td>
+<td>no</td>
 <td>Provides info about client for which is bill created.</td>
 </tr>
 <tr>
 <td>contactPerson</td>
 <td>ContactPerson</td>
 <td>read write</td>
+<td>no</td>
 <td>Person for whom is the bill created.</td>
 </tr>
 <tr>
 <td>createdAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Date of creation.</td>
 </tr>
 <tr>
 <td>description</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Description of document.</td>
 </tr>
 <tr>
 <td>displayName</td>
 <td>String</td>
 <td>read only</td>
+<td>no</td>
 <td>Describes an object in human readable form.</td>
 </tr>
 <tr>
 <td>docDate</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Date of document issuance.</td>
 </tr>
 <tr>
 <td>docNumber</td>
 <td>String</td>
 <td>read only</td>
+<td>no</td>
 <td>Document number. Generated automatically.</td>
 </tr>
 <tr>
 <td>dueDate</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Date of maturity.</td>
 </tr>
 <tr>
 <td>footer</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Footer of document.</td>
 </tr>
 <tr>
 <td>groupAttributes</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Group attributes.</td>
 </tr>
 <tr>
 <td>header</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Header of document.</td>
 </tr>
 <tr>
 <td>id</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Unique object identifier.</td>
 </tr>
 <tr>
 <td>items</td>
 <td>List</td>
 <td>read write</td>
+<td>no</td>
 <td>List of bill items.</td>
 </tr>
 <tr>
 <td>lastPaymentDate</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Date of the last payment.</td>
 </tr>
 <tr>
 <td>notes</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Additional notes.</td>
 </tr>
 <tr>
 <td>totalPrice</td>
 <td>Double</td>
 <td>read write</td>
+<td>no</td>
 <td>Summary of item prices. Generated automatically.</td>
 </tr>
 <tr>
 <td>trashItem</td>
 <td>TrashItem</td>
 <td>read write</td>
+<td>no</td>
 <td>Informs whether an object is in the trash. An object is in the trash if a trash item was specified.</td>
 </tr>
 <tr>
 <td>updatedAt</td>
 <td>Date</td>
 <td>read only</td>
+<td>no</td>
 <td>Last modified date.</td>
 </tr>
 <tr>
 <td>vatDate</td>
 <td>Date</td>
 <td>read write</td>
+<td>no</td>
 <td>Date of taxable supply.</td>
 </tr>
 <tr>
 <td>vatText</td>
 <td>String</td>
 <td>read write</td>
+<td>no</td>
 <td>Info about a VAT. E.g. &#39;All prices are without a VAT.&#39;</td>
 </tr>
 <tr>
 <td>version</td>
 <td>Long</td>
 <td>read write</td>
+<td>no</td>
 <td>Object version number.</td>
 </tr>
 </tbody>
@@ -1307,11 +1331,10 @@
             "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
                 {
                     "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-string">"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"</span>
                 </span>},
                 {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span></span>,
-                    "<span class="hljs-attribute">pattern</span>" : <span class="hljs-value"><span class="hljs-literal">null</span>
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
                 </span>}
             ]
         </span>},
@@ -1396,15 +1419,15 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"72ef6767-3b79-4b4e-b3da-47d77914e309"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416915477217)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416981117217)/"</span></span>,
-    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"80a1745f-0a29-4b8d-a1fb-787fe2330654"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417582901183)/"</span></span>,
+    "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
     "<span class="hljs-attribute">docNumber</span>" : <span class="hljs-value"><span class="hljs-string">"2013-01"</span></span>,
-    "<span class="hljs-attribute">docDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416916317216)/"</span></span>,
-    "<span class="hljs-attribute">vatDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416916317216)/"</span></span>,
-    "<span class="hljs-attribute">dueDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521117216)/"</span></span>,
-    "<span class="hljs-attribute">lastPaymentDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521117216)/"</span></span>,
+    "<span class="hljs-attribute">docDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
+    "<span class="hljs-attribute">vatDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
+    "<span class="hljs-attribute">dueDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418126501183)/"</span></span>,
+    "<span class="hljs-attribute">lastPaymentDate</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418126501183)/"</span></span>,
     "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"CMS billing"</span></span>,
     "<span class="hljs-attribute">notes</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
     "<span class="hljs-attribute">vatText</span>" : <span class="hljs-value"><span class="hljs-string">"All prices are without a VAT."</span></span>,
@@ -1412,27 +1435,26 @@
     "<span class="hljs-attribute">footer</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
     "<span class="hljs-attribute">totalPrice</span>" : <span class="hljs-value"><span class="hljs-number">1500.0</span></span>,
     "<span class="hljs-attribute">client</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"3a80b997-c174-4483-9846-2332e751eaee"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914877217)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416927117217)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"6a7b3a30-24bf-4c5e-a7e0-881946a80de1"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518581183)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417543301183)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
         "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"f93f50f4-38af-4e5a-a40f-412c371f3ee2"</span></span>,
-            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416915837217)/"</span></span>,
-            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416955917217)/"</span></span>,
-            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"14f5ffe3-a4b9-4911-b9f6-7b68906da78e"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519301183)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
             "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
             "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
         </span>}</span>,
         "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"customer-996"</span></span>,
         "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/customers/996"</span></span>,
-        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416916317216)/"</span></span>,
+        "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
         "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
         "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
         "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"EXL"</span></span>,
         "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"info@example.com"</span></span>,
-        "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
         "<span class="hljs-attribute">billsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
         "<span class="hljs-attribute">projectsCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
         "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Rua 123 Sul Avenida Lo 15"</span></span>,
@@ -1447,37 +1469,36 @@
         "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span>
     </span>}</span>,
     "<span class="hljs-attribute">contactPerson</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"176249f2-777a-4063-81aa-82075c0b00a7"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416913137217)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416919917217)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d7775629-2c24-4a67-b4ed-84eca591f2de"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520141183)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417564901183)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
         "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"Pedro"</span></span>,
         "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Examplo"</span></span>,
         "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"pedro@example.com"</span></span>,
         "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"66 234 555 678"</span></span>,
         "<span class="hljs-attribute">jobTitle</span>" : <span class="hljs-value"><span class="hljs-string">"deputy director"</span></span>,
         "<span class="hljs-attribute">client</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"3a80b997-c174-4483-9846-2332e751eaee"</span></span>,
-            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914877217)/"</span></span>,
-            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416927117217)/"</span></span>,
-            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"6a7b3a30-24bf-4c5e-a7e0-881946a80de1"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417518581183)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417543301183)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
             "<span class="hljs-attribute">externalSystem</span>" : <span class="hljs-value">{
-                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"f93f50f4-38af-4e5a-a40f-412c371f3ee2"</span></span>,
-                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416915837217)/"</span></span>,
-                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416955917217)/"</span></span>,
-                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">6</span></span>,
+                "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"14f5ffe3-a4b9-4911-b9f6-7b68906da78e"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417519301183)/"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
+                "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
                 "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span></span>,
                 "<span class="hljs-attribute">integrationPlugin</span>" : <span class="hljs-value"><span class="hljs-string">"vendor"</span></span>,
                 "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Vendor system"</span>
             </span>}</span>,
             "<span class="hljs-attribute">externalResourceId</span>" : <span class="hljs-value"><span class="hljs-string">"customer-996"</span></span>,
             "<span class="hljs-attribute">externalBrowsableUrl</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.vendor.com/customers/996"</span></span>,
-            "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416916317216)/"</span></span>,
+            "<span class="hljs-attribute">externalSyncedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417521701183)/"</span></span>,
             "<span class="hljs-attribute">externalSynced</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
             "<span class="hljs-attribute">code</span>" : <span class="hljs-value"><span class="hljs-string">"EXL"</span></span>,
             "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"info@example.com"</span></span>,
-            "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
             "<span class="hljs-attribute">billsCount</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
             "<span class="hljs-attribute">projectsCount</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
             "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Rua 123 Sul Avenida Lo 15"</span></span>,
@@ -1496,10 +1517,10 @@
     "<span class="hljs-attribute">approved</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">items</span>" : <span class="hljs-value">[
         {
-            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"9899f24a-2acc-4b93-9d9a-d151020f53e2"</span></span>,
-            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416915117217)/"</span></span>,
-            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416981117217)/"</span></span>,
-            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"ef100a3d-1328-41dc-af15-ffa002a53ab2"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520321183)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417568501183)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
             "<span class="hljs-attribute">attributes</span>" : <span class="hljs-value"><span class="hljs-string">"{\"project\":\"name\"}"</span></span>,
             "<span class="hljs-attribute">itemGroup</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span></span>,
             "<span class="hljs-attribute">docIndex</span>" : <span class="hljs-value"><span class="hljs-number">0</span></span>,
@@ -1508,10 +1529,10 @@
             "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"#0"</span>
         </span>},
         {
-            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"6f54403e-ced0-45fe-8615-a3de2c224f08"</span></span>,
-            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416914217217)/"</span></span>,
-            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416930717217)/"</span></span>,
-            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
+            "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"a468b9a7-244f-4d8a-a90a-c9f4d572aa85"</span></span>,
+            "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520501183)/"</span></span>,
+            "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417543301183)/"</span></span>,
+            "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
             "<span class="hljs-attribute">attributes</span>" : <span class="hljs-value"><span class="hljs-string">"{\"project\":\"name\"}"</span></span>,
             "<span class="hljs-attribute">itemGroup</span>" : <span class="hljs-value"><span class="hljs-string">"Content management system"</span></span>,
             "<span class="hljs-attribute">docIndex</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
@@ -1521,10 +1542,10 @@
         </span>}
     ]</span>,
     "<span class="hljs-attribute">author</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"c79ca863-e60f-46d7-b187-9c333fab013b"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416913497217)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416923517217)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">3</span></span>,
+        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"ce93a194-1a51-45d8-8883-6cd47c6ef282"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417520381183)/"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417579301183)/"</span></span>,
+        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">2</span></span>,
         "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
         "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe"</span></span>,
         "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Johny D."</span></span>,
@@ -1541,10 +1562,10 @@
         "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1418770800000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416898800000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416931200000)/"</span></span>,
-        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1416829917216)/"</span></span>,
+        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1419375600000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417503600000)/"</span></span>,
+        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417536000000)/"</span></span>,
+        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1417435301183)/"</span></span>,
         "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
         "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Doe John"</span>
@@ -1584,7 +1605,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":1}};
     gitbook.start(config);
 });
 </script>
