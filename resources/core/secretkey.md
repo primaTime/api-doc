@@ -7,20 +7,20 @@ SecretKey
 
 ## Properties
 
-| Name           | Type      | Access     | Description                                                                                         |
-|----------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt      | Date      | read only  | Date of creation.                                                                                   |
-| displayName    | String    | read only  | Describes an object in human readable form.                                                         |
-| expiration     | Date      | read write | Expiration date of the secret key. For internal usage only.                                         |
-| id             | String    | read write | Unique object identifier.                                                                           |
-| name           | String    | read write | Describes intended use of the secret key.                                                           |
-| registrationId | String    | read write | Registration ID for Google Cloud Messaging usage.                                                   |
-| secretKey      | String    | read only  | A key for user authentication.                                                                      |
-| senderId       | String    | read write | Sender ID for Google Cloud Messaging usage.                                                         |
-| trashItem      | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt      | Date      | read only  | Last modified date.                                                                                 |
-| user           | User      | read write | Provides info about the user for whom the secret Key was generated.                                 |
-| version        | Long      | read write | Object version number.                                                                              |
+| Name           | Type      | Access     | Required                                                               | Description                                                                                         |
+|----------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt      | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName    | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| expiration     | Date      | read write | no                                                                     | Expiration date of the secret key. For internal usage only.                                         |
+| id             | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| name           | String    | read write | no                                                                     | Describes intended use of the secret key.                                                           |
+| registrationId | String    | read write | no                                                                     | Registration ID for Google Cloud Messaging usage.                                                   |
+| secretKey      | String    | read only  | no                                                                     | A key for user authentication.                                                                      |
+| senderId       | String    | read write | no                                                                     | Sender ID for Google Cloud Messaging usage.                                                         |
+| trashItem      | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt      | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| user           | User      | read write | no                                                                     | Provides info about the user for whom the secret Key was generated.                                 |
+| version        | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -55,11 +55,10 @@ SecretKey
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -82,8 +81,7 @@ SecretKey
 			"access" : "READ_ONLY",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -135,15 +133,15 @@ SecretKey
 
 ```JSON
 {
-	"id" : "01b87ba5-ec51-46f2-9426-a90d4a005d1f",
-	"createdAt" : "/Date(1416916197603)/",
-	"updatedAt" : "/Date(1416981117603)/",
-	"version" : 4,
+	"id" : "6c76c81c-b70c-45b4-8be0-4bf688e29b8a",
+	"createdAt" : "/Date(1417520441119)/",
+	"updatedAt" : "/Date(1417597301119)/",
+	"version" : 8,
 	"user" : {
-		"id" : "5b135f9b-8a54-45e5-adff-3cc9d0c590cc",
-		"createdAt" : "/Date(1416912837603)/",
-		"updatedAt" : "/Date(1416927117603)/",
-		"version" : 6,
+		"id" : "38852c66-58ea-4e24-8d7d-1dc676b54c77",
+		"createdAt" : "/Date(1417519781119)/",
+		"updatedAt" : "/Date(1417521701119)/",
+		"version" : 2,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -160,19 +158,19 @@ SecretKey
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1417734000000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829917603)/",
+		"birthdayRemind" : "/Date(1418338800000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435301119)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"secretKey" : "c7bc651d-aacb-4fef-9133-7f88f83db1bd",
+	"secretKey" : "d4495765-1d3e-45de-9776-43c8f0e459e0",
 	"name" : "Chrome plugin",
 	"senderId" : "6248151342",
 	"registrationId" : "HPRgkF3VZjC9KtT8OvPVGJ-hQMRKRrZuDELjzEvxwYv7hH5OFEeco8ohsN5PjL1iC2dNtk2BAokeMCg2ZXKqpc8FXKmhX94kIxQ",
-	"expiration" : "/Date(1419335517603)/",
-	"displayName" : "Chrome plugin (c7bc651d-aacb-4fef-9133-7f88f83db1bd)"
+	"expiration" : "/Date(1419940901119)/",
+	"displayName" : "Chrome plugin (d4495765-1d3e-45de-9776-43c8f0e459e0)"
 }
 ```

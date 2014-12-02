@@ -7,18 +7,18 @@ Relation
 
 ## Properties
 
-| Name         | Type      | Access     | Description                                                                                         |
-|--------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt    | Date      | read only  | Date of creation.                                                                                   |
-| displayName  | String    | read only  | Describes an object in human readable form.                                                         |
-| id           | String    | read write | Unique object identifier.                                                                           |
-| inboundId    | String    | read write | Unique id of inbound side object.                                                                   |
-| inboundType  | String    | read write | Inbound bean type. Lowercase simple class name.                                                     |
-| outboundId   | String    | read write | Unique id of outbound side object.                                                                  |
-| outboundType | String    | read write | Outbound bean type. Lowercase simple class name.                                                    |
-| trashItem    | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt    | Date      | read only  | Last modified date.                                                                                 |
-| version      | Long      | read write | Object version number.                                                                              |
+| Name         | Type      | Access     | Required                                                               | Description                                                                                         |
+|--------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt    | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName  | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id           | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| inboundId    | String    | read write | no                                                                     | Unique id of inbound side object.                                                                   |
+| inboundType  | String    | read write | no                                                                     | Inbound bean type. Lowercase simple class name.                                                     |
+| outboundId   | String    | read write | no                                                                     | Unique id of outbound side object.                                                                  |
+| outboundType | String    | read write | no                                                                     | Outbound bean type. Lowercase simple class name.                                                    |
+| trashItem    | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt    | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version      | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -47,11 +47,10 @@ Relation
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -63,7 +62,7 @@ Relation
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				}
 			]
 		},
@@ -81,7 +80,7 @@ Relation
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				}
 			]
 		},
@@ -126,14 +125,14 @@ Relation
 
 ```JSON
 {
-	"id" : "2b80b659-1983-4fc4-980b-6677ead0f517",
-	"createdAt" : "/Date(1416914937407)/",
-	"updatedAt" : "/Date(1416930717407)/",
-	"version" : 2,
-	"inboundId" : "3f7ce337-e9a4-4b44-9068-f7a86bef94bf",
+	"id" : "481b9685-9f62-41d4-b349-cf6917b406f5",
+	"createdAt" : "/Date(1417521701837)/",
+	"updatedAt" : "/Date(1417557701837)/",
+	"version" : 6,
+	"inboundId" : "138c7856-ca5d-4d04-8d5a-4185526dc756",
 	"inboundType" : "user",
-	"outboundId" : "92c0b1ef-b105-4358-b535-0da7423fa48f",
+	"outboundId" : "981597af-5bc4-4130-9dd4-c934465a120a",
 	"outboundType" : "timerecord",
-	"displayName" : "user 3f7ce337-e9a4-4b44-9068-f7a86bef94bf -> timerecord 92c0b1ef-b105-4358-b535-0da7423fa48f"
+	"displayName" : "user 138c7856-ca5d-4d04-8d5a-4185526dc756 -> timerecord 981597af-5bc4-4130-9dd4-c934465a120a"
 }
 ```

@@ -16,5 +16,10 @@
         "custom": {
             "www.primaerp.com": "http://www.primaerp.com"
         }
+    },
+    "pluginsConfig": {
+        "fontSettings": {
+            "size": 1
+        }
     }
 }

@@ -7,15 +7,15 @@ ProjectMember
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | User who is a member.                                                                               |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| user        | User      | read write | YES                                                                    | User who is a member.                                                                               |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -44,11 +44,10 @@ ProjectMember
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -73,8 +72,7 @@ ProjectMember
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -100,15 +98,15 @@ ProjectMember
 
 ```JSON
 {
-	"id" : "b20a954c-c713-4ab5-a610-51ab5f41decd",
-	"createdAt" : "/Date(1416915358867)/",
-	"updatedAt" : "/Date(1416923518867)/",
-	"version" : 2,
+	"id" : "3e65f8c4-8877-4d64-805b-45e4b3f24443",
+	"createdAt" : "/Date(1417521581263)/",
+	"updatedAt" : "/Date(1417600901263)/",
+	"version" : 3,
 	"user" : {
-		"id" : "318f2b02-c222-4a8f-8436-9a6fabbdfb4b",
-		"createdAt" : "/Date(1416913558867)/",
-		"updatedAt" : "/Date(1416970318867)/",
-		"version" : 9,
+		"id" : "ffeeb507-8cb2-4f6d-951e-7211c1b7db3c",
+		"createdAt" : "/Date(1417519961263)/",
+		"updatedAt" : "/Date(1417593701263)/",
+		"version" : 2,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -125,10 +123,10 @@ ProjectMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1417734000000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829918867)/",
+		"birthdayRemind" : "/Date(1418338800000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435301263)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

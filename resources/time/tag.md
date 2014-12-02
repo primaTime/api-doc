@@ -7,15 +7,15 @@ Tag
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| name        | String    | read write | Name of tag                                                                                         |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| name        | String    | read write | no                                                                     | Name of tag                                                                                         |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -44,11 +44,10 @@ Tag
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -93,9 +92,9 @@ Tag
 
 ```JSON
 {
-	"id" : "09565459-5e13-4de4-8022-3e9f6260ddca",
-	"createdAt" : "/Date(1416916017683)/",
-	"updatedAt" : "/Date(1416927117683)/",
+	"id" : "f3491044-a87b-4ebb-a00c-d5635fd878cd",
+	"createdAt" : "/Date(1417520981799)/",
+	"updatedAt" : "/Date(1417575701799)/",
 	"version" : 3,
 	"name" : "SW",
 	"displayName" : "SW"

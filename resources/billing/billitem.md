@@ -7,19 +7,19 @@ BillItem
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| attributes  | String    | read write | Describes form of item aggregation.                                                                 |
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| docIndex    | Integer   | read write | Sequence number of item in bill.                                                                    |
-| duration    | Long      | read write | Duration of work (in milliseconds).                                                                 |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| itemGroup   | String    | read write | Name of aggregating itemGroup.                                                                      |
-| price       | Double    | read write | Price of item.                                                                                      |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| attributes  | String    | read write | no                                                                     | Describes form of item aggregation.                                                                 |
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| docIndex    | Integer   | read write | no                                                                     | Sequence number of item in bill.                                                                    |
+| duration    | Long      | read write | no                                                                     | Duration of work (in milliseconds).                                                                 |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| itemGroup   | String    | read write | no                                                                     | Name of aggregating itemGroup.                                                                      |
+| price       | Double    | read write | no                                                                     | Price of item.                                                                                      |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -60,7 +60,7 @@ BillItem
 			"constraints" : [
 				{
 					"type" : "Min",
-					"pattern" : null
+					"details" : "value 0"
 				}
 			]
 		},
@@ -72,11 +72,10 @@ BillItem
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -127,10 +126,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "71a7ebfe-2ad7-4e56-a36a-bdcf5e3e91dc",
-	"createdAt" : "/Date(1416916257650)/",
-	"updatedAt" : "/Date(1416952317650)/",
-	"version" : 6,
+	"id" : "e6daadcb-2717-4612-a6a2-23ae6100c927",
+	"createdAt" : "/Date(1417521341299)/",
+	"updatedAt" : "/Date(1417525301299)/",
+	"version" : 8,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

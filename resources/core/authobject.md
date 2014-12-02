@@ -3,12 +3,12 @@ AuthObject
 
 ## Properties
 
-| Name              | Type   | Access     | Description                                          |
-|-------------------|--------|------------|------------------------------------------------------|
-| expiration        | Date   | read write | Expiration of the authentication token.              |
-| refreshexpiration | Date   | read write | Expiration of the authentication token.              |
-| refreshtoken      | String | read write | Refresh the token for the authetication token renew. |
-| token             | String | read write | Authentication token for the current user.           |
+| Name              | Type   | Access     | Required | Description                                          |
+|-------------------|--------|------------|----|------------------------------------------------------|
+| expiration        | Date   | read write | no | Expiration of the authentication token.              |
+| refreshexpiration | Date   | read write | no | Expiration of the authentication token.              |
+| refreshtoken      | String | read write | no | Refresh the token for the authetication token renew. |
+| token             | String | read write | no | Authentication token for the current user.           |
 
 ## Metadata
 
@@ -48,9 +48,9 @@ AuthObject
 
 ```JSON
 {
-	"token" : "3a710ee9-3f35-4b2c-bb21-9ae5d8345717",
-	"expiration" : "/Date(1416919918979)/",
-	"refreshToken" : "674ec005-4eb0-447e-8d97-4b7ea51b68d0",
-	"refreshExpiration" : "/Date(1417521118979)/"
+	"token" : "42090cbd-dd24-4de4-9c65-14a22989ea6c",
+	"expiration" : "/Date(1417525301906)/",
+	"refreshToken" : "6e47daf5-6046-4ffb-a463-18675123417f",
+	"refreshExpiration" : "/Date(1418126501906)/"
 }
 ```

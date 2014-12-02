@@ -7,20 +7,20 @@ ContactPerson
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| client      | Client    | read write | Provides info about client for which person works.                                                  |
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| email       | String    | read write | Contact person's e-mail address.                                                                    |
-| firstName   | String    | read write | Contact person's first name.                                                                        |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| jobTitle    | String    | read write | Describes the job position held by a person.                                                        |
-| lastName    | String    | read write | Contact person's last name.                                                                         |
-| phone       | String    | read write | Contact person's phone number.                                                                      |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| client      | Client    | read write | no                                                                     | Provides info about client for which person works.                                                  |
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| email       | String    | read write | no                                                                     | Contact person's e-mail address.                                                                    |
+| firstName   | String    | read write | no                                                                     | Contact person's first name.                                                                        |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| jobTitle    | String    | read write | no                                                                     | Describes the job position held by a person.                                                        |
+| lastName    | String    | read write | no                                                                     | Contact person's last name.                                                                         |
+| phone       | String    | read write | no                                                                     | Contact person's phone number.                                                                      |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -56,7 +56,7 @@ ContactPerson
 			"constraints" : [
 				{
 					"type" : "Email",
-					"pattern" : ".*"
+					"details" : "regexp .*"
 				}
 			]
 		},
@@ -74,11 +74,10 @@ ContactPerson
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -135,37 +134,36 @@ ContactPerson
 
 ```JSON
 {
-	"id" : "a4263cb3-4f08-4b51-ae86-f65e1bedfc63",
-	"createdAt" : "/Date(1416916078042)/",
-	"updatedAt" : "/Date(1416930718042)/",
-	"version" : 8,
+	"id" : "ee015fff-fc25-4397-9169-590accc7f535",
+	"createdAt" : "/Date(1417519240917)/",
+	"updatedAt" : "/Date(1417579300917)/",
+	"version" : 0,
 	"firstName" : "Pedro",
 	"lastName" : "Examplo",
 	"email" : "pedro@example.com",
 	"phone" : "66 234 555 678",
 	"jobTitle" : "deputy director",
 	"client" : {
-		"id" : "91420cf6-c9ac-44c0-bc25-dc5991e14b92",
-		"createdAt" : "/Date(1416912898042)/",
-		"updatedAt" : "/Date(1416955918042)/",
-		"version" : 4,
+		"id" : "d39afeaf-a7df-4f1c-9454-821bedc0c263",
+		"createdAt" : "/Date(1417519480917)/",
+		"updatedAt" : "/Date(1417582900917)/",
+		"version" : 2,
 		"externalSystem" : {
-			"id" : "69a709c1-72d8-4d64-ab6e-f2c8f75ac199",
-			"createdAt" : "/Date(1416913198042)/",
-			"updatedAt" : "/Date(1416952318042)/",
-			"version" : 1,
+			"id" : "fdb33ee8-725b-47a2-a52c-5c52cdecb157",
+			"createdAt" : "/Date(1417521160917)/",
+			"updatedAt" : "/Date(1417582900917)/",
+			"version" : 9,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1416916318042)/",
+		"externalSyncedAt" : "/Date(1417521700917)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
 		"email" : "info@example.com",
-		"active" : true,
 		"billsCount" : 2,
 		"projectsCount" : 1,
 		"streetAddress" : "Rua 123 Sul Avenida Lo 15",

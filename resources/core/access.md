@@ -7,17 +7,17 @@ Access
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| created     | Date      | read write | Date and time when the access was granted.                                                          |
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | Access is granted to this product.                                                                  |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | Provides info about the user for whom the access is granted.                                        |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| created     | Date      | read only  | no                                                                     | Date and time when the access was granted.                                                          |
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| product     | Product   | read write | YES                                                                    | Access is granted to this product.                                                                  |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| user        | User      | read write | YES                                                                    | Provides info about the user for whom the access is granted.                                        |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -30,11 +30,10 @@ Access
 			"type" : "Date",
 			"name" : "created",
 			"description" : "Date and time when the access was granted.",
-			"access" : "READ_WRITE",
+			"access" : "READ_ONLY",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -58,11 +57,10 @@ Access
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -73,8 +71,7 @@ Access
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -99,8 +96,7 @@ Access
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -126,15 +122,15 @@ Access
 
 ```JSON
 {
-	"id" : "0fe97830-01b4-40ef-bdab-6bb62640fba9",
-	"createdAt" : "/Date(1416914277024)/",
-	"updatedAt" : "/Date(1416941517024)/",
-	"version" : 3,
+	"id" : "95a5e29a-bb75-4b7d-b166-60b202a9528d",
+	"createdAt" : "/Date(1417519000716)/",
+	"updatedAt" : "/Date(1417561300716)/",
+	"version" : 6,
 	"user" : {
-		"id" : "b274cfd9-febe-4de6-96e3-87c74c9a4776",
-		"createdAt" : "/Date(1416912957024)/",
-		"updatedAt" : "/Date(1416959517024)/",
-		"version" : 9,
+		"id" : "9bb92353-8256-4a75-9988-95ddfdc04e7d",
+		"createdAt" : "/Date(1417518400716)/",
+		"updatedAt" : "/Date(1417546900716)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -151,16 +147,16 @@ Access
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1417734000000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829917024)/",
+		"birthdayRemind" : "/Date(1418338800000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435300716)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"product" : "TIME",
-	"created" : "/Date(1416916317024)/",
+	"created" : "/Date(1417521700716)/",
 	"displayName" : "TIME"
 }
 ```

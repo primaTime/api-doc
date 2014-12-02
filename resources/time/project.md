@@ -7,35 +7,35 @@ Project
 
 ## Properties
 
-| Name                 | Type           | Access     | Description                                                                                         |
-|----------------------|----------------|------------|-----------------------------------------------------------------------------------------------------|
-| active               | Boolean        | read write | Determines whether the project is currently active.                                                 |
-| begins               | Date           | read write | Date and time when the project begins.                                                              |
-| billable             | Boolean        | read write | Determines whether the project will be billed to the client.                                        |
-| client               | Client         | read write | Provides info about the client for whom the project is realized.                                    |
-| code                 | String         | read write | A code or an abbreviation of the project.                                                           |
-| createdAt            | Date           | read only  | Date of creation.                                                                                   |
-| displayName          | String         | read only  | Describes an object in human readable form.                                                         |
-| effective            | Boolean        | read write | Determines whether the project is effective.                                                        |
-| ends                 | Date           | read write | Date and time of project completion.                                                                |
-| externalBrowsableUrl | String         | read write | Human accessible link in external system.                                                           |
-| externalResourceId   | String         | read write | Unique external system identifier.                                                                  |
-| externalSynced       | Boolean        | write only | Determines whether an object was synced with the external system.                                   |
-| externalSyncedAt     | Date           | read only  | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
-| externalSystem       | ExternalSystem | read write | External system which maintains this object.                                                        |
-| id                   | String         | read write | Unique object identifier.                                                                           |
-| membersCount         | Long           | read only  | Counts the number of members working on the project.                                                |
-| name                 | String         | read write | Project name.                                                                                       |
-| note                 | String         | read write | Note about the project.                                                                             |
-| owner                | User           | read write | Identifies the project owner.                                                                       |
-| personal             | Boolean        | read write | Determines whether the project is available, only for the owner.                                    |
-| priceBudget          | Double         | read write | Amount of money available for the project.                                                          |
-| tasksCount           | Long           | read only  | Counts the number of tasks that belong to the project and which have not been done.                 |
-| timeBudget           | Long           | read write | Amount of milliseconds available for the project.                                                   |
-| timeRecordsCount     | Long           | read only  | Counts the number of time records in the project.                                                   |
-| trashItem            | TrashItem      | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt            | Date           | read only  | Last modified date.                                                                                 |
-| version              | Long           | read write | Object version number.                                                                              |
+| Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
+|----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| active               | Boolean        | read write | no                                                                     | Determines whether the project is currently active.                                                 |
+| begins               | Date           | read write | no                                                                     | Date and time when the project begins.                                                              |
+| billable             | Boolean        | read write | no                                                                     | Determines whether the project will be billed to the client.                                        |
+| client               | Client         | read write | no                                                                     | Provides info about the client for whom the project is realized.                                    |
+| code                 | String         | read write | no                                                                     | A code or an abbreviation of the project.                                                           |
+| createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| effective            | Boolean        | read write | YES                                                                    | Determines whether the project is effective.                                                        |
+| ends                 | Date           | read write | no                                                                     | Date and time of project completion.                                                                |
+| externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
+| externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
+| externalSynced       | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
+| externalSyncedAt     | Date           | read only  | no                                                                     | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
+| externalSystem       | ExternalSystem | read write | no                                                                     | External system which maintains this object.                                                        |
+| id                   | String         | read write | no                                                                     | Unique object identifier.                                                                           |
+| membersCount         | Long           | read only  | no                                                                     | Counts the number of members working on the project.                                                |
+| name                 | String         | read write | no                                                                     | Project name.                                                                                       |
+| note                 | String         | read write | no                                                                     | Note about the project.                                                                             |
+| owner                | User           | read write | YES                                                                    | Identifies the project owner.                                                                       |
+| personal             | Boolean        | read write | no                                                                     | Determines whether the project is available, only for the owner.                                    |
+| priceBudget          | Double         | read write | no                                                                     | Amount of money available for the project.                                                          |
+| tasksCount           | Long           | read only  | no                                                                     | Counts the number of tasks that belong to the project and which have not been done.                 |
+| timeBudget           | Long           | read write | no                                                                     | Amount of milliseconds available for the project.                                                   |
+| timeRecordsCount     | Long           | read only  | no                                                                     | Counts the number of time records in the project.                                                   |
+| trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
+| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -77,7 +77,7 @@ Project
 			"constraints" : [
 				{
 					"type" : "Size",
-					"pattern" : null
+					"details" : "min 0, max 20"
 				}
 			]
 		},
@@ -100,8 +100,7 @@ Project
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -150,11 +149,10 @@ Project
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -184,8 +182,7 @@ Project
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -247,8 +244,8 @@ Project
 				"ProjectMember",
 				"ProjectWorkTypeLink",
 				"TimeRecord",
-				"Task",
-				"Impulse"
+				"Impulse",
+				"Task"
 			]
 		}
 	]
@@ -259,36 +256,35 @@ Project
 
 ```JSON
 {
-	"id" : "f876b20c-1214-45bc-bb8a-9759f00371db",
-	"createdAt" : "/Date(1416914697096)/",
-	"updatedAt" : "/Date(1416952317096)/",
+	"id" : "7b6cb0bb-fb70-49d6-8c26-7c33c5b090d4",
+	"createdAt" : "/Date(1417519361603)/",
+	"updatedAt" : "/Date(1417590101603)/",
 	"version" : 5,
 	"externalSystem" : {
-		"id" : "bec1db51-be24-47bc-ae32-15404f1e7e3b",
-		"createdAt" : "/Date(1416914757097)/",
-		"updatedAt" : "/Date(1416930717097)/",
-		"version" : 4,
+		"id" : "2cdc115a-cbfe-41e0-8bb0-1aefc7c30087",
+		"createdAt" : "/Date(1417521641604)/",
+		"updatedAt" : "/Date(1417550501604)/",
+		"version" : 2,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1416916317096)/",
+	"externalSyncedAt" : "/Date(1417521701603)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1416829917096)/",
-	"ends" : "/Date(1417002717096)/",
+	"begins" : "/Date(1417435301603)/",
+	"ends" : "/Date(1417608101603)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
-	"active" : true,
 	"personal" : false,
 	"owner" : {
-		"id" : "a2fdc201-6535-4b57-928b-75d6c4b31fba",
-		"createdAt" : "/Date(1416916257097)/",
-		"updatedAt" : "/Date(1416984717097)/",
+		"id" : "3ba066de-7ad6-489f-8356-2ab48e7380bf",
+		"createdAt" : "/Date(1417519061604)/",
+		"updatedAt" : "/Date(1417521701604)/",
 		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Doe",
@@ -306,36 +302,35 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418770800000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829917096)/",
+		"birthdayRemind" : "/Date(1419375600000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435301603)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "0800b887-78e4-4b6d-8caf-d5e727b5f589",
-		"createdAt" : "/Date(1416915777096)/",
-		"updatedAt" : "/Date(1416941517096)/",
-		"version" : 9,
+		"id" : "b72b6ddc-5929-4c62-a86c-219e20c10fb4",
+		"createdAt" : "/Date(1417521701604)/",
+		"updatedAt" : "/Date(1417521701604)/",
+		"version" : 8,
 		"externalSystem" : {
-			"id" : "81d85af0-c7b2-471d-9afe-272351c37a36",
-			"createdAt" : "/Date(1416914337096)/",
-			"updatedAt" : "/Date(1416977517096)/",
-			"version" : 5,
+			"id" : "98517cf8-3f98-4623-8919-6a44e9428758",
+			"createdAt" : "/Date(1417518641604)/",
+			"updatedAt" : "/Date(1417561301604)/",
+			"version" : 0,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1416916317096)/",
+		"externalSyncedAt" : "/Date(1417521701603)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
 		"email" : "info@example.com",
-		"active" : true,
 		"billsCount" : 2,
 		"projectsCount" : 1,
 		"streetAddress" : "Rua 123 Sul Avenida Lo 15",

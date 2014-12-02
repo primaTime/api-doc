@@ -7,16 +7,16 @@ UserRole
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| role        | Role      | read write | Role which has an user.                                                                             |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| user        | User      | read write | User who has a role.                                                                                |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| role        | Role      | read write | YES                                                                    | Role which has an user.                                                                             |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| user        | User      | read write | YES                                                                    | User who has a role.                                                                                |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -45,11 +45,10 @@ UserRole
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -61,8 +60,7 @@ UserRole
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -87,8 +85,7 @@ UserRole
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -114,15 +111,15 @@ UserRole
 
 ```JSON
 {
-	"id" : "ba21a061-24cc-43f3-9450-ce68c6ab10f5",
-	"createdAt" : "/Date(1416914337839)/",
-	"updatedAt" : "/Date(1416991917839)/",
-	"version" : 1,
+	"id" : "c19d7084-8d62-4146-875e-e4a2f59631ac",
+	"createdAt" : "/Date(1417519840278)/",
+	"updatedAt" : "/Date(1417579300278)/",
+	"version" : 2,
 	"user" : {
-		"id" : "4b462ad2-5295-4e6c-807c-471305b9a508",
-		"createdAt" : "/Date(1416914217839)/",
-		"updatedAt" : "/Date(1416955917839)/",
-		"version" : 8,
+		"id" : "77d12289-8e89-4229-8566-95a0716be92e",
+		"createdAt" : "/Date(1417520680278)/",
+		"updatedAt" : "/Date(1417597300278)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -139,19 +136,19 @@ UserRole
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418770800000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829917839)/",
+		"birthdayRemind" : "/Date(1419375600000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435300278)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"role" : {
-		"id" : "d5fa4d30-d39e-49be-b586-c0906fca0f55",
-		"createdAt" : "/Date(1416915777839)/",
-		"updatedAt" : "/Date(1416995517839)/",
-		"version" : 7,
+		"id" : "e7df1a6a-0dfe-4663-83dc-af11d7f33e61",
+		"createdAt" : "/Date(1417520200279)/",
+		"updatedAt" : "/Date(1417554100279)/",
+		"version" : 1,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",

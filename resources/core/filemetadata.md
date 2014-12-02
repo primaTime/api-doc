@@ -3,12 +3,12 @@ FileMetadata
 
 ## Properties
 
-| Name        | Type   | Access     | Description            |
-|-------------|--------|------------|------------------------|
-| contentsize | Long   | read write | Content size in bytes. |
-| contenttype | String | read write | MIME content type.     |
-| filename    | String | read write | Original file name.    |
-| storagepath | String | denied     | Path on file storage.  |
+| Name        | Type   | Access     | Required | Description            |
+|-------------|--------|------------|----|------------------------|
+| contentsize | Long   | read write | no | Content size in bytes. |
+| contenttype | String | read write | no | MIME content type.     |
+| filename    | String | read write | no | Original file name.    |
+| storagepath | String | denied     | no | Path on file storage.  |
 
 ## Metadata
 
@@ -48,10 +48,10 @@ FileMetadata
 
 ```JSON
 {
-	"id" : "3aa9a57a-dd22-4ed3-ab56-dc685a4bfd82",
-	"createdAt" : "/Date(1416914578989)/",
-	"updatedAt" : "/Date(1416988318989)/",
-	"version" : 3,
+	"id" : "67b3427e-c09d-4bd2-bbe1-781bd95b327b",
+	"createdAt" : "/Date(1417520921914)/",
+	"updatedAt" : "/Date(1417590101914)/",
+	"version" : 8,
 	"fileName" : "mysignature.jpeg",
 	"contentType" : "image/jpeg",
 	"contentSize" : 13114,

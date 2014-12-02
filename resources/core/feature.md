@@ -7,17 +7,17 @@ Feature
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| enabled     | Boolean   | read write | Determines whether the feature is enabled.                                                          |
-| featureId   | String    | read write | Unique feature id.                                                                                  |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| product     | Product   | read write | The feature is applied to this product.                                                             |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| enabled     | Boolean   | read write | no                                                                     | Determines whether the feature is enabled.                                                          |
+| featureId   | String    | read write | YES                                                                    | Unique feature id.                                                                                  |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| product     | Product   | read write | no                                                                     | The feature is applied to this product.                                                             |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -51,8 +51,7 @@ Feature
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -64,11 +63,10 @@ Feature
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -113,10 +111,10 @@ Feature
 
 ```JSON
 {
-	"id" : "0f4f2a20-9c61-4a70-a37b-c2d5fba8754f",
-	"createdAt" : "/Date(1416915418965)/",
-	"updatedAt" : "/Date(1416945118965)/",
-	"version" : 1,
+	"id" : "b1df50b5-e90b-48bf-95ae-f19b1cb2606a",
+	"createdAt" : "/Date(1417518701546)/",
+	"updatedAt" : "/Date(1417561301546)/",
+	"version" : 2,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,

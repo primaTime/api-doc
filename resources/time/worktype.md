@@ -7,23 +7,23 @@ WorkType
 
 ## Properties
 
-| Name                 | Type           | Access     | Description                                                                                         |
-|----------------------|----------------|------------|-----------------------------------------------------------------------------------------------------|
-| active               | Boolean        | read write | Determines whether the work type is currently active.                                               |
-| code                 | String         | read write | A code or an abbreviation of the work type.                                                         |
-| createdAt            | Date           | read only  | Date of creation.                                                                                   |
-| displayName          | String         | read only  | Describes an object in human readable form.                                                         |
-| effective            | Boolean        | read write | Determines whether the work type is effective.                                                      |
-| externalBrowsableUrl | String         | read write | Human accessible link in external system.                                                           |
-| externalResourceId   | String         | read write | Unique external system identifier.                                                                  |
-| externalSynced       | Boolean        | write only | Determines whether an object was synced with the external system.                                   |
-| externalSyncedAt     | Date           | read only  | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
-| externalSystem       | ExternalSystem | read write | External system which maintains this object.                                                        |
-| id                   | String         | read write | Unique object identifier.                                                                           |
-| name                 | String         | read write | Name of the work type.                                                                              |
-| trashItem            | TrashItem      | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt            | Date           | read only  | Last modified date.                                                                                 |
-| version              | Long           | read write | Object version number.                                                                              |
+| Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
+|----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| active               | Boolean        | read write | no                                                                     | Determines whether the work type is currently active.                                               |
+| code                 | String         | read write | no                                                                     | A code or an abbreviation of the work type.                                                         |
+| createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| effective            | Boolean        | read write | YES                                                                    | Determines whether the work type is effective.                                                      |
+| externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
+| externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
+| externalSynced       | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
+| externalSyncedAt     | Date           | read only  | no                                                                     | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
+| externalSystem       | ExternalSystem | read write | no                                                                     | External system which maintains this object.                                                        |
+| id                   | String         | read write | no                                                                     | Unique object identifier.                                                                           |
+| name                 | String         | read write | no                                                                     | Name of the work type.                                                                              |
+| trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
+| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -46,7 +46,7 @@ WorkType
 			"constraints" : [
 				{
 					"type" : "Size",
-					"pattern" : null
+					"details" : "min 0, max 20"
 				}
 			]
 		},
@@ -69,8 +69,7 @@ WorkType
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -113,11 +112,10 @@ WorkType
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -163,14 +161,14 @@ WorkType
 
 ```JSON
 {
-	"id" : "615bc345-5b59-4c41-9d11-bbcd5c398ad7",
-	"createdAt" : "/Date(1416916017450)/",
-	"updatedAt" : "/Date(1416984717450)/",
+	"id" : "4ecee421-5d01-436a-a8a4-925d3def65b0",
+	"createdAt" : "/Date(1417521280343)/",
+	"updatedAt" : "/Date(1417525300343)/",
 	"version" : 5,
 	"externalSystem" : {
-		"id" : "317bfb2a-0efe-41e5-92c1-4e292379b470",
-		"createdAt" : "/Date(1416915117451)/",
-		"updatedAt" : "/Date(1416970317451)/",
+		"id" : "d1022c7b-f8d4-4f84-b280-87cfe05cc99e",
+		"createdAt" : "/Date(1417521400343)/",
+		"updatedAt" : "/Date(1417586500343)/",
 		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -178,11 +176,10 @@ WorkType
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1416916317450)/",
+	"externalSyncedAt" : "/Date(1417521700343)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",
-	"active" : true,
 	"displayName" : "Software development"
 }
 ```

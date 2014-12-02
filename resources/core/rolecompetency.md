@@ -7,16 +7,16 @@ RoleCompetency
 
 ## Properties
 
-| Name        | Type       | Access     | Description                                                                                         |
-|-------------|------------|------------|-----------------------------------------------------------------------------------------------------|
-| competency  | Competency | read only  | If it is set, then the role is generated automatically and cannot be edited.                        |
-| createdAt   | Date       | read only  | Date of creation.                                                                                   |
-| displayName | String     | read only  | Describes an object in human readable form.                                                         |
-| id          | String     | read write | Unique object identifier.                                                                           |
-| role        | Role       | read write | The role of an custom user's role. Built-in roles do not have a role.                               |
-| trashItem   | TrashItem  | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date       | read only  | Last modified date.                                                                                 |
-| version     | Long       | read write | Object version number.                                                                              |
+| Name        | Type       | Access     | Required                                                               | Description                                                                                         |
+|-------------|------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| competency  | Competency | read only  | no                                                                     | If it is set, then the role is generated automatically and cannot be edited.                        |
+| createdAt   | Date       | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String     | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String     | read write | no                                                                     | Unique object identifier.                                                                           |
+| role        | Role       | read write | no                                                                     | The role of an custom user's role. Built-in roles do not have a role.                               |
+| trashItem   | TrashItem  | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date       | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long       | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -51,11 +51,10 @@ RoleCompetency
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -101,15 +100,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "0d000b03-9abf-46ef-8abc-c7c60f86e338",
-	"createdAt" : "/Date(1416912837363)/",
-	"updatedAt" : "/Date(1416959517363)/",
-	"version" : 9,
+	"id" : "3cd7a11c-0a59-4b01-ae02-fb08fce87e0d",
+	"createdAt" : "/Date(1417521580870)/",
+	"updatedAt" : "/Date(1417564900870)/",
+	"version" : 0,
 	"role" : {
-		"id" : "029b77ad-1cdd-4030-a5ab-bf246e87690c",
-		"createdAt" : "/Date(1416914697363)/",
-		"updatedAt" : "/Date(1416930717363)/",
-		"version" : 1,
+		"id" : "40e488fb-15fc-4f38-88d2-2f8eec93bb93",
+		"createdAt" : "/Date(1417521340870)/",
+		"updatedAt" : "/Date(1417550500870)/",
+		"version" : 6,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",
@@ -117,6 +116,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@406b7c3a[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=029b77ad-1cdd-4030-a5ab-bf246e87690c,tenantId=<null>,trashItem=<null>,createdAt=Tue Nov 25 12:24:57 CET 2014,updatedAt=Tue Nov 25 16:51:57 CET 2014,version=1][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@292ed8e1[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=40e488fb-15fc-4f38-88d2-2f8eec93bb93,tenantId=<null>,trashItem=<null>,createdAt=Tue Dec 02 12:55:40 CET 2014,updatedAt=Tue Dec 02 21:01:40 CET 2014,version=6][ACCOUNT_ADMIN]"
 }
 ```

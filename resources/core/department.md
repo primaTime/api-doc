@@ -7,16 +7,16 @@ Department
 
 ## Properties
 
-| Name        | Type      | Access     | Description                                                                                         |
-|-------------|-----------|------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | Date of creation.                                                                                   |
-| displayName | String    | read only  | Describes an object in human readable form.                                                         |
-| id          | String    | read write | Unique object identifier.                                                                           |
-| manager     | User      | read write | The user who is the manager of the department.                                                      |
-| name        | String    | read write | The department name.                                                                                |
-| trashItem   | TrashItem | read write | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | Last modified date.                                                                                 |
-| version     | Long      | read write | Object version number.                                                                              |
+| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
+|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| manager     | User      | read write | no                                                                     | The user who is the manager of the department.                                                      |
+| name        | String    | read write | no                                                                     | The department name.                                                                                |
+| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -45,11 +45,10 @@ Department
 			"constraints" : [
 				{
 					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
+					"details" : "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "NotNull",
-					"pattern" : null
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -102,15 +101,15 @@ Department
 
 ```JSON
 {
-	"id" : "075d77cd-b3f3-46a4-b346-3aaf7bf8a941",
-	"createdAt" : "/Date(1416914337317)/",
-	"updatedAt" : "/Date(1416988317317)/",
-	"version" : 7,
+	"id" : "3389b62c-3dbe-4963-a14b-3449b72e3a60",
+	"createdAt" : "/Date(1417519420564)/",
+	"updatedAt" : "/Date(1417579300564)/",
+	"version" : 5,
 	"name" : "Development",
 	"manager" : {
-		"id" : "54fae6fc-45b8-4ab5-8a61-c3a7a8a1d881",
-		"createdAt" : "/Date(1416915477317)/",
-		"updatedAt" : "/Date(1416923517317)/",
+		"id" : "6276f2d5-83aa-402a-ab78-ad9ff205c47b",
+		"createdAt" : "/Date(1417518220564)/",
+		"updatedAt" : "/Date(1417593700564)/",
 		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -128,10 +127,10 @@ Department
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1417734000000)/",
-		"workingTimeStart" : "/Date(1416898800000)/",
-		"workingTimeEnd" : "/Date(1416931200000)/",
-		"created" : "/Date(1416829917317)/",
+		"birthdayRemind" : "/Date(1418338800000)/",
+		"workingTimeStart" : "/Date(1417503600000)/",
+		"workingTimeEnd" : "/Date(1417536000000)/",
+		"created" : "/Date(1417435300564)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
