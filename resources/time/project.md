@@ -9,14 +9,14 @@ Project
 
 | Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
 |----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| active               | Boolean        | read write | no                                                                     | Determines whether the project is currently active.                                                 |
+| active               | Boolean        | read write | no                                                                     | Determines whether the project is currently active. Default value is true.                          |
 | begins               | Date           | read write | no                                                                     | Date and time when the project begins.                                                              |
 | billable             | Boolean        | read write | no                                                                     | Determines whether the project will be billed to the client.                                        |
 | client               | Client         | read write | no                                                                     | Provides info about the client for whom the project is realized.                                    |
 | code                 | String         | read write | no                                                                     | A code or an abbreviation of the project.                                                           |
 | createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
 | displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| effective            | Boolean        | read write | YES                                                                    | Determines whether the project is effective.                                                        |
+| effective            | Boolean        | read write | YES                                                                    | Determines whether the project is effective. Default value is true.                                 |
 | ends                 | Date           | read write | no                                                                     | Date and time of project completion.                                                                |
 | externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
 | externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
@@ -35,7 +35,7 @@ Project
 | timeRecordsCount     | Long           | read only  | no                                                                     | Counts the number of time records in the project.                                                   |
 | trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
+| version              | Long           | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -48,6 +48,7 @@ Project
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the project is currently active.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -97,6 +98,7 @@ Project
 			"type" : "Boolean",
 			"name" : "effective",
 			"description" : "Determines whether the project is effective.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -233,7 +235,7 @@ Project
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -256,36 +258,36 @@ Project
 
 ```JSON
 {
-	"id" : "7b6cb0bb-fb70-49d6-8c26-7c33c5b090d4",
-	"createdAt" : "/Date(1417519361603)/",
-	"updatedAt" : "/Date(1417590101603)/",
-	"version" : 5,
+	"id" : "04f3a14a-5ea8-4a6a-8a88-bc3a11a13299",
+	"createdAt" : "/Date(1417602300549)/",
+	"updatedAt" : "/Date(1417619340549)/",
+	"version" : 6,
 	"externalSystem" : {
-		"id" : "2cdc115a-cbfe-41e0-8bb0-1aefc7c30087",
-		"createdAt" : "/Date(1417521641604)/",
-		"updatedAt" : "/Date(1417550501604)/",
-		"version" : 2,
+		"id" : "e075e4fc-a9e3-471b-b95b-2125d15cb5a9",
+		"createdAt" : "/Date(1417603080549)/",
+		"updatedAt" : "/Date(1417612140549)/",
+		"version" : 9,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1417521701603)/",
+	"externalSyncedAt" : "/Date(1417604940548)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1417435301603)/",
-	"ends" : "/Date(1417608101603)/",
+	"begins" : "/Date(1417518540548)/",
+	"ends" : "/Date(1417691340548)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
 	"personal" : false,
 	"owner" : {
-		"id" : "3ba066de-7ad6-489f-8356-2ab48e7380bf",
-		"createdAt" : "/Date(1417519061604)/",
-		"updatedAt" : "/Date(1417521701604)/",
-		"version" : 5,
+		"id" : "2aae1d6c-666a-4a3a-bf73-abe6452ace82",
+		"createdAt" : "/Date(1417603140549)/",
+		"updatedAt" : "/Date(1417651740549)/",
+		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -302,31 +304,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1419375600000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301603)/",
+		"birthdayRemind" : "/Date(1419462000000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540549)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "b72b6ddc-5929-4c62-a86c-219e20c10fb4",
-		"createdAt" : "/Date(1417521701604)/",
-		"updatedAt" : "/Date(1417521701604)/",
-		"version" : 8,
+		"id" : "f158b782-d6b1-4dbd-b205-2a36fbc72c6c",
+		"createdAt" : "/Date(1417601640549)/",
+		"updatedAt" : "/Date(1417684140549)/",
+		"version" : 1,
 		"externalSystem" : {
-			"id" : "98517cf8-3f98-4623-8919-6a44e9428758",
-			"createdAt" : "/Date(1417518641604)/",
-			"updatedAt" : "/Date(1417561301604)/",
-			"version" : 0,
+			"id" : "18dc54fb-2a46-4f92-b8eb-d311feafa32a",
+			"createdAt" : "/Date(1417603140549)/",
+			"updatedAt" : "/Date(1417651740549)/",
+			"version" : 4,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1417521701603)/",
+		"externalSyncedAt" : "/Date(1417604940548)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",

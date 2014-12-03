@@ -9,11 +9,11 @@ WorkType
 
 | Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
 |----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| active               | Boolean        | read write | no                                                                     | Determines whether the work type is currently active.                                               |
+| active               | Boolean        | read write | no                                                                     | Determines whether the work type is currently active. Default value is true.                        |
 | code                 | String         | read write | no                                                                     | A code or an abbreviation of the work type.                                                         |
 | createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
 | displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| effective            | Boolean        | read write | YES                                                                    | Determines whether the work type is effective.                                                      |
+| effective            | Boolean        | read write | YES                                                                    | Determines whether the work type is effective. Default value is true.                               |
 | externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
 | externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
 | externalSynced       | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
@@ -23,7 +23,7 @@ WorkType
 | name                 | String         | read write | no                                                                     | Name of the work type.                                                                              |
 | trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
+| version              | Long           | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -36,6 +36,7 @@ WorkType
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the work type is currently active.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -66,6 +67,7 @@ WorkType
 			"type" : "Boolean",
 			"name" : "effective",
 			"description" : "Determines whether the work type is effective.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -142,7 +144,7 @@ WorkType
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -161,22 +163,22 @@ WorkType
 
 ```JSON
 {
-	"id" : "4ecee421-5d01-436a-a8a4-925d3def65b0",
-	"createdAt" : "/Date(1417521280343)/",
-	"updatedAt" : "/Date(1417525300343)/",
-	"version" : 5,
+	"id" : "bcee2dd9-13b5-4180-ae65-1684168f1d8d",
+	"createdAt" : "/Date(1417602479873)/",
+	"updatedAt" : "/Date(1417637339873)/",
+	"version" : 2,
 	"externalSystem" : {
-		"id" : "d1022c7b-f8d4-4f84-b280-87cfe05cc99e",
-		"createdAt" : "/Date(1417521400343)/",
-		"updatedAt" : "/Date(1417586500343)/",
-		"version" : 6,
+		"id" : "5f4d294d-2fe9-4fd3-8f54-de3c9786b0d0",
+		"createdAt" : "/Date(1417603919873)/",
+		"updatedAt" : "/Date(1417637339873)/",
+		"version" : 8,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1417521700343)/",
+	"externalSyncedAt" : "/Date(1417604939873)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",

@@ -19,7 +19,7 @@ BillItem
 | price       | Double    | read write | no                                                                     | Price of item.                                                                                      |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -108,7 +108,7 @@ BillItem
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -126,10 +126,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "e6daadcb-2717-4612-a6a2-23ae6100c927",
-	"createdAt" : "/Date(1417521341299)/",
-	"updatedAt" : "/Date(1417525301299)/",
-	"version" : 8,
+	"id" : "35b4a4ec-7b9e-4711-a374-54572e59f18e",
+	"createdAt" : "/Date(1417602420077)/",
+	"updatedAt" : "/Date(1417669740077)/",
+	"version" : 5,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

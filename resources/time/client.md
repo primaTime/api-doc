@@ -9,7 +9,7 @@ Client
 
 | Name                  | Type           | Access     | Required                                                               | Description                                                                                         |
 |-----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| active                | Boolean        | read write | no                                                                     | Determines whether the client is currently active.                                                  |
+| active                | Boolean        | read write | no                                                                     | Determines whether the client is currently active. Default value is true.                           |
 | additionalAddressInfo | String         | read write | no                                                                     | Any additional information related to the address.                                                  |
 | billsCount            | Long           | read only  | no                                                                     | Counts the number of bills which were issued for the client.                                        |
 | city                  | String         | read write | no                                                                     | Name of the city.                                                                                   |
@@ -32,7 +32,7 @@ Client
 | trashItem             | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt             | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
 | vatId                 | String         | read write | no                                                                     | VAT identification number.                                                                          |
-| version               | Long           | read write | no                                                                     | Object version number.                                                                              |
+| version               | Long           | read only  | no                                                                     | Object version number.                                                                              |
 | website               | String         | read write | no                                                                     | Website URL.                                                                                        |
 | zipCode               | String         | read write | no                                                                     | ZIP or postal code.                                                                                 |
 
@@ -47,6 +47,7 @@ Client
 			"type" : "Boolean",
 			"name" : "active",
 			"description" : "Determines whether the client is currently active.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -218,7 +219,7 @@ Client
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -250,14 +251,14 @@ Client
 
 ```JSON
 {
-	"id" : "795a6aac-1c0e-44d9-8e02-0f59b3565f02",
-	"createdAt" : "/Date(1417519960669)/",
-	"updatedAt" : "/Date(1417521700669)/",
-	"version" : 8,
+	"id" : "9949dce4-6afd-4a08-be7f-97d9875402ec",
+	"createdAt" : "/Date(1417601700452)/",
+	"updatedAt" : "/Date(1417604940452)/",
+	"version" : 0,
 	"externalSystem" : {
-		"id" : "75e404ae-9e04-45bd-b177-88fa8f594235",
-		"createdAt" : "/Date(1417521040669)/",
-		"updatedAt" : "/Date(1417600900669)/",
+		"id" : "2ffab395-9692-4d15-a442-60ce75f07ed6",
+		"createdAt" : "/Date(1417601460452)/",
+		"updatedAt" : "/Date(1417658940452)/",
 		"version" : 9,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -265,7 +266,7 @@ Client
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1417521700669)/",
+	"externalSyncedAt" : "/Date(1417604940452)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",

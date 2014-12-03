@@ -18,7 +18,7 @@ Relation
 | outboundType | String    | read write | no                                                                     | Outbound bean type. Lowercase simple class name.                                                    |
 | trashItem    | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt    | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version      | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version      | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -107,7 +107,7 @@ Relation
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -125,14 +125,14 @@ Relation
 
 ```JSON
 {
-	"id" : "481b9685-9f62-41d4-b349-cf6917b406f5",
-	"createdAt" : "/Date(1417521701837)/",
-	"updatedAt" : "/Date(1417557701837)/",
-	"version" : 6,
-	"inboundId" : "138c7856-ca5d-4d04-8d5a-4185526dc756",
+	"id" : "62fcbc1b-9d52-4e1b-a612-e924e191d42e",
+	"createdAt" : "/Date(1417604760797)/",
+	"updatedAt" : "/Date(1417669740797)/",
+	"version" : 0,
+	"inboundId" : "e1318772-06a2-4dff-99ee-d1ac363bed5c",
 	"inboundType" : "user",
-	"outboundId" : "981597af-5bc4-4130-9dd4-c934465a120a",
+	"outboundId" : "35dbc341-6487-423f-8793-8b067a6636a9",
 	"outboundType" : "timerecord",
-	"displayName" : "user 138c7856-ca5d-4d04-8d5a-4185526dc756 -> timerecord 981597af-5bc4-4130-9dd4-c934465a120a"
+	"displayName" : "user e1318772-06a2-4dff-99ee-d1ac363bed5c -> timerecord 35dbc341-6487-423f-8793-8b067a6636a9"
 }
 ```

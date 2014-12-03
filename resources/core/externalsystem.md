@@ -16,7 +16,7 @@ ExternalSystem
 | name              | String    | read write | no                                                                     | The name of the external system                                                                     |
 | trashItem         | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt         | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version           | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version           | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -81,7 +81,7 @@ ExternalSystem
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -99,9 +99,9 @@ ExternalSystem
 
 ```JSON
 {
-	"id" : "6fd61230-d780-41a7-859e-004ecfd6694f",
-	"createdAt" : "/Date(1417521040960)/",
-	"updatedAt" : "/Date(1417572100960)/",
+	"id" : "09e055f2-8366-43bc-8fbb-c18b85524aa2",
+	"createdAt" : "/Date(1417603679988)/",
+	"updatedAt" : "/Date(1417626539988)/",
 	"version" : 6,
 	"name" : "My BaseCamp account",
 	"integrationPlugin" : "basecamp",

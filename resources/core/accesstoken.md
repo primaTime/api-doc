@@ -18,7 +18,7 @@ AccessToken
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | Associated user.                                                                                    |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -116,7 +116,7 @@ AccessToken
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -134,17 +134,17 @@ AccessToken
 
 ```JSON
 {
-	"id" : "6648649d-ab6e-47f0-ba11-a02ed3cdb63c",
-	"createdAt" : "/Date(1417519540612)/",
-	"updatedAt" : "/Date(1417597300612)/",
-	"version" : 4,
+	"id" : "28bb059d-a2f3-43a4-9979-1142f8c83a28",
+	"createdAt" : "/Date(1417603860031)/",
+	"updatedAt" : "/Date(1417655340031)/",
+	"version" : 2,
 	"provider" : "google",
 	"accessToken" : "your-google-account-authentication-id",
 	"accountName" : "jsmith@gmail.com",
 	"user" : {
-		"id" : "f8f729e0-a698-4799-8623-24de9d20b3c1",
-		"createdAt" : "/Date(1417519600612)/",
-		"updatedAt" : "/Date(1417582900612)/",
+		"id" : "55cdc4a2-91cf-44a2-9de3-349a243b55ce",
+		"createdAt" : "/Date(1417603800031)/",
+		"updatedAt" : "/Date(1417680540031)/",
 		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -162,10 +162,10 @@ AccessToken
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435300612)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540031)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

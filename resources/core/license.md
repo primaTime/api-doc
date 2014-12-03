@@ -23,7 +23,7 @@ License
 | usersCount    | Integer     | read write | no                                                                     | The number of users for which the license is valid.                                                 |
 | validFrom     | Date        | read write | no                                                                     | The license is valid from this date.                                                                |
 | validTo       | Date        | read write | no                                                                     | The License is valid until this date.                                                               |
-| version       | Long        | read write | no                                                                     | Object version number.                                                                              |
+| version       | Long        | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -131,7 +131,7 @@ License
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -149,20 +149,20 @@ License
 
 ```JSON
 {
-	"id" : "98d5a0ee-a327-460e-9844-997a2ec6b371",
-	"createdAt" : "/Date(1417518880204)/",
-	"updatedAt" : "/Date(1417568500204)/",
-	"version" : 8,
+	"id" : "14d2b6c2-054c-490e-90ae-11200a807ad5",
+	"createdAt" : "/Date(1417602600699)/",
+	"updatedAt" : "/Date(1417630140699)/",
+	"version" : 5,
 	"account" : {
-		"id" : "5e15163e-cca8-4e5a-b0f6-01d89109b313",
-		"createdAt" : "/Date(1417521640205)/",
-		"updatedAt" : "/Date(1417600900205)/",
-		"version" : 3,
+		"id" : "dd6660bd-bfa1-43e0-a7e4-660442c15a50",
+		"createdAt" : "/Date(1417604580699)/",
+		"updatedAt" : "/Date(1417655340699)/",
+		"version" : 8,
 		"owner" : {
-			"id" : "ae647f9b-dc55-43fb-901e-ab627e91c80a",
-			"createdAt" : "/Date(1417521400205)/",
-			"updatedAt" : "/Date(1417572100205)/",
-			"version" : 9,
+			"id" : "532f70bf-0c88-4271-b903-ba35e6b13ac4",
+			"createdAt" : "/Date(1417603860699)/",
+			"updatedAt" : "/Date(1417684140699)/",
+			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -179,10 +179,10 @@ License
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1418338800000)/",
-			"workingTimeStart" : "/Date(1417503600000)/",
-			"workingTimeEnd" : "/Date(1417536000000)/",
-			"created" : "/Date(1417435300204)/",
+			"birthdayRemind" : "/Date(1418425200000)/",
+			"workingTimeStart" : "/Date(1417590000000)/",
+			"workingTimeEnd" : "/Date(1417622400000)/",
+			"created" : "/Date(1417518540699)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -206,23 +206,23 @@ License
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435300204)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540699)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1417521700204)/",
-		"affiliateId" : "89e4638e-9d57-480e-9105-edbd73d5c712",
+		"deactivationRequestedAt" : "/Date(1417604940699)/",
+		"affiliateId" : "f612b15c-93f4-4549-95c6-7c67db4b4533",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
-	"licenseNumber" : "97d98222-293d-4dff-bc0d-eb54a5a9e2cb",
+	"licenseNumber" : "a86e671f-25f5-4006-82ba-66ba6b4cffbb",
 	"usersCount" : 5,
-	"validFrom" : "/Date(1417302000000)/",
-	"validTo" : "/Date(1419894000000)/",
+	"validFrom" : "/Date(1417388400000)/",
+	"validTo" : "/Date(1420066800000)/",
 	"ownerName" : "Example Ltd.",
 	"product" : "TIME",
 	"type" : "BUY",
 	"purchaseInfo" : "{\"purchase_id\":\"1154795\"}",
-	"displayName" : "97d98222-293d-4dff-bc0d-eb54a5a9e2cb"
+	"displayName" : "a86e671f-25f5-4006-82ba-66ba6b4cffbb"
 }
 ```

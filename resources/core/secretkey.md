@@ -20,7 +20,7 @@ SecretKey
 | trashItem      | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt      | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user           | User      | read write | no                                                                     | Provides info about the user for whom the secret Key was generated.                                 |
-| version        | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version        | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -115,7 +115,7 @@ SecretKey
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -133,15 +133,15 @@ SecretKey
 
 ```JSON
 {
-	"id" : "6c76c81c-b70c-45b4-8be0-4bf688e29b8a",
-	"createdAt" : "/Date(1417520441119)/",
-	"updatedAt" : "/Date(1417597301119)/",
-	"version" : 8,
+	"id" : "24e55ee4-33ae-49ac-bb3f-b100662ef1e3",
+	"createdAt" : "/Date(1417602119819)/",
+	"updatedAt" : "/Date(1417673339819)/",
+	"version" : 5,
 	"user" : {
-		"id" : "38852c66-58ea-4e24-8d7d-1dc676b54c77",
-		"createdAt" : "/Date(1417519781119)/",
-		"updatedAt" : "/Date(1417521701119)/",
-		"version" : 2,
+		"id" : "1e1342d7-0572-47a0-878a-d01e14a3f837",
+		"createdAt" : "/Date(1417602959819)/",
+		"updatedAt" : "/Date(1417633739819)/",
+		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -158,19 +158,19 @@ SecretKey
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301119)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518539818)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"secretKey" : "d4495765-1d3e-45de-9776-43c8f0e459e0",
+	"secretKey" : "77e32c59-1b86-4a71-9ed2-2acef2a1d222",
 	"name" : "Chrome plugin",
 	"senderId" : "6248151342",
 	"registrationId" : "HPRgkF3VZjC9KtT8OvPVGJ-hQMRKRrZuDELjzEvxwYv7hH5OFEeco8ohsN5PjL1iC2dNtk2BAokeMCg2ZXKqpc8FXKmhX94kIxQ",
-	"expiration" : "/Date(1419940901119)/",
-	"displayName" : "Chrome plugin (d4495765-1d3e-45de-9776-43c8f0e459e0)"
+	"expiration" : "/Date(1420024139818)/",
+	"displayName" : "Chrome plugin (77e32c59-1b86-4a71-9ed2-2acef2a1d222)"
 }
 ```

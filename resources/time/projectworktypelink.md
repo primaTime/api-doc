@@ -14,7 +14,7 @@ ProjectWorkTypeLink
 | id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 | workType    | WorkType  | read write | YES                                                                    | The work type which is linked with another object.                                                  |
 
 ## Metadata
@@ -68,7 +68,7 @@ ProjectWorkTypeLink
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "WorkType",
@@ -98,19 +98,19 @@ ProjectWorkTypeLink
 
 ```JSON
 {
-	"id" : "919be4dd-ec3f-472e-9be3-5f61142e8894",
-	"createdAt" : "/Date(1417521520078)/",
-	"updatedAt" : "/Date(1417575700078)/",
-	"version" : 0,
+	"id" : "e007ce11-df0b-466c-bdd8-7399f8a17670",
+	"createdAt" : "/Date(1417604581332)/",
+	"updatedAt" : "/Date(1417651741332)/",
+	"version" : 8,
 	"workType" : {
-		"id" : "971c4d6d-e32d-4763-9df7-559e60eab983",
-		"createdAt" : "/Date(1417520080078)/",
-		"updatedAt" : "/Date(1417536100078)/",
-		"version" : 5,
+		"id" : "f2c8ac49-50c2-4e3f-8392-363e26aa9ae6",
+		"createdAt" : "/Date(1417602301332)/",
+		"updatedAt" : "/Date(1417684141332)/",
+		"version" : 6,
 		"externalSystem" : {
-			"id" : "b84046b0-3382-475b-bdc6-0781d34d5a32",
-			"createdAt" : "/Date(1417518280078)/",
-			"updatedAt" : "/Date(1417597300078)/",
+			"id" : "f9847dd9-4f80-4482-8c4c-fee340d4ad3e",
+			"createdAt" : "/Date(1417602181332)/",
+			"updatedAt" : "/Date(1417637341332)/",
 			"version" : 0,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
@@ -118,7 +118,7 @@ ProjectWorkTypeLink
 		},
 		"externalResourceId" : "wt-058",
 		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1417521700078)/",
+		"externalSyncedAt" : "/Date(1417604941332)/",
 		"externalSynced" : true,
 		"name" : "Software development",
 		"code" : "SW",

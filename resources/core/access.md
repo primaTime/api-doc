@@ -17,7 +17,7 @@ Access
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | Provides info about the user for whom the access is granted.                                        |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -104,7 +104,7 @@ Access
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -122,14 +122,14 @@ Access
 
 ```JSON
 {
-	"id" : "95a5e29a-bb75-4b7d-b166-60b202a9528d",
-	"createdAt" : "/Date(1417519000716)/",
-	"updatedAt" : "/Date(1417561300716)/",
-	"version" : 6,
+	"id" : "c2acccf8-2daa-4cb8-a805-07e9ab8c4f9f",
+	"createdAt" : "/Date(1417603081034)/",
+	"updatedAt" : "/Date(1417651741034)/",
+	"version" : 9,
 	"user" : {
-		"id" : "9bb92353-8256-4a75-9988-95ddfdc04e7d",
-		"createdAt" : "/Date(1417518400716)/",
-		"updatedAt" : "/Date(1417546900716)/",
+		"id" : "518937f5-7af1-4b72-9e31-fdf67ae07394",
+		"createdAt" : "/Date(1417601521034)/",
+		"updatedAt" : "/Date(1417673341034)/",
 		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -147,16 +147,16 @@ Access
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435300716)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518541034)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"product" : "TIME",
-	"created" : "/Date(1417521700716)/",
+	"created" : "/Date(1417604941034)/",
 	"displayName" : "TIME"
 }
 ```

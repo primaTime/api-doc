@@ -18,7 +18,7 @@ Role
 | roleType    | RoleType    | read write | no                                                                     | Role type, only custom roles can be edited.                                                         |
 | trashItem   | TrashItem   | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date        | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long        | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long        | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -95,7 +95,7 @@ Role
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -113,10 +113,10 @@ Role
 
 ```JSON
 {
-	"id" : "b1130582-aa4a-470c-8cc9-d5c8dbb17b8d",
-	"createdAt" : "/Date(1417520441652)/",
-	"updatedAt" : "/Date(1417543301652)/",
-	"version" : 1,
+	"id" : "871b2953-c2ee-49af-b3ba-d5ff275b2ef3",
+	"createdAt" : "/Date(1417604160188)/",
+	"updatedAt" : "/Date(1417630140188)/",
+	"version" : 9,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",

@@ -15,7 +15,7 @@ ProjectMember
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | User who is a member.                                                                               |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -80,7 +80,7 @@ ProjectMember
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -98,15 +98,15 @@ ProjectMember
 
 ```JSON
 {
-	"id" : "3e65f8c4-8877-4d64-805b-45e4b3f24443",
-	"createdAt" : "/Date(1417521581263)/",
-	"updatedAt" : "/Date(1417600901263)/",
+	"id" : "176585bf-2356-419b-8fab-a86d8ca4de88",
+	"createdAt" : "/Date(1417601640310)/",
+	"updatedAt" : "/Date(1417637340310)/",
 	"version" : 3,
 	"user" : {
-		"id" : "ffeeb507-8cb2-4f6d-951e-7211c1b7db3c",
-		"createdAt" : "/Date(1417519961263)/",
-		"updatedAt" : "/Date(1417593701263)/",
-		"version" : 2,
+		"id" : "20a6a502-d439-4b76-996a-fa65177b6ad5",
+		"createdAt" : "/Date(1417604880310)/",
+		"updatedAt" : "/Date(1417666140310)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -123,10 +123,10 @@ ProjectMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301263)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540310)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

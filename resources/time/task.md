@@ -14,7 +14,7 @@ Task
 | createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
 | displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
 | done                 | Boolean        | read write | no                                                                     | Determines whether the task is currently done.                                                      |
-| effective            | Boolean        | read write | YES                                                                    | Determines whether the task is effective.                                                           |
+| effective            | Boolean        | read write | YES                                                                    | Determines whether the task is effective. Default value is true.                                    |
 | externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
 | externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
 | externalSynced       | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
@@ -29,7 +29,7 @@ Task
 | timeBudget           | Long           | read write | no                                                                     | Amount of milliseconds available for the task.                                                      |
 | trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
+| version              | Long           | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -79,6 +79,7 @@ Task
 			"type" : "Boolean",
 			"name" : "effective",
 			"description" : "Determines whether the task is effective.",
+			"defaultValue" : "true",
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
@@ -187,7 +188,7 @@ Task
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -205,54 +206,54 @@ Task
 
 ```JSON
 {
-	"id" : "cf32864c-2186-4085-a7f2-ea320e3bd6cf",
-	"createdAt" : "/Date(1417520681357)/",
-	"updatedAt" : "/Date(1417539701357)/",
-	"version" : 4,
+	"id" : "134a1164-7fd0-4f68-8af0-fbfd1433a4d5",
+	"createdAt" : "/Date(1417602240382)/",
+	"updatedAt" : "/Date(1417669740382)/",
+	"version" : 6,
 	"externalSystem" : {
-		"id" : "e4ec62b7-4635-4fa9-9681-8be36eeb6202",
-		"createdAt" : "/Date(1417520021358)/",
-		"updatedAt" : "/Date(1417521701358)/",
-		"version" : 0,
+		"id" : "4aeac3d2-3f71-45af-901f-26a07c44a456",
+		"createdAt" : "/Date(1417603980382)/",
+		"updatedAt" : "/Date(1417630140382)/",
+		"version" : 8,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "task-556",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/556",
-	"externalSyncedAt" : "/Date(1417521701357)/",
+	"externalSyncedAt" : "/Date(1417604940381)/",
 	"externalSynced" : true,
 	"project" : {
-		"id" : "6c3cc29d-7c9f-4e94-9d8f-12e1fe137046",
-		"createdAt" : "/Date(1417518281357)/",
-		"updatedAt" : "/Date(1417543301358)/",
-		"version" : 6,
+		"id" : "724ba394-7151-408b-a99c-ca9266ecbf1d",
+		"createdAt" : "/Date(1417601880382)/",
+		"updatedAt" : "/Date(1417615740382)/",
+		"version" : 7,
 		"externalSystem" : {
-			"id" : "152a698d-680b-44b4-a28c-cad30feb7dcc",
-			"createdAt" : "/Date(1417520741358)/",
-			"updatedAt" : "/Date(1417528901358)/",
-			"version" : 0,
+			"id" : "eb9c0314-02c9-4ef1-b6d9-0e136a8f9325",
+			"createdAt" : "/Date(1417602780382)/",
+			"updatedAt" : "/Date(1417644540382)/",
+			"version" : 2,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "project-221",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-		"externalSyncedAt" : "/Date(1417521701357)/",
+		"externalSyncedAt" : "/Date(1417604940381)/",
 		"externalSynced" : true,
 		"name" : "Content management system",
 		"code" : "CMS",
 		"note" : "core feature",
-		"begins" : "/Date(1417435301357)/",
-		"ends" : "/Date(1417608101357)/",
+		"begins" : "/Date(1417518540381)/",
+		"ends" : "/Date(1417691340381)/",
 		"timeBudget" : 604800000,
 		"priceBudget" : 100000.0,
 		"personal" : false,
 		"owner" : {
-			"id" : "cb5c67b0-78ec-40e9-b566-9f1c93914a05",
-			"createdAt" : "/Date(1417518401358)/",
-			"updatedAt" : "/Date(1417554101358)/",
-			"version" : 8,
+			"id" : "089dfcc2-badd-4f1d-9230-ba64e42d44f7",
+			"createdAt" : "/Date(1417602540382)/",
+			"updatedAt" : "/Date(1417651740382)/",
+			"version" : 5,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
@@ -269,31 +270,31 @@ Task
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1419375600000)/",
-			"workingTimeStart" : "/Date(1417503600000)/",
-			"workingTimeEnd" : "/Date(1417536000000)/",
-			"created" : "/Date(1417435301357)/",
+			"birthdayRemind" : "/Date(1419462000000)/",
+			"workingTimeStart" : "/Date(1417590000000)/",
+			"workingTimeEnd" : "/Date(1417622400000)/",
+			"created" : "/Date(1417518540382)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"client" : {
-			"id" : "38f4c5e4-605d-474d-ab72-4d9eef75d52b",
-			"createdAt" : "/Date(1417521341358)/",
-			"updatedAt" : "/Date(1417525301358)/",
-			"version" : 9,
+			"id" : "53f9bc5b-ff60-46ae-b031-b09a82f98d56",
+			"createdAt" : "/Date(1417601880382)/",
+			"updatedAt" : "/Date(1417648140382)/",
+			"version" : 5,
 			"externalSystem" : {
-				"id" : "c46fa689-aa11-4c41-a576-f98980a041d8",
-				"createdAt" : "/Date(1417518341358)/",
-				"updatedAt" : "/Date(1417521701358)/",
-				"version" : 7,
+				"id" : "c83e55c0-f4be-4699-a229-601786c62b1d",
+				"createdAt" : "/Date(1417604400382)/",
+				"updatedAt" : "/Date(1417666140382)/",
+				"version" : 0,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1417521701357)/",
+			"externalSyncedAt" : "/Date(1417604940381)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -322,10 +323,10 @@ Task
 	"note" : "form with validation",
 	"done" : true,
 	"author" : {
-		"id" : "cb5c67b0-78ec-40e9-b566-9f1c93914a05",
-		"createdAt" : "/Date(1417518401358)/",
-		"updatedAt" : "/Date(1417554101358)/",
-		"version" : 8,
+		"id" : "089dfcc2-badd-4f1d-9230-ba64e42d44f7",
+		"createdAt" : "/Date(1417602540382)/",
+		"updatedAt" : "/Date(1417651740382)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -342,19 +343,19 @@ Task
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1419375600000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301357)/",
+		"birthdayRemind" : "/Date(1419462000000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540382)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"owner" : {
-		"id" : "8cac6574-43b4-4136-8cf3-db843cdc63c5",
-		"createdAt" : "/Date(1417521641357)/",
-		"updatedAt" : "/Date(1417528901357)/",
-		"version" : 8,
+		"id" : "dbc7424a-d082-457f-b1c8-a2ed9895f20c",
+		"createdAt" : "/Date(1417604220382)/",
+		"updatedAt" : "/Date(1417651740382)/",
+		"version" : 2,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -371,10 +372,10 @@ Task
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301357)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540382)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

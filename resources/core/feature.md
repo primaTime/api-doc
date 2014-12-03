@@ -17,7 +17,7 @@ Feature
 | product     | Product   | read write | no                                                                     | The feature is applied to this product.                                                             |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -93,7 +93,7 @@ Feature
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -111,10 +111,10 @@ Feature
 
 ```JSON
 {
-	"id" : "b1df50b5-e90b-48bf-95ae-f19b1cb2606a",
-	"createdAt" : "/Date(1417518701546)/",
-	"updatedAt" : "/Date(1417561301546)/",
-	"version" : 2,
+	"id" : "97e013ea-ff9d-4de9-b33d-c6dbbdd0b46a",
+	"createdAt" : "/Date(1417604280213)/",
+	"updatedAt" : "/Date(1417626540213)/",
+	"version" : 1,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,

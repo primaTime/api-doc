@@ -36,7 +36,7 @@ Account
 | updatedAt               | Date      | read only  | no                                                                                           | Last modified date.                                                                                                           |
 | urlPrefix               | String    | read only  | no                                                                                           | Identifies the account tenant.                                                                                                |
 | vatId                   | String    | read write | no                                                                                           | VAT identification number.                                                                                                    |
-| version                 | Long      | read write | no                                                                                           | Object version number.                                                                                                        |
+| version                 | Long      | read only  | no                                                                                           | Object version number.                                                                                                        |
 | website                 | String    | read write | no                                                                                           | The website URL.                                                                                                              |
 | weekStart               | Byte      | read write | no                                                                                           | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
 | workingTimeEnd          | Date      | read write | no                                                                                           | The time when the work day usually end.                                                                                       |
@@ -274,7 +274,7 @@ Account
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		},
 		{
 			"type" : "String",
@@ -333,15 +333,15 @@ Account
 
 ```JSON
 {
-	"id" : "0b9d8b3a-95f2-439c-be60-d1ffc893aa01",
-	"createdAt" : "/Date(1417518761755)/",
-	"updatedAt" : "/Date(1417536101755)/",
-	"version" : 7,
+	"id" : "cf360bd4-66e1-4ce1-bfb8-e1964f1d7f9a",
+	"createdAt" : "/Date(1417602120636)/",
+	"updatedAt" : "/Date(1417622940636)/",
+	"version" : 0,
 	"owner" : {
-		"id" : "81a594ad-d0c1-476b-81f3-bb387ec4afdf",
-		"createdAt" : "/Date(1417519481755)/",
-		"updatedAt" : "/Date(1417593701755)/",
-		"version" : 7,
+		"id" : "c306a04d-698d-45ce-93f8-a2bf5b5f13b1",
+		"createdAt" : "/Date(1417602180636)/",
+		"updatedAt" : "/Date(1417648140636)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -358,10 +358,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418338800000)/",
-		"workingTimeStart" : "/Date(1417503600000)/",
-		"workingTimeEnd" : "/Date(1417536000000)/",
-		"created" : "/Date(1417435301754)/",
+		"birthdayRemind" : "/Date(1418425200000)/",
+		"workingTimeStart" : "/Date(1417590000000)/",
+		"workingTimeEnd" : "/Date(1417622400000)/",
+		"created" : "/Date(1417518540635)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -385,13 +385,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1417503600000)/",
-	"workingTimeEnd" : "/Date(1417536000000)/",
-	"created" : "/Date(1417435301754)/",
+	"workingTimeStart" : "/Date(1417590000000)/",
+	"workingTimeEnd" : "/Date(1417622400000)/",
+	"created" : "/Date(1417518540636)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1417521701754)/",
-	"affiliateId" : "61ea23fc-e687-4282-999f-68c51439a284",
+	"deactivationRequestedAt" : "/Date(1417604940636)/",
+	"affiliateId" : "ca225cfa-0209-408a-8272-9ddd79306e1d",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

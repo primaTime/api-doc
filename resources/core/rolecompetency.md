@@ -16,7 +16,7 @@ RoleCompetency
 | role        | Role       | read write | no                                                                     | The role of an custom user's role. Built-in roles do not have a role.                               |
 | trashItem   | TrashItem  | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date       | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long       | read write | no                                                                     | Object version number.                                                                              |
+| version     | Long       | read only  | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -82,7 +82,7 @@ RoleCompetency
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_WRITE"
+			"access" : "READ_ONLY"
 		}
 	],
 	"cascades" : [
@@ -100,15 +100,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "3cd7a11c-0a59-4b01-ae02-fb08fce87e0d",
-	"createdAt" : "/Date(1417521580870)/",
-	"updatedAt" : "/Date(1417564900870)/",
-	"version" : 0,
+	"id" : "1a00d964-0966-453a-9228-e73b9fb8b05f",
+	"createdAt" : "/Date(1417603560113)/",
+	"updatedAt" : "/Date(1417651740113)/",
+	"version" : 3,
 	"role" : {
-		"id" : "40e488fb-15fc-4f38-88d2-2f8eec93bb93",
-		"createdAt" : "/Date(1417521340870)/",
-		"updatedAt" : "/Date(1417550500870)/",
-		"version" : 6,
+		"id" : "61abdc39-ce95-4f3d-b2c9-a87f636d9a40",
+		"createdAt" : "/Date(1417602360113)/",
+		"updatedAt" : "/Date(1417676940113)/",
+		"version" : 5,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",
@@ -116,6 +116,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@292ed8e1[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=40e488fb-15fc-4f38-88d2-2f8eec93bb93,tenantId=<null>,trashItem=<null>,createdAt=Tue Dec 02 12:55:40 CET 2014,updatedAt=Tue Dec 02 21:01:40 CET 2014,version=6][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@431649ad[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=61abdc39-ce95-4f3d-b2c9-a87f636d9a40,tenantId=<null>,trashItem=<null>,createdAt=Wed Dec 03 11:26:00 CET 2014,updatedAt=Thu Dec 04 08:09:00 CET 2014,version=5][ACCOUNT_ADMIN]"
 }
 ```
