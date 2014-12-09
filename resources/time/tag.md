@@ -92,10 +92,10 @@ Tag
 
 ```JSON
 {
-	"id" : "ce5bc0c0-6c6d-4f16-983f-65b703722f15",
-	"createdAt" : "/Date(1417602301123)/",
-	"updatedAt" : "/Date(1417615741123)/",
-	"version" : 1,
+	"id" : "a0c07b3c-1dad-4d6d-8dba-f1f00def5b7c",
+	"createdAt" : "/Date(1418061211229)/",
+	"updatedAt" : "/Date(1418125891229)/",
+	"version" : 8,
 	"name" : "SW",
 	"displayName" : "SW"
 }

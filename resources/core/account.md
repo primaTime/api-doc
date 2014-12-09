@@ -333,15 +333,15 @@ Account
 
 ```JSON
 {
-	"id" : "cf360bd4-66e1-4ce1-bfb8-e1964f1d7f9a",
-	"createdAt" : "/Date(1417602120636)/",
-	"updatedAt" : "/Date(1417622940636)/",
+	"id" : "c19d6c80-4b18-4eaa-a28d-3a787431340e",
+	"createdAt" : "/Date(1418063910841)/",
+	"updatedAt" : "/Date(1418122290841)/",
 	"version" : 0,
 	"owner" : {
-		"id" : "c306a04d-698d-45ce-93f8-a2bf5b5f13b1",
-		"createdAt" : "/Date(1417602180636)/",
-		"updatedAt" : "/Date(1417648140636)/",
-		"version" : 1,
+		"id" : "1b3ccef2-5385-46d9-b50a-3c04227393fa",
+		"createdAt" : "/Date(1418061750841)/",
+		"updatedAt" : "/Date(1418136690841)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -358,10 +358,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418425200000)/",
-		"workingTimeStart" : "/Date(1417590000000)/",
-		"workingTimeEnd" : "/Date(1417622400000)/",
-		"created" : "/Date(1417518540635)/",
+		"birthdayRemind" : "/Date(1418857200000)/",
+		"workingTimeStart" : "/Date(1418022000000)/",
+		"workingTimeEnd" : "/Date(1418054400000)/",
+		"created" : "/Date(1417978290841)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -385,13 +385,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1417590000000)/",
-	"workingTimeEnd" : "/Date(1417622400000)/",
-	"created" : "/Date(1417518540636)/",
+	"workingTimeStart" : "/Date(1418022000000)/",
+	"workingTimeEnd" : "/Date(1418054400000)/",
+	"created" : "/Date(1417978290841)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1417604940636)/",
-	"affiliateId" : "ca225cfa-0209-408a-8272-9ddd79306e1d",
+	"deactivationRequestedAt" : "/Date(1418064690841)/",
+	"affiliateId" : "0a2f0d09-daac-4eaf-ae23-db9793cdbcd1",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

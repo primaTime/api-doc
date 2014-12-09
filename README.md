@@ -1,7 +1,7 @@
 Introduction to the primaERP API
 ==
 
-Current version: ~1.5.22
+Current version: ~1.5.23
 
 If you want to read / create / edit / delete your projects, clients, tasks or time records you can use the primaERP API.
 
@@ -11,8 +11,9 @@ To access the API you will need an API KEY. Please send an email to [support@pri
 
 ## Read More
 
-* [Overview](rest/README.md) - Basic description how to use the API
-* [Resources](resources/README.md) - A list of resources available in all primaERP applications
+* [Overview](rest/README.md) - Basic description how to use the API.
+* [Resources](resources/README.md) - A list of the available resources in the primaERP applications.
+* [Examples](examples/README.md) - Practical demonstration.
 
 ## Need More information?
 

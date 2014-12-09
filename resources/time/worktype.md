@@ -163,22 +163,22 @@ WorkType
 
 ```JSON
 {
-	"id" : "bcee2dd9-13b5-4180-ae65-1684168f1d8d",
-	"createdAt" : "/Date(1417602479873)/",
-	"updatedAt" : "/Date(1417637339873)/",
-	"version" : 2,
+	"id" : "0031122d-d282-48cb-b704-12fb6a21f1cb",
+	"createdAt" : "/Date(1418061991258)/",
+	"updatedAt" : "/Date(1418082691258)/",
+	"version" : 4,
 	"externalSystem" : {
-		"id" : "5f4d294d-2fe9-4fd3-8f54-de3c9786b0d0",
-		"createdAt" : "/Date(1417603919873)/",
-		"updatedAt" : "/Date(1417637339873)/",
-		"version" : 8,
+		"id" : "a308408a-a490-4298-b07c-085003e9936a",
+		"createdAt" : "/Date(1418064211258)/",
+		"updatedAt" : "/Date(1418129491258)/",
+		"version" : 3,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1417604939873)/",
+	"externalSyncedAt" : "/Date(1418064691258)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",
