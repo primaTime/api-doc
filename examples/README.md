@@ -19,7 +19,7 @@ def email = 'your@email.com'
 def password = 'yourPassword'
 def apikey = 'your-apikey'
 
-def rest = new RESTClient('http://your-tenant.api.primaerp.com/v1/')
+def rest = new RESTClient('https://your-tenant.api.primaerp.com/v1/')
 
 def file = '/home/user/clients.csv' // or 'c:\\some\\folder\\clients.csv' for Windows
 

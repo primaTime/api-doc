@@ -133,15 +133,15 @@ SecretKey
 
 ```JSON
 {
-	"id" : "2d4bd97d-72ed-4c1c-a76d-05ff514f7e7a",
-	"createdAt" : "/Date(1418062111298)/",
-	"updatedAt" : "/Date(1418143891298)/",
-	"version" : 0,
+	"id" : "92feb24d-18f1-403d-ba78-abd92f65c50c",
+	"createdAt" : "/Date(1421137718574)/",
+	"updatedAt" : "/Date(1421195138574)/",
+	"version" : 8,
 	"user" : {
-		"id" : "b785e6d1-bfb6-4402-afaa-5ce599002447",
-		"createdAt" : "/Date(1418063371298)/",
-		"updatedAt" : "/Date(1418097091298)/",
-		"version" : 5,
+		"id" : "4df577b5-b338-485a-81de-76fa8ffeafe0",
+		"createdAt" : "/Date(1421138498574)/",
+		"updatedAt" : "/Date(1421155538574)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -158,19 +158,19 @@ SecretKey
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1418857200000)/",
-		"workingTimeStart" : "/Date(1418022000000)/",
-		"workingTimeEnd" : "/Date(1418054400000)/",
-		"created" : "/Date(1417978291298)/",
+		"birthdayRemind" : "/Date(1421967600000)/",
+		"workingTimeStart" : "/Date(1421132400000)/",
+		"workingTimeEnd" : "/Date(1421164800000)/",
+		"created" : "/Date(1421054738574)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"secretKey" : "8b1d925c-9ed4-4eb8-ab2e-8ac83e16d4a9",
+	"secretKey" : "c11d206f-10e8-4fb2-91ab-cebb77cf8dd6",
 	"name" : "Chrome plugin",
 	"senderId" : "6248151342",
 	"registrationId" : "HPRgkF3VZjC9KtT8OvPVGJ-hQMRKRrZuDELjzEvxwYv7hH5OFEeco8ohsN5PjL1iC2dNtk2BAokeMCg2ZXKqpc8FXKmhX94kIxQ",
-	"expiration" : "/Date(1420483891298)/",
-	"displayName" : "Chrome plugin (8b1d925c-9ed4-4eb8-ab2e-8ac83e16d4a9)"
+	"expiration" : "/Date(1423560338574)/",
+	"displayName" : "Chrome plugin (c11d206f-10e8-4fb2-91ab-cebb77cf8dd6)"
 }
 ```

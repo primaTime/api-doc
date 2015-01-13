@@ -17,226 +17,213 @@ Where `{resource}` is a module resource such as: `time/projects`, `time/timereco
 
 ```JSON
 {
-	"type" : "Client",
-	"fields" : [
+	"type": "Project",
+	"path": "/v1/time/projects",
+	"fields": [
 		{
-			"type" : "Boolean",
-			"name" : "active",
-			"description" : "Determines whether the client is currently active.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Boolean",
+			"name": "active",
+			"description": "Determines whether the project is currently active.",
+			"defaultValue": "true",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "additionalAddressInfo",
-			"description" : "Any additional information related to the address.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Date",
+			"name": "begins",
+			"description": "Date and time when the project begins.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "Long",
-			"name" : "billsCount",
-			"description" : "Counts the number of bills which were issued for the client.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"type": "Boolean",
+			"name": "billable",
+			"description": "Determines whether the project will be billed to the client.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "city",
-			"description" : "Name of the city.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Client",
+			"path": "/v1/time/clients",
+			"name": "client",
+			"description": "Provides info about the client for whom the project is realized.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "code",
-			"description" : "A code or an abbreviation of the client.",
-			"access" : "READ_WRITE",
-			"constraints" : [
+			"type": "String",
+			"name": "code",
+			"description": "A code or an abbreviation of the project.",
+			"access": "READ_WRITE",
+			"constraints": [
 				{
-					"type" : "Size",
-					"pattern" : null
+					"type": "Size",
+					"details": "min 0, max 20"
 				}
 			]
 		},
 		{
-			"type" : "String",
-			"name" : "countryCode",
-			"description" : "Country code according to ISO 3166-1 alpha-3 standard.",
-			"access" : "READ_WRITE",
-			"constraints" : [
+			"type": "Date",
+			"name": "createdAt",
+			"description": "Date of creation.",
+			"access": "READ_ONLY"
+		},
+		{
+			"type": "String",
+			"name": "displayName",
+			"description": "Describes an object in human readable form.",
+			"access": "READ_ONLY"
+		},
+		{
+			"type": "Boolean",
+			"name": "effective",
+			"description": "Determines whether the project is effective.",
+			"defaultValue": "true",
+			"access": "READ_WRITE",
+			"constraints": [
 				{
-					"type" : "Pattern",
-					"pattern" : "[A-Z]+"
+					"type": "NotNull"
+				}
+			]
+		},
+		{
+			"type": "Date",
+			"name": "ends",
+			"description": "Date and time of project completion.",
+			"access": "READ_WRITE"
+		},
+		{
+			"type": "String",
+			"name": "externalBrowsableUrl",
+			"description": "Human accessible link in external system.",
+			"access": "READ_WRITE"
+		},
+		{
+			"type": "String",
+			"name": "externalResourceId",
+			"description": "Unique external system identifier.",
+			"access": "READ_WRITE"
+		},
+		{
+			"type": "Boolean",
+			"name": "externalSynced",
+			"description": "Determines whether an object was synced with the external system.",
+			"access": "WRITE_ONLY"
+		},
+		{
+			"type": "Date",
+			"name": "externalSyncedAt",
+			"description": "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
+			"access": "READ_ONLY"
+		},
+		{
+			"type": "ExternalSystem",
+			"path": "/v1/externalsystems",
+			"name": "externalSystem",
+			"description": "External system which maintains this object.",
+			"access": "READ_WRITE"
+		},
+		{
+			"type": "String",
+			"name": "id",
+			"description": "Unique object identifier.",
+			"access": "READ_WRITE",
+			"constraints": [
+				{
+					"type": "Pattern",
+					"details": "regexp [0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
 				},
 				{
-					"type" : "Size",
-					"pattern" : null
+					"type": "NotNull"
 				}
 			]
 		},
 		{
-			"type" : "Date",
-			"name" : "createdAt",
-			"description" : "Date of creation.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"type": "Long",
+			"name": "membersCount",
+			"description": "Counts the number of members working on the project.",
+			"access": "READ_ONLY"
 		},
 		{
-			"type" : "String",
-			"name" : "displayName",
-			"description" : "Describes an object in human readable form.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"type": "String",
+			"name": "name",
+			"description": "Project name.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "email",
-			"description" : "E-mail address of the client.",
-			"access" : "READ_WRITE",
-			"constraints" : [
+			"type": "String",
+			"name": "note",
+			"description": "Note about the project.",
+			"access": "READ_WRITE"
+		},
+		{
+			"type": "User",
+			"path": "/v1/users",
+			"name": "owner",
+			"description": "Identifies the project owner.",
+			"access": "READ_WRITE",
+			"constraints": [
 				{
-					"type" : "Email",
-					"pattern" : ".*"
+					"type": "NotNull"
 				}
 			]
 		},
 		{
-			"type" : "String",
-			"name" : "externalBrowsableUrl",
-			"description" : "Human accessible link in external system.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Boolean",
+			"name": "personal",
+			"description": "Determines whether the project is available, only for the owner.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "externalResourceId",
-			"description" : "Unique external system identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Double",
+			"name": "priceBudget",
+			"description": "Amount of money available for the project.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "Boolean",
-			"name" : "externalSynced",
-			"description" : "Determines whether an object was synced with the external system.",
-			"access" : "WRITE_ONLY",
-			"constraints" : [ ]
+			"type": "Long",
+			"name": "tasksCount",
+			"description": "Counts the number of tasks that belong to the project and which have not been done.",
+			"access": "READ_ONLY"
 		},
 		{
-			"type" : "Date",
-			"name" : "externalSyncedAt",
-			"description" : "Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
+			"type": "Long",
+			"name": "timeBudget",
+			"description": "Amount of milliseconds available for the project.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "ExternalSystem",
-			"name" : "externalSystem",
-			"description" : "External system which maintains this object.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Long",
+			"name": "timeRecordsCount",
+			"description": "Counts the number of time records in the project.",
+			"access": "READ_ONLY"
 		},
 		{
-			"type" : "String",
-			"name" : "id",
-			"description" : "Unique object identifier.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "Pattern",
-					"pattern" : "[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}"
-				},
-				{
-					"type" : "NotNull",
-					"pattern" : null
-				}
-			]
+			"type": "TrashItem",
+			"path": "/v1/trash",
+			"name": "trashItem",
+			"description": "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
+			"access": "READ_WRITE"
 		},
 		{
-			"type" : "String",
-			"name" : "name",
-			"description" : "Client name.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Date",
+			"name": "updatedAt",
+			"description": "Last modified date.",
+			"access": "READ_ONLY"
 		},
 		{
-			"type" : "String",
-			"name" : "phone",
-			"description" : "Telephone number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "Long",
-			"name" : "projectsCount",
-			"description" : "Counts the number of projects being done for the client.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "String",
-			"name" : "state",
-			"description" : "Name of the state or province.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "String",
-			"name" : "streetAddress",
-			"description" : "Street name with the house number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "TrashItem",
-			"name" : "trashItem",
-			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "Date",
-			"name" : "updatedAt",
-			"description" : "Last modified date.",
-			"access" : "READ_ONLY",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "String",
-			"name" : "vatId",
-			"description" : "VAT identification number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "Long",
-			"name" : "version",
-			"description" : "Object version number.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "String",
-			"name" : "website",
-			"description" : "Website URL.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
-		},
-		{
-			"type" : "String",
-			"name" : "zipCode",
-			"description" : "ZIP or postal code.",
-			"access" : "READ_WRITE",
-			"constraints" : [ ]
+			"type": "Long",
+			"name": "version",
+			"description": "Object version number.",
+			"access": "READ_ONLY"
 		}
 	],
-	"cascades" : [
+	"cascades": [
 		{
-			"cascadeType" : "REMOVE",
-			"objectTypes" : [
-				"Bill",
+			"cascadeType": "REMOVE",
+			"objectTypes": [
 				"TrashItem",
-				"ContactPerson"
+				"ProjectMember",
+				"ProjectWorkTypeLink",
+				"TimeRecord",
+				"Impulse",
+				"Task"
 			]
 		}
 	]
