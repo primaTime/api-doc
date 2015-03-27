@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="UTF-8">
-        <title>account | primaERP / API Documentation</title>
+        <title>documentnumbering | primaERP / API Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.1.0">
@@ -18,10 +18,10 @@
     
     
     
-    <link rel="next" href="../../resources/core/accountadmin.html" />
+    <link rel="next" href="../../resources/core/documentseries.html" />
     
     
-    <link rel="prev" href="../../resources/core/accesstoken.html" />
+    <link rel="prev" href="../../resources/core/departmentmember.html" />
     
 
         
@@ -33,7 +33,7 @@
 
 
         
-    <div class="book" data-level="2.2.3" data-basepath="../.." data-revision="1427448957443">
+    <div class="book" data-level="2.2.8" data-basepath="../.." data-revision="1427448957443">
     
 
 <div class="book-summary">
@@ -441,7 +441,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="2.2.3" data-path="resources/core/account.html">
+        <li class="chapter " data-level="2.2.3" data-path="resources/core/account.html">
             
                 
                     <a href="../../resources/core/account.html">
@@ -521,7 +521,7 @@
         </li>
     
         
-        <li class="chapter " data-level="2.2.8" data-path="resources/core/documentnumbering.html">
+        <li class="chapter active" data-level="2.2.8" data-path="resources/core/documentnumbering.html">
             
                 
                     <a href="../../resources/core/documentnumbering.html">
@@ -1105,11 +1105,11 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_11">
+                    <section class="normal" id="section-gitbook_16">
                     
-                        <h1 id="account">Account</h1>
+                        <h1 id="documentnumbering">DocumentNumbering</h1>
 <h2 id="url">URL</h2>
-<pre><code>https://api.primaerp.com/v1/accounts
+<pre><code>https://api.primaerp.com/v1/documentNumberings
 </code></pre><h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -1123,60 +1123,11 @@
 </thead>
 <tbody>
 <tr>
-<td>additionalAddressInfo</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Any additional informations related to the address.</td>
-</tr>
-<tr>
-<td>affiliateId</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>An identification of the subject who has contributed to the account registration.</td>
-</tr>
-<tr>
-<td>apiKey</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Unique key for access the application.</td>
-</tr>
-<tr>
-<td>campaign</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The marketing campaign from which the account originates from. For internal use only.</td>
-</tr>
-<tr>
-<td>city</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Name of the city.</td>
-</tr>
-<tr>
-<td>confirmed</td>
+<td>autoNumbering</td>
 <td>Boolean</td>
 <td>read write</td>
 <td>no</td>
-<td>The account is confirmed. Users can log into confirmed account only.</td>
-</tr>
-<tr>
-<td>countryCode</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Country code according to ISO 3166-1 alpha-3 standard.</td>
-</tr>
-<tr>
-<td>created</td>
-<td>Date</td>
-<td>read only</td>
-<td>no</td>
-<td>The date and time when the account was created.</td>
+<td>Determines whether the document number will be generated automatically.</td>
 </tr>
 <tr>
 <td>createdAt</td>
@@ -1186,32 +1137,18 @@
 <td>Date of creation.</td>
 </tr>
 <tr>
-<td>currency</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Default currency for the account.</td>
-</tr>
-<tr>
-<td>dateFormat</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The date format pattern according to java.text.SimpleDateFormat</td>
-</tr>
-<tr>
-<td>deactivationRequestedAt</td>
-<td>Date</td>
-<td>read write</td>
-<td>no</td>
-<td>The date and time when the account owner requested deactivation.</td>
-</tr>
-<tr>
 <td>displayName</td>
 <td>String</td>
 <td>read only</td>
 <td>no</td>
 <td>Describes an object in human readable form.</td>
+</tr>
+<tr>
+<td>docType</td>
+<td>DocumentType</td>
+<td>read write</td>
+<td>YES</td>
+<td>Document type.</td>
 </tr>
 <tr>
 <td>id</td>
@@ -1221,67 +1158,11 @@
 <td>Unique object identifier.</td>
 </tr>
 <tr>
-<td>language</td>
+<td>numberingScheme</td>
 <td>String</td>
 <td>read write</td>
 <td>no</td>
-<td>Preferred language.</td>
-</tr>
-<tr>
-<td>name</td>
-<td>String</td>
-<td>read write</td>
-<td>YES</td>
-<td>The Account name.</td>
-</tr>
-<tr>
-<td>owner</td>
-<td>User</td>
-<td>read write</td>
-<td>no</td>
-<td>The user who has created the account.</td>
-</tr>
-<tr>
-<td>phone</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Telephone number.</td>
-</tr>
-<tr>
-<td>source</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The account sources for marketing purposes. For internal use only.</td>
-</tr>
-<tr>
-<td>state</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Name of the state or province.</td>
-</tr>
-<tr>
-<td>streetAddress</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The street name with the house number.</td>
-</tr>
-<tr>
-<td>timeFormat</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The time format pattern according to java.text.SimpleDateFormat</td>
-</tr>
-<tr>
-<td>timeZone</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone</td>
+<td>A mask for the document number.</td>
 </tr>
 <tr>
 <td>trashItem</td>
@@ -1298,130 +1179,24 @@
 <td>Last modified date.</td>
 </tr>
 <tr>
-<td>urlPrefix</td>
-<td>String</td>
-<td>read only</td>
-<td>no</td>
-<td>Identifies the account tenant.</td>
-</tr>
-<tr>
-<td>vatId</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>VAT identification number.</td>
-</tr>
-<tr>
 <td>version</td>
 <td>Long</td>
 <td>read write</td>
 <td>no</td>
 <td>Object version number.</td>
 </tr>
-<tr>
-<td>website</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>The website URL.</td>
-</tr>
-<tr>
-<td>weekStart</td>
-<td>Byte</td>
-<td>read write</td>
-<td>no</td>
-<td>The number of the day when the week starts. Monday is 1 and Sunday is 7.</td>
-</tr>
-<tr>
-<td>workingTimeEnd</td>
-<td>Date</td>
-<td>read write</td>
-<td>no</td>
-<td>The time when the work day usually end.</td>
-</tr>
-<tr>
-<td>workingTimeStart</td>
-<td>Date</td>
-<td>read write</td>
-<td>no</td>
-<td>The time when the work day usually start.</td>
-</tr>
-<tr>
-<td>zipCode</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>ZIP or postal code.</td>
-</tr>
 </tbody>
 </table>
 <h2 id="metadata">Metadata</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Account"</span></span>,
-    "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/accounts"</span></span>,
+    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"DocumentNumbering"</span></span>,
+    "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/documentNumberings"</span></span>,
     "<span class="hljs-attribute">fields</span>" : <span class="hljs-value">[
         {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"additionalAddressInfo"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Any additional informations related to the address."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"affiliateId"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"An identification of the subject who has contributed to the account registration."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"apiKey"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Unique key for access the application."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"campaign"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The marketing campaign from which the account originates from. For internal use only."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"city"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Name of the city."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Boolean"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"confirmed"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The account is confirmed. Users can log into confirmed account only."</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"autoNumbering"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Determines whether the document number will be generated automatically."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"countryCode"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Country code according to ISO 3166-1 alpha-3 standard."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Size"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"min 3, max 3"</span>
-                </span>},
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp [A-Z]+"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"created"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The date and time when the account was created."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
-                </span>}
-            ]
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
@@ -1431,33 +1206,24 @@
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"currency"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Default currency for the account."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"dateFormat"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The date format pattern according to java.text.SimpleDateFormat"</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp dd\\.MM\\.yyyy|MM/dd/yyyy|dd/MM/yyyy|yyyy-MM-dd|yyyy\\.MM\\.dd|yyyy/MM/dd"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"deactivationRequestedAt"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The date and time when the account owner requested deactivation."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"displayName"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Describes an object in human readable form."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
+        </span>},
+        {
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"DocumentType"</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"docType"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Document type."</span></span>,
+            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
+            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
+                {
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Enum"</span></span>,
+                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"BILL"</span>
+                </span>},
+                {
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotNull"</span>
+                </span>}
+            ]
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
@@ -1476,75 +1242,9 @@
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"language"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Preferred language."</span></span>,
+            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"numberingScheme"</span></span>,
+            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"A mask for the document number."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"name"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The Account name."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotBlank"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
-            "<span class="hljs-attribute">path</span>" : <span class="hljs-value"><span class="hljs-string">"/v1/users"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"owner"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The user who has created the account."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"phone"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Telephone number."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"source"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The account sources for marketing purposes. For internal use only."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"state"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Name of the state or province."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"streetAddress"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The street name with the house number."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"timeFormat"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The time format pattern according to java.text.SimpleDateFormat"</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp HH:mm|K:mm a"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"timeZone"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone"</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp ^(Africa|America|Asia|Atlantic|Australia|Europe|Indian|Pacific)/.*|UTC|GMT"</span>
-                </span>}
-            ]
         </span>},
         {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"TrashItem"</span></span>,
@@ -1560,70 +1260,9 @@
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span>
         </span>},
         {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"urlPrefix"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Identifies the account tenant."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_ONLY"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Pattern"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"regexp (^[a-z0-9]$)|(^[a-z0-9][-a-z0-9]*[a-z0-9]$)"</span>
-                </span>},
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"NotBlank"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"vatId"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"VAT identification number."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
             "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Long"</span></span>,
             "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"version"</span></span>,
             "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"Object version number."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"website"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The website URL."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Byte"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"weekStart"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The number of the day when the week starts. Monday is 1 and Sunday is 7."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span></span>,
-            "<span class="hljs-attribute">constraints</span>" : <span class="hljs-value">[
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Max"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"value 7"</span>
-                </span>},
-                {
-                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Min"</span></span>,
-                    "<span class="hljs-attribute">details</span>" : <span class="hljs-value"><span class="hljs-string">"value 1"</span>
-                </span>}
-            ]
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"workingTimeEnd"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The time when the work day usually end."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"Date"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"workingTimeStart"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"The time when the work day usually start."</span></span>,
-            "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
-        </span>},
-        {
-            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
-            "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"zipCode"</span></span>,
-            "<span class="hljs-attribute">description</span>" : <span class="hljs-value"><span class="hljs-string">"ZIP or postal code."</span></span>,
             "<span class="hljs-attribute">access</span>" : <span class="hljs-value"><span class="hljs-string">"READ_WRITE"</span>
         </span>}
     ]</span>,
@@ -1631,8 +1270,7 @@
         {
             "<span class="hljs-attribute">cascadeType</span>" : <span class="hljs-value"><span class="hljs-string">"REMOVE"</span></span>,
             "<span class="hljs-attribute">objectTypes</span>" : <span class="hljs-value">[
-                <span class="hljs-string">"TrashItem"</span>,
-                <span class="hljs-string">"License"</span>
+                <span class="hljs-string">"TrashItem"</span>
             ]
         </span>}
     ]
@@ -1640,66 +1278,14 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"18ea88ef-cff1-45e7-93fe-17fe450c59fb"</span></span>,
-    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424882054551)/"</span></span>,
-    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424908454551)/"</span></span>,
+    "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"493408c1-5cc9-416a-9c14-368fde85bac7"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424883195474)/"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424958855474)/"</span></span>,
     "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">1</span></span>,
-    "<span class="hljs-attribute">owner</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">id</span>" : <span class="hljs-value"><span class="hljs-string">"d021053c-902f-45b2-b531-cd638e6b6a3b"</span></span>,
-        "<span class="hljs-attribute">createdAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424882594551)/"</span></span>,
-        "<span class="hljs-attribute">updatedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424922854551)/"</span></span>,
-        "<span class="hljs-attribute">version</span>" : <span class="hljs-value"><span class="hljs-number">4</span></span>,
-        "<span class="hljs-attribute">firstName</span>" : <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
-        "<span class="hljs-attribute">lastName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith"</span></span>,
-        "<span class="hljs-attribute">nickName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith, J."</span></span>,
-        "<span class="hljs-attribute">email</span>" : <span class="hljs-value"><span class="hljs-string">"john.smith@example.com"</span></span>,
-        "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"55 123 444 567"</span></span>,
-        "<span class="hljs-attribute">position</span>" : <span class="hljs-value"><span class="hljs-string">"Chief developer"</span></span>,
-        "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Sao_Paulo"</span></span>,
-        "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"dd/MM/yyyy"</span></span>,
-        "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"K:mm a"</span></span>,
-        "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
-        "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
-        "<span class="hljs-attribute">password</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
-        "<span class="hljs-attribute">secretKey</span>" : <span class="hljs-value"><span class="hljs-string">"userSecretKey"</span></span>,
-        "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">confirmedEmail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">active</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">birthdayRemind</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1425682800000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424847600000)/"</span></span>,
-        "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424880000000)/"</span></span>,
-        "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424796854551)/"</span></span>,
-        "<span class="hljs-attribute">admin</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">projectManager</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Smith John"</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">urlPrefix</span>" : <span class="hljs-value"><span class="hljs-string">"example-ltd"</span></span>,
-    "<span class="hljs-attribute">name</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd."</span></span>,
-    "<span class="hljs-attribute">streetAddress</span>" : <span class="hljs-value"><span class="hljs-string">"Avenida General Vale 1234"</span></span>,
-    "<span class="hljs-attribute">additionalAddressInfo</span>" : <span class="hljs-value"><span class="hljs-string">""</span></span>,
-    "<span class="hljs-attribute">zipCode</span>" : <span class="hljs-value"><span class="hljs-string">"78010-000"</span></span>,
-    "<span class="hljs-attribute">city</span>" : <span class="hljs-value"><span class="hljs-string">"Cuiaba"</span></span>,
-    "<span class="hljs-attribute">state</span>" : <span class="hljs-value"><span class="hljs-string">"Mato Grosso"</span></span>,
-    "<span class="hljs-attribute">countryCode</span>" : <span class="hljs-value"><span class="hljs-string">"BRA"</span></span>,
-    "<span class="hljs-attribute">phone</span>" : <span class="hljs-value"><span class="hljs-string">"+55 123 456 789"</span></span>,
-    "<span class="hljs-attribute">website</span>" : <span class="hljs-value"><span class="hljs-string">"http://www.example.com"</span></span>,
-    "<span class="hljs-attribute">vatId</span>" : <span class="hljs-value"><span class="hljs-string">"12.345.678/0009-66"</span></span>,
-    "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"America/Cuiaba"</span></span>,
-    "<span class="hljs-attribute">dateFormat</span>" : <span class="hljs-value"><span class="hljs-string">"dd/MM/yyyy"</span></span>,
-    "<span class="hljs-attribute">timeFormat</span>" : <span class="hljs-value"><span class="hljs-string">"HH:mm"</span></span>,
-    "<span class="hljs-attribute">weekStart</span>" : <span class="hljs-value"><span class="hljs-number">7</span></span>,
-    "<span class="hljs-attribute">language</span>" : <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
-    "<span class="hljs-attribute">apiKey</span>" : <span class="hljs-value"><span class="hljs-string">"0165e7d3-c99f-41b5-bf8c-03222edcf681"</span></span>,
-    "<span class="hljs-attribute">confirmed</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">currency</span>" : <span class="hljs-value"><span class="hljs-string">"USD"</span></span>,
-    "<span class="hljs-attribute">workingTimeStart</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424847600000)/"</span></span>,
-    "<span class="hljs-attribute">workingTimeEnd</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424880000000)/"</span></span>,
-    "<span class="hljs-attribute">created</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424796854551)/"</span></span>,
-    "<span class="hljs-attribute">source</span>" : <span class="hljs-value"><span class="hljs-string">"LINKEDIN"</span></span>,
-    "<span class="hljs-attribute">campaign</span>" : <span class="hljs-value"><span class="hljs-string">"LINKEDIN-2013-C1"</span></span>,
-    "<span class="hljs-attribute">deactivationRequestedAt</span>" : <span class="hljs-value"><span class="hljs-string">"/Date(1424883254551)/"</span></span>,
-    "<span class="hljs-attribute">affiliateId</span>" : <span class="hljs-value"><span class="hljs-string">"dfdc40fc-8a70-46aa-8e56-82d9a0151419"</span></span>,
-    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"Example Ltd. (example-ltd)"</span>
+    "<span class="hljs-attribute">docType</span>" : <span class="hljs-value"><span class="hljs-string">"BILL"</span></span>,
+    "<span class="hljs-attribute">numberingScheme</span>" : <span class="hljs-value"><span class="hljs-string">"BIL-{number}/{year}"</span></span>,
+    "<span class="hljs-attribute">autoNumbering</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">displayName</span>" : <span class="hljs-value"><span class="hljs-string">"BIL-{number}/{year}"</span>
 </span>}
 </code></pre>
 
@@ -1712,10 +1298,10 @@
         </div>
 
         
-        <a href="../../resources/core/accesstoken.html" class="navigation navigation-prev " aria-label="Previous page: accesstoken"><i class="fa fa-angle-left"></i></a>
+        <a href="../../resources/core/departmentmember.html" class="navigation navigation-prev " aria-label="Previous page: departmentmember"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../resources/core/accountadmin.html" class="navigation navigation-next " aria-label="Next page: accountadmin"><i class="fa fa-angle-right"></i></a>
+        <a href="../../resources/core/documentseries.html" class="navigation navigation-next " aria-label="Next page: documentseries"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
