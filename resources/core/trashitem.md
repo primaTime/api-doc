@@ -17,7 +17,7 @@ TrashItem
 | id                 | String    | read write | no                                                                     | Unique object identifier.                                                                           |
 | trashItem          | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt          | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version            | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version            | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -98,7 +98,7 @@ TrashItem
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -116,10 +116,10 @@ TrashItem
 
 ```JSON
 {
-	"id" : "0e5922b9-09be-4353-812f-5dc7cf787f6c",
-	"createdAt" : "/Date(1421138017290)/",
-	"updatedAt" : "/Date(1421209537290)/",
-	"version" : 9,
+	"id" : "70e1c175-2b91-4dd3-864f-c8dd9968d5f8",
+	"createdAt" : "/Date(1424880193352)/",
+	"updatedAt" : "/Date(1424886853352)/",
+	"version" : 7,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"groupId" : "ffaf67e7-051d-4a58-a71a-8e39353a93b4",

@@ -32,7 +32,7 @@ Client
 | trashItem             | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt             | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
 | vatId                 | String         | read write | no                                                                     | VAT identification number.                                                                          |
-| version               | Long           | read only  | no                                                                     | Object version number.                                                                              |
+| version               | Long           | read write | no                                                                     | Object version number.                                                                              |
 | website               | String         | read write | no                                                                     | Website URL.                                                                                        |
 | zipCode               | String         | read write | no                                                                     | ZIP or postal code.                                                                                 |
 
@@ -219,7 +219,7 @@ Client
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -251,22 +251,22 @@ Client
 
 ```JSON
 {
-	"id" : "5b818608-9c73-4c1c-813e-4ad078332238",
-	"createdAt" : "/Date(1421138437889)/",
-	"updatedAt" : "/Date(1421202337889)/",
-	"version" : 0,
+	"id" : "dc0a6c90-db38-4d68-8565-4eefb9da5258",
+	"createdAt" : "/Date(1424881273955)/",
+	"updatedAt" : "/Date(1424958853955)/",
+	"version" : 7,
 	"externalSystem" : {
-		"id" : "dd9e4e08-d0e8-483a-8b17-bef65e65aae9",
-		"createdAt" : "/Date(1421138917889)/",
-		"updatedAt" : "/Date(1421184337889)/",
-		"version" : 3,
+		"id" : "c0a732b8-0e51-408d-be05-5f5ed0b00bcd",
+		"createdAt" : "/Date(1424881393955)/",
+		"updatedAt" : "/Date(1424948053955)/",
+		"version" : 1,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1421141137889)/",
+	"externalSyncedAt" : "/Date(1424883253955)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",

@@ -17,7 +17,7 @@ Feature
 | product     | Product   | read write | no                                                                     | The feature is applied to this product.                                                             |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -74,7 +74,13 @@ Feature
 			"type" : "Product",
 			"name" : "product",
 			"description" : "The feature is applied to this product.",
-			"access" : "READ_WRITE"
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "CORE, TIME, BILLING, ATTENDANCE"
+				}
+			]
 		},
 		{
 			"type" : "TrashItem",
@@ -93,7 +99,7 @@ Feature
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -111,10 +117,10 @@ Feature
 
 ```JSON
 {
-	"id" : "14be877c-df48-4c17-b7c5-a9800d9bc46d",
-	"createdAt" : "/Date(1421140417753)/",
-	"updatedAt" : "/Date(1421220337753)/",
-	"version" : 5,
+	"id" : "704fd49e-da7f-4636-9b0e-6b7ae53675fa",
+	"createdAt" : "/Date(1424882775364)/",
+	"updatedAt" : "/Date(1424901255364)/",
+	"version" : 8,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,

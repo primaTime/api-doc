@@ -15,7 +15,7 @@ Tag
 | name        | String    | read write | no                                                                     | Name of tag                                                                                         |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -74,7 +74,7 @@ Tag
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -92,10 +92,10 @@ Tag
 
 ```JSON
 {
-	"id" : "bdaf1139-2202-4efb-a52e-855607a6532d",
-	"createdAt" : "/Date(1421137957180)/",
-	"updatedAt" : "/Date(1421209537180)/",
-	"version" : 3,
+	"id" : "ee8267c1-4cda-4e6d-ba29-4ff8583dd2a2",
+	"createdAt" : "/Date(1424882594503)/",
+	"updatedAt" : "/Date(1424951654503)/",
+	"version" : 0,
 	"name" : "SW",
 	"displayName" : "SW"
 }

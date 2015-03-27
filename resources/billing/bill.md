@@ -18,6 +18,7 @@ Bill
 | displayName     | String        | read only  | no                                                                     | Describes an object in human readable form.                                                         |
 | docDate         | Date          | read write | no                                                                     | Date of document issuance.                                                                          |
 | docNumber       | String        | read only  | no                                                                     | Document number. Generated automatically.                                                           |
+| draft           | Boolean       | read write | no                                                                     | Document is in draft mode.                                                                          |
 | dueDate         | Date          | read write | no                                                                     | Date of maturity.                                                                                   |
 | footer          | String        | read write | no                                                                     | Footer of document.                                                                                 |
 | groupAttributes | String        | read write | no                                                                     | Group attributes.                                                                                   |
@@ -31,7 +32,7 @@ Bill
 | updatedAt       | Date          | read only  | no                                                                     | Last modified date.                                                                                 |
 | vatDate         | Date          | read write | no                                                                     | Date of taxable supply.                                                                             |
 | vatText         | String        | read write | no                                                                     | Info about a VAT. E.g. 'All prices are without a VAT.'                                              |
-| version         | Long          | read only  | no                                                                     | Object version number.                                                                              |
+| version         | Long          | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -96,6 +97,12 @@ Bill
 			"name" : "docNumber",
 			"description" : "Document number. Generated automatically.",
 			"access" : "READ_ONLY"
+		},
+		{
+			"type" : "Boolean",
+			"name" : "draft",
+			"description" : "Document is in draft mode.",
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Date",
@@ -189,7 +196,7 @@ Bill
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -200,15 +207,15 @@ Bill
 			]
 		},
 		{
-			"cascadeType" : "MERGE",
+			"cascadeType" : "REMOVE",
 			"objectTypes" : [
+				"TrashItem",
 				"BillItem"
 			]
 		},
 		{
-			"cascadeType" : "REMOVE",
+			"cascadeType" : "MERGE",
 			"objectTypes" : [
-				"TrashItem",
 				"BillItem"
 			]
 		}
@@ -220,38 +227,38 @@ Bill
 
 ```JSON
 {
-	"id" : "70cd3756-6366-4ab4-9b19-400f7172aa2a",
-	"createdAt" : "/Date(1421140657568)/",
-	"updatedAt" : "/Date(1421148337568)/",
-	"version" : 3,
+	"id" : "ee351795-65f0-44c2-ae93-7a60a3b8f087",
+	"createdAt" : "/Date(1424881336022)/",
+	"updatedAt" : "/Date(1424894056022)/",
+	"version" : 5,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1421141137568)/",
-	"vatDate" : "/Date(1421141137568)/",
-	"dueDate" : "/Date(1421745937568)/",
-	"lastPaymentDate" : "/Date(1421745937568)/",
+	"docDate" : "/Date(1424883256022)/",
+	"vatDate" : "/Date(1424883256022)/",
+	"dueDate" : "/Date(1426092856022)/",
+	"lastPaymentDate" : "/Date(1425488056022)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"vatText" : "All prices are without a VAT.",
 	"header" : "",
 	"footer" : "",
-	"totalPrice" : 1500.0,
+	"totalPrice" : 2000.0,
 	"client" : {
-		"id" : "cd04bddf-c862-46c1-b7e4-32edff5f3534",
-		"createdAt" : "/Date(1421139337569)/",
-		"updatedAt" : "/Date(1421180737569)/",
-		"version" : 0,
+		"id" : "988c1383-9ef8-4fff-8683-13d5bedf42d6",
+		"createdAt" : "/Date(1424882716022)/",
+		"updatedAt" : "/Date(1424919256022)/",
+		"version" : 8,
 		"externalSystem" : {
-			"id" : "ee564a02-f3c5-439f-b6d8-19e568c46846",
-			"createdAt" : "/Date(1421138197569)/",
-			"updatedAt" : "/Date(1421213137569)/",
-			"version" : 5,
+			"id" : "3739c634-304e-42fd-9223-c8d20ee89013",
+			"createdAt" : "/Date(1424883256022)/",
+			"updatedAt" : "/Date(1424937256022)/",
+			"version" : 7,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1421141137568)/",
+		"externalSyncedAt" : "/Date(1424883256022)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -270,32 +277,32 @@ Bill
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "45c914f9-f81a-4f5c-af22-e15d7da59e7f",
-		"createdAt" : "/Date(1421137957569)/",
-		"updatedAt" : "/Date(1421202337569)/",
-		"version" : 9,
+		"id" : "b8ea66ef-4634-4291-96f0-03d8d035021f",
+		"createdAt" : "/Date(1424882836022)/",
+		"updatedAt" : "/Date(1424951656022)/",
+		"version" : 2,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "cd04bddf-c862-46c1-b7e4-32edff5f3534",
-			"createdAt" : "/Date(1421139337569)/",
-			"updatedAt" : "/Date(1421180737569)/",
-			"version" : 0,
+			"id" : "988c1383-9ef8-4fff-8683-13d5bedf42d6",
+			"createdAt" : "/Date(1424882716022)/",
+			"updatedAt" : "/Date(1424919256022)/",
+			"version" : 8,
 			"externalSystem" : {
-				"id" : "ee564a02-f3c5-439f-b6d8-19e568c46846",
-				"createdAt" : "/Date(1421138197569)/",
-				"updatedAt" : "/Date(1421213137569)/",
-				"version" : 5,
+				"id" : "3739c634-304e-42fd-9223-c8d20ee89013",
+				"createdAt" : "/Date(1424883256022)/",
+				"updatedAt" : "/Date(1424937256022)/",
+				"version" : 7,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1421141137568)/",
+			"externalSyncedAt" : "/Date(1424883256022)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -318,35 +325,39 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "19b178fd-7173-4d7d-be45-b4c96e45b329",
-			"createdAt" : "/Date(1421140357568)/",
-			"updatedAt" : "/Date(1421173537568)/",
-			"version" : 9,
+			"id" : "f8b7a263-1c32-4f68-b716-d7956a5c4e5b",
+			"createdAt" : "/Date(1424881036022)/",
+			"updatedAt" : "/Date(1424966056022)/",
+			"version" : 6,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
-			"duration" : 3600000,
+			"quantity" : 3600000.0,
 			"price" : 500.0,
+			"unitPrice" : 500.0,
+			"unit" : "hours",
 			"displayName" : "#0"
 		},
 		{
-			"id" : "4898c151-21eb-485b-8b9b-9313ab66d60d",
-			"createdAt" : "/Date(1421141077568)/",
-			"updatedAt" : "/Date(1421216737568)/",
-			"version" : 5,
+			"id" : "aaa6c87b-c511-41bf-ac86-2c1644402ebc",
+			"createdAt" : "/Date(1424881336022)/",
+			"updatedAt" : "/Date(1424966056022)/",
+			"version" : 0,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 1,
-			"duration" : 7200000,
-			"price" : 1000.0,
+			"quantity" : 7200000.0,
+			"price" : 2000.0,
+			"unitPrice" : 1000.0,
+			"unit" : "hours",
 			"displayName" : "#1"
 		}
 	],
 	"author" : {
-		"id" : "b7ce3d62-6f95-4c06-8e94-12aa12dcafb7",
-		"createdAt" : "/Date(1421139877568)/",
-		"updatedAt" : "/Date(1421202337568)/",
-		"version" : 6,
+		"id" : "6fcd7547-1e48-46e8-9796-5eb08cf04fa2",
+		"createdAt" : "/Date(1424882536022)/",
+		"updatedAt" : "/Date(1424940856022)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -363,15 +374,16 @@ Bill
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1423004400000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054737568)/",
+		"birthdayRemind" : "/Date(1426719600000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796856021)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"groupAttributes" : "[\"project\"]",
+	"draft" : false,
 	"displayName" : "2013-01"
 }
 ```

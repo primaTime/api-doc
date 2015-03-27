@@ -28,6 +28,8 @@
 		 * [authobject](resources/core/authobject.md)
 		 * [department](resources/core/department.md)
 		 * [departmentmember](resources/core/departmentmember.md)
+		 * [documentnumbering](resources/core/documentnumbering.md)
+		 * [documentseries](resources/core/documentseries.md)
 		 * [externalsystem](resources/core/externalsystem.md)
 		 * [feature](resources/core/feature.md)
 		 * [filemetadata](resources/core/filemetadata.md)

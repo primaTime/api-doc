@@ -16,7 +16,7 @@ UserRole
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | User who has a role.                                                                                |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -93,7 +93,7 @@ UserRole
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -111,15 +111,15 @@ UserRole
 
 ```JSON
 {
-	"id" : "7fde22df-25c9-4280-a822-d135c2932d4d",
-	"createdAt" : "/Date(1421139217445)/",
-	"updatedAt" : "/Date(1421173537445)/",
-	"version" : 9,
+	"id" : "3a81e22b-41ce-47a2-b0f9-c7f5f3ef343f",
+	"createdAt" : "/Date(1424881754457)/",
+	"updatedAt" : "/Date(1424962454457)/",
+	"version" : 2,
 	"user" : {
-		"id" : "562c39d3-5622-4959-9c25-5c0ee43b37c3",
-		"createdAt" : "/Date(1421138617445)/",
-		"updatedAt" : "/Date(1421155537445)/",
-		"version" : 9,
+		"id" : "cc8febf6-1353-4e58-b09f-75d15b145a6a",
+		"createdAt" : "/Date(1424880554457)/",
+		"updatedAt" : "/Date(1424890454457)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -136,19 +136,19 @@ UserRole
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1423004400000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054737445)/",
+		"birthdayRemind" : "/Date(1426719600000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796854457)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"role" : {
-		"id" : "40a0bfe7-8495-4e9f-b9cf-90ae85628aff",
-		"createdAt" : "/Date(1421140177445)/",
-		"updatedAt" : "/Date(1421173537445)/",
-		"version" : 6,
+		"id" : "1d1d531f-5c6c-40d4-b2b2-63a21a3bbd1e",
+		"createdAt" : "/Date(1424883014457)/",
+		"updatedAt" : "/Date(1424958854457)/",
+		"version" : 8,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",

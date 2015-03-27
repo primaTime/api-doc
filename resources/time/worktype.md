@@ -10,6 +10,7 @@ WorkType
 | Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
 |----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | active               | Boolean        | read write | no                                                                     | Determines whether the work type is currently active. Default value is true.                        |
+| category             | Category       | read write | no                                                                     | A work type category.                                                                               |
 | code                 | String         | read write | no                                                                     | A code or an abbreviation of the work type.                                                         |
 | createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
 | displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
@@ -23,7 +24,7 @@ WorkType
 | name                 | String         | read write | no                                                                     | Name of the work type.                                                                              |
 | trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read only  | no                                                                     | Object version number.                                                                              |
+| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -38,6 +39,18 @@ WorkType
 			"description" : "Determines whether the work type is currently active.",
 			"defaultValue" : "true",
 			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "Category",
+			"name" : "category",
+			"description" : "A work type category.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "WORK, BREAK"
+				}
+			]
 		},
 		{
 			"type" : "String",
@@ -144,7 +157,7 @@ WorkType
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -163,25 +176,26 @@ WorkType
 
 ```JSON
 {
-	"id" : "fb71d1f2-7fc4-4c5a-b879-108b3e3a38a3",
-	"createdAt" : "/Date(1421140178291)/",
-	"updatedAt" : "/Date(1421166338291)/",
-	"version" : 1,
+	"id" : "d36eeeca-9a05-4ba5-8390-a16e1252ca5d",
+	"createdAt" : "/Date(1424880012983)/",
+	"updatedAt" : "/Date(1424955252983)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "f00d9f9a-5928-4695-8bf2-366c3dd1bc4b",
-		"createdAt" : "/Date(1421138258291)/",
-		"updatedAt" : "/Date(1421166338291)/",
-		"version" : 3,
+		"id" : "0305a4f5-3ff0-4ed2-a4a5-339fea378bfe",
+		"createdAt" : "/Date(1424881092983)/",
+		"updatedAt" : "/Date(1424908452984)/",
+		"version" : 8,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1421141138291)/",
+	"externalSyncedAt" : "/Date(1424883252983)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",
+	"category" : "WORK",
 	"displayName" : "Software development"
 }
 ```

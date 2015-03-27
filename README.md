@@ -1,7 +1,7 @@
 Introduction to the primaERP API
 ==
 
-Current version: ~1.5.24
+Current version: ~1.5.25.4
 
 If you want to read / create / edit / delete your projects, clients, tasks or time records you can use the primaERP API.
 

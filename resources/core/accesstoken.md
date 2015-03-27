@@ -7,18 +7,19 @@ AccessToken
 
 ## Properties
 
-| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
-|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| accessToken | String    | read write | YES                                                                    | Unique access token obtained from provider.                                                         |
-| accountName | String    | read write | YES                                                                    | Account name identifies the user with the provider, i.e. e-mail address.                            |
-| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| provider    | String    | read write | YES                                                                    | Access token provider.                                                                              |
-| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| user        | User      | read write | YES                                                                    | Associated user.                                                                                    |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| Name         | Type      | Access     | Required                                                               | Description                                                                                         |
+|--------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| accessToken  | String    | read write | YES                                                                    | Unique access token obtained from provider.                                                         |
+| accountName  | String    | read write | YES                                                                    | Account name identifies the user with the provider, i.e. e-mail address.                            |
+| createdAt    | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
+| displayName  | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
+| id           | String    | read write | no                                                                     | Unique object identifier.                                                                           |
+| provider     | String    | read write | YES                                                                    | Access token provider.                                                                              |
+| refreshToken | String    | read write | no                                                                     | Refresh token obtained from the provider.                                                           |
+| trashItem    | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt    | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
+| user         | User      | read write | YES                                                                    | Associated user.                                                                                    |
+| version      | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -88,6 +89,12 @@ AccessToken
 			]
 		},
 		{
+			"type" : "String",
+			"name" : "refreshToken",
+			"description" : "Refresh token obtained from the provider.",
+			"access" : "READ_WRITE"
+		},
+		{
 			"type" : "TrashItem",
 			"path" : "/v1/trash",
 			"name" : "trashItem",
@@ -116,7 +123,7 @@ AccessToken
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -134,18 +141,18 @@ AccessToken
 
 ```JSON
 {
-	"id" : "af08ab3c-58b7-4bdc-bb75-51a48acf4c06",
-	"createdAt" : "/Date(1421138078078)/",
-	"updatedAt" : "/Date(1421209538078)/",
-	"version" : 5,
+	"id" : "1eba4296-2c8e-40c6-90cf-169861294915",
+	"createdAt" : "/Date(1424882714671)/",
+	"updatedAt" : "/Date(1424951654671)/",
+	"version" : 7,
 	"provider" : "google",
-	"accessToken" : "your-google-account-authentication-id",
+	"accessToken" : "8974987412978974984",
 	"accountName" : "jsmith@gmail.com",
 	"user" : {
-		"id" : "69b7b300-43d6-4114-96c2-a5cca9b8da3b",
-		"createdAt" : "/Date(1421139938078)/",
-		"updatedAt" : "/Date(1421141138078)/",
-		"version" : 2,
+		"id" : "f5e852c8-6553-42f6-a603-849345605bdd",
+		"createdAt" : "/Date(1424880614671)/",
+		"updatedAt" : "/Date(1424926454671)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -162,14 +169,15 @@ AccessToken
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1421967600000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054738077)/",
+		"birthdayRemind" : "/Date(1425682800000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796854671)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
+	"refreshToken" : "blX09ao39021das92394=29384/0283na3bgcx2234",
 	"displayName" : "jsmith@gmail.com"
 }
 ```

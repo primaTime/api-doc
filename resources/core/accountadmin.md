@@ -16,7 +16,7 @@ AccountAdmin
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | The user who is the account administrator.                                                          |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -93,7 +93,7 @@ AccountAdmin
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -111,20 +111,20 @@ AccountAdmin
 
 ```JSON
 {
-	"id" : "242f2319-5bf6-49d1-bcd9-befb116dc8f9",
-	"createdAt" : "/Date(1421141017235)/",
-	"updatedAt" : "/Date(1421223937235)/",
-	"version" : 8,
+	"id" : "9d976152-7e42-49dd-92b7-541262fa20a8",
+	"createdAt" : "/Date(1424882714054)/",
+	"updatedAt" : "/Date(1424883254054)/",
+	"version" : 2,
 	"account" : {
-		"id" : "e2cb1c09-fc46-4c5c-8b1f-09683c87cfc9",
-		"createdAt" : "/Date(1421140297235)/",
-		"updatedAt" : "/Date(1421187937235)/",
+		"id" : "b2005f46-af55-45c8-9637-69957b1a5135",
+		"createdAt" : "/Date(1424881874054)/",
+		"updatedAt" : "/Date(1424944454054)/",
 		"version" : 9,
 		"owner" : {
-			"id" : "c8ca7fc1-372b-42cc-83e4-9708784efa2d",
-			"createdAt" : "/Date(1421138017235)/",
-			"updatedAt" : "/Date(1421191537235)/",
-			"version" : 3,
+			"id" : "4be88ffc-0919-4092-ba22-6632cc7f34b4",
+			"createdAt" : "/Date(1424881994054)/",
+			"updatedAt" : "/Date(1424883254054)/",
+			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -141,10 +141,10 @@ AccountAdmin
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1421967600000)/",
-			"workingTimeStart" : "/Date(1421132400000)/",
-			"workingTimeEnd" : "/Date(1421164800000)/",
-			"created" : "/Date(1421054737234)/",
+			"birthdayRemind" : "/Date(1425682800000)/",
+			"workingTimeStart" : "/Date(1424847600000)/",
+			"workingTimeEnd" : "/Date(1424880000000)/",
+			"created" : "/Date(1424796854054)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -168,19 +168,19 @@ AccountAdmin
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054737234)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796854054)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1421141137235)/",
-		"affiliateId" : "34a8b093-9ae3-45ac-97de-f6ea500736c5",
+		"deactivationRequestedAt" : "/Date(1424883254054)/",
+		"affiliateId" : "ed91ad2f-a1f1-4bef-8a30-7d7b24d995f9",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
 	"user" : {
-		"id" : "61b41517-5890-432a-9060-e179b1ece0b6",
-		"createdAt" : "/Date(1421138977235)/",
-		"updatedAt" : "/Date(1421159137235)/",
+		"id" : "97f16d45-dd43-49ec-bbc2-efd5880160cc",
+		"createdAt" : "/Date(1424883254054)/",
+		"updatedAt" : "/Date(1424904854054)/",
 		"version" : 8,
 		"firstName" : "Charles",
 		"lastName" : "Johnson",
@@ -198,10 +198,10 @@ AccountAdmin
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1422399600000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054737235)/",
+		"birthdayRemind" : "/Date(1426114800000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796854054)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Johnson Charles"

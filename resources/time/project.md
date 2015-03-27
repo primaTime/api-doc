@@ -10,6 +10,7 @@ Project
 | Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
 |----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | active               | Boolean        | read write | no                                                                     | Determines whether the project is currently active. Default value is true.                          |
+| autoMembership       | Boolean        | read write | no                                                                     | All new users will be added to this project automatically.                                          |
 | begins               | Date           | read write | no                                                                     | Date and time when the project begins.                                                              |
 | billable             | Boolean        | read write | no                                                                     | Determines whether the project will be billed to the client.                                        |
 | client               | Client         | read write | no                                                                     | Provides info about the client for whom the project is realized.                                    |
@@ -35,7 +36,7 @@ Project
 | timeRecordsCount     | Long           | read only  | no                                                                     | Counts the number of time records in the project.                                                   |
 | trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read only  | no                                                                     | Object version number.                                                                              |
+| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -49,6 +50,12 @@ Project
 			"name" : "active",
 			"description" : "Determines whether the project is currently active.",
 			"defaultValue" : "true",
+			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "Boolean",
+			"name" : "autoMembership",
+			"description" : "All new users will be added to this project automatically.",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -235,7 +242,7 @@ Project
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -246,8 +253,8 @@ Project
 				"ProjectMember",
 				"ProjectWorkTypeLink",
 				"TimeRecord",
-				"Task",
-				"Impulse"
+				"Impulse",
+				"Task"
 			]
 		}
 	]
@@ -258,36 +265,36 @@ Project
 
 ```JSON
 {
-	"id" : "e1cf1f1d-be38-4dab-9dba-14570ee27b17",
-	"createdAt" : "/Date(1421138258647)/",
-	"updatedAt" : "/Date(1421177138647)/",
-	"version" : 1,
+	"id" : "d286f8c7-9a14-43d3-b08e-c644ba5f4289",
+	"createdAt" : "/Date(1424882055542)/",
+	"updatedAt" : "/Date(1424955255542)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "2334d3c6-4eb2-499c-b703-51066e12cc0e",
-		"createdAt" : "/Date(1421140298648)/",
-		"updatedAt" : "/Date(1421213138648)/",
-		"version" : 2,
+		"id" : "5327c434-b362-4602-9b31-b0d60249e3f5",
+		"createdAt" : "/Date(1424882055543)/",
+		"updatedAt" : "/Date(1424933655543)/",
+		"version" : 4,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1421141138647)/",
+	"externalSyncedAt" : "/Date(1424883255542)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1421054738647)/",
-	"ends" : "/Date(1421227538647)/",
+	"begins" : "/Date(1424796855542)/",
+	"ends" : "/Date(1424969655542)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
 	"personal" : false,
 	"owner" : {
-		"id" : "0affd580-de23-4894-ba31-fb2b8f18a015",
-		"createdAt" : "/Date(1421137658648)/",
-		"updatedAt" : "/Date(1421173538648)/",
-		"version" : 8,
+		"id" : "95dd9ec3-c6db-4b00-b877-2c9f27ac0d91",
+		"createdAt" : "/Date(1424881035543)/",
+		"updatedAt" : "/Date(1424883255543)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -304,31 +311,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1423004400000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054738647)/",
+		"birthdayRemind" : "/Date(1426719600000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796855542)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "7fa52e02-0e50-42db-8ae9-1da113fbb874",
-		"createdAt" : "/Date(1421138918648)/",
-		"updatedAt" : "/Date(1421141138648)/",
+		"id" : "401cf74e-7198-4e85-944c-f0e5b9c10d27",
+		"createdAt" : "/Date(1424881095543)/",
+		"updatedAt" : "/Date(1424901255543)/",
 		"version" : 8,
 		"externalSystem" : {
-			"id" : "6c0747f1-ae95-4db4-9dab-762f95769edc",
-			"createdAt" : "/Date(1421140838648)/",
-			"updatedAt" : "/Date(1421141138648)/",
-			"version" : 6,
+			"id" : "ee755369-8c6c-4db2-a9f4-eca0da554c58",
+			"createdAt" : "/Date(1424881575543)/",
+			"updatedAt" : "/Date(1424937255543)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1421141138647)/",
+		"externalSyncedAt" : "/Date(1424883255542)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -347,6 +354,7 @@ Project
 		"displayName" : "Example Ltd."
 	},
 	"billable" : true,
+	"autoMembership" : false,
 	"membersCount" : 1,
 	"tasksCount" : 3,
 	"timeRecordsCount" : 2,

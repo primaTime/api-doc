@@ -7,16 +7,16 @@ RoleCompetency
 
 ## Properties
 
-| Name        | Type       | Access     | Required                                                               | Description                                                                                         |
-|-------------|------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| competency  | Competency | read only  | no                                                                     | If it is set, then the role is generated automatically and cannot be edited.                        |
-| createdAt   | Date       | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName | String     | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id          | String     | read write | no                                                                     | Unique object identifier.                                                                           |
-| role        | Role       | read write | no                                                                     | The role of an custom user's role. Built-in roles do not have a role.                               |
-| trashItem   | TrashItem  | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date       | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long       | read only  | no                                                                     | Object version number.                                                                              |
+| Name        | Type       | Access     | Required                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Description                                                                                         |
+|-------------|------------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| competency  | Competency | read only  | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | If it is set, then the role is generated automatically and cannot be edited.                        |
+| createdAt   | Date       | read only  | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Date of creation.                                                                                   |
+| displayName | String     | read only  | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Describes an object in human readable form.                                                         |
+| id          | String     | read write | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Unique object identifier.                                                                           |
+| role        | Role       | read write | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | The role of an custom user's role. Built-in roles do not have a role.                               |
+| trashItem   | TrashItem  | read write | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date       | read only  | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Last modified date.                                                                                 |
+| version     | Long       | read write | no                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Object version number.                                                                              |
 
 ## Metadata
 
@@ -29,7 +29,13 @@ RoleCompetency
 			"type" : "Competency",
 			"name" : "competency",
 			"description" : "If it is set, then the role is generated automatically and cannot be edited.",
-			"access" : "READ_ONLY"
+			"access" : "READ_ONLY",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "READ_ACCESS, WRITE_ACCESS, OWNERSHIP, ACCOUNT_ADMIN, USERS_MANAGE, USER_PROFILE, TIME_ACCESS, TIME_ADMIN, CLIENTS_MANAGE, WORKTYPES_MANAGE, PROJECTS_CREATE_NEW, TIMERECORD_TRACK_OWN, TIMERECORD_TRACK_WITHOUT_PROJECT, PROJECTS_PRIVATE_MANAGE_TRACK, PROJECTS_MEMBER_VIEW_TRACK, PROJECTS_MEMBER_VIEW_OTHERS, PROJECTS_OWN_MANAGE_TRACK, PROJECTS_ALL_MANAGE_TRACK, APPROVE_OWN, APPROVE_ALL, REPORTS_PERSONAL, REPORTS_COMPLETE, REPORTS_PROJECT, REPORTS_TEAM, PRICES_VIEW, PRICES_UPDATE, BILLING_ACCESS, BILLING_ADMIN, ATTENDANCE_ACCESS, ATTENDANCE_ADMIN"
+				}
+			]
 		},
 		{
 			"type" : "Date",
@@ -82,7 +88,7 @@ RoleCompetency
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -100,15 +106,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "d4be3d83-efe1-4828-827c-19d1913f7aa3",
-	"createdAt" : "/Date(1421139756681)/",
-	"updatedAt" : "/Date(1421223936681)/",
-	"version" : 3,
+	"id" : "360c6e4b-0aed-459d-8f8c-a6f28e5d7a12",
+	"createdAt" : "/Date(1424880852907)/",
+	"updatedAt" : "/Date(1424890452907)/",
+	"version" : 6,
 	"role" : {
-		"id" : "a662a0ec-b549-4ab9-b759-3a283730241c",
-		"createdAt" : "/Date(1421137836681)/",
-		"updatedAt" : "/Date(1421159136681)/",
-		"version" : 2,
+		"id" : "c1dc3bcb-9570-4aa2-aea0-1d291db368af",
+		"createdAt" : "/Date(1424881692907)/",
+		"updatedAt" : "/Date(1424883252907)/",
+		"version" : 4,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",
@@ -116,6 +122,6 @@ RoleCompetency
 		"displayName" : "ADMIN"
 	},
 	"competency" : "ACCOUNT_ADMIN",
-	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@4e88cda1[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=a662a0ec-b549-4ab9-b759-3a283730241c,tenantId=<null>,trashItem=<null>,createdAt=Tue Jan 13 09:30:36 CET 2015,updatedAt=Tue Jan 13 15:25:36 CET 2015,version=2][ACCOUNT_ADMIN]"
+	"displayName" : "eu.abra.primaerp.api.beans.system.permissions.Role@380959b3[name=Admin,builtInRole=ADMIN,roleType=EXPLICIT,product=CORE,id=c1dc3bcb-9570-4aa2-aea0-1d291db368af,tenantId=<null>,trashItem=<null>,createdAt=Wed Feb 25 17:28:12 CET 2015,updatedAt=Wed Feb 25 17:54:12 CET 2015,version=4][ACCOUNT_ADMIN]"
 }
 ```

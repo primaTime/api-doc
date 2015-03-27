@@ -22,25 +22,27 @@
 | [WorkType](time/worktype.md)                      | `https://api.primaerp.com/v1/time/worktypes`                   |
 
 ## CORE
-| Name                                         | URL                                                    |
-|----------------------------------------------|--------------------------------------------------------|
-| [Access](core/access.md)                    | `https://api.primaerp.com/v1/accesses`                 |
-| [AccessToken](core/accesstoken.md)          | `https://api.primaerp.com/v1/users/@self/accesstokens` |
-| [Account](core/account.md)                  | `https://api.primaerp.com/v1/accounts`                 |
-| [AccountAdmin](core/accountadmin.md)        | `https://api.primaerp.com/v1/accountadmins`            |
-| [AuthObject](core/authobject.md)            | `https://api.primaerp.com/v1/`                         |
-| [Department](core/department.md)            | `https://api.primaerp.com/v1/departments`              |
-| [DepartmentMember](core/departmentmember.md)| `https://api.primaerp.com/v1/departmentmembers`        |
-| [ExternalSystem](core/externalsystem.md)    | `https://api.primaerp.com/v1/externalsystems`          |
-| [Feature](core/feature.md)                  | `https://api.primaerp.com/v1/features`                 |
-| [FileMetadata](core/filemetadata.md)        | `https://api.primaerp.com/v1/`                         |
-| [License](core/license.md)                  | `https://api.primaerp.com/v1/licenses`                 |
-| [Relation](core/relation.md)                | `https://api.primaerp.com/v1/relations`                |
-| [Role](core/role.md)                        | `https://api.primaerp.com/v1/roles`                    |
-| [RoleCompetency](core/rolecompetency.md)    | `https://api.primaerp.com/v1/rolecompetencies`         |
-| [SecretKey](core/secretkey.md)              | `https://api.primaerp.com/v1/users/@self/secretkeys`   |
-| [SpendingTimeUnit](core/spendingtimeunit.md)| `https://api.primaerp.com/v1/spendingtime`             |
-| [TrashItem](core/trashitem.md)              | `https://api.primaerp.com/v1/trash`                    |
-| [User](core/user.md)                        | `https://api.primaerp.com/v1/users`                    |
-| [UserRole](core/userrole.md)                | `https://api.primaerp.com/v1/userroles`                |
+| Name                                           | URL                                                    |
+|------------------------------------------------|--------------------------------------------------------|
+| [Access](core/access.md)                      | `https://api.primaerp.com/v1/accesses`                 |
+| [AccessToken](core/accesstoken.md)            | `https://api.primaerp.com/v1/users/@self/accesstokens` |
+| [Account](core/account.md)                    | `https://api.primaerp.com/v1/accounts`                 |
+| [AccountAdmin](core/accountadmin.md)          | `https://api.primaerp.com/v1/accountadmins`            |
+| [AuthObject](core/authobject.md)              | `https://api.primaerp.com/v1/`                         |
+| [Department](core/department.md)              | `https://api.primaerp.com/v1/departments`              |
+| [DepartmentMember](core/departmentmember.md)  | `https://api.primaerp.com/v1/departmentmembers`        |
+| [DocumentNumbering](core/documentnumbering.md)| `https://api.primaerp.com/v1/documentNumberings`       |
+| [DocumentSeries](core/documentseries.md)      | `https://api.primaerp.com/v1/documentSeries`           |
+| [ExternalSystem](core/externalsystem.md)      | `https://api.primaerp.com/v1/externalsystems`          |
+| [Feature](core/feature.md)                    | `https://api.primaerp.com/v1/features`                 |
+| [FileMetadata](core/filemetadata.md)          | `https://api.primaerp.com/v1/`                         |
+| [License](core/license.md)                    | `https://api.primaerp.com/v1/licenses`                 |
+| [Relation](core/relation.md)                  | `https://api.primaerp.com/v1/relations`                |
+| [Role](core/role.md)                          | `https://api.primaerp.com/v1/roles`                    |
+| [RoleCompetency](core/rolecompetency.md)      | `https://api.primaerp.com/v1/rolecompetencies`         |
+| [SecretKey](core/secretkey.md)                | `https://api.primaerp.com/v1/users/@self/secretkeys`   |
+| [SpendingTimeUnit](core/spendingtimeunit.md)  | `https://api.primaerp.com/v1/spendingtime`             |
+| [TrashItem](core/trashitem.md)                | `https://api.primaerp.com/v1/trash`                    |
+| [User](core/user.md)                          | `https://api.primaerp.com/v1/users`                    |
+| [UserRole](core/userrole.md)                  | `https://api.primaerp.com/v1/userroles`                |
 

@@ -16,7 +16,7 @@ Department
 | name        | String    | read write | no                                                                     | The department name.                                                                                |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -82,7 +82,7 @@ Department
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -101,16 +101,16 @@ Department
 
 ```JSON
 {
-	"id" : "dcdbfb82-0346-4123-b516-65ff58e60d58",
-	"createdAt" : "/Date(1421137656612)/",
-	"updatedAt" : "/Date(1421177136612)/",
-	"version" : 2,
+	"id" : "e5ac4471-f563-436c-b1f8-cc70995c12ce",
+	"createdAt" : "/Date(1424879714168)/",
+	"updatedAt" : "/Date(1424940854168)/",
+	"version" : 8,
 	"name" : "Development",
 	"manager" : {
-		"id" : "69977d4c-42e0-4661-aee0-2dec82f255cf",
-		"createdAt" : "/Date(1421138556612)/",
-		"updatedAt" : "/Date(1421216736612)/",
-		"version" : 7,
+		"id" : "a1a61243-a09f-407a-a806-bceb976095af",
+		"createdAt" : "/Date(1424880494168)/",
+		"updatedAt" : "/Date(1424958854168)/",
+		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -127,10 +127,10 @@ Department
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1421967600000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054736612)/",
+		"birthdayRemind" : "/Date(1425682800000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796854168)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

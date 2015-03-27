@@ -16,6 +16,7 @@ License
 | licenseNumber | String      | read write | no                                                                     | The license number.                                                                                 |
 | ownerName     | String      | read write | no                                                                     | The names of the licensed owner.                                                                    |
 | product       | Product     | read write | no                                                                     | The product which is licensed.                                                                      |
+| promoCode     | String      | read write | no                                                                     | Used promo code.                                                                                    |
 | purchaseInfo  | String      | read write | no                                                                     | The purchase informations.                                                                          |
 | trashItem     | TrashItem   | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | type          | LicenseType | read write | no                                                                     | Type of license.                                                                                    |
@@ -23,7 +24,7 @@ License
 | usersCount    | Integer     | read write | no                                                                     | The number of users for which the license is valid.                                                 |
 | validFrom     | Date        | read write | no                                                                     | The license is valid from this date.                                                                |
 | validTo       | Date        | read write | no                                                                     | The License is valid until this date.                                                               |
-| version       | Long        | read only  | no                                                                     | Object version number.                                                                              |
+| version       | Long        | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -82,6 +83,18 @@ License
 			"type" : "Product",
 			"name" : "product",
 			"description" : "The product which is licensed.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "CORE, TIME, BILLING, ATTENDANCE"
+				}
+			]
+		},
+		{
+			"type" : "String",
+			"name" : "promoCode",
+			"description" : "Used promo code.",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -101,7 +114,13 @@ License
 			"type" : "LicenseType",
 			"name" : "type",
 			"description" : "Type of license.",
-			"access" : "READ_WRITE"
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "FREE, BUY, PROMO"
+				}
+			]
 		},
 		{
 			"type" : "Date",
@@ -131,7 +150,7 @@ License
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -149,20 +168,20 @@ License
 
 ```JSON
 {
-	"id" : "0364ffc5-6e52-48f9-90a0-9b9fd101cfe3",
-	"createdAt" : "/Date(1421138857831)/",
-	"updatedAt" : "/Date(1421198737831)/",
-	"version" : 7,
+	"id" : "dff57a82-770f-4926-90f1-85a1a1dda009",
+	"createdAt" : "/Date(1424881993174)/",
+	"updatedAt" : "/Date(1424904853174)/",
+	"version" : 1,
 	"account" : {
-		"id" : "5e1320c4-b31b-47c8-83f5-c2b2d0bc1c97",
-		"createdAt" : "/Date(1421138437831)/",
-		"updatedAt" : "/Date(1421202337831)/",
-		"version" : 9,
+		"id" : "c0d4c6a3-9ff5-4367-af98-2c927eae210e",
+		"createdAt" : "/Date(1424882653174)/",
+		"updatedAt" : "/Date(1424940853174)/",
+		"version" : 1,
 		"owner" : {
-			"id" : "fdaa1bb7-8740-4163-8a31-96894dd6fe2a",
-			"createdAt" : "/Date(1421140417831)/",
-			"updatedAt" : "/Date(1421155537831)/",
-			"version" : 0,
+			"id" : "a244a7ba-b147-40a3-ae5f-300aa88bf857",
+			"createdAt" : "/Date(1424881573174)/",
+			"updatedAt" : "/Date(1424904853174)/",
+			"version" : 6,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -179,10 +198,10 @@ License
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1421967600000)/",
-			"workingTimeStart" : "/Date(1421132400000)/",
-			"workingTimeEnd" : "/Date(1421164800000)/",
-			"created" : "/Date(1421054737831)/",
+			"birthdayRemind" : "/Date(1425682800000)/",
+			"workingTimeStart" : "/Date(1424847600000)/",
+			"workingTimeEnd" : "/Date(1424880000000)/",
+			"created" : "/Date(1424796853174)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -206,23 +225,24 @@ License
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054737831)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796853174)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1421141137831)/",
-		"affiliateId" : "f7433627-a60d-4551-92b0-21a8d749cb0f",
+		"deactivationRequestedAt" : "/Date(1424883253174)/",
+		"affiliateId" : "976b61e2-497d-473c-b981-f92f5a13889b",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
-	"licenseNumber" : "4101c44d-5029-4348-9c8c-187df0c803a3",
+	"licenseNumber" : "456932b7-3b23-47d1-a568-2c6e75ee74c5",
 	"usersCount" : 5,
-	"validFrom" : "/Date(1420930800000)/",
-	"validTo" : "/Date(1423609200000)/",
+	"validFrom" : "/Date(1424646000000)/",
+	"validTo" : "/Date(1427065200000)/",
 	"ownerName" : "Example Ltd.",
 	"product" : "TIME",
 	"type" : "BUY",
 	"purchaseInfo" : "{\"purchase_id\":\"1154795\"}",
-	"displayName" : "4101c44d-5029-4348-9c8c-187df0c803a3"
+	"promoCode" : "PROMO",
+	"displayName" : "456932b7-3b23-47d1-a568-2c6e75ee74c5"
 }
 ```

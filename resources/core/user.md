@@ -33,7 +33,7 @@ User
 | timeZone         | String    | read write | no                                                                                           | The time zone of the place where the user works. The time zone is identified by the ID according to java.util.TimeZone |
 | trashItem        | TrashItem | read write | no                                                                                           | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                    |
 | updatedAt        | Date      | read only  | no                                                                                           | Last modified date.                                                                                                    |
-| version          | Long      | read only  | no                                                                                           | Object version number.                                                                                                 |
+| version          | Long      | read write | no                                                                                           | Object version number.                                                                                                 |
 | weekStart        | Byte      | read write | no                                                                                           | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                               |
 | workingTimeEnd   | Date      | read write | no                                                                                           | Time when the work usually ends.                                                                                       |
 | workingTimeStart | Date      | read write | no                                                                                           | Time when the work usually starts.                                                                                     |
@@ -245,7 +245,7 @@ User
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Byte",
@@ -294,10 +294,10 @@ User
 
 ```JSON
 {
-	"id" : "0e9c941f-1afe-4220-ab0a-3042f42f4017",
-	"createdAt" : "/Date(1421139338244)/",
-	"updatedAt" : "/Date(1421198738244)/",
-	"version" : 1,
+	"id" : "c2fdcd28-ba8b-4026-b02d-589890e77437",
+	"createdAt" : "/Date(1424882413451)/",
+	"updatedAt" : "/Date(1424915653451)/",
+	"version" : 2,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -314,10 +314,10 @@ User
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1421967600000)/",
-	"workingTimeStart" : "/Date(1421132400000)/",
-	"workingTimeEnd" : "/Date(1421164800000)/",
-	"created" : "/Date(1421054738244)/",
+	"birthdayRemind" : "/Date(1425682800000)/",
+	"workingTimeStart" : "/Date(1424847600000)/",
+	"workingTimeEnd" : "/Date(1424880000000)/",
+	"created" : "/Date(1424796853450)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"

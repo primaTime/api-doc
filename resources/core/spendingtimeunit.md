@@ -18,7 +18,7 @@ SpendingTimeUnit
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                                                |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                                                                |
 | user        | User      | read write | YES                                                                    | User who spends time.                                                                                                                              |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                                                                             |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                                                                             |
 
 ## Metadata
 
@@ -101,7 +101,7 @@ SpendingTimeUnit
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -119,14 +119,14 @@ SpendingTimeUnit
 
 ```JSON
 {
-	"id" : "4d060762-6523-4972-b288-f7edc1d29bd8",
-	"createdAt" : "/Date(1421139818462)/",
-	"updatedAt" : "/Date(1421162738462)/",
-	"version" : 2,
+	"id" : "7a952dc9-4e52-434c-80fe-deb56b52b042",
+	"createdAt" : "/Date(1424881873524)/",
+	"updatedAt" : "/Date(1424897653524)/",
+	"version" : 7,
 	"user" : {
-		"id" : "7e3cd4a8-477e-41b0-b078-4422b0bb07c6",
-		"createdAt" : "/Date(1421137598462)/",
-		"updatedAt" : "/Date(1421180738462)/",
+		"id" : "575e274c-21c6-467f-a2a0-eb4444e82380",
+		"createdAt" : "/Date(1424880853524)/",
+		"updatedAt" : "/Date(1424904853524)/",
 		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -144,16 +144,16 @@ SpendingTimeUnit
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1421967600000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054738462)/",
+		"birthdayRemind" : "/Date(1425682800000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796853524)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"begin" : "/Date(1421112338462)/",
-	"end" : "/Date(1421138258462)/",
+	"begin" : "/Date(1424854453524)/",
+	"end" : "/Date(1424880373524)/",
 	"duration" : 1200000,
 	"displayName" : "20m"
 }

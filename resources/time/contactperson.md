@@ -20,7 +20,7 @@ ContactPerson
 | phone       | String    | read write | no                                                                     | Contact person's phone number.                                                                      |
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -116,7 +116,7 @@ ContactPerson
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -134,32 +134,32 @@ ContactPerson
 
 ```JSON
 {
-	"id" : "e4fe53fb-353d-4987-bb32-f8dc3413c3e1",
-	"createdAt" : "/Date(1421139277369)/",
-	"updatedAt" : "/Date(1421202337369)/",
-	"version" : 0,
+	"id" : "6550ad66-80cc-4a93-b943-0dc7e5c97664",
+	"createdAt" : "/Date(1424882413875)/",
+	"updatedAt" : "/Date(1424926453875)/",
+	"version" : 4,
 	"firstName" : "Pedro",
 	"lastName" : "Examplo",
 	"email" : "pedro@example.com",
 	"phone" : "66 234 555 678",
 	"jobTitle" : "deputy director",
 	"client" : {
-		"id" : "2662b324-b39e-4d0d-aed5-9a1df0c79909",
-		"createdAt" : "/Date(1421138557369)/",
-		"updatedAt" : "/Date(1421148337369)/",
-		"version" : 3,
+		"id" : "a43c5f25-7485-4dfe-9c6a-57aeac1886f7",
+		"createdAt" : "/Date(1424880553876)/",
+		"updatedAt" : "/Date(1424955253876)/",
+		"version" : 7,
 		"externalSystem" : {
-			"id" : "408f0ba4-cae7-4750-a36f-3bf03be65fa3",
-			"createdAt" : "/Date(1421139097369)/",
-			"updatedAt" : "/Date(1421180737369)/",
-			"version" : 6,
+			"id" : "fe7a7955-0f75-47ec-b67d-2a1140928875",
+			"createdAt" : "/Date(1424881873876)/",
+			"updatedAt" : "/Date(1424890453876)/",
+			"version" : 4,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1421141137369)/",
+		"externalSyncedAt" : "/Date(1424883253875)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",

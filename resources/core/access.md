@@ -17,7 +17,7 @@ Access
 | trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
 | user        | User      | read write | YES                                                                    | Provides info about the user for whom the access is granted.                                        |
-| version     | Long      | read only  | no                                                                     | Object version number.                                                                              |
+| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
 
 ## Metadata
 
@@ -72,6 +72,10 @@ Access
 			"constraints" : [
 				{
 					"type" : "NotNull"
+				},
+				{
+					"type" : "Enum",
+					"details" : "CORE, TIME, BILLING, ATTENDANCE"
 				}
 			]
 		},
@@ -104,7 +108,7 @@ Access
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
-			"access" : "READ_ONLY"
+			"access" : "READ_WRITE"
 		}
 	],
 	"cascades" : [
@@ -122,15 +126,15 @@ Access
 
 ```JSON
 {
-	"id" : "401ee9e2-dd8e-4ee1-a2c9-a0dcd61da158",
-	"createdAt" : "/Date(1421140356771)/",
-	"updatedAt" : "/Date(1421220336771)/",
-	"version" : 8,
+	"id" : "03e5bca8-13b5-4a56-96bc-125f324f899f",
+	"createdAt" : "/Date(1424881753283)/",
+	"updatedAt" : "/Date(1424904853283)/",
+	"version" : 5,
 	"user" : {
-		"id" : "c8f41ca0-3bad-4373-9172-83527464f799",
-		"createdAt" : "/Date(1421138136771)/",
-		"updatedAt" : "/Date(1421141136771)/",
-		"version" : 9,
+		"id" : "c2f7e914-7db0-4722-a251-79abf0a94c3d",
+		"createdAt" : "/Date(1424880433283)/",
+		"updatedAt" : "/Date(1424937253283)/",
+		"version" : 8,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -147,16 +151,16 @@ Access
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1421967600000)/",
-		"workingTimeStart" : "/Date(1421132400000)/",
-		"workingTimeEnd" : "/Date(1421164800000)/",
-		"created" : "/Date(1421054736771)/",
+		"birthdayRemind" : "/Date(1425682800000)/",
+		"workingTimeStart" : "/Date(1424847600000)/",
+		"workingTimeEnd" : "/Date(1424880000000)/",
+		"created" : "/Date(1424796853283)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"product" : "TIME",
-	"created" : "/Date(1421141136771)/",
+	"created" : "/Date(1424883253283)/",
 	"displayName" : "TIME"
 }
 ```
