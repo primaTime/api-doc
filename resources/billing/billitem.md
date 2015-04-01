@@ -7,21 +7,21 @@ BillItem
 
 ## Properties
 
-| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
-|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| attributes  | String    | read write | no                                                                     | Describes form of item aggregation.                                                                 |
-| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| docIndex    | Integer   | read write | no                                                                     | Sequence number of item in bill.                                                                    |
-| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| itemGroup   | String    | read write | no                                                                     | Name of aggregating itemGroup.                                                                      |
-| price       | Double    | read write | no                                                                     | The price of the item is calculated by the formula: 'unitPrice * quantity'.                         |
-| quantity    | Double    | read write | no                                                                     | The amount of a specified unit.                                                                     |
-| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| unit        | String    | read write | no                                                                     | The billed unit (e.g. hours, kilometers, pieces, ...).                                              |
-| unitPrice   | Double    | read write | no                                                                     | The unit price is the price per a specified unit.                                                   |
-| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name        | Type      | Access     | Required | Description                                                                                         |
+|-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| attributes  | String    | read write | no       | Describes form of item aggregation.                                                                 |
+| createdAt   | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayName | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| docIndex    | Integer   | read write | no       | Sequence number of item in bill.                                                                    |
+| id          | String    | read write | no       | Unique object identifier.                                                                           |
+| itemGroup   | String    | read write | no       | Name of aggregating itemGroup.                                                                      |
+| price       | Double    | read write | no       | The price of the item is calculated by the formula: 'unitPrice * quantity'.                         |
+| quantity    | Double    | read write | no       | The amount of a specified unit.                                                                     |
+| trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| unit        | String    | read write | no       | The billed unit (e.g. hours, kilometers, pieces, ...).                                              |
+| unitPrice   | Double    | read write | no       | The unit price is the price per a specified unit.                                                   |
+| updatedAt   | Date      | read only  | no       | Last modified date.                                                                                 |
+| version     | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -134,10 +134,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "63636ecf-2423-4e17-85ee-f0b3be542152",
-	"createdAt" : "/Date(1424880674813)/",
-	"updatedAt" : "/Date(1424937254813)/",
-	"version" : 9,
+	"id" : "d3e5ede4-e6a2-4ec2-beed-db5383bf69f6",
+	"createdAt" : "/Date(1427899081272)/",
+	"updatedAt" : "/Date(1427938261272)/",
+	"version" : 2,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

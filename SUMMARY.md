@@ -46,6 +46,7 @@
 		 * [client](resources/time/client.md)
 		 * [contactperson](resources/time/contactperson.md)
 		 * [impulse](resources/time/impulse.md)
+		 * [lock](resources/time/lock.md)
 		 * [project](resources/time/project.md)
 		 * [projectmember](resources/time/projectmember.md)
 		 * [projectworktypelink](resources/time/projectworktypelink.md)

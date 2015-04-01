@@ -7,16 +7,16 @@ AccountAdmin
 
 ## Properties
 
-| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
-|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| account     | Account   | read write | YES                                                                    | Determines which account is administered.                                                           |
-| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| user        | User      | read write | YES                                                                    | The user who is the account administrator.                                                          |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name        | Type      | Access     | Required | Description                                                                                         |
+|-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| account     | Account   | read write | YES      | Determines which account is administered.                                                           |
+| createdAt   | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayName | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| id          | String    | read write | no       | Unique object identifier.                                                                           |
+| trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no       | Last modified date.                                                                                 |
+| user        | User      | read write | YES      | The user who is the account administrator.                                                          |
+| version     | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -111,20 +111,20 @@ AccountAdmin
 
 ```JSON
 {
-	"id" : "9d976152-7e42-49dd-92b7-541262fa20a8",
-	"createdAt" : "/Date(1424882714054)/",
-	"updatedAt" : "/Date(1424883254054)/",
-	"version" : 2,
+	"id" : "9fed96e9-c178-4374-a6c5-362917f63ad4",
+	"createdAt" : "/Date(1427898841313)/",
+	"updatedAt" : "/Date(1427959861313)/",
+	"version" : 5,
 	"account" : {
-		"id" : "b2005f46-af55-45c8-9637-69957b1a5135",
-		"createdAt" : "/Date(1424881874054)/",
-		"updatedAt" : "/Date(1424944454054)/",
-		"version" : 9,
+		"id" : "f5521bfb-3092-4694-912b-c9b3841ad6ff",
+		"createdAt" : "/Date(1427902021313)/",
+		"updatedAt" : "/Date(1427909461313)/",
+		"version" : 3,
 		"owner" : {
-			"id" : "4be88ffc-0919-4092-ba22-6632cc7f34b4",
-			"createdAt" : "/Date(1424881994054)/",
-			"updatedAt" : "/Date(1424883254054)/",
-			"version" : 4,
+			"id" : "cc66c516-0351-4409-aa29-c31dd251849c",
+			"createdAt" : "/Date(1427901181313)/",
+			"updatedAt" : "/Date(1427923861313)/",
+			"version" : 7,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -141,10 +141,10 @@ AccountAdmin
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1425682800000)/",
-			"workingTimeStart" : "/Date(1424847600000)/",
-			"workingTimeEnd" : "/Date(1424880000000)/",
-			"created" : "/Date(1424796854054)/",
+			"birthdayRemind" : "/Date(1428703200000)/",
+			"workingTimeStart" : "/Date(1427868000000)/",
+			"workingTimeEnd" : "/Date(1427900400000)/",
+			"created" : "/Date(1427815861312)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -168,20 +168,20 @@ AccountAdmin
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796854054)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815861312)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1424883254054)/",
-		"affiliateId" : "ed91ad2f-a1f1-4bef-8a30-7d7b24d995f9",
+		"deactivationRequestedAt" : "/Date(1427902261312)/",
+		"affiliateId" : "d98304bb-951f-4d79-b0ac-87009d769cf6",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
 	"user" : {
-		"id" : "97f16d45-dd43-49ec-bbc2-efd5880160cc",
-		"createdAt" : "/Date(1424883254054)/",
-		"updatedAt" : "/Date(1424904854054)/",
-		"version" : 8,
+		"id" : "0d0aaa99-dd2d-45a0-ae4e-48b3db7d6403",
+		"createdAt" : "/Date(1427898961313)/",
+		"updatedAt" : "/Date(1427927461313)/",
+		"version" : 0,
 		"firstName" : "Charles",
 		"lastName" : "Johnson",
 		"nickName" : "Charlie",
@@ -198,10 +198,10 @@ AccountAdmin
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1426114800000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796854054)/",
+		"birthdayRemind" : "/Date(1429135200000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815861313)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Johnson Charles"

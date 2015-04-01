@@ -211,7 +211,7 @@ Where `{resource}` is a module resource such as: `time/projects`, `time/timereco
 			"type": "Long",
 			"name": "version",
 			"description": "Object version number.",
-			"access": "READ_ONLY"
+			"access": "READ_WRITE"
 		}
 	],
 	"cascades": [

@@ -7,36 +7,36 @@ User
 
 ## Properties
 
-| Name             | Type      | Access     | Required                                                                                     | Description                                                                                                            |
-|------------------|-----------|------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| active           | Boolean   | read write | no                                                                                           | Determines whether or not the user is active. Only active user can be logged into his account.                         |
-| admin            | Boolean   | read write | YES                                                                                          | Determines whether the user is admin.                                                                                  |
-| birthdayRemind   | Date      | read write | no                                                                                           | Date which reminds the user of the birthday of another person.                                                         |
-| confirmed        | Boolean   | read only  | no                                                                                           | User confirmed his registration. Only confirmed users can log into the account.                                        |
-| confirmedEmail   | Boolean   | read only  | no                                                                                           | User confirmed his email address.                                                                                      |
-| created          | Date      | read only  | no                                                                                           | Date and time when was the user was registered.                                                                        |
-| createdAt        | Date      | read only  | no                                                                                           | Date of creation.                                                                                                      |
-| dateFormat       | String    | read write | no                                                                                           | Date format pattern according to the java.text.SimpleDateFormat                                                        |
-| displayName      | String    | read only  | no                                                                                           | Describes an object in human readable form.                                                                            |
-| email            | String    | read only  | no                                                                                           | User's e-mail address. It is also used as a login. Can be set only once.                                               |
-| firstName        | String    | read write | no                                                                                           | User's first name.                                                                                                     |
-| id               | String    | read write | no                                                                                           | Unique object identifier.                                                                                              |
-| language         | String    | read write | no                                                                                           | Preferred language.                                                                                                    |
-| lastName         | String    | read write | no                                                                                           | User's last name.                                                                                                      |
-| nickName         | String    | read write | no                                                                                           | User's nick name.                                                                                                      |
-| password         | String    | write only | no                                                                                           | The password in plain text. It is used only for changing the password.                                                 |
-| phone            | String    | read write | no                                                                                           | User's contact phone.                                                                                                  |
-| position         | String    | read write | no                                                                                           | User's job position.                                                                                                   |
-| projectManager   | Boolean   | read write | YES                                                                                          | Determines whether the user is project manager.                                                                        |
-| secretKey        | String    | read write | no                                                                                           | Unique authentication key. Can be used instead of the user’s credentials.                                              |
-| timeFormat       | String    | read write | no                                                                                           | Time format pattern according to java.text.SimpleDateFormat                                                            |
-| timeZone         | String    | read write | no                                                                                           | The time zone of the place where the user works. The time zone is identified by the ID according to java.util.TimeZone |
-| trashItem        | TrashItem | read write | no                                                                                           | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                    |
-| updatedAt        | Date      | read only  | no                                                                                           | Last modified date.                                                                                                    |
-| version          | Long      | read write | no                                                                                           | Object version number.                                                                                                 |
-| weekStart        | Byte      | read write | no                                                                                           | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                               |
-| workingTimeEnd   | Date      | read write | no                                                                                           | Time when the work usually ends.                                                                                       |
-| workingTimeStart | Date      | read write | no                                                                                           | Time when the work usually starts.                                                                                     |
+| Name             | Type      | Access     | Required | Description                                                                                                            |
+|------------------|-----------|------------|----------|------------------------------------------------------------------------------------------------------------------------|
+| active           | Boolean   | read write | no       | Determines whether or not the user is active. Only active user can be logged into his account.                         |
+| admin            | Boolean   | read write | YES      | Determines whether the user is admin.                                                                                  |
+| birthdayRemind   | Date      | read write | no       | Date which reminds the user of the birthday of another person.                                                         |
+| confirmed        | Boolean   | read only  | no       | User confirmed his registration. Only confirmed users can log into the account.                                        |
+| confirmedEmail   | Boolean   | read only  | no       | User confirmed his email address.                                                                                      |
+| created          | Date      | read only  | no       | Date and time when was the user was registered.                                                                        |
+| createdAt        | Date      | read only  | no       | Date of creation.                                                                                                      |
+| dateFormat       | String    | read write | no       | Date format pattern according to the java.text.SimpleDateFormat                                                        |
+| displayName      | String    | read only  | no       | Describes an object in human readable form.                                                                            |
+| email            | String    | read only  | no       | User's e-mail address. It is also used as a login. Can be set only once.                                               |
+| firstName        | String    | read write | no       | User's first name.                                                                                                     |
+| id               | String    | read write | no       | Unique object identifier.                                                                                              |
+| language         | String    | read write | no       | Preferred language.                                                                                                    |
+| lastName         | String    | read write | no       | User's last name.                                                                                                      |
+| nickName         | String    | read write | no       | User's nick name.                                                                                                      |
+| password         | String    | write only | no       | The password in plain text. It is used only for changing the password.                                                 |
+| phone            | String    | read write | no       | User's contact phone.                                                                                                  |
+| position         | String    | read write | no       | User's job position.                                                                                                   |
+| projectManager   | Boolean   | read write | YES      | Determines whether the user is project manager.                                                                        |
+| secretKey        | String    | read write | no       | Unique authentication key. Can be used instead of the user’s credentials.                                              |
+| timeFormat       | String    | read write | no       | Time format pattern according to java.text.SimpleDateFormat                                                            |
+| timeZone         | String    | read write | no       | The time zone of the place where the user works. The time zone is identified by the ID according to java.util.TimeZone |
+| trashItem        | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                    |
+| updatedAt        | Date      | read only  | no       | Last modified date.                                                                                                    |
+| version          | Long      | read write | no       | Object version number.                                                                                                 |
+| weekStart        | Byte      | read write | no       | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                               |
+| workingTimeEnd   | Date      | read write | no       | Time when the work usually ends.                                                                                       |
+| workingTimeStart | Date      | read write | no       | Time when the work usually starts.                                                                                     |
 
 ## Metadata
 
@@ -294,10 +294,10 @@ User
 
 ```JSON
 {
-	"id" : "c2fdcd28-ba8b-4026-b02d-589890e77437",
-	"createdAt" : "/Date(1424882413451)/",
-	"updatedAt" : "/Date(1424915653451)/",
-	"version" : 2,
+	"id" : "76163ace-113c-4033-8ee9-eda41fa53697",
+	"createdAt" : "/Date(1427899560421)/",
+	"updatedAt" : "/Date(1427902260421)/",
+	"version" : 0,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -314,10 +314,10 @@ User
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1425682800000)/",
-	"workingTimeStart" : "/Date(1424847600000)/",
-	"workingTimeEnd" : "/Date(1424880000000)/",
-	"created" : "/Date(1424796853450)/",
+	"birthdayRemind" : "/Date(1428703200000)/",
+	"workingTimeStart" : "/Date(1427868000000)/",
+	"workingTimeEnd" : "/Date(1427900400000)/",
+	"created" : "/Date(1427815860421)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"

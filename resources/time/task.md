@@ -5,31 +5,33 @@ Task
 
 	https://api.primaerp.com/v1/time/tasks
 
+	https://api.primaerp.com/v1/time/projects/{id}/tasks
+
 ## Properties
 
-| Name                 | Type           | Access     | Required                                                               | Description                                                                                         |
-|----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| author               | User           | read write | no                                                                     | User who created the task.                                                                          |
-| code                 | String         | read write | no                                                                     | A code or an abbreviation of the task.                                                              |
-| createdAt            | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName          | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| done                 | Boolean        | read write | no                                                                     | Determines whether the task is currently done.                                                      |
-| effective            | Boolean        | read write | YES                                                                    | Determines whether the task is effective. Default value is true.                                    |
-| externalBrowsableUrl | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
-| externalResourceId   | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
-| externalSynced       | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
-| externalSyncedAt     | Date           | read only  | no                                                                     | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
-| externalSystem       | ExternalSystem | read write | no                                                                     | External system which maintains this object.                                                        |
-| id                   | String         | read write | no                                                                     | Unique object identifier.                                                                           |
-| name                 | String         | read write | no                                                                     | Task name.                                                                                          |
-| note                 | String         | read write | no                                                                     | Additional note.                                                                                    |
-| owner                | User           | read write | no                                                                     | User who is responsible for the task.                                                               |
-| priceBudget          | Double         | read write | no                                                                     | Amount of money available for the task.                                                             |
-| project              | Project        | read write | no                                                                     | Tasks belonging to this project.                                                                    |
-| timeBudget           | Long           | read write | no                                                                     | Amount of milliseconds available for the task.                                                      |
-| trashItem            | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt            | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| version              | Long           | read write | no                                                                     | Object version number.                                                                              |
+| Name                 | Type           | Access     | Required | Description                                                                                         |
+|----------------------|----------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| author               | User           | read write | no       | User who created the task.                                                                          |
+| code                 | String         | read write | no       | A code or an abbreviation of the task.                                                              |
+| createdAt            | Date           | read only  | no       | Date of creation.                                                                                   |
+| displayName          | String         | read only  | no       | Describes an object in human readable form.                                                         |
+| done                 | Boolean        | read write | no       | Determines whether the task is currently done.                                                      |
+| effective            | Boolean        | read write | YES      | Determines whether the task is effective. Default value is true.                                    |
+| externalBrowsableUrl | String         | read write | no       | Human accessible link in external system.                                                           |
+| externalResourceId   | String         | read write | no       | Unique external system identifier.                                                                  |
+| externalSynced       | Boolean        | write only | no       | Determines whether an object was synced with the external system.                                   |
+| externalSyncedAt     | Date           | read only  | no       | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
+| externalSystem       | ExternalSystem | read write | no       | External system which maintains this object.                                                        |
+| id                   | String         | read write | no       | Unique object identifier.                                                                           |
+| name                 | String         | read write | no       | Task name.                                                                                          |
+| note                 | String         | read write | no       | Additional note.                                                                                    |
+| owner                | User           | read write | no       | User who is responsible for the task.                                                               |
+| priceBudget          | Double         | read write | no       | Amount of money available for the task.                                                             |
+| project              | Project        | read write | no       | Tasks belonging to this project.                                                                    |
+| timeBudget           | Long           | read write | no       | Amount of milliseconds available for the task.                                                      |
+| trashItem            | TrashItem      | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt            | Date           | read only  | no       | Last modified date.                                                                                 |
+| version              | Long           | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -206,53 +208,53 @@ Task
 
 ```JSON
 {
-	"id" : "8cc77c93-7e0c-4055-abf4-1df36f960645",
-	"createdAt" : "/Date(1424880495253)/",
-	"updatedAt" : "/Date(1424930055253)/",
-	"version" : 6,
+	"id" : "5d3c053c-cf5e-42e2-8c12-3bce7b7dac19",
+	"createdAt" : "/Date(1427900040018)/",
+	"updatedAt" : "/Date(1427985060019)/",
+	"version" : 3,
 	"externalSystem" : {
-		"id" : "d3088a88-5092-4ba1-a40e-64ab2dc0af94",
-		"createdAt" : "/Date(1424880615254)/",
-		"updatedAt" : "/Date(1424958855254)/",
-		"version" : 1,
+		"id" : "75faf9d4-69e6-4760-b896-fefafdc81047",
+		"createdAt" : "/Date(1427899260019)/",
+		"updatedAt" : "/Date(1427974260019)/",
+		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "task-556",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/556",
-	"externalSyncedAt" : "/Date(1424883255253)/",
+	"externalSyncedAt" : "/Date(1427902260017)/",
 	"externalSynced" : true,
 	"project" : {
-		"id" : "3a04a12f-d5c0-489d-bf91-29373a26c2bb",
-		"createdAt" : "/Date(1424881935253)/",
-		"updatedAt" : "/Date(1424894055253)/",
+		"id" : "7d3b2a1b-3c15-44d4-8494-a5684028448b",
+		"createdAt" : "/Date(1427901360019)/",
+		"updatedAt" : "/Date(1427920260019)/",
 		"version" : 2,
 		"externalSystem" : {
-			"id" : "63e83440-c80f-4ac5-bfe7-2c9820619571",
-			"createdAt" : "/Date(1424881635254)/",
-			"updatedAt" : "/Date(1424951655254)/",
-			"version" : 3,
+			"id" : "503f2569-4fe1-4357-a1db-2ad44082f501",
+			"createdAt" : "/Date(1427900700019)/",
+			"updatedAt" : "/Date(1427938260019)/",
+			"version" : 9,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "project-221",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-		"externalSyncedAt" : "/Date(1424883255253)/",
+		"externalSyncedAt" : "/Date(1427902260017)/",
 		"externalSynced" : true,
 		"name" : "Content management system",
 		"code" : "CMS",
 		"note" : "core feature",
-		"begins" : "/Date(1424796855253)/",
-		"ends" : "/Date(1424969655253)/",
+		"begins" : "/Date(1427815860017)/",
+		"ends" : "/Date(1427988660017)/",
 		"timeBudget" : 604800000,
 		"priceBudget" : 100000.0,
 		"personal" : false,
 		"owner" : {
-			"id" : "fd4ece79-c3a7-40cc-b27d-d9b1e345d3c9",
-			"createdAt" : "/Date(1424882235254)/",
-			"updatedAt" : "/Date(1424894055254)/",
+			"id" : "b957ac1c-9024-4309-ac4d-77d8ca7420c3",
+			"createdAt" : "/Date(1427900400019)/",
+			"updatedAt" : "/Date(1427985060019)/",
 			"version" : 3,
 			"firstName" : "John",
 			"lastName" : "Doe",
@@ -270,31 +272,31 @@ Task
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1426719600000)/",
-			"workingTimeStart" : "/Date(1424847600000)/",
-			"workingTimeEnd" : "/Date(1424880000000)/",
-			"created" : "/Date(1424796855253)/",
+			"birthdayRemind" : "/Date(1429740000000)/",
+			"workingTimeStart" : "/Date(1427868000000)/",
+			"workingTimeEnd" : "/Date(1427900400000)/",
+			"created" : "/Date(1427815860018)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"client" : {
-			"id" : "d32bc65f-fe47-4f0a-a2c5-50d3893e588e",
-			"createdAt" : "/Date(1424881455254)/",
-			"updatedAt" : "/Date(1424926455254)/",
-			"version" : 9,
+			"id" : "03d172a6-9673-4798-a7ca-e979cc09a3c0",
+			"createdAt" : "/Date(1427899560019)/",
+			"updatedAt" : "/Date(1427967060019)/",
+			"version" : 1,
 			"externalSystem" : {
-				"id" : "874bf01d-aa1e-4f55-a15b-21572a548aa4",
-				"createdAt" : "/Date(1424879715254)/",
-				"updatedAt" : "/Date(1424912055254)/",
-				"version" : 5,
+				"id" : "6af11799-318a-4004-b2bd-3e5aff01f44b",
+				"createdAt" : "/Date(1427899800019)/",
+				"updatedAt" : "/Date(1427945460019)/",
+				"version" : 2,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1424883255253)/",
+			"externalSyncedAt" : "/Date(1427902260017)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -324,9 +326,9 @@ Task
 	"note" : "form with validation",
 	"done" : true,
 	"author" : {
-		"id" : "fd4ece79-c3a7-40cc-b27d-d9b1e345d3c9",
-		"createdAt" : "/Date(1424882235254)/",
-		"updatedAt" : "/Date(1424894055254)/",
+		"id" : "b957ac1c-9024-4309-ac4d-77d8ca7420c3",
+		"createdAt" : "/Date(1427900400019)/",
+		"updatedAt" : "/Date(1427985060019)/",
 		"version" : 3,
 		"firstName" : "John",
 		"lastName" : "Doe",
@@ -344,19 +346,19 @@ Task
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1426719600000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796855253)/",
+		"birthdayRemind" : "/Date(1429740000000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860018)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"owner" : {
-		"id" : "03547f29-36d9-40b3-94ba-55e43cd4f295",
-		"createdAt" : "/Date(1424880255253)/",
-		"updatedAt" : "/Date(1424940855253)/",
-		"version" : 3,
+		"id" : "d73410d5-278c-4cf8-9031-9bdb91f5a7c7",
+		"createdAt" : "/Date(1427900460019)/",
+		"updatedAt" : "/Date(1427905860019)/",
+		"version" : 0,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -373,10 +375,10 @@ Task
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1425682800000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796855253)/",
+		"birthdayRemind" : "/Date(1428703200000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860018)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

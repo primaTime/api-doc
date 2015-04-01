@@ -7,17 +7,17 @@ TrashItem
 
 ## Properties
 
-| Name               | Type      | Access     | Required                                                               | Description                                                                                         |
-|--------------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt          | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| deletedObjectClass | Class     | read write | YES                                                                    | Identifies the type of deleted entity.                                                              |
-| deletedObjectId    | String    | read write | YES                                                                    | Identifies a deleted object.                                                                        |
-| displayName        | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| groupId            | String    | read write | no                                                                     | Groups all the objects which were deleted together.                                                 |
-| id                 | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| trashItem          | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt          | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version            | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name               | Type      | Access     | Required | Description                                                                                         |
+|--------------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt          | Date      | read only  | no       | Date of creation.                                                                                   |
+| deletedObjectClass | Class     | read write | YES      | Identifies the type of deleted entity.                                                              |
+| deletedObjectId    | String    | read write | YES      | Identifies a deleted object.                                                                        |
+| displayName        | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| groupId            | String    | read write | no       | Groups all the objects which were deleted together.                                                 |
+| id                 | String    | read write | no       | Unique object identifier.                                                                           |
+| trashItem          | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt          | Date      | read only  | no       | Last modified date.                                                                                 |
+| version            | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -116,10 +116,10 @@ TrashItem
 
 ```JSON
 {
-	"id" : "70e1c175-2b91-4dd3-864f-c8dd9968d5f8",
-	"createdAt" : "/Date(1424880193352)/",
-	"updatedAt" : "/Date(1424886853352)/",
-	"version" : 7,
+	"id" : "7561ddba-90b4-45ce-8f36-ff34730a232f",
+	"createdAt" : "/Date(1427901900305)/",
+	"updatedAt" : "/Date(1427927460305)/",
+	"version" : 4,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"groupId" : "ffaf67e7-051d-4a58-a71a-8e39353a93b4",

@@ -7,18 +7,18 @@ Role
 
 ## Properties
 
-| Name        | Type        | Access     | Required                                                                                                          | Description                                                                                         |
-|-------------|-------------|------------|-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| builtInRole | BuiltInRole | read only  | no                                                                                                                | If it is set, then the role is generated automatically and cannot be edited.                        |
-| createdAt   | Date        | read only  | no                                                                                                                | Date of creation.                                                                                   |
-| displayName | String      | read only  | no                                                                                                                | Describes an object in human readable form.                                                         |
-| id          | String      | read write | no                                                                                                                | Unique object identifier.                                                                           |
-| name        | String      | read write | no                                                                                                                | The name of an custom user's role. Built-in roles do not have a name.                               |
-| product     | Product     | read write | no                                                                                                                | Product, only custom roles can be edited.                                                           |
-| roleType    | RoleType    | read write | no                                                                                                                | Role type, only custom roles can be edited.                                                         |
-| trashItem   | TrashItem   | read write | no                                                                                                                | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date        | read only  | no                                                                                                                | Last modified date.                                                                                 |
-| version     | Long        | read write | no                                                                                                                | Object version number.                                                                              |
+| Name        | Type        | Access     | Required | Description                                                                                         |
+|-------------|-------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| builtInRole | BuiltInRole | read only  | no       | If it is set, then the role is generated automatically and cannot be edited.                        |
+| createdAt   | Date        | read only  | no       | Date of creation.                                                                                   |
+| displayName | String      | read only  | no       | Describes an object in human readable form.                                                         |
+| id          | String      | read write | no       | Unique object identifier.                                                                           |
+| name        | String      | read write | no       | The name of an custom user's role. Built-in roles do not have a name.                               |
+| product     | Product     | read write | no       | Product, only custom roles can be edited.                                                           |
+| roleType    | RoleType    | read write | no       | Role type, only custom roles can be edited.                                                         |
+| trashItem   | TrashItem   | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date        | read only  | no       | Last modified date.                                                                                 |
+| version     | Long        | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -35,7 +35,7 @@ Role
 			"constraints" : [
 				{
 					"type" : "Enum",
-					"details" : "TIME_USER, OWNER, ADMIN, PROJECT_MANAGER, PRICE_EDITOR, BILLING_USER, ATTENDANCE_USER, ATTENDANCE_MANAGER"
+					"details" : "TIME_USER, OWNER, ADMIN, PROJECT_MANAGER, PRICE_EDITOR, BILLING_USER, ATTENDANCE_USER, ATTENDANCE_ADVANCED_USER, ATTENDANCE_MANAGER"
 				}
 			]
 		},
@@ -131,10 +131,10 @@ Role
 
 ```JSON
 {
-	"id" : "758f5902-4308-4c35-8310-ab9fdc043968",
-	"createdAt" : "/Date(1424880195730)/",
-	"updatedAt" : "/Date(1424951655730)/",
-	"version" : 4,
+	"id" : "a6a54568-2545-4779-815a-2e99f95dd447",
+	"createdAt" : "/Date(1427899799953)/",
+	"updatedAt" : "/Date(1427977859953)/",
+	"version" : 5,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",

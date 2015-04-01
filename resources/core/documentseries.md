@@ -7,17 +7,17 @@ DocumentSeries
 
 ## Properties
 
-| Name            | Type         | Access     | Required                                                               | Description                                                                                         |
-|-----------------|--------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt       | Date         | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName     | String       | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| docType         | DocumentType | read write | no                                                                     | Document type.                                                                                      |
-| id              | String       | read write | no                                                                     | Unique object identifier.                                                                           |
-| nextNumber      | Integer      | read write | no                                                                     | A number of the next document.                                                                      |
-| numberingScheme | String       | read write | no                                                                     | A mask for the document number.                                                                     |
-| trashItem       | TrashItem    | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt       | Date         | read only  | no                                                                     | Last modified date.                                                                                 |
-| version         | Long         | read write | no                                                                     | Object version number.                                                                              |
+| Name            | Type         | Access     | Required | Description                                                                                         |
+|-----------------|--------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt       | Date         | read only  | no       | Date of creation.                                                                                   |
+| displayName     | String       | read only  | no       | Describes an object in human readable form.                                                         |
+| docType         | DocumentType | read write | no       | Document type.                                                                                      |
+| id              | String       | read write | no       | Unique object identifier.                                                                           |
+| nextNumber      | Integer      | read write | no       | A number of the next document.                                                                      |
+| numberingScheme | String       | read write | no       | A mask for the document number.                                                                     |
+| trashItem       | TrashItem    | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt       | Date         | read only  | no       | Last modified date.                                                                                 |
+| version         | Long         | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -112,13 +112,13 @@ DocumentSeries
 
 ```JSON
 {
-	"id" : "3a725015-07a0-4c52-bed1-a496865be040",
-	"createdAt" : "/Date(1424883195419)/",
-	"updatedAt" : "/Date(1424904855419)/",
-	"version" : 8,
+	"id" : "5e5124aa-be04-4fb2-8982-a348c132f795",
+	"createdAt" : "/Date(1427900881245)/",
+	"updatedAt" : "/Date(1427952661245)/",
+	"version" : 2,
 	"docType" : "BILL",
 	"numberingScheme" : "${number}/2015",
-	"nextNumber" : 917,
+	"nextNumber" : 477,
 	"displayName" : "${number}/2015"
 }
 ```

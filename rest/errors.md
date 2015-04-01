@@ -42,6 +42,7 @@ Listed below are special errors, which may arise during the interaction with API
 | PE01-1010      | 401              | Token is invalid or expired                   |
 | PE01-1011      | 401              | Refresh token is invalid or expired           |
 | PE01-1012      | 301              | Tenant is registered on other endpoint.       |
+| PE01-1013      | 403              | Object is unavailable                         |
 | PE01-1101      | 404              | Object not found                              |
 | PE01-1102      | 409              | Object already exists                         |
 | PE01-1103      | 400              | Operation not allowed                         |

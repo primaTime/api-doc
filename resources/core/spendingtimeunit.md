@@ -7,18 +7,18 @@ SpendingTimeUnit
 
 ## Properties
 
-| Name        | Type      | Access     | Required                                                               | Description                                                                                                                                        |
-|-------------|-----------|------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| begin       | Date      | read write | no                                                                     | Time when user begins spending his time.                                                                                                           |
-| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                                                                  |
-| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                                                                        |
-| duration    | Long      | read write | no                                                                     | Length of the activity between the beginning and the end (in milliseconds). Can also be just a part of the time between the beginning and the end. |
-| end         | Date      | read write | no                                                                     | Time when user ends spending his time.                                                                                                             |
-| id          | String    | read write | no                                                                     | Unique object identifier.                                                                                                                          |
-| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                                                |
-| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                                                                |
-| user        | User      | read write | YES                                                                    | User who spends time.                                                                                                                              |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                                                                             |
+| Name        | Type      | Access     | Required | Description                                                                                                                                        |
+|-------------|-----------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| begin       | Date      | read write | no       | Time when user begins spending his time.                                                                                                           |
+| createdAt   | Date      | read only  | no       | Date of creation.                                                                                                                                  |
+| displayName | String    | read only  | no       | Describes an object in human readable form.                                                                                                        |
+| duration    | Long      | read write | no       | Length of the activity between the beginning and the end (in milliseconds). Can also be just a part of the time between the beginning and the end. |
+| end         | Date      | read write | no       | Time when user ends spending his time.                                                                                                             |
+| id          | String    | read write | no       | Unique object identifier.                                                                                                                          |
+| trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                                                |
+| updatedAt   | Date      | read only  | no       | Last modified date.                                                                                                                                |
+| user        | User      | read write | YES      | User who spends time.                                                                                                                              |
+| version     | Long      | read write | no       | Object version number.                                                                                                                             |
 
 ## Metadata
 
@@ -119,15 +119,15 @@ SpendingTimeUnit
 
 ```JSON
 {
-	"id" : "7a952dc9-4e52-434c-80fe-deb56b52b042",
-	"createdAt" : "/Date(1424881873524)/",
-	"updatedAt" : "/Date(1424897653524)/",
-	"version" : 7,
+	"id" : "d161bc17-9921-4a63-a71f-6120ca9738c7",
+	"createdAt" : "/Date(1427899560161)/",
+	"updatedAt" : "/Date(1427945460161)/",
+	"version" : 8,
 	"user" : {
-		"id" : "575e274c-21c6-467f-a2a0-eb4444e82380",
-		"createdAt" : "/Date(1424880853524)/",
-		"updatedAt" : "/Date(1424904853524)/",
-		"version" : 3,
+		"id" : "de32e56e-4f29-4093-98b3-dd491f14f17c",
+		"createdAt" : "/Date(1427902080161)/",
+		"updatedAt" : "/Date(1427967060161)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -144,16 +144,16 @@ SpendingTimeUnit
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1425682800000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796853524)/",
+		"birthdayRemind" : "/Date(1428703200000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860161)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"begin" : "/Date(1424854453524)/",
-	"end" : "/Date(1424880373524)/",
+	"begin" : "/Date(1427873460161)/",
+	"end" : "/Date(1427899380161)/",
 	"duration" : 1200000,
 	"displayName" : "20m"
 }

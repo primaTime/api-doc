@@ -7,41 +7,41 @@ Account
 
 ## Properties
 
-| Name                    | Type      | Access     | Required                                                                                     | Description                                                                                                                   |
-|-------------------------|-----------|------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| additionalAddressInfo   | String    | read write | no                                                                                           | Any additional informations related to the address.                                                                           |
-| affiliateId             | String    | read write | no                                                                                           | An identification of the subject who has contributed to the account registration.                                             |
-| apiKey                  | String    | read write | no                                                                                           | Unique key for access the application.                                                                                        |
-| campaign                | String    | read write | no                                                                                           | The marketing campaign from which the account originates from. For internal use only.                                         |
-| city                    | String    | read write | no                                                                                           | Name of the city.                                                                                                             |
-| confirmed               | Boolean   | read write | no                                                                                           | The account is confirmed. Users can log into confirmed account only.                                                          |
-| countryCode             | String    | read write | no                                                                                           | Country code according to ISO 3166-1 alpha-3 standard.                                                                        |
-| created                 | Date      | read only  | no                                                                                           | The date and time when the account was created.                                                                               |
-| createdAt               | Date      | read only  | no                                                                                           | Date of creation.                                                                                                             |
-| currency                | String    | read write | no                                                                                           | Default currency for the account.                                                                                             |
-| dateFormat              | String    | read write | no                                                                                           | The date format pattern according to java.text.SimpleDateFormat                                                               |
-| deactivationRequestedAt | Date      | read write | no                                                                                           | The date and time when the account owner requested deactivation.                                                              |
-| displayName             | String    | read only  | no                                                                                           | Describes an object in human readable form.                                                                                   |
-| id                      | String    | read write | no                                                                                           | Unique object identifier.                                                                                                     |
-| language                | String    | read write | no                                                                                           | Preferred language.                                                                                                           |
-| name                    | String    | read write | YES                                                                                          | The Account name.                                                                                                             |
-| owner                   | User      | read write | no                                                                                           | The user who has created the account.                                                                                         |
-| phone                   | String    | read write | no                                                                                           | Telephone number.                                                                                                             |
-| source                  | String    | read write | no                                                                                           | The account sources for marketing purposes. For internal use only.                                                            |
-| state                   | String    | read write | no                                                                                           | Name of the state or province.                                                                                                |
-| streetAddress           | String    | read write | no                                                                                           | The street name with the house number.                                                                                        |
-| timeFormat              | String    | read write | no                                                                                           | The time format pattern according to java.text.SimpleDateFormat                                                               |
-| timeZone                | String    | read write | no                                                                                           | The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone |
-| trashItem               | TrashItem | read write | no                                                                                           | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                           |
-| updatedAt               | Date      | read only  | no                                                                                           | Last modified date.                                                                                                           |
-| urlPrefix               | String    | read only  | no                                                                                           | Identifies the account tenant.                                                                                                |
-| vatId                   | String    | read write | no                                                                                           | VAT identification number.                                                                                                    |
-| version                 | Long      | read write | no                                                                                           | Object version number.                                                                                                        |
-| website                 | String    | read write | no                                                                                           | The website URL.                                                                                                              |
-| weekStart               | Byte      | read write | no                                                                                           | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
-| workingTimeEnd          | Date      | read write | no                                                                                           | The time when the work day usually end.                                                                                       |
-| workingTimeStart        | Date      | read write | no                                                                                           | The time when the work day usually start.                                                                                     |
-| zipCode                 | String    | read write | no                                                                                           | ZIP or postal code.                                                                                                           |
+| Name                    | Type      | Access     | Required | Description                                                                                                                   |
+|-------------------------|-----------|------------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| additionalAddressInfo   | String    | read write | no       | Any additional informations related to the address.                                                                           |
+| affiliateId             | String    | read write | no       | An identification of the subject who has contributed to the account registration.                                             |
+| apiKey                  | String    | read write | no       | Unique key for access the application.                                                                                        |
+| campaign                | String    | read write | no       | The marketing campaign from which the account originates from. For internal use only.                                         |
+| city                    | String    | read write | no       | Name of the city.                                                                                                             |
+| confirmed               | Boolean   | read write | no       | The account is confirmed. Users can log into confirmed account only.                                                          |
+| countryCode             | String    | read write | no       | Country code according to ISO 3166-1 alpha-3 standard.                                                                        |
+| created                 | Date      | read only  | no       | The date and time when the account was created.                                                                               |
+| createdAt               | Date      | read only  | no       | Date of creation.                                                                                                             |
+| currency                | String    | read write | no       | Default currency for the account.                                                                                             |
+| dateFormat              | String    | read write | no       | The date format pattern according to java.text.SimpleDateFormat                                                               |
+| deactivationRequestedAt | Date      | read write | no       | The date and time when the account owner requested deactivation.                                                              |
+| displayName             | String    | read only  | no       | Describes an object in human readable form.                                                                                   |
+| id                      | String    | read write | no       | Unique object identifier.                                                                                                     |
+| language                | String    | read write | no       | Preferred language.                                                                                                           |
+| name                    | String    | read write | YES      | The Account name.                                                                                                             |
+| owner                   | User      | read write | no       | The user who has created the account.                                                                                         |
+| phone                   | String    | read write | no       | Telephone number.                                                                                                             |
+| source                  | String    | read write | no       | The account sources for marketing purposes. For internal use only.                                                            |
+| state                   | String    | read write | no       | Name of the state or province.                                                                                                |
+| streetAddress           | String    | read write | no       | The street name with the house number.                                                                                        |
+| timeFormat              | String    | read write | no       | The time format pattern according to java.text.SimpleDateFormat                                                               |
+| timeZone                | String    | read write | no       | The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone |
+| trashItem               | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                           |
+| updatedAt               | Date      | read only  | no       | Last modified date.                                                                                                           |
+| urlPrefix               | String    | read only  | no       | Identifies the account tenant.                                                                                                |
+| vatId                   | String    | read write | no       | VAT identification number.                                                                                                    |
+| version                 | Long      | read write | no       | Object version number.                                                                                                        |
+| website                 | String    | read write | no       | The website URL.                                                                                                              |
+| weekStart               | Byte      | read write | no       | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
+| workingTimeEnd          | Date      | read write | no       | The time when the work day usually end.                                                                                       |
+| workingTimeStart        | Date      | read write | no       | The time when the work day usually start.                                                                                     |
+| zipCode                 | String    | read write | no       | ZIP or postal code.                                                                                                           |
 
 ## Metadata
 
@@ -333,15 +333,15 @@ Account
 
 ```JSON
 {
-	"id" : "18ea88ef-cff1-45e7-93fe-17fe450c59fb",
-	"createdAt" : "/Date(1424882054551)/",
-	"updatedAt" : "/Date(1424908454551)/",
-	"version" : 1,
+	"id" : "ac2e8ff7-17cf-403f-9e7a-ef7d4278e66c",
+	"createdAt" : "/Date(1427901540938)/",
+	"updatedAt" : "/Date(1427981460938)/",
+	"version" : 6,
 	"owner" : {
-		"id" : "d021053c-902f-45b2-b531-cd638e6b6a3b",
-		"createdAt" : "/Date(1424882594551)/",
-		"updatedAt" : "/Date(1424922854551)/",
-		"version" : 4,
+		"id" : "17fcf807-e574-4622-b168-008ea3cde6e1",
+		"createdAt" : "/Date(1427898780938)/",
+		"updatedAt" : "/Date(1427985060938)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -358,10 +358,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1425682800000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796854551)/",
+		"birthdayRemind" : "/Date(1428703200000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860938)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -385,13 +385,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1424847600000)/",
-	"workingTimeEnd" : "/Date(1424880000000)/",
-	"created" : "/Date(1424796854551)/",
+	"workingTimeStart" : "/Date(1427868000000)/",
+	"workingTimeEnd" : "/Date(1427900400000)/",
+	"created" : "/Date(1427815860938)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1424883254551)/",
-	"affiliateId" : "dfdc40fc-8a70-46aa-8e56-82d9a0151419",
+	"deactivationRequestedAt" : "/Date(1427902260938)/",
+	"affiliateId" : "7713ccc8-5000-4f83-9f23-e7a8c5d31312",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

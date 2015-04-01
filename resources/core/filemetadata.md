@@ -4,16 +4,16 @@ FileMetadata
 ## Properties
 
 | Name        | Type      | Access     | Required | Description                                                                                         |
-|-------------|-----------|------------|----|-----------------------------------------------------------------------------------------------------|
-| contentsize | Long      | read write | no | Content size in bytes.                                                                              |
-| contenttype | String    | read write | no | MIME content type.                                                                                  |
-| createdat   | Date      | read only  | no | Date of creation.                                                                                   |
-| displayname | String    | read only  | no | Describes an object in human readable form.                                                         |
-| filename    | String    | read write | no | Original file name.                                                                                 |
-| id          | String    | read write | no | Unique object identifier.                                                                           |
-| trashitem   | TrashItem | read write | no | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedat   | Date      | read only  | no | Last modified date.                                                                                 |
-| version     | Long      | read write | no | Object version number.                                                                              |
+|-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| contentsize | Long      | read write | no       | Content size in bytes.                                                                              |
+| contenttype | String    | read write | no       | MIME content type.                                                                                  |
+| createdat   | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayname | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| filename    | String    | read write | no       | Original file name.                                                                                 |
+| id          | String    | read write | no       | Unique object identifier.                                                                           |
+| trashitem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedat   | Date      | read only  | no       | Last modified date.                                                                                 |
+| version     | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -83,10 +83,10 @@ FileMetadata
 
 ```JSON
 {
-	"id" : "00aa8a93-fb94-48e5-a8be-40777b5ad7e7",
-	"createdAt" : "/Date(1424880016124)/",
-	"updatedAt" : "/Date(1424912056124)/",
-	"version" : 2,
+	"id" : "11f99773-be6f-41f2-8cc5-5d576ee7eca3",
+	"createdAt" : "/Date(1427901181437)/",
+	"updatedAt" : "/Date(1427977861437)/",
+	"version" : 5,
 	"fileName" : "mysignature.jpeg",
 	"contentType" : "image/jpeg",
 	"contentSize" : 13114,

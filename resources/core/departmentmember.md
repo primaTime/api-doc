@@ -7,16 +7,16 @@ DepartmentMember
 
 ## Properties
 
-| Name        | Type       | Access     | Required                                                               | Description                                                                                         |
-|-------------|------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date       | read only  | no                                                                     | Date of creation.                                                                                   |
-| department  | Department | read write | YES                                                                    | The department of the account member.                                                               |
-| displayName | String     | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id          | String     | read write | no                                                                     | Unique object identifier.                                                                           |
-| trashItem   | TrashItem  | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date       | read only  | no                                                                     | Last modified date.                                                                                 |
-| user        | User       | read write | YES                                                                    | User who is a member.                                                                               |
-| version     | Long       | read write | no                                                                     | Object version number.                                                                              |
+| Name        | Type       | Access     | Required | Description                                                                                         |
+|-------------|------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date       | read only  | no       | Date of creation.                                                                                   |
+| department  | Department | read write | YES      | The department of the account member.                                                               |
+| displayName | String     | read only  | no       | Describes an object in human readable form.                                                         |
+| id          | String     | read write | no       | Unique object identifier.                                                                           |
+| trashItem   | TrashItem  | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date       | read only  | no       | Last modified date.                                                                                 |
+| user        | User       | read write | YES      | User who is a member.                                                                               |
+| version     | Long       | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -111,15 +111,15 @@ DepartmentMember
 
 ```JSON
 {
-	"id" : "b2d8bacd-c0ab-44f1-afa2-a60289bb415a",
-	"createdAt" : "/Date(1424880315636)/",
-	"updatedAt" : "/Date(1424912055636)/",
-	"version" : 0,
+	"id" : "4636e729-f2f8-406c-ae91-d1a0f632989a",
+	"createdAt" : "/Date(1427899500368)/",
+	"updatedAt" : "/Date(1427927460368)/",
+	"version" : 5,
 	"user" : {
-		"id" : "917fd6c1-d35d-4bc3-b31c-0f3cd4d6dc73",
-		"createdAt" : "/Date(1424880855636)/",
-		"updatedAt" : "/Date(1424937255636)/",
-		"version" : 6,
+		"id" : "6e526c99-bc59-4a65-8fac-f4be227f24f6",
+		"createdAt" : "/Date(1427900640369)/",
+		"updatedAt" : "/Date(1427967060369)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -136,25 +136,25 @@ DepartmentMember
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1426719600000)/",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796855635)/",
+		"birthdayRemind" : "/Date(1429740000000)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860368)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"department" : {
-		"id" : "6f5418e6-f83f-4f5a-8519-6c49a10fcb6b",
-		"createdAt" : "/Date(1424880195636)/",
-		"updatedAt" : "/Date(1424908455636)/",
+		"id" : "8078ea08-6403-4d32-b5d0-cd560d21ff80",
+		"createdAt" : "/Date(1427900520369)/",
+		"updatedAt" : "/Date(1427909460369)/",
 		"version" : 3,
 		"name" : "Development",
 		"manager" : {
-			"id" : "831a1be6-dece-4467-a75b-5ae0668dea47",
-			"createdAt" : "/Date(1424881635636)/",
-			"updatedAt" : "/Date(1424922855636)/",
-			"version" : 7,
+			"id" : "46cad1ae-9692-4342-8b61-662b6503d5cf",
+			"createdAt" : "/Date(1427901660369)/",
+			"updatedAt" : "/Date(1427931060369)/",
+			"version" : 9,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -171,10 +171,10 @@ DepartmentMember
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1425682800000)/",
-			"workingTimeStart" : "/Date(1424847600000)/",
-			"workingTimeEnd" : "/Date(1424880000000)/",
-			"created" : "/Date(1424796855635)/",
+			"birthdayRemind" : "/Date(1428703200000)/",
+			"workingTimeStart" : "/Date(1427868000000)/",
+			"workingTimeEnd" : "/Date(1427900400000)/",
+			"created" : "/Date(1427815860368)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"

@@ -5,20 +5,24 @@ Relation
 
 	https://api.primaerp.com/v1/relations
 
+	https://api.primaerp.com/v1/time/timerecords/{id}/relations
+
+	https://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations
+
 ## Properties
 
-| Name         | Type      | Access     | Required                                                               | Description                                                                                         |
-|--------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt    | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName  | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id           | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| inboundId    | String    | read write | no                                                                     | Unique id of inbound side object.                                                                   |
-| inboundType  | String    | read write | no                                                                     | Inbound bean type. Lowercase simple class name.                                                     |
-| outboundId   | String    | read write | no                                                                     | Unique id of outbound side object.                                                                  |
-| outboundType | String    | read write | no                                                                     | Outbound bean type. Lowercase simple class name.                                                    |
-| trashItem    | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt    | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version      | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name         | Type      | Access     | Required | Description                                                                                         |
+|--------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt    | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayName  | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| id           | String    | read write | no       | Unique object identifier.                                                                           |
+| inboundId    | String    | read write | no       | Unique id of inbound side object.                                                                   |
+| inboundType  | String    | read write | no       | Inbound bean type. Lowercase simple class name.                                                     |
+| outboundId   | String    | read write | no       | Unique id of outbound side object.                                                                  |
+| outboundType | String    | read write | no       | Outbound bean type. Lowercase simple class name.                                                    |
+| trashItem    | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt    | Date      | read only  | no       | Last modified date.                                                                                 |
+| version      | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -125,14 +129,14 @@ Relation
 
 ```JSON
 {
-	"id" : "e8d1d5fe-0480-4d28-a6b5-968793db54ae",
-	"createdAt" : "/Date(1424883194336)/",
-	"updatedAt" : "/Date(1424908454336)/",
-	"version" : 3,
-	"inboundId" : "4945cbfa-f3be-44c8-9ced-76130546ff0a",
+	"id" : "cf4d6745-dcfb-4dde-b246-edb5fa6ce3bc",
+	"createdAt" : "/Date(1427902261136)/",
+	"updatedAt" : "/Date(1427934661136)/",
+	"version" : 7,
+	"inboundId" : "0551259e-4d55-4a88-abda-3df6f79e9f85",
 	"inboundType" : "user",
-	"outboundId" : "53237194-ecc5-4c5a-ae15-f31498559851",
+	"outboundId" : "ccd21999-2e30-4404-a901-26140950ac73",
 	"outboundType" : "timerecord",
-	"displayName" : "user 4945cbfa-f3be-44c8-9ced-76130546ff0a -> timerecord 53237194-ecc5-4c5a-ae15-f31498559851"
+	"displayName" : "user 0551259e-4d55-4a88-abda-3df6f79e9f85 -> timerecord ccd21999-2e30-4404-a901-26140950ac73"
 }
 ```

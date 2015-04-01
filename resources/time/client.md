@@ -7,34 +7,34 @@ Client
 
 ## Properties
 
-| Name                  | Type           | Access     | Required                                                               | Description                                                                                         |
-|-----------------------|----------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| active                | Boolean        | read write | no                                                                     | Determines whether the client is currently active. Default value is true.                           |
-| additionalAddressInfo | String         | read write | no                                                                     | Any additional information related to the address.                                                  |
-| billsCount            | Long           | read only  | no                                                                     | Counts the number of bills which were issued for the client.                                        |
-| city                  | String         | read write | no                                                                     | Name of the city.                                                                                   |
-| code                  | String         | read write | no                                                                     | A code or an abbreviation of the client.                                                            |
-| countryCode           | String         | read write | no                                                                     | Country code according to ISO 3166-1 alpha-3 standard.                                              |
-| createdAt             | Date           | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName           | String         | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| email                 | String         | read write | no                                                                     | E-mail address of the client.                                                                       |
-| externalBrowsableUrl  | String         | read write | no                                                                     | Human accessible link in external system.                                                           |
-| externalResourceId    | String         | read write | no                                                                     | Unique external system identifier.                                                                  |
-| externalSynced        | Boolean        | write only | no                                                                     | Determines whether an object was synced with the external system.                                   |
-| externalSyncedAt      | Date           | read only  | no                                                                     | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
-| externalSystem        | ExternalSystem | read write | no                                                                     | External system which maintains this object.                                                        |
-| id                    | String         | read write | no                                                                     | Unique object identifier.                                                                           |
-| name                  | String         | read write | no                                                                     | Client name.                                                                                        |
-| phone                 | String         | read write | no                                                                     | Telephone number.                                                                                   |
-| projectsCount         | Long           | read only  | no                                                                     | Counts the number of projects being done for the client.                                            |
-| state                 | String         | read write | no                                                                     | Name of the state or province.                                                                      |
-| streetAddress         | String         | read write | no                                                                     | Street name with the house number.                                                                  |
-| trashItem             | TrashItem      | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt             | Date           | read only  | no                                                                     | Last modified date.                                                                                 |
-| vatId                 | String         | read write | no                                                                     | VAT identification number.                                                                          |
-| version               | Long           | read write | no                                                                     | Object version number.                                                                              |
-| website               | String         | read write | no                                                                     | Website URL.                                                                                        |
-| zipCode               | String         | read write | no                                                                     | ZIP or postal code.                                                                                 |
+| Name                  | Type           | Access     | Required | Description                                                                                         |
+|-----------------------|----------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| active                | Boolean        | read write | no       | Determines whether the client is currently active. Default value is true.                           |
+| additionalAddressInfo | String         | read write | no       | Any additional information related to the address.                                                  |
+| billsCount            | Long           | read only  | no       | Counts the number of bills which were issued for the client.                                        |
+| city                  | String         | read write | no       | Name of the city.                                                                                   |
+| code                  | String         | read write | no       | A code or an abbreviation of the client.                                                            |
+| countryCode           | String         | read write | no       | Country code according to ISO 3166-1 alpha-3 standard.                                              |
+| createdAt             | Date           | read only  | no       | Date of creation.                                                                                   |
+| displayName           | String         | read only  | no       | Describes an object in human readable form.                                                         |
+| email                 | String         | read write | no       | E-mail address of the client.                                                                       |
+| externalBrowsableUrl  | String         | read write | no       | Human accessible link in external system.                                                           |
+| externalResourceId    | String         | read write | no       | Unique external system identifier.                                                                  |
+| externalSynced        | Boolean        | write only | no       | Determines whether an object was synced with the external system.                                   |
+| externalSyncedAt      | Date           | read only  | no       | Date of the last sync with the external system. It is set when the 'externalSynced' flag is true.   |
+| externalSystem        | ExternalSystem | read write | no       | External system which maintains this object.                                                        |
+| id                    | String         | read write | no       | Unique object identifier.                                                                           |
+| name                  | String         | read write | no       | Client name.                                                                                        |
+| phone                 | String         | read write | no       | Telephone number.                                                                                   |
+| projectsCount         | Long           | read only  | no       | Counts the number of projects being done for the client.                                            |
+| state                 | String         | read write | no       | Name of the state or province.                                                                      |
+| streetAddress         | String         | read write | no       | Street name with the house number.                                                                  |
+| trashItem             | TrashItem      | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt             | Date           | read only  | no       | Last modified date.                                                                                 |
+| vatId                 | String         | read write | no       | VAT identification number.                                                                          |
+| version               | Long           | read write | no       | Object version number.                                                                              |
+| website               | String         | read write | no       | Website URL.                                                                                        |
+| zipCode               | String         | read write | no       | ZIP or postal code.                                                                                 |
 
 ## Metadata
 
@@ -251,22 +251,22 @@ Client
 
 ```JSON
 {
-	"id" : "dc0a6c90-db38-4d68-8565-4eefb9da5258",
-	"createdAt" : "/Date(1424881273955)/",
-	"updatedAt" : "/Date(1424958853955)/",
-	"version" : 7,
+	"id" : "7a6e39cd-bccc-41f2-a85e-f31b29258d89",
+	"createdAt" : "/Date(1427900340210)/",
+	"updatedAt" : "/Date(1427913060210)/",
+	"version" : 9,
 	"externalSystem" : {
-		"id" : "c0a732b8-0e51-408d-be05-5f5ed0b00bcd",
-		"createdAt" : "/Date(1424881393955)/",
-		"updatedAt" : "/Date(1424948053955)/",
-		"version" : 1,
+		"id" : "32d29cf1-47e4-4856-9e24-8887844ba421",
+		"createdAt" : "/Date(1427902080211)/",
+		"updatedAt" : "/Date(1427920260211)/",
+		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1424883253955)/",
+	"externalSyncedAt" : "/Date(1427902260210)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",

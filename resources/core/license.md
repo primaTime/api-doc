@@ -7,24 +7,24 @@ License
 
 ## Properties
 
-| Name          | Type        | Access     | Required                                                               | Description                                                                                         |
-|---------------|-------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| account       | Account     | read write | no                                                                     | Provides info about the account for which the license was created.                                  |
-| createdAt     | Date        | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName   | String      | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id            | String      | read write | no                                                                     | Unique object identifier.                                                                           |
-| licenseNumber | String      | read write | no                                                                     | The license number.                                                                                 |
-| ownerName     | String      | read write | no                                                                     | The names of the licensed owner.                                                                    |
-| product       | Product     | read write | no                                                                     | The product which is licensed.                                                                      |
-| promoCode     | String      | read write | no                                                                     | Used promo code.                                                                                    |
-| purchaseInfo  | String      | read write | no                                                                     | The purchase informations.                                                                          |
-| trashItem     | TrashItem   | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| type          | LicenseType | read write | no                                                                     | Type of license.                                                                                    |
-| updatedAt     | Date        | read only  | no                                                                     | Last modified date.                                                                                 |
-| usersCount    | Integer     | read write | no                                                                     | The number of users for which the license is valid.                                                 |
-| validFrom     | Date        | read write | no                                                                     | The license is valid from this date.                                                                |
-| validTo       | Date        | read write | no                                                                     | The License is valid until this date.                                                               |
-| version       | Long        | read write | no                                                                     | Object version number.                                                                              |
+| Name          | Type        | Access     | Required | Description                                                                                         |
+|---------------|-------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| account       | Account     | read write | no       | Provides info about the account for which the license was created.                                  |
+| createdAt     | Date        | read only  | no       | Date of creation.                                                                                   |
+| displayName   | String      | read only  | no       | Describes an object in human readable form.                                                         |
+| id            | String      | read write | no       | Unique object identifier.                                                                           |
+| licenseNumber | String      | read write | no       | The license number.                                                                                 |
+| ownerName     | String      | read write | no       | The names of the licensed owner.                                                                    |
+| product       | Product     | read write | no       | The product which is licensed.                                                                      |
+| promoCode     | String      | read write | no       | Used promo code.                                                                                    |
+| purchaseInfo  | String      | read write | no       | The purchase informations.                                                                          |
+| trashItem     | TrashItem   | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| type          | LicenseType | read write | no       | Type of license.                                                                                    |
+| updatedAt     | Date        | read only  | no       | Last modified date.                                                                                 |
+| usersCount    | Integer     | read write | no       | The number of users for which the license is valid.                                                 |
+| validFrom     | Date        | read write | no       | The license is valid from this date.                                                                |
+| validTo       | Date        | read write | no       | The License is valid until this date.                                                               |
+| version       | Long        | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -168,20 +168,20 @@ License
 
 ```JSON
 {
-	"id" : "dff57a82-770f-4926-90f1-85a1a1dda009",
-	"createdAt" : "/Date(1424881993174)/",
-	"updatedAt" : "/Date(1424904853174)/",
-	"version" : 1,
+	"id" : "933855bd-baeb-457a-92e9-d8c719fab6ba",
+	"createdAt" : "/Date(1427898780101)/",
+	"updatedAt" : "/Date(1427902260101)/",
+	"version" : 8,
 	"account" : {
-		"id" : "c0d4c6a3-9ff5-4367-af98-2c927eae210e",
-		"createdAt" : "/Date(1424882653174)/",
-		"updatedAt" : "/Date(1424940853174)/",
-		"version" : 1,
+		"id" : "4124ece4-c6ee-457a-b451-a0096cad89a7",
+		"createdAt" : "/Date(1427901900101)/",
+		"updatedAt" : "/Date(1427916660101)/",
+		"version" : 3,
 		"owner" : {
-			"id" : "a244a7ba-b147-40a3-ae5f-300aa88bf857",
-			"createdAt" : "/Date(1424881573174)/",
-			"updatedAt" : "/Date(1424904853174)/",
-			"version" : 6,
+			"id" : "0bb32cb4-4273-48e3-9bbd-43488b1b7949",
+			"createdAt" : "/Date(1427901360101)/",
+			"updatedAt" : "/Date(1427967060101)/",
+			"version" : 0,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -198,10 +198,10 @@ License
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1425682800000)/",
-			"workingTimeStart" : "/Date(1424847600000)/",
-			"workingTimeEnd" : "/Date(1424880000000)/",
-			"created" : "/Date(1424796853174)/",
+			"birthdayRemind" : "/Date(1428703200000)/",
+			"workingTimeStart" : "/Date(1427868000000)/",
+			"workingTimeEnd" : "/Date(1427900400000)/",
+			"created" : "/Date(1427815860101)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -225,24 +225,24 @@ License
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1424847600000)/",
-		"workingTimeEnd" : "/Date(1424880000000)/",
-		"created" : "/Date(1424796853174)/",
+		"workingTimeStart" : "/Date(1427868000000)/",
+		"workingTimeEnd" : "/Date(1427900400000)/",
+		"created" : "/Date(1427815860101)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1424883253174)/",
-		"affiliateId" : "976b61e2-497d-473c-b981-f92f5a13889b",
+		"deactivationRequestedAt" : "/Date(1427902260101)/",
+		"affiliateId" : "c131a7df-53e6-4d5f-9f57-268dafaaa420",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
-	"licenseNumber" : "456932b7-3b23-47d1-a568-2c6e75ee74c5",
+	"licenseNumber" : "df112047-cf7b-4b62-850f-1dd3c2095b53",
 	"usersCount" : 5,
-	"validFrom" : "/Date(1424646000000)/",
-	"validTo" : "/Date(1427065200000)/",
+	"validFrom" : "/Date(1427666400000)/",
+	"validTo" : "/Date(1430344800000)/",
 	"ownerName" : "Example Ltd.",
 	"product" : "TIME",
 	"type" : "BUY",
 	"purchaseInfo" : "{\"purchase_id\":\"1154795\"}",
 	"promoCode" : "PROMO",
-	"displayName" : "456932b7-3b23-47d1-a568-2c6e75ee74c5"
+	"displayName" : "df112047-cf7b-4b62-850f-1dd3c2095b53"
 }
 ```

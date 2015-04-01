@@ -7,16 +7,16 @@ ExternalSystem
 
 ## Properties
 
-| Name              | Type      | Access     | Required                                                               | Description                                                                                         |
-|-------------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt         | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName       | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| id                | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| integrationPlugin | String    | read write | no                                                                     | The name of the third-party system integrated into primaERP.                                        |
-| name              | String    | read write | no                                                                     | The name of the external system                                                                     |
-| trashItem         | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt         | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version           | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name              | Type      | Access     | Required | Description                                                                                         |
+|-------------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt         | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayName       | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| id                | String    | read write | no       | Unique object identifier.                                                                           |
+| integrationPlugin | String    | read write | no       | The name of the third-party system integrated into primaERP.                                        |
+| name              | String    | read write | no       | The name of the external system                                                                     |
+| trashItem         | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt         | Date      | read only  | no       | Last modified date.                                                                                 |
+| version           | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -99,10 +99,10 @@ ExternalSystem
 
 ```JSON
 {
-	"id" : "16751f96-1aff-4b92-9ba9-7ae846e7ba4c",
-	"createdAt" : "/Date(1424882354758)/",
-	"updatedAt" : "/Date(1424912054758)/",
-	"version" : 1,
+	"id" : "e77e0f16-11b5-4c43-a848-58c3afcd9c82",
+	"createdAt" : "/Date(1427901600336)/",
+	"updatedAt" : "/Date(1427985060336)/",
+	"version" : 6,
 	"name" : "My BaseCamp account",
 	"integrationPlugin" : "basecamp",
 	"displayName" : "My BaseCamp account"

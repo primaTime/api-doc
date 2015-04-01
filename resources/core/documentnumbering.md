@@ -7,17 +7,17 @@ DocumentNumbering
 
 ## Properties
 
-| Name            | Type         | Access     | Required                                                               | Description                                                                                         |
-|-----------------|--------------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| autoNumbering   | Boolean      | read write | no                                                                     | Determines whether the document number will be generated automatically.                             |
-| createdAt       | Date         | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName     | String       | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| docType         | DocumentType | read write | YES                                                                    | Document type.                                                                                      |
-| id              | String       | read write | no                                                                     | Unique object identifier.                                                                           |
-| numberingScheme | String       | read write | no                                                                     | A mask for the document number.                                                                     |
-| trashItem       | TrashItem    | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt       | Date         | read only  | no                                                                     | Last modified date.                                                                                 |
-| version         | Long         | read write | no                                                                     | Object version number.                                                                              |
+| Name            | Type         | Access     | Required | Description                                                                                         |
+|-----------------|--------------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| autoNumbering   | Boolean      | read write | no       | Determines whether the document number will be generated automatically.                             |
+| createdAt       | Date         | read only  | no       | Date of creation.                                                                                   |
+| displayName     | String       | read only  | no       | Describes an object in human readable form.                                                         |
+| docType         | DocumentType | read write | YES      | Document type.                                                                                      |
+| id              | String       | read write | no       | Unique object identifier.                                                                           |
+| numberingScheme | String       | read write | no       | A mask for the document number.                                                                     |
+| trashItem       | TrashItem    | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt       | Date         | read only  | no       | Last modified date.                                                                                 |
+| version         | Long         | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -115,10 +115,10 @@ DocumentNumbering
 
 ```JSON
 {
-	"id" : "493408c1-5cc9-416a-9c14-368fde85bac7",
-	"createdAt" : "/Date(1424883195474)/",
-	"updatedAt" : "/Date(1424958855474)/",
-	"version" : 1,
+	"id" : "e05cb359-43fb-4e2b-90af-40817c5d6188",
+	"createdAt" : "/Date(1427901241021)/",
+	"updatedAt" : "/Date(1427959861021)/",
+	"version" : 6,
 	"docType" : "BILL",
 	"numberingScheme" : "BIL-{number}/{year}",
 	"autoNumbering" : true,

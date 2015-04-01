@@ -7,17 +7,17 @@ Feature
 
 ## Properties
 
-| Name        | Type      | Access     | Required                                                               | Description                                                                                         |
-|-------------|-----------|------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| createdAt   | Date      | read only  | no                                                                     | Date of creation.                                                                                   |
-| displayName | String    | read only  | no                                                                     | Describes an object in human readable form.                                                         |
-| enabled     | Boolean   | read write | no                                                                     | Determines whether the feature is enabled.                                                          |
-| featureId   | String    | read write | YES                                                                    | Unique feature id.                                                                                  |
-| id          | String    | read write | no                                                                     | Unique object identifier.                                                                           |
-| product     | Product   | read write | no                                                                     | The feature is applied to this product.                                                             |
-| trashItem   | TrashItem | read write | no                                                                     | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
-| updatedAt   | Date      | read only  | no                                                                     | Last modified date.                                                                                 |
-| version     | Long      | read write | no                                                                     | Object version number.                                                                              |
+| Name        | Type      | Access     | Required | Description                                                                                         |
+|-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
+| createdAt   | Date      | read only  | no       | Date of creation.                                                                                   |
+| displayName | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| enabled     | Boolean   | read write | no       | Determines whether the feature is enabled.                                                          |
+| featureId   | String    | read write | YES      | Unique feature id.                                                                                  |
+| id          | String    | read write | no       | Unique object identifier.                                                                           |
+| product     | Product   | read write | no       | The feature is applied to this product.                                                             |
+| trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| updatedAt   | Date      | read only  | no       | Last modified date.                                                                                 |
+| version     | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
@@ -117,10 +117,10 @@ Feature
 
 ```JSON
 {
-	"id" : "704fd49e-da7f-4636-9b0e-6b7ae53675fa",
-	"createdAt" : "/Date(1424882775364)/",
-	"updatedAt" : "/Date(1424901255364)/",
-	"version" : 8,
+	"id" : "15f9f9fb-e1a4-4d4c-ae32-6775a769b5b1",
+	"createdAt" : "/Date(1427898721422)/",
+	"updatedAt" : "/Date(1427913061422)/",
+	"version" : 5,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,

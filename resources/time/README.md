@@ -3,6 +3,7 @@
 | [Client](client.md)                                | `https://api.primaerp.com/v1/time/clients`                     |
 | [ContactPerson](contactperson.md)                  | `https://api.primaerp.com/v1/time/clients/{id}/contacts`       |
 | [Impulse](impulse.md)                              | `https://api.primaerp.com/v1/time/impulses`                    |
+| [Lock](lock.md)                                    | `https://api.primaerp.com/v1/time/locks`                       |
 | [Project](project.md)                              | `https://api.primaerp.com/v1/time/projects`                    |
 | [ProjectMember](projectmember.md)                  | `https://api.primaerp.com/v1/time/projects/{id}/members`       |
 | [ProjectWorkTypeLink](projectworktypelink.md)      | `https://api.primaerp.com/v1/time/projects/{id}/worktypelinks` |
