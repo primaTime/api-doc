@@ -5,9 +5,17 @@ Relation
 
 	https://api.primaerp.com/v1/relations
 
+	https://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations
+
+	https://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations/@inbound
+
+	https://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations/@outbound
+
 	https://api.primaerp.com/v1/time/timerecords/{id}/relations
 
-	https://api.primaerp.com/v1/billing/bills/{billId}/items/{id}/relations
+	https://api.primaerp.com/v1/time/timerecords/{id}/relations/@inbound
+
+	https://api.primaerp.com/v1/time/timerecords/{id}/relations/@outbound
 
 ## Properties
 
@@ -129,14 +137,14 @@ Relation
 
 ```JSON
 {
-	"id" : "cf4d6745-dcfb-4dde-b246-edb5fa6ce3bc",
-	"createdAt" : "/Date(1427902261136)/",
-	"updatedAt" : "/Date(1427934661136)/",
-	"version" : 7,
-	"inboundId" : "0551259e-4d55-4a88-abda-3df6f79e9f85",
+	"id" : "ba304405-c04e-419e-bb7d-49806e66abb6",
+	"createdAt" : "/Date(1430140974950)/",
+	"updatedAt" : "/Date(1430157114950)/",
+	"version" : 0,
+	"inboundId" : "72aa6345-f7b9-436d-9697-2b96021171cd",
 	"inboundType" : "user",
-	"outboundId" : "ccd21999-2e30-4404-a901-26140950ac73",
+	"outboundId" : "140a9573-d789-4256-9c7f-e73aac32d149",
 	"outboundType" : "timerecord",
-	"displayName" : "user 0551259e-4d55-4a88-abda-3df6f79e9f85 -> timerecord ccd21999-2e30-4404-a901-26140950ac73"
+	"displayName" : "user 72aa6345-f7b9-436d-9697-2b96021171cd -> timerecord 140a9573-d789-4256-9c7f-e73aac32d149"
 }
 ```

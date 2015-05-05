@@ -5,7 +5,19 @@ Access
 
 	https://api.primaerp.com/v1/accesses
 
+	https://api.primaerp.com/v1/accesses/product/{product}/$free
+
+	https://api.primaerp.com/v1/accesses/@exceeded
+
+	https://api.primaerp.com/v1/accesses/products/$allowed
+
 	https://api.primaerp.com/v1/users/{id}/accesses
+
+	https://api.primaerp.com/v1/users/{id}/accesses/product/{product}/$free
+
+	https://api.primaerp.com/v1/users/{id}/accesses/@exceeded
+
+	https://api.primaerp.com/v1/users/{id}/accesses/products/$allowed
 
 ## Properties
 
@@ -128,15 +140,15 @@ Access
 
 ```JSON
 {
-	"id" : "b7859824-0871-41fe-beac-0ee9c23f26f1",
-	"createdAt" : "/Date(1427900101101)/",
-	"updatedAt" : "/Date(1427927461101)/",
-	"version" : 4,
+	"id" : "144c77b8-fa96-4245-9167-899932c75ee3",
+	"createdAt" : "/Date(1430139834689)/",
+	"updatedAt" : "/Date(1430175114689)/",
+	"version" : 1,
 	"user" : {
-		"id" : "472c35b8-d8f1-4668-9224-7dcf426e6877",
-		"createdAt" : "/Date(1427898961101)/",
-		"updatedAt" : "/Date(1427931061101)/",
-		"version" : 1,
+		"id" : "9fa23d40-65a6-48fc-8ed2-00124811282b",
+		"createdAt" : "/Date(1430140614689)/",
+		"updatedAt" : "/Date(1430167914689)/",
+		"version" : 4,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -153,16 +165,16 @@ Access
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1428703200000)/",
-		"workingTimeStart" : "/Date(1427868000000)/",
-		"workingTimeEnd" : "/Date(1427900400000)/",
-		"created" : "/Date(1427815861101)/",
+		"birthdayRemind" : "/Date(1430949600000)/",
+		"workingTimeStart" : "/Date(1430114400000)/",
+		"workingTimeEnd" : "/Date(1430146800000)/",
+		"created" : "/Date(1430056314689)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"product" : "TIME",
-	"created" : "/Date(1427902261101)/",
+	"created" : "/Date(1430142714689)/",
 	"displayName" : "TIME"
 }
 ```

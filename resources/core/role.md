@@ -5,6 +5,10 @@ Role
 
 	https://api.primaerp.com/v1/roles
 
+	https://api.primaerp.com/v1/roles/{id}/users
+
+	https://api.primaerp.com/v1/roles/{id}/competencies
+
 ## Properties
 
 | Name        | Type        | Access     | Required | Description                                                                                         |
@@ -131,10 +135,10 @@ Role
 
 ```JSON
 {
-	"id" : "a6a54568-2545-4779-815a-2e99f95dd447",
-	"createdAt" : "/Date(1427899799953)/",
-	"updatedAt" : "/Date(1427977859953)/",
-	"version" : 5,
+	"id" : "ded31e7e-8539-40a9-bb64-407b41657341",
+	"createdAt" : "/Date(1430139892869)/",
+	"updatedAt" : "/Date(1430185912869)/",
+	"version" : 6,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",

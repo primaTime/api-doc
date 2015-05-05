@@ -5,15 +5,63 @@ TimeRecord
 
 	https://api.primaerp.com/v1/time/timerecords
 
-	https://api.primaerp.com/v1/time/tags/{id}/timerecords
+	https://api.primaerp.com/v1/time/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/timerecords/{id}/$updateprice
 
 	https://api.primaerp.com/v1/time/tasks/{id}/timerecords
 
+	https://api.primaerp.com/v1/time/tasks/{id}/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/tasks/{id}/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/tasks/{id}/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/tasks/{id}/timerecords/{id}/$updateprice
+
+	https://api.primaerp.com/v1/time/tags/{id}/timerecords
+
+	https://api.primaerp.com/v1/time/tags/{id}/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/tags/{id}/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/tags/{id}/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/tags/{id}/timerecords/{id}/$updateprice
+
 	https://api.primaerp.com/v1/time/projects/{id}/timerecords
+
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/{id}/$updateprice
 
 	https://api.primaerp.com/v1/time/users/{id}/timerecords
 
+	https://api.primaerp.com/v1/time/users/{id}/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/users/{id}/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/users/{id}/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/users/{id}/timerecords/{id}/$updateprice
+
 	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords
+
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$calculateprice
+
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilled
+
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilledsummary
+
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/{id}/$updateprice
 
 ## Properties
 
@@ -285,28 +333,28 @@ TimeRecord
 
 ```JSON
 {
-	"id" : "b55700c4-716c-47b1-a93b-608d3b3eb86d",
-	"createdAt" : "/Date(1427901239648)/",
-	"updatedAt" : "/Date(1427931059648)/",
-	"version" : 4,
+	"id" : "b65b2430-3f89-4ef8-879b-71e174c48727",
+	"createdAt" : "/Date(1430139234182)/",
+	"updatedAt" : "/Date(1430189514182)/",
+	"version" : 6,
 	"externalSystem" : {
-		"id" : "c057845f-b62e-4eee-9b4c-37a2bdd916be",
-		"createdAt" : "/Date(1427898899650)/",
-		"updatedAt" : "/Date(1427974259650)/",
-		"version" : 8,
+		"id" : "f1a0aa8b-8dfe-443a-b67b-dcd385d9a754",
+		"createdAt" : "/Date(1430142174185)/",
+		"updatedAt" : "/Date(1430178714185)/",
+		"version" : 9,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "time-55567",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334/time/55567",
-	"externalSyncedAt" : "/Date(1427902259648)/",
+	"externalSyncedAt" : "/Date(1430142714182)/",
 	"externalSynced" : true,
 	"user" : {
-		"id" : "3a2f7609-c0e2-41b4-9347-4465ef742497",
-		"createdAt" : "/Date(1427900639650)/",
-		"updatedAt" : "/Date(1427909459650)/",
-		"version" : 7,
+		"id" : "ae45f68a-5ae4-45a0-95b6-d38e7da8746f",
+		"createdAt" : "/Date(1430141634183)/",
+		"updatedAt" : "/Date(1430196714183)/",
+		"version" : 2,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -323,45 +371,45 @@ TimeRecord
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1428703200000)/",
-		"workingTimeStart" : "/Date(1427868000000)/",
-		"workingTimeEnd" : "/Date(1427900400000)/",
-		"created" : "/Date(1427815859648)/",
+		"birthdayRemind" : "/Date(1430949600000)/",
+		"workingTimeStart" : "/Date(1430114400000)/",
+		"workingTimeEnd" : "/Date(1430146800000)/",
+		"created" : "/Date(1430056314182)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
 	"project" : {
-		"id" : "e5c0fb49-d0cd-442e-88fa-0d546fb2e075",
-		"createdAt" : "/Date(1427900639649)/",
-		"updatedAt" : "/Date(1427981459649)/",
-		"version" : 8,
+		"id" : "d7a46409-1e26-4be0-90b7-cd2a7646b5ff",
+		"createdAt" : "/Date(1430140614183)/",
+		"updatedAt" : "/Date(1430167914183)/",
+		"version" : 3,
 		"externalSystem" : {
-			"id" : "39ee5af9-835c-4830-99de-563c142d0c52",
-			"createdAt" : "/Date(1427902019650)/",
-			"updatedAt" : "/Date(1427941859650)/",
-			"version" : 3,
+			"id" : "349fdfe0-7ead-4281-9f7b-8a3d38d986c5",
+			"createdAt" : "/Date(1430139474185)/",
+			"updatedAt" : "/Date(1430211114185)/",
+			"version" : 1,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "project-221",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-		"externalSyncedAt" : "/Date(1427902259648)/",
+		"externalSyncedAt" : "/Date(1430142714182)/",
 		"externalSynced" : true,
 		"name" : "Content management system",
 		"code" : "CMS",
 		"note" : "core feature",
-		"begins" : "/Date(1427815859648)/",
-		"ends" : "/Date(1427988659648)/",
+		"begins" : "/Date(1430056314182)/",
+		"ends" : "/Date(1430229114182)/",
 		"timeBudget" : 604800000,
 		"priceBudget" : 100000.0,
 		"personal" : true,
 		"owner" : {
-			"id" : "6c075d05-126b-4694-9e9d-084f2979e92a",
-			"createdAt" : "/Date(1427901479650)/",
-			"updatedAt" : "/Date(1427963459650)/",
-			"version" : 4,
+			"id" : "3bd2e578-6bb2-446e-98ea-43fe8044b1a6",
+			"createdAt" : "/Date(1430139714185)/",
+			"updatedAt" : "/Date(1430142714185)/",
+			"version" : 8,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
@@ -378,31 +426,31 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1429740000000)/",
-			"workingTimeStart" : "/Date(1427868000000)/",
-			"workingTimeEnd" : "/Date(1427900400000)/",
-			"created" : "/Date(1427815859648)/",
+			"birthdayRemind" : "/Date(1431986400000)/",
+			"workingTimeStart" : "/Date(1430114400000)/",
+			"workingTimeEnd" : "/Date(1430146800000)/",
+			"created" : "/Date(1430056314182)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"client" : {
-			"id" : "56bad883-7253-44d8-a616-ff3f227a67a1",
-			"createdAt" : "/Date(1427899319649)/",
-			"updatedAt" : "/Date(1427916659649)/",
-			"version" : 9,
+			"id" : "49571314-8277-4bc1-a9c2-54396b1b9129",
+			"createdAt" : "/Date(1430141334183)/",
+			"updatedAt" : "/Date(1430175114183)/",
+			"version" : 0,
 			"externalSystem" : {
-				"id" : "3cd45abf-104f-4b90-8643-9698d900916d",
-				"createdAt" : "/Date(1427901059649)/",
-				"updatedAt" : "/Date(1427956259649)/",
-				"version" : 6,
+				"id" : "df664a5b-43d0-4b1e-b90c-498f3e52ff52",
+				"createdAt" : "/Date(1430140674183)/",
+				"updatedAt" : "/Date(1430178714184)/",
+				"version" : 1,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1427902259648)/",
+			"externalSyncedAt" : "/Date(1430142714182)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -428,54 +476,54 @@ TimeRecord
 		"displayName" : "Content management system"
 	},
 	"task" : {
-		"id" : "a32c994d-d4ad-4201-b123-2e1e87484f6a",
-		"createdAt" : "/Date(1427899739649)/",
-		"updatedAt" : "/Date(1427909459649)/",
-		"version" : 1,
+		"id" : "48ecf46e-4a47-4c11-bf16-ea291bf3405e",
+		"createdAt" : "/Date(1430139834183)/",
+		"updatedAt" : "/Date(1430153514183)/",
+		"version" : 7,
 		"externalSystem" : {
-			"id" : "b32b6523-347d-4c34-ab8d-814fee7c809d",
-			"createdAt" : "/Date(1427899799650)/",
-			"updatedAt" : "/Date(1427909459650)/",
-			"version" : 7,
+			"id" : "6e2c2d9a-34ac-4b90-9420-cb32192629d1",
+			"createdAt" : "/Date(1430141274185)/",
+			"updatedAt" : "/Date(1430203914185)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "task-334",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334",
-		"externalSyncedAt" : "/Date(1427902259648)/",
+		"externalSyncedAt" : "/Date(1430142714182)/",
 		"externalSynced" : true,
 		"project" : {
-			"id" : "e5c0fb49-d0cd-442e-88fa-0d546fb2e075",
-			"createdAt" : "/Date(1427900639649)/",
-			"updatedAt" : "/Date(1427981459649)/",
-			"version" : 8,
+			"id" : "d7a46409-1e26-4be0-90b7-cd2a7646b5ff",
+			"createdAt" : "/Date(1430140614183)/",
+			"updatedAt" : "/Date(1430167914183)/",
+			"version" : 3,
 			"externalSystem" : {
-				"id" : "39ee5af9-835c-4830-99de-563c142d0c52",
-				"createdAt" : "/Date(1427902019650)/",
-				"updatedAt" : "/Date(1427941859650)/",
-				"version" : 3,
+				"id" : "349fdfe0-7ead-4281-9f7b-8a3d38d986c5",
+				"createdAt" : "/Date(1430139474185)/",
+				"updatedAt" : "/Date(1430211114185)/",
+				"version" : 1,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "project-221",
 			"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-			"externalSyncedAt" : "/Date(1427902259648)/",
+			"externalSyncedAt" : "/Date(1430142714182)/",
 			"externalSynced" : true,
 			"name" : "Content management system",
 			"code" : "CMS",
 			"note" : "core feature",
-			"begins" : "/Date(1427815859648)/",
-			"ends" : "/Date(1427988659648)/",
+			"begins" : "/Date(1430056314182)/",
+			"ends" : "/Date(1430229114182)/",
 			"timeBudget" : 604800000,
 			"priceBudget" : 100000.0,
 			"personal" : true,
 			"owner" : {
-				"id" : "6c075d05-126b-4694-9e9d-084f2979e92a",
-				"createdAt" : "/Date(1427901479650)/",
-				"updatedAt" : "/Date(1427963459650)/",
-				"version" : 4,
+				"id" : "3bd2e578-6bb2-446e-98ea-43fe8044b1a6",
+				"createdAt" : "/Date(1430139714185)/",
+				"updatedAt" : "/Date(1430142714185)/",
+				"version" : 8,
 				"firstName" : "John",
 				"lastName" : "Doe",
 				"nickName" : "Johny D.",
@@ -492,31 +540,31 @@ TimeRecord
 				"confirmed" : false,
 				"confirmedEmail" : false,
 				"active" : false,
-				"birthdayRemind" : "/Date(1429740000000)/",
-				"workingTimeStart" : "/Date(1427868000000)/",
-				"workingTimeEnd" : "/Date(1427900400000)/",
-				"created" : "/Date(1427815859648)/",
+				"birthdayRemind" : "/Date(1431986400000)/",
+				"workingTimeStart" : "/Date(1430114400000)/",
+				"workingTimeEnd" : "/Date(1430146800000)/",
+				"created" : "/Date(1430056314182)/",
 				"admin" : false,
 				"projectManager" : false,
 				"displayName" : "Doe John"
 			},
 			"client" : {
-				"id" : "56bad883-7253-44d8-a616-ff3f227a67a1",
-				"createdAt" : "/Date(1427899319649)/",
-				"updatedAt" : "/Date(1427916659649)/",
-				"version" : 9,
+				"id" : "49571314-8277-4bc1-a9c2-54396b1b9129",
+				"createdAt" : "/Date(1430141334183)/",
+				"updatedAt" : "/Date(1430175114183)/",
+				"version" : 0,
 				"externalSystem" : {
-					"id" : "3cd45abf-104f-4b90-8643-9698d900916d",
-					"createdAt" : "/Date(1427901059649)/",
-					"updatedAt" : "/Date(1427956259649)/",
-					"version" : 6,
+					"id" : "df664a5b-43d0-4b1e-b90c-498f3e52ff52",
+					"createdAt" : "/Date(1430140674183)/",
+					"updatedAt" : "/Date(1430178714184)/",
+					"version" : 1,
 					"name" : "Vendor system",
 					"integrationPlugin" : "vendor",
 					"displayName" : "Vendor system"
 				},
 				"externalResourceId" : "customer-996",
 				"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-				"externalSyncedAt" : "/Date(1427902259648)/",
+				"externalSyncedAt" : "/Date(1430142714182)/",
 				"externalSynced" : true,
 				"name" : "Example Ltd.",
 				"code" : "EXL",
@@ -546,10 +594,10 @@ TimeRecord
 		"note" : "form with validation",
 		"done" : false,
 		"author" : {
-			"id" : "6c075d05-126b-4694-9e9d-084f2979e92a",
-			"createdAt" : "/Date(1427901479650)/",
-			"updatedAt" : "/Date(1427963459650)/",
-			"version" : 4,
+			"id" : "3bd2e578-6bb2-446e-98ea-43fe8044b1a6",
+			"createdAt" : "/Date(1430139714185)/",
+			"updatedAt" : "/Date(1430142714185)/",
+			"version" : 8,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
@@ -566,19 +614,19 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1429740000000)/",
-			"workingTimeStart" : "/Date(1427868000000)/",
-			"workingTimeEnd" : "/Date(1427900400000)/",
-			"created" : "/Date(1427815859648)/",
+			"birthdayRemind" : "/Date(1431986400000)/",
+			"workingTimeStart" : "/Date(1430114400000)/",
+			"workingTimeEnd" : "/Date(1430146800000)/",
+			"created" : "/Date(1430056314182)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"owner" : {
-			"id" : "3a2f7609-c0e2-41b4-9347-4465ef742497",
-			"createdAt" : "/Date(1427900639650)/",
-			"updatedAt" : "/Date(1427909459650)/",
-			"version" : 7,
+			"id" : "ae45f68a-5ae4-45a0-95b6-d38e7da8746f",
+			"createdAt" : "/Date(1430141634183)/",
+			"updatedAt" : "/Date(1430196714183)/",
+			"version" : 2,
 			"firstName" : "John",
 			"lastName" : "Smith",
 			"nickName" : "Smith, J.",
@@ -595,10 +643,10 @@ TimeRecord
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1428703200000)/",
-			"workingTimeStart" : "/Date(1427868000000)/",
-			"workingTimeEnd" : "/Date(1427900400000)/",
-			"created" : "/Date(1427815859648)/",
+			"birthdayRemind" : "/Date(1430949600000)/",
+			"workingTimeStart" : "/Date(1430114400000)/",
+			"workingTimeEnd" : "/Date(1430146800000)/",
+			"created" : "/Date(1430056314182)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Smith John"
@@ -608,22 +656,22 @@ TimeRecord
 		"displayName" : "Article editation"
 	},
 	"workType" : {
-		"id" : "c23c3f1b-427b-4abf-bc80-efd9cff10601",
-		"createdAt" : "/Date(1427901839650)/",
-		"updatedAt" : "/Date(1427916659650)/",
-		"version" : 7,
+		"id" : "f74704b2-a825-4d78-a4dd-89c008f55495",
+		"createdAt" : "/Date(1430142354185)/",
+		"updatedAt" : "/Date(1430175114185)/",
+		"version" : 2,
 		"externalSystem" : {
-			"id" : "f6d81295-e656-4e9c-80d4-816a8240f126",
-			"createdAt" : "/Date(1427900759650)/",
-			"updatedAt" : "/Date(1427934659650)/",
-			"version" : 3,
+			"id" : "de989676-6c47-4a66-88ea-be23f6c716fb",
+			"createdAt" : "/Date(1430140794185)/",
+			"updatedAt" : "/Date(1430200314185)/",
+			"version" : 6,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "wt-058",
 		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1427902259648)/",
+		"externalSyncedAt" : "/Date(1430142714182)/",
 		"externalSynced" : true,
 		"name" : "Software development",
 		"code" : "SW",
@@ -631,22 +679,22 @@ TimeRecord
 		"displayName" : "Software development"
 	},
 	"client" : {
-		"id" : "56bad883-7253-44d8-a616-ff3f227a67a1",
-		"createdAt" : "/Date(1427899319649)/",
-		"updatedAt" : "/Date(1427916659649)/",
-		"version" : 9,
+		"id" : "49571314-8277-4bc1-a9c2-54396b1b9129",
+		"createdAt" : "/Date(1430141334183)/",
+		"updatedAt" : "/Date(1430175114183)/",
+		"version" : 0,
 		"externalSystem" : {
-			"id" : "3cd45abf-104f-4b90-8643-9698d900916d",
-			"createdAt" : "/Date(1427901059649)/",
-			"updatedAt" : "/Date(1427956259649)/",
-			"version" : 6,
+			"id" : "df664a5b-43d0-4b1e-b90c-498f3e52ff52",
+			"createdAt" : "/Date(1430140674183)/",
+			"updatedAt" : "/Date(1430178714184)/",
+			"version" : 1,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1427902259648)/",
+		"externalSyncedAt" : "/Date(1430142714182)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -664,8 +712,8 @@ TimeRecord
 		"website" : "http://www.example.com/",
 		"displayName" : "Example Ltd."
 	},
-	"start" : "/Date(1427815859648)/",
-	"stop" : "/Date(1427837459648)/",
+	"start" : "/Date(1430056314182)/",
+	"stop" : "/Date(1430077914182)/",
 	"duration" : 21600000,
 	"description" : "Form validations and CRUD.",
 	"billable" : true,

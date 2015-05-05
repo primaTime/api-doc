@@ -116,10 +116,10 @@ TrashItem
 
 ```JSON
 {
-	"id" : "7561ddba-90b4-45ce-8f36-ff34730a232f",
-	"createdAt" : "/Date(1427901900305)/",
-	"updatedAt" : "/Date(1427927460305)/",
-	"version" : 4,
+	"id" : "545476a8-2e45-4092-b54f-f997546f62bd",
+	"createdAt" : "/Date(1430142054392)/",
+	"updatedAt" : "/Date(1430142714392)/",
+	"version" : 9,
 	"deletedObjectClass" : "eu.abra.primaerp.api.beans.core.User",
 	"deletedObjectId" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"groupId" : "ffaf67e7-051d-4a58-a71a-8e39353a93b4",

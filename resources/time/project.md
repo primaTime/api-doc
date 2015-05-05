@@ -5,9 +5,45 @@ Project
 
 	https://api.primaerp.com/v1/time/projects
 
+	https://api.primaerp.com/v1/time/projects/{id}/$activate
+
+	https://api.primaerp.com/v1/time/projects/@member
+
+	https://api.primaerp.com/v1/time/projects/@own
+
+	https://api.primaerp.com/v1/time/projects/{id}/$deactivate
+
+	https://api.primaerp.com/v1/time/projects/@trackable
+
+	https://api.primaerp.com/v1/time/projects/@editable
+
 	https://api.primaerp.com/v1/time/clients/{id}/projects
 
+	https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$activate
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/@member
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/@own
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$deactivate
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/@trackable
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/@editable
+
 	https://api.primaerp.com/v1/users/{id}/projects
+
+	https://api.primaerp.com/v1/users/{id}/projects/@member/summary
+
+	https://api.primaerp.com/v1/users/{id}/projects/{id}/$activate
+
+	https://api.primaerp.com/v1/users/{id}/projects/@own
+
+	https://api.primaerp.com/v1/users/{id}/projects/{id}/$deactivate
+
+	https://api.primaerp.com/v1/users/{id}/projects/@trackable
+
+	https://api.primaerp.com/v1/users/{id}/projects/@editable
 
 ## Properties
 
@@ -269,14 +305,14 @@ Project
 
 ```JSON
 {
-	"id" : "53cf0184-59e8-419c-8722-5e524442375e",
-	"createdAt" : "/Date(1427901180475)/",
-	"updatedAt" : "/Date(1427967060475)/",
-	"version" : 5,
+	"id" : "46c3d5fd-c932-4319-9b07-8c842a29410d",
+	"createdAt" : "/Date(1430139954503)/",
+	"updatedAt" : "/Date(1430225514503)/",
+	"version" : 3,
 	"externalSystem" : {
-		"id" : "a839a0ec-7f5d-434f-835d-2d52111e1ca5",
-		"createdAt" : "/Date(1427901660475)/",
-		"updatedAt" : "/Date(1427967060475)/",
+		"id" : "416159d3-5552-421e-8387-da8bb9f66c61",
+		"createdAt" : "/Date(1430140794503)/",
+		"updatedAt" : "/Date(1430153514503)/",
 		"version" : 0,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -284,21 +320,21 @@ Project
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1427902260474)/",
+	"externalSyncedAt" : "/Date(1430142714502)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1427815860474)/",
-	"ends" : "/Date(1427988660474)/",
+	"begins" : "/Date(1430056314502)/",
+	"ends" : "/Date(1430229114502)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
 	"personal" : false,
 	"owner" : {
-		"id" : "fc05b9b3-7264-45e4-88b4-bec5d326c2ad",
-		"createdAt" : "/Date(1427901540475)/",
-		"updatedAt" : "/Date(1427934660475)/",
-		"version" : 4,
+		"id" : "c13124f1-6a47-4976-9033-4add0a525570",
+		"createdAt" : "/Date(1430142294503)/",
+		"updatedAt" : "/Date(1430207514503)/",
+		"version" : 7,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -315,31 +351,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1429740000000)/",
-		"workingTimeStart" : "/Date(1427868000000)/",
-		"workingTimeEnd" : "/Date(1427900400000)/",
-		"created" : "/Date(1427815860475)/",
+		"birthdayRemind" : "/Date(1431986400000)/",
+		"workingTimeStart" : "/Date(1430114400000)/",
+		"workingTimeEnd" : "/Date(1430146800000)/",
+		"created" : "/Date(1430056314502)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "87701fcf-fbcd-4ecb-a6ee-44a3f899b6a3",
-		"createdAt" : "/Date(1427898840475)/",
-		"updatedAt" : "/Date(1427938260475)/",
-		"version" : 3,
+		"id" : "ae86f084-d386-4ea4-935b-09d469e65070",
+		"createdAt" : "/Date(1430140794503)/",
+		"updatedAt" : "/Date(1430142714503)/",
+		"version" : 4,
 		"externalSystem" : {
-			"id" : "49365f63-923a-4a5b-8ae2-086b25298ad1",
-			"createdAt" : "/Date(1427899680475)/",
-			"updatedAt" : "/Date(1427934660475)/",
-			"version" : 7,
+			"id" : "375c1c2f-4730-4fed-9444-4f74c2157447",
+			"createdAt" : "/Date(1430141274503)/",
+			"updatedAt" : "/Date(1430214714503)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1427902260474)/",
+		"externalSyncedAt" : "/Date(1430142714502)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",

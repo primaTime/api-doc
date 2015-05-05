@@ -5,6 +5,8 @@ WorkType
 
 	https://api.primaerp.com/v1/time/worktypes
 
+	https://api.primaerp.com/v1/time/worktypes/@linked
+
 ## Properties
 
 | Name                 | Type           | Access     | Required | Description                                                                                         |
@@ -176,22 +178,22 @@ WorkType
 
 ```JSON
 {
-	"id" : "f2012dd6-9397-4dbc-b52e-8f6f8e570fe4",
-	"createdAt" : "/Date(1427900401397)/",
-	"updatedAt" : "/Date(1427941861397)/",
-	"version" : 9,
+	"id" : "38627928-4c70-4170-8a54-3e1b8a959663",
+	"createdAt" : "/Date(1430139473442)/",
+	"updatedAt" : "/Date(1430189513442)/",
+	"version" : 2,
 	"externalSystem" : {
-		"id" : "a8fcf9eb-a43d-45bf-83c0-f4f933107861",
-		"createdAt" : "/Date(1427899501397)/",
-		"updatedAt" : "/Date(1427927461397)/",
-		"version" : 8,
+		"id" : "1934020c-2284-4bc6-a6c0-3d5ae3d5b3ca",
+		"createdAt" : "/Date(1430140493442)/",
+		"updatedAt" : "/Date(1430221913442)/",
+		"version" : 4,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1427902261397)/",
+	"externalSyncedAt" : "/Date(1430142713442)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",

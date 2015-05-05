@@ -5,6 +5,10 @@ Account
 
 	https://api.primaerp.com/v1/accounts
 
+	https://api.primaerp.com/v1/accounts/{id}/$setUrlPrefix
+
+	https://api.primaerp.com/v1/accounts/@own
+
 ## Properties
 
 | Name                    | Type      | Access     | Required | Description                                                                                                                   |
@@ -333,15 +337,15 @@ Account
 
 ```JSON
 {
-	"id" : "ac2e8ff7-17cf-403f-9e7a-ef7d4278e66c",
-	"createdAt" : "/Date(1427901540938)/",
-	"updatedAt" : "/Date(1427981460938)/",
-	"version" : 6,
+	"id" : "90c338ee-e942-478c-afea-149329bfd077",
+	"createdAt" : "/Date(1430140254100)/",
+	"updatedAt" : "/Date(1430175114100)/",
+	"version" : 2,
 	"owner" : {
-		"id" : "17fcf807-e574-4622-b168-008ea3cde6e1",
-		"createdAt" : "/Date(1427898780938)/",
-		"updatedAt" : "/Date(1427985060938)/",
-		"version" : 6,
+		"id" : "a03ae044-a7a0-45c2-a962-5863747d3dcb",
+		"createdAt" : "/Date(1430140134100)/",
+		"updatedAt" : "/Date(1430207514100)/",
+		"version" : 5,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -358,10 +362,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1428703200000)/",
-		"workingTimeStart" : "/Date(1427868000000)/",
-		"workingTimeEnd" : "/Date(1427900400000)/",
-		"created" : "/Date(1427815860938)/",
+		"birthdayRemind" : "/Date(1430949600000)/",
+		"workingTimeStart" : "/Date(1430114400000)/",
+		"workingTimeEnd" : "/Date(1430146800000)/",
+		"created" : "/Date(1430056314100)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -385,13 +389,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1427868000000)/",
-	"workingTimeEnd" : "/Date(1427900400000)/",
-	"created" : "/Date(1427815860938)/",
+	"workingTimeStart" : "/Date(1430114400000)/",
+	"workingTimeEnd" : "/Date(1430146800000)/",
+	"created" : "/Date(1430056314100)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1427902260938)/",
-	"affiliateId" : "7713ccc8-5000-4f83-9f23-e7a8c5d31312",
+	"deactivationRequestedAt" : "/Date(1430142714100)/",
+	"affiliateId" : "711583cd-5a91-487f-ac38-f0addff32ef6",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

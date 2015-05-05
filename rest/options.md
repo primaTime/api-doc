@@ -138,7 +138,7 @@ The API supports filtering by fields:
 | Div | Division | /time/projects?$filter=priceBudget div 2 gt 4 |
 | Mod | Modulo | /time/projects?$filter=priceBudget mod 2 eq 0 |
 | **Grouping Operators** |||
-| ( ) | Precedence grouping | /time/projects?$filter=(priceBudget sub 5) gt 10 |
+| (&nbsp;) | Precedence grouping | /time/projects?$filter=(priceBudget sub 5) gt 10 |
 
 API also supports filtering by string functions:
 

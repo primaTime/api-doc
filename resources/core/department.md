@@ -5,6 +5,8 @@ Department
 
 	https://api.primaerp.com/v1/departments
 
+	https://api.primaerp.com/v1/departments/@member
+
 ## Properties
 
 | Name        | Type      | Access     | Required | Description                                                                                         |
@@ -101,16 +103,16 @@ Department
 
 ```JSON
 {
-	"id" : "207d37b2-ddce-4266-b97e-acdc75e60fed",
-	"createdAt" : "/Date(1427900340265)/",
-	"updatedAt" : "/Date(1427902260265)/",
-	"version" : 6,
+	"id" : "c68a4379-2d07-4f32-84c3-51c58d0b389f",
+	"createdAt" : "/Date(1430141694989)/",
+	"updatedAt" : "/Date(1430221914989)/",
+	"version" : 8,
 	"name" : "Development",
 	"manager" : {
-		"id" : "e8b68914-3f6a-4c5c-9457-c313b5909d3a",
-		"createdAt" : "/Date(1427901900265)/",
-		"updatedAt" : "/Date(1427909460265)/",
-		"version" : 5,
+		"id" : "0006aa29-2319-4c75-88f3-5b35121139ff",
+		"createdAt" : "/Date(1430139174989)/",
+		"updatedAt" : "/Date(1430167914989)/",
+		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -127,10 +129,10 @@ Department
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1428703200000)/",
-		"workingTimeStart" : "/Date(1427868000000)/",
-		"workingTimeEnd" : "/Date(1427900400000)/",
-		"created" : "/Date(1427815860265)/",
+		"birthdayRemind" : "/Date(1430949600000)/",
+		"workingTimeStart" : "/Date(1430114400000)/",
+		"workingTimeEnd" : "/Date(1430146800000)/",
+		"created" : "/Date(1430056314989)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

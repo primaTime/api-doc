@@ -99,10 +99,10 @@ ExternalSystem
 
 ```JSON
 {
-	"id" : "e77e0f16-11b5-4c43-a848-58c3afcd9c82",
-	"createdAt" : "/Date(1427901600336)/",
-	"updatedAt" : "/Date(1427985060336)/",
-	"version" : 6,
+	"id" : "ae96e088-c376-41ea-b1c6-fc80b3aa440e",
+	"createdAt" : "/Date(1430142114731)/",
+	"updatedAt" : "/Date(1430200314731)/",
+	"version" : 7,
 	"name" : "My BaseCamp account",
 	"integrationPlugin" : "basecamp",
 	"displayName" : "My BaseCamp account"

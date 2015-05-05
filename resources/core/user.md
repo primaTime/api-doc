@@ -5,6 +5,16 @@ User
 
 	https://api.primaerp.com/v1/users
 
+	https://api.primaerp.com/v1/users/{id}/$confirmation
+
+	https://api.primaerp.com/v1/users/{id}/roles
+
+	https://api.primaerp.com/v1/users/{id}/$setEmail
+
+	https://api.primaerp.com/v1/users/{id}/competencies
+
+	https://api.primaerp.com/v1/users/@self
+
 ## Properties
 
 | Name             | Type      | Access     | Required | Description                                                                                                            |
@@ -281,6 +291,7 @@ User
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
 				"TrashItem",
+				"ProjectMember",
 				"SpendingTimeUnit",
 				"SecretKey",
 				"Access"
@@ -294,10 +305,10 @@ User
 
 ```JSON
 {
-	"id" : "76163ace-113c-4033-8ee9-eda41fa53697",
-	"createdAt" : "/Date(1427899560421)/",
-	"updatedAt" : "/Date(1427902260421)/",
-	"version" : 0,
+	"id" : "17233059-42f5-4fe7-a68e-0e24c219d4f5",
+	"createdAt" : "/Date(1430140673297)/",
+	"updatedAt" : "/Date(1430178713297)/",
+	"version" : 4,
 	"firstName" : "John",
 	"lastName" : "Smith",
 	"nickName" : "Smith, J.",
@@ -314,10 +325,10 @@ User
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1428703200000)/",
-	"workingTimeStart" : "/Date(1427868000000)/",
-	"workingTimeEnd" : "/Date(1427900400000)/",
-	"created" : "/Date(1427815860421)/",
+	"birthdayRemind" : "/Date(1430949600000)/",
+	"workingTimeStart" : "/Date(1430114400000)/",
+	"workingTimeEnd" : "/Date(1430146800000)/",
+	"created" : "/Date(1430056313297)/",
 	"admin" : false,
 	"projectManager" : false,
 	"displayName" : "Smith John"
