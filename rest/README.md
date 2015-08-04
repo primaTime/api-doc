@@ -43,4 +43,4 @@ Using specific location endpoint
 
 Where: 
 * `{tenant}` is the name of the primaERP account
-* `{location}` is the specific endpoint location: eu or us
+* `{location}` is the specific endpoint location: *eu* or *us*
