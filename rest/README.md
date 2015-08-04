@@ -41,5 +41,6 @@ Using specific location endpoint
 
 		https://{tenant}.api.{location}.primaerp.com/v1/
 
-Where: `{tenant}` is the name of the primaERP account
-       `{location}` is the specific endpoint location: eu or us
+Where: 
+* `{tenant}` is the name of the primaERP account
+* `{location}` is the specific endpoint location: eu or us
