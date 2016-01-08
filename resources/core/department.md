@@ -103,15 +103,15 @@ Department
 
 ```JSON
 {
-	"id" : "c68a4379-2d07-4f32-84c3-51c58d0b389f",
-	"createdAt" : "/Date(1430141694989)/",
-	"updatedAt" : "/Date(1430221914989)/",
-	"version" : 8,
+	"id" : "95dc111c-0264-49f0-8430-5815fa16cedd",
+	"createdAt" : "/Date(1452254237641)/",
+	"updatedAt" : "/Date(1452329357641)/",
+	"version" : 7,
 	"name" : "Development",
 	"manager" : {
-		"id" : "0006aa29-2319-4c75-88f3-5b35121139ff",
-		"createdAt" : "/Date(1430139174989)/",
-		"updatedAt" : "/Date(1430167914989)/",
+		"id" : "9c9f37d0-c0fa-4b25-81a6-3c75e268feb0",
+		"createdAt" : "/Date(1452256097641)/",
+		"updatedAt" : "/Date(1452275357641)/",
 		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
@@ -129,10 +129,10 @@ Department
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1430949600000)/",
-		"workingTimeStart" : "/Date(1430114400000)/",
-		"workingTimeEnd" : "/Date(1430146800000)/",
-		"created" : "/Date(1430056314989)/",
+		"birthdayRemind" : "/Date(1453071600000)/",
+		"workingTimeStart" : "/Date(1452236400000)/",
+		"workingTimeEnd" : "/Date(1452268800000)/",
+		"created" : "/Date(1452170957641)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"

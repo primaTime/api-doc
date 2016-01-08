@@ -83,10 +83,10 @@ FileMetadata
 
 ```JSON
 {
-	"id" : "227fe644-e295-4320-bc4d-322425c993a4",
-	"createdAt" : "/Date(1430140435030)/",
-	"updatedAt" : "/Date(1430214715030)/",
-	"version" : 3,
+	"id" : "dffb205f-720b-4231-81d4-467b9cbfa298",
+	"createdAt" : "/Date(1452253819456)/",
+	"updatedAt" : "/Date(1452340159456)/",
+	"version" : 8,
 	"fileName" : "mysignature.jpeg",
 	"contentType" : "image/jpeg",
 	"contentSize" : 13114,

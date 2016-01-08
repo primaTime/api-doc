@@ -1,4 +1,5 @@
 {
+    "gitbook": "2.x.x",
     "title": "primaERP / API Documentation",
     "description": "Official API documentation for primaERP",
     "github": "primaERP/api-doc",

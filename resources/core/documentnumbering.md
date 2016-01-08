@@ -115,10 +115,10 @@ DocumentNumbering
 
 ```JSON
 {
-	"id" : "62f06953-26a2-48d7-aa98-5e70deb52613",
-	"createdAt" : "/Date(1430139893400)/",
-	"updatedAt" : "/Date(1430193113400)/",
-	"version" : 8,
+	"id" : "5b27c726-782f-48d7-ba0b-4621c69feaee",
+	"createdAt" : "/Date(1452254598667)/",
+	"updatedAt" : "/Date(1452260958667)/",
+	"version" : 3,
 	"docType" : "BILL",
 	"numberingScheme" : "BIL-{number}/{year}",
 	"autoNumbering" : true,

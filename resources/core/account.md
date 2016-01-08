@@ -19,11 +19,11 @@ Account
 | campaign                | String    | read write | no       | The marketing campaign from which the account originates from. For internal use only.                                         |
 | city                    | String    | read write | no       | Name of the city.                                                                                                             |
 | confirmed               | Boolean   | read write | no       | The account is confirmed. Users can log into confirmed account only.                                                          |
-| countryCode             | String    | read write | no       | Country code according to ISO 3166-1 alpha-3 standard.                                                                        |
+| countryCode             | String    | read write | YES      | Country code according to ISO 3166-1 alpha-3 standard.                                                                        |
 | created                 | Date      | read only  | no       | The date and time when the account was created.                                                                               |
 | createdAt               | Date      | read only  | no       | Date of creation.                                                                                                             |
-| currency                | String    | read write | no       | Default currency for the account.                                                                                             |
-| dateFormat              | String    | read write | no       | The date format pattern according to java.text.SimpleDateFormat                                                               |
+| currency                | String    | read write | YES      | Default currency for the account.                                                                                             |
+| dateFormat              | String    | read write | YES      | The date format pattern according to java.text.SimpleDateFormat                                                               |
 | deactivationRequestedAt | Date      | read write | no       | The date and time when the account owner requested deactivation.                                                              |
 | displayName             | String    | read only  | no       | Describes an object in human readable form.                                                                                   |
 | id                      | String    | read write | no       | Unique object identifier.                                                                                                     |
@@ -34,15 +34,15 @@ Account
 | source                  | String    | read write | no       | The account sources for marketing purposes. For internal use only.                                                            |
 | state                   | String    | read write | no       | Name of the state or province.                                                                                                |
 | streetAddress           | String    | read write | no       | The street name with the house number.                                                                                        |
-| timeFormat              | String    | read write | no       | The time format pattern according to java.text.SimpleDateFormat                                                               |
-| timeZone                | String    | read write | no       | The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone |
+| timeFormat              | String    | read write | YES      | The time format pattern according to java.text.SimpleDateFormat                                                               |
+| timeZone                | String    | read write | YES      | The time zone of the place where the account is located. The timezone is identified by the ID according to java.util.TimeZone |
 | trashItem               | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified.                           |
 | updatedAt               | Date      | read only  | no       | Last modified date.                                                                                                           |
 | urlPrefix               | String    | read only  | no       | Identifies the account tenant.                                                                                                |
 | vatId                   | String    | read write | no       | VAT identification number.                                                                                                    |
 | version                 | Long      | read write | no       | Object version number.                                                                                                        |
 | website                 | String    | read write | no       | The website URL.                                                                                                              |
-| weekStart               | Byte      | read write | no       | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
+| weekStart               | Byte      | read write | YES      | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
 | workingTimeEnd          | Date      | read write | no       | The time when the work day usually end.                                                                                       |
 | workingTimeStart        | Date      | read write | no       | The time when the work day usually start.                                                                                     |
 | zipCode                 | String    | read write | no       | ZIP or postal code.                                                                                                           |
@@ -103,6 +103,10 @@ Account
 				{
 					"type" : "Pattern",
 					"details" : "regexp [A-Z]+"
+				},
+				{
+					"type" : "Required",
+					"details" : ""
 				}
 			]
 		},
@@ -127,7 +131,13 @@ Account
 			"type" : "String",
 			"name" : "currency",
 			"description" : "Default currency for the account.",
-			"access" : "READ_WRITE"
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Required",
+					"details" : ""
+				}
+			]
 		},
 		{
 			"type" : "String",
@@ -135,6 +145,10 @@ Account
 			"description" : "The date format pattern according to java.text.SimpleDateFormat",
 			"access" : "READ_WRITE",
 			"constraints" : [
+				{
+					"type" : "Required",
+					"details" : ""
+				},
 				{
 					"type" : "Pattern",
 					"details" : "regexp dd\\.MM\\.yyyy|MM/dd/yyyy|dd/MM/yyyy|yyyy-MM-dd|yyyy\\.MM\\.dd|yyyy/MM/dd"
@@ -223,8 +237,12 @@ Account
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
+					"type" : "Required",
+					"details" : ""
+				},
+				{
 					"type" : "Pattern",
-					"details" : "regexp HH:mm|K:mm a"
+					"details" : "regexp HH:mm|K:mm a|h:mm a|hh:mm a"
 				}
 			]
 		},
@@ -237,6 +255,10 @@ Account
 				{
 					"type" : "Pattern",
 					"details" : "regexp ^(Africa|America|Asia|Atlantic|Australia|Europe|Indian|Pacific)/.*|UTC|GMT"
+				},
+				{
+					"type" : "Required",
+					"details" : ""
 				}
 			]
 		},
@@ -293,6 +315,10 @@ Account
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
+					"type" : "Required",
+					"details" : ""
+				},
+				{
 					"type" : "Max",
 					"details" : "value 7"
 				},
@@ -337,15 +363,15 @@ Account
 
 ```JSON
 {
-	"id" : "90c338ee-e942-478c-afea-149329bfd077",
-	"createdAt" : "/Date(1430140254100)/",
-	"updatedAt" : "/Date(1430175114100)/",
-	"version" : 2,
+	"id" : "6d446180-deff-44fe-a020-2e125b5ed211",
+	"createdAt" : "/Date(1452256278609)/",
+	"updatedAt" : "/Date(1452336558609)/",
+	"version" : 1,
 	"owner" : {
-		"id" : "a03ae044-a7a0-45c2-a962-5863747d3dcb",
-		"createdAt" : "/Date(1430140134100)/",
-		"updatedAt" : "/Date(1430207514100)/",
-		"version" : 5,
+		"id" : "fc663cb7-7856-4a96-b519-39ae3150b6fd",
+		"createdAt" : "/Date(1452255198609)/",
+		"updatedAt" : "/Date(1452336558609)/",
+		"version" : 8,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -362,10 +388,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1430949600000)/",
-		"workingTimeStart" : "/Date(1430114400000)/",
-		"workingTimeEnd" : "/Date(1430146800000)/",
-		"created" : "/Date(1430056314100)/",
+		"birthdayRemind" : "/Date(1453071600000)/",
+		"workingTimeStart" : "/Date(1452236400000)/",
+		"workingTimeEnd" : "/Date(1452268800000)/",
+		"created" : "/Date(1452170958609)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -389,13 +415,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1430114400000)/",
-	"workingTimeEnd" : "/Date(1430146800000)/",
-	"created" : "/Date(1430056314100)/",
+	"workingTimeStart" : "/Date(1452236400000)/",
+	"workingTimeEnd" : "/Date(1452268800000)/",
+	"created" : "/Date(1452170958609)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1430142714100)/",
-	"affiliateId" : "711583cd-5a91-487f-ac38-f0addff32ef6",
+	"deactivationRequestedAt" : "/Date(1452257358609)/",
+	"affiliateId" : "dba2ea82-b5c0-417d-a33c-76c7a4466bd6",
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

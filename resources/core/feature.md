@@ -117,10 +117,10 @@ Feature
 
 ```JSON
 {
-	"id" : "700a8dcc-2096-4e3f-968c-197c66b64606",
-	"createdAt" : "/Date(1430142474919)/",
-	"updatedAt" : "/Date(1430218314919)/",
-	"version" : 2,
+	"id" : "25349c8c-ec43-4fe6-b251-e33d2e578382",
+	"createdAt" : "/Date(1452253998041)/",
+	"updatedAt" : "/Date(1452307758041)/",
+	"version" : 5,
 	"featureId" : "9c217672-8847-4408-8d85-031c95190274",
 	"product" : "TIME",
 	"enabled" : true,
