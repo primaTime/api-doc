@@ -106,15 +106,15 @@ RoleCompetency
 
 ```JSON
 {
-	"id" : "8be6e203-a17e-45a4-a2bf-da9e1ecc00bd",
-	"createdAt" : "/Date(1452254237950)/",
-	"updatedAt" : "/Date(1452340157950)/",
-	"version" : 5,
+	"id" : "07cce69a-813a-44d0-96af-dc69fbaab35b",
+	"createdAt" : "/Date(1481621268615)/",
+	"updatedAt" : "/Date(1481704728615)/",
+	"version" : 7,
 	"role" : {
-		"id" : "a5fd9080-b637-4055-a0e7-be16c8f1a5b8",
-		"createdAt" : "/Date(1452254117950)/",
-		"updatedAt" : "/Date(1452300557950)/",
-		"version" : 8,
+		"id" : "12b6f536-834e-4377-8991-1165fc852b68",
+		"createdAt" : "/Date(1481620908615)/",
+		"updatedAt" : "/Date(1481690328615)/",
+		"version" : 9,
 		"name" : "Admin",
 		"builtInRole" : "ADMIN",
 		"roleType" : "EXPLICIT",

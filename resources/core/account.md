@@ -40,6 +40,8 @@ Account
 | updatedAt               | Date      | read only  | no       | Last modified date.                                                                                                           |
 | urlPrefix               | String    | read only  | no       | Identifies the account tenant.                                                                                                |
 | vatId                   | String    | read write | no       | VAT identification number.                                                                                                    |
+| vatMode                 | VatMode   | read write | no       | VAT mode.                                                                                                                     |
+| vatRate                 | Double    | read write | no       | VAT rate.                                                                                                                     |
 | version                 | Long      | read write | no       | Object version number.                                                                                                        |
 | website                 | String    | read write | no       | The website URL.                                                                                                              |
 | weekStart               | Byte      | read write | YES      | The number of the day when the week starts. Monday is 1 and Sunday is 7.                                                      |
@@ -297,6 +299,24 @@ Account
 			"access" : "READ_WRITE"
 		},
 		{
+			"type" : "VatMode",
+			"name" : "vatMode",
+			"description" : "VAT mode.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "DECLARE_VAT, NO_VAT"
+				}
+			]
+		},
+		{
+			"type" : "Double",
+			"name" : "vatRate",
+			"description" : "VAT rate.",
+			"access" : "READ_WRITE"
+		},
+		{
 			"type" : "Long",
 			"name" : "version",
 			"description" : "Object version number.",
@@ -363,15 +383,15 @@ Account
 
 ```JSON
 {
-	"id" : "6d446180-deff-44fe-a020-2e125b5ed211",
-	"createdAt" : "/Date(1452256278609)/",
-	"updatedAt" : "/Date(1452336558609)/",
-	"version" : 1,
+	"id" : "3df9973e-ebb8-426a-baa8-668622d1de28",
+	"createdAt" : "/Date(1481621209672)/",
+	"updatedAt" : "/Date(1481647129672)/",
+	"version" : 8,
 	"owner" : {
-		"id" : "fc663cb7-7856-4a96-b519-39ae3150b6fd",
-		"createdAt" : "/Date(1452255198609)/",
-		"updatedAt" : "/Date(1452336558609)/",
-		"version" : 8,
+		"id" : "1b2e2ebe-2260-4852-97cd-fad088c59044",
+		"createdAt" : "/Date(1481621869672)/",
+		"updatedAt" : "/Date(1481629129672)/",
+		"version" : 9,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -388,10 +408,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1453071600000)/",
-		"workingTimeStart" : "/Date(1452236400000)/",
-		"workingTimeEnd" : "/Date(1452268800000)/",
-		"created" : "/Date(1452170958609)/",
+		"birthdayRemind" : "/Date(1482447600000)/",
+		"workingTimeStart" : "/Date(1481612400000)/",
+		"workingTimeEnd" : "/Date(1481644800000)/",
+		"created" : "/Date(1481535529671)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -415,13 +435,15 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1452236400000)/",
-	"workingTimeEnd" : "/Date(1452268800000)/",
-	"created" : "/Date(1452170958609)/",
+	"workingTimeStart" : "/Date(1481612400000)/",
+	"workingTimeEnd" : "/Date(1481644800000)/",
+	"created" : "/Date(1481535529671)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1452257358609)/",
-	"affiliateId" : "dba2ea82-b5c0-417d-a33c-76c7a4466bd6",
+	"deactivationRequestedAt" : "/Date(1481621929671)/",
+	"affiliateId" : "b02b685c-7c23-4f9e-bc59-2816986d1954",
+	"vatMode" : "DECLARE_VAT",
+	"vatRate" : 20.0,
 	"displayName" : "Example Ltd. (example-ltd)"
 }
 ```

@@ -1,9 +1,9 @@
-ProjectMember
+BillVat
 ==
 
 ## URL
 
-	https://api.primaerp.com/v1/time/projects/{id}/members
+	https://api.primaerp.com/v1/billing/bills/{billId}/vats
 
 ## Properties
 
@@ -14,15 +14,16 @@ ProjectMember
 | id          | String    | read write | no       | Unique object identifier.                                                                           |
 | trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt   | Date      | read only  | no       | Last modified date.                                                                                 |
-| user        | User      | read write | YES      | User who is a member.                                                                               |
+| vatPrice    | Double    | read write | no       | VAT calculated from related bill.                                                                   |
+| vatRate     | Double    | read write | no       | VAT rate in percent.                                                                                |
 | version     | Long      | read write | no       | Object version number.                                                                              |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "ProjectMember",
-	"path" : "/v1/time/projects/{id}/members",
+	"type" : "BillVat",
+	"path" : "/v1/billing/bills/{billId}/vats",
 	"fields" : [
 		{
 			"type" : "Date",
@@ -65,16 +66,16 @@ ProjectMember
 			"access" : "READ_ONLY"
 		},
 		{
-			"type" : "User",
-			"path" : "/v1/users",
-			"name" : "user",
-			"description" : "User who is a member.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull"
-				}
-			]
+			"type" : "Double",
+			"name" : "vatPrice",
+			"description" : "VAT calculated from related bill.",
+			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "Double",
+			"name" : "vatRate",
+			"description" : "VAT rate in percent.",
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "Long",
@@ -98,39 +99,12 @@ ProjectMember
 
 ```JSON
 {
-	"id" : "0ffddfb6-1a04-47b0-9eed-02931aa671bd",
-	"createdAt" : "/Date(1481620068808)/",
-	"updatedAt" : "/Date(1481650728808)/",
-	"version" : 0,
-	"user" : {
-		"id" : "4e8f3083-aabe-427c-806d-5cd4e7e55f2c",
-		"createdAt" : "/Date(1481621268808)/",
-		"updatedAt" : "/Date(1481665128808)/",
-		"version" : 7,
-		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
-		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
-		"timeFormat" : "K:mm a",
-		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
-		"secretKey" : "userSecretKey",
-		"confirmed" : false,
-		"confirmedEmail" : false,
-		"active" : false,
-		"birthdayRemind" : "/Date(1482447600000)/",
-		"workingTimeStart" : "/Date(1481612400000)/",
-		"workingTimeEnd" : "/Date(1481644800000)/",
-		"created" : "/Date(1481535528807)/",
-		"admin" : false,
-		"projectManager" : false,
-		"displayName" : "Smith John"
-	},
-	"displayName" : "Smith John"
+	"id" : "bdfeffc9-8d7a-43d0-a948-613b4170f0e6",
+	"createdAt" : "/Date(1481621689816)/",
+	"updatedAt" : "/Date(1481675929816)/",
+	"version" : 7,
+	"vatRate" : 20.0,
+	"vatPrice" : 500.0,
+	"displayName" : "20.0"
 }
 ```

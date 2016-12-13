@@ -53,7 +53,7 @@ a list of objects. Each object represents a response to the original request obj
 		method : "PUT",
 		headers : "Content-Type : application/json \n Accept : application/json"
 		path : "/v1/time/projects/bb4acd88-a855-40cb-afc8-973ec6d858c2?response_object=true",
-		body : "{ "name" : "New name" }"
+		body : "{ \"name\" : \"New name\" }"
 	}
 ]
 ```

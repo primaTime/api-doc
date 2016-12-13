@@ -25,7 +25,7 @@ API is also accessible on the HTTPS protocol.
 
 ## API endpoint
 
-The primaERP application runs in two locations, both with a specific endpoint. It counts also with a generic location-agnostic endpoint, which routes to the proper endpoint via the AWS's latency based geolocation routing. 
+The primaERP API runs in two locations, both with a specific endpoint. It counts also with a generic location-agnostic endpoint, which routes to the proper endpoint via the AWS's latency based geolocation routing. 
 
 In most cases, the generic location handles the tenant’s routing to the proper endpoint, however on certain conditions (e.g. VPN environment, etc), this is not possible. In this case, the API returns a 301 redirect, so that the client repeats the location request to a specific endpoint. 
 

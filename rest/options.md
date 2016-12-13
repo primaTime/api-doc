@@ -7,10 +7,10 @@ The primaERP API supports CRUD (Create, Read, Update, Delete) operations via the
 
 | Operation | SQL | HTTP |
 | --- | --- | --- |
-| Create			| [INSERT](http://en.wikipedia.org/wiki/Insert_%28SQL%29) | [POST](http://en.wikipedia.org/wiki/POST_%28HTTP%29) |
-| Read (Retrieve)	| [SELECT](http://en.wikipedia.org/wiki/Select_%28SQL%29) | [GET](http://en.wikipedia.org/wiki/GET_%28HTTP%29) |
-| Update (Modify)	| [UPDATE](http://en.wikipedia.org/wiki/Update_%28SQL%29) | [PUT](http://en.wikipedia.org/wiki/PUT_%28HTTP%29) |
-| Delete (Destroy)	| [DELETE](http://en.wikipedia.org/wiki/Delete_%28SQL%29) | [DELETE](http://en.wikipedia.org/wiki/DELETE_%28HTTP%29) |
+| [Create](.#create)			        | [INSERT](http://en.wikipedia.org/wiki/Insert_%28SQL%29) | [POST](http://en.wikipedia.org/wiki/POST_%28HTTP%29) |
+| [Read (Retrieve)](.#read-retrieve)	| [SELECT](http://en.wikipedia.org/wiki/Select_%28SQL%29) | [GET](http://en.wikipedia.org/wiki/GET_%28HTTP%29) |
+| [Update (Modify)](.#update-modify)	| [UPDATE](http://en.wikipedia.org/wiki/Update_%28SQL%29) | [PUT](http://en.wikipedia.org/wiki/PUT_%28HTTP%29) |
+| [Delete (Destroy)](.#delete-destroy)	| [DELETE](http://en.wikipedia.org/wiki/Delete_%28SQL%29) | [DELETE](http://en.wikipedia.org/wiki/DELETE_%28HTTP%29) |
 
 In case you have a client with limited capability for setting the HTTP Header, you should set up a CRUD operation by the query parameter `?method`.
 
@@ -20,9 +20,142 @@ In case you have a client with limited capability for setting the HTTP Header, y
 - DELETE = `?method=DELETE`
 
 
-## $set
+### Create
+#### Syntax
 
-This is a special case used to set values to the object's fields. This query can be used with multiple parameters.
+        /{resource}
+
+Values:
+
+- `{resource}` - a module resource such as: `time/projects`, `time/timerecords`, `time/tasks`, etc. Or a global resource such as `user`
+
+#### Example
+
+        POST http://{tenant}.api.primaerp.com/v1/time/timerecords
+        
+        > Content-Type: application/json
+Request data:
+```JSON
+{
+  "user": {
+    "id": "cc41790b-59f4-4520-81e1-ac10c74e9454"
+  },
+  "start": "/Date(1479974400000)/",
+  "stop": "/Date(1479978000000)/",
+  "duration": 3600000,
+  "description": "Lorem ipsum, dolor sit amet.",
+  "effective": true
+}
+```
+
+
+### Read (Retrieve)
+#### Syntax
+
+        /{resource}
+
+Values:
+
+- `{resource}` - a module resource such as: `time/projects`, `time/timerecords`, `time/tasks`, etc. Or a global resource such as `user`
+
+#### Example
+
+        GET http://{tenant}.api.primaerp.com/v1/time/projects
+        
+        > Accept: application/json
+        
+Response data:
+```JSON
+[
+    {
+        "id" : "1b8e29a2-d97d-4e9c-b0b3-7072241adf22",
+        "version" : 9,
+        "name" : "Content management system",
+        "code" : "CMS",
+        "note" : "core feature",
+        "begins" : "/Date(1452170816188)/",
+        "ends" : "/Date(1452343616188)/",
+        "timeBudget" : 604800000,
+        "priceBudget" : 100000.0,
+        "personal" : false,
+        "owner" : {
+            "id" : "2a99b231-e9fa-4c6c-91ca-aca539df8590",
+            "version" : 8,
+            "firstName" : "John",
+            "lastName" : "Doe",
+            "email" : "john.doe@example.com",
+            ...
+        },
+        ...
+    },
+    {
+        "id" : "6f23b610-92c1-4005-9235-c714d9b4a2b0",
+        "version" : 2,
+        "name" : "Hardware upgrade",
+        "code" : "HWUP",
+        "begins" : "/Date(1452170816188)/",
+        "ends" : "/Date(1452343616188)/",
+        "timeBudget" : 172800000,
+        "priceBudget" : 20000.0,
+        "personal" : false,
+        "owner" : {
+            "id" : "1fc16d91-322b-4121-87ae-53c9db59dcc1",
+            "version" : 3,
+            "firstName" : "John",
+            "lastName" : "Smith",
+            "email" : "john.smith@example.com",
+            ...
+        },
+        ...
+    },
+    ...
+]
+```
+
+
+### Update (Modify)
+#### Syntax
+
+        /{resource}/{id}
+
+Values:
+
+- `{resource}` - a module resource such as: `time/projects`, `time/timerecords`, `time/tasks`, etc. Or a global resource such as `user`
+- `{id}` - a resource ID
+
+#### Example
+
+        PUT http://{tenant}.api.primaerp.com/v1/time/projects/6f23b610-92c1-4005-9235-c714d9b4a2b0
+        
+        > Content-Type: application/json
+        
+Request data:
+```JSON
+{
+  "priceBudget" : 40000.0,
+  "version": 2
+}
+```
+
+
+### Delete (Destroy)
+#### Syntax
+
+        /{resource}/{id}
+
+Values:
+
+- `{resource}` - a module resource such as: `time/projects`, `time/timerecords`, `time/tasks`, etc. Or a global resource such as `user`
+- `{id}` - a resource ID
+
+#### Example
+
+        DELETE http://{tenant}.api.primaerp.com/v1/time/projects/6f23b610-92c1-4005-9235-c714d9b4a2b0
+        
+
+### $set
+
+This is a special case of PUT. It is used to set values to the object's fields. This query can be used with multiple parameters.
 
 #### Syntax
 

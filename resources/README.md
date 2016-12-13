@@ -5,6 +5,7 @@
 |-------------------------------------------|------------------------------------------------------------|
 | [Bill](billing/bill.md)                  | `https://api.primaerp.com/v1/billing/bills`                |
 | [BillItem](billing/billitem.md)          | `https://api.primaerp.com/v1/billing/bills/{billId}/items` |
+| [BillVat](billing/billvat.md)            | `https://api.primaerp.com/v1/billing/bills/{billId}/vats`  |
 | [TimePriceList](billing/timepricelist.md)| `https://api.primaerp.com/v1/billing/pricelists/time`      |
 
 ## TIME

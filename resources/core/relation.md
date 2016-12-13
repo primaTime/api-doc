@@ -137,14 +137,14 @@ Relation
 
 ```JSON
 {
-	"id" : "4b362d55-d630-44ad-9cb7-14c98234af77",
-	"createdAt" : "/Date(1452256518082)/",
-	"updatedAt" : "/Date(1452282558082)/",
-	"version" : 7,
-	"inboundId" : "ed02f9c4-909a-4582-886e-b57b709ee0fd",
+	"id" : "9c7b5a96-1f5d-4ec0-bc20-d250639c753d",
+	"createdAt" : "/Date(1481621030097)/",
+	"updatedAt" : "/Date(1481668730097)/",
+	"version" : 1,
+	"inboundId" : "2295e8f8-f29f-4d69-b257-2d7efdd02622",
 	"inboundType" : "user",
-	"outboundId" : "40f443e7-0781-4857-8a49-39100681d651",
+	"outboundId" : "6a56655d-26be-4f8c-a35e-dde6dc113bef",
 	"outboundType" : "timerecord",
-	"displayName" : "user ed02f9c4-909a-4582-886e-b57b709ee0fd -> timerecord 40f443e7-0781-4857-8a49-39100681d651"
+	"displayName" : "user 2295e8f8-f29f-4d69-b257-2d7efdd02622 -> timerecord 6a56655d-26be-4f8c-a35e-dde6dc113bef"
 }
 ```

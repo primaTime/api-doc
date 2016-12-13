@@ -11,13 +11,17 @@ Bill
 
 	https://api.primaerp.com/v1/billing/bills/$setNextDocNumberPart
 
-	https://api.primaerp.com/v1/billing/billitems/{id}/bills
+	https://api.primaerp.com/v1/billing/bills/{id}/billitems/relations
 
-	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumber
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills
 
-	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumberPart
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
 
-	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$setNextDocNumberPart
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
 
 	https://api.primaerp.com/v1/time/clients/{id}/bills
 
@@ -26,6 +30,18 @@ Bill
 	https://api.primaerp.com/v1/time/clients/{id}/bills/$getNextDocNumberPart
 
 	https://api.primaerp.com/v1/time/clients/{id}/bills/$setNextDocNumberPart
+
+	https://api.primaerp.com/v1/time/clients/{id}/bills/{id}/billitems/relations
+
+	https://api.primaerp.com/v1/billing/billitems/{id}/bills
+
+	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumber
+
+	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$setNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relations
 
 ## Properties
 
@@ -47,13 +63,16 @@ Bill
 | header          | String        | read write | no       | Header of document.                                                                                 |
 | id              | String        | read write | no       | Unique object identifier.                                                                           |
 | items           | List          | read write | no       | List of bill items.                                                                                 |
+| itemsPrice      | Double        | read write | no       | Summary of item prices. Without VAT. Generated automatically.                                       |
 | lastPaymentDate | Date          | read write | no       | Date of the last payment.                                                                           |
 | notes           | String        | read write | no       | Additional notes.                                                                                   |
-| totalPrice      | Double        | read write | no       | Summary of item prices. Generated automatically.                                                    |
+| totalPrice      | Double        | read write | no       | Summary of item prices. VAT included. Generated automatically.                                      |
 | trashItem       | TrashItem     | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt       | Date          | read only  | no       | Last modified date.                                                                                 |
 | vatDate         | Date          | read write | no       | Date of taxable supply.                                                                             |
+| vatMode         | VatMode       | read write | no       | VAT mode.                                                                                           |
 | vatText         | String        | read write | no       | Info about a VAT. E.g. 'All prices are without a VAT.'                                              |
+| vats            | List          | read write | no       | List of bill VATs.                                                                                  |
 | version         | Long          | read write | no       | Object version number.                                                                              |
 
 ## Metadata
@@ -172,6 +191,12 @@ Bill
 			"access" : "READ_WRITE"
 		},
 		{
+			"type" : "Double",
+			"name" : "itemsPrice",
+			"description" : "Summary of item prices. Without VAT. Generated automatically.",
+			"access" : "READ_WRITE"
+		},
+		{
 			"type" : "Date",
 			"name" : "lastPaymentDate",
 			"description" : "Date of the last payment.",
@@ -186,7 +211,7 @@ Bill
 		{
 			"type" : "Double",
 			"name" : "totalPrice",
-			"description" : "Summary of item prices. Generated automatically.",
+			"description" : "Summary of item prices. VAT included. Generated automatically.",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -209,9 +234,27 @@ Bill
 			"access" : "READ_WRITE"
 		},
 		{
+			"type" : "VatMode",
+			"name" : "vatMode",
+			"description" : "VAT mode.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "DECLARE_VAT, NO_VAT"
+				}
+			]
+		},
+		{
 			"type" : "String",
 			"name" : "vatText",
 			"description" : "Info about a VAT. E.g. 'All prices are without a VAT.'",
+			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "List",
+			"name" : "vats",
+			"description" : "List of bill VATs.",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -223,22 +266,25 @@ Bill
 	],
 	"cascades" : [
 		{
+			"cascadeType" : "PERSIST",
+			"objectTypes" : [
+				"BillItem",
+				"BillVat"
+			]
+		},
+		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
 				"TrashItem",
-				"BillItem"
+				"BillItem",
+				"BillVat"
 			]
 		},
 		{
 			"cascadeType" : "MERGE",
 			"objectTypes" : [
-				"BillItem"
-			]
-		},
-		{
-			"cascadeType" : "PERSIST",
-			"objectTypes" : [
-				"BillItem"
+				"BillItem",
+				"BillVat"
 			]
 		}
 	]
@@ -249,38 +295,39 @@ Bill
 
 ```JSON
 {
-	"id" : "d32ac698-9727-438b-865b-784364cad3c1",
-	"createdAt" : "/Date(1452255319310)/",
-	"updatedAt" : "/Date(1452268159310)/",
-	"version" : 5,
+	"id" : "20fd84f0-22b9-4a05-b812-3a44eda3df3a",
+	"createdAt" : "/Date(1481618448385)/",
+	"updatedAt" : "/Date(1481679528385)/",
+	"version" : 3,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1452257359310)/",
-	"vatDate" : "/Date(1452257359310)/",
-	"dueDate" : "/Date(1453466959310)/",
-	"lastPaymentDate" : "/Date(1452862159310)/",
+	"docDate" : "/Date(1481621928385)/",
+	"vatDate" : "/Date(1481621928385)/",
+	"dueDate" : "/Date(1482831528385)/",
+	"lastPaymentDate" : "/Date(1482226728385)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"vatText" : "All prices are without a VAT.",
 	"header" : "",
 	"footer" : "",
-	"totalPrice" : 2000.0,
+	"itemsPrice" : 2500.0,
+	"totalPrice" : 3000.0,
 	"client" : {
-		"id" : "69caf697-da2d-40a0-b24c-1ddbac250e22",
-		"createdAt" : "/Date(1452257059311)/",
-		"updatedAt" : "/Date(1452278959311)/",
-		"version" : 1,
+		"id" : "347705c2-a792-439d-a9d5-841d27d4ff36",
+		"createdAt" : "/Date(1481620188385)/",
+		"updatedAt" : "/Date(1481632728385)/",
+		"version" : 5,
 		"externalSystem" : {
-			"id" : "50f3add7-9292-44b9-b198-f5c74da8f889",
-			"createdAt" : "/Date(1452253819311)/",
-			"updatedAt" : "/Date(1452314959311)/",
-			"version" : 4,
+			"id" : "c1b01f66-f6bf-493c-bc44-8f0595326107",
+			"createdAt" : "/Date(1481621388385)/",
+			"updatedAt" : "/Date(1481672328385)/",
+			"version" : 9,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1452257359310)/",
+		"externalSyncedAt" : "/Date(1481621928385)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -299,32 +346,32 @@ Bill
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "66ae3bbb-295b-4b02-8b32-bc307bfa5406",
-		"createdAt" : "/Date(1452254359311)/",
-		"updatedAt" : "/Date(1452329359311)/",
-		"version" : 6,
+		"id" : "126d8506-2c6b-40f5-9742-de6efba73fdb",
+		"createdAt" : "/Date(1481619168385)/",
+		"updatedAt" : "/Date(1481701128385)/",
+		"version" : 2,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "69caf697-da2d-40a0-b24c-1ddbac250e22",
-			"createdAt" : "/Date(1452257059311)/",
-			"updatedAt" : "/Date(1452278959311)/",
-			"version" : 1,
+			"id" : "347705c2-a792-439d-a9d5-841d27d4ff36",
+			"createdAt" : "/Date(1481620188385)/",
+			"updatedAt" : "/Date(1481632728385)/",
+			"version" : 5,
 			"externalSystem" : {
-				"id" : "50f3add7-9292-44b9-b198-f5c74da8f889",
-				"createdAt" : "/Date(1452253819311)/",
-				"updatedAt" : "/Date(1452314959311)/",
-				"version" : 4,
+				"id" : "c1b01f66-f6bf-493c-bc44-8f0595326107",
+				"createdAt" : "/Date(1481621388385)/",
+				"updatedAt" : "/Date(1481672328385)/",
+				"version" : 9,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1452257359310)/",
+			"externalSyncedAt" : "/Date(1481621928385)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -347,10 +394,10 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "19bddc31-0db5-4568-98f8-156d7f2e77b3",
-			"createdAt" : "/Date(1452255979311)/",
-			"updatedAt" : "/Date(1452336559311)/",
-			"version" : 5,
+			"id" : "b60714f0-cf0f-43a8-9ba2-146cb3c7cde5",
+			"createdAt" : "/Date(1481620608385)/",
+			"updatedAt" : "/Date(1481629128385)/",
+			"version" : 9,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
@@ -361,10 +408,10 @@ Bill
 			"displayName" : "#0"
 		},
 		{
-			"id" : "193d24d1-c47f-41dd-928f-81448c153a46",
-			"createdAt" : "/Date(1452256879311)/",
-			"updatedAt" : "/Date(1452271759311)/",
-			"version" : 7,
+			"id" : "f9496401-78aa-4d2d-8cec-da904b14dbd3",
+			"createdAt" : "/Date(1481621028386)/",
+			"updatedAt" : "/Date(1481661528386)/",
+			"version" : 5,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 1,
@@ -376,10 +423,10 @@ Bill
 		}
 	],
 	"author" : {
-		"id" : "a541aa0d-e9e1-4722-ad1c-83dcaeab0fa6",
-		"createdAt" : "/Date(1452256039310)/",
-		"updatedAt" : "/Date(1452329359310)/",
-		"version" : 4,
+		"id" : "61607cb3-5cb9-487f-8537-9c26fda929fa",
+		"createdAt" : "/Date(1481621028386)/",
+		"updatedAt" : "/Date(1481683128386)/",
+		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -396,16 +443,28 @@ Bill
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1454108400000)/",
-		"workingTimeStart" : "/Date(1452236400000)/",
-		"workingTimeEnd" : "/Date(1452268800000)/",
-		"created" : "/Date(1452170959310)/",
+		"birthdayRemind" : "/Date(1483484400000)/",
+		"workingTimeStart" : "/Date(1481612400000)/",
+		"workingTimeEnd" : "/Date(1481644800000)/",
+		"created" : "/Date(1481535528385)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"groupAttributes" : "[\"project\"]",
 	"draft" : false,
+	"vatMode" : "DECLARE_VAT",
+	"vats" : [
+		{
+			"id" : "96d67ad0-68ec-4850-b361-fd6cb14e6bc4",
+			"createdAt" : "/Date(1481620728386)/",
+			"updatedAt" : "/Date(1481697528386)/",
+			"version" : 3,
+			"vatRate" : 20.0,
+			"vatPrice" : 500.0,
+			"displayName" : "20.0"
+		}
+	],
 	"displayName" : "2013-01"
 }
 ```

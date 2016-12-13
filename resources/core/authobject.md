@@ -48,9 +48,9 @@ AuthObject
 
 ```JSON
 {
-	"token" : "5bff7a36-79c5-4e45-83bd-33618287fdcc",
-	"expiration" : "/Date(1452260959464)/",
-	"refreshToken" : "820c26ac-568d-4853-b52b-14ca2db33a3c",
-	"refreshExpiration" : "/Date(1452862159464)/"
+	"token" : "32e53771-4b56-46e7-8d62-9353678fa53e",
+	"expiration" : "/Date(1481625530392)/",
+	"refreshToken" : "0f978668-5d40-4ba3-977a-8d8f8444a202",
+	"refreshExpiration" : "/Date(1482226730392)/"
 }
 ```

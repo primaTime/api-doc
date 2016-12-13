@@ -251,14 +251,14 @@ Client
 
 ```JSON
 {
-	"id" : "7cf04c8c-090b-4603-8231-f8df54d17df9",
-	"createdAt" : "/Date(1452256037700)/",
-	"updatedAt" : "/Date(1452257357700)/",
-	"version" : 1,
+	"id" : "24d62f15-a902-4afe-921a-1c177f82c7a8",
+	"createdAt" : "/Date(1481621929960)/",
+	"updatedAt" : "/Date(1481650729960)/",
+	"version" : 3,
 	"externalSystem" : {
-		"id" : "95f2ef6d-b515-42af-a9ef-cb2692caf337",
-		"createdAt" : "/Date(1452255317700)/",
-		"updatedAt" : "/Date(1452318557700)/",
+		"id" : "48cafafb-ae61-4f5c-85c3-49ca9a2f01e1",
+		"createdAt" : "/Date(1481621809960)/",
+		"updatedAt" : "/Date(1481650729960)/",
 		"version" : 2,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -266,7 +266,7 @@ Client
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1452257357700)/",
+	"externalSyncedAt" : "/Date(1481621929960)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",

@@ -112,13 +112,13 @@ DocumentSeries
 
 ```JSON
 {
-	"id" : "8e21b05f-9f97-4123-8201-946b24cb17af",
-	"createdAt" : "/Date(1452255559199)/",
-	"updatedAt" : "/Date(1452296959199)/",
-	"version" : 2,
+	"id" : "8321205f-c857-44b2-a79a-d9af0d5c3433",
+	"createdAt" : "/Date(1481619349398)/",
+	"updatedAt" : "/Date(1481665129398)/",
+	"version" : 5,
 	"docType" : "BILL",
 	"numberingScheme" : "${number}/2016",
-	"nextNumber" : 47,
+	"nextNumber" : 495,
 	"displayName" : "${number}/2016"
 }
 ```

@@ -57,5 +57,6 @@
 	 * [BILLING](resources/billing/README.md)
 		 * [bill](resources/billing/bill.md)
 		 * [billitem](resources/billing/billitem.md)
+		 * [billvat](resources/billing/billvat.md)
 		 * [timepricelist](resources/billing/timepricelist.md)
 * [Examples](examples/README.md)
