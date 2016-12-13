@@ -53,7 +53,7 @@
         data-chapter-title="Overview"
         data-filepath="rest/README.md"
         data-basepath=".."
-        data-revision="Fri Jan 08 2016 14:04:30 GMT+0100 (CET)"
+        data-revision="Tue Dec 13 2016 11:20:29 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -957,14 +957,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="resources/billing/timepricelist.html">
+        <li class="chapter " data-level="2.4.3" data-path="resources/billing/billvat.html">
+            
+                
+                    <a href="../resources/billing/billvat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                        billvat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="resources/billing/timepricelist.html">
             
                 
                     <a href="../resources/billing/timepricelist.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
                         timepricelist
                     </a>
@@ -1043,10 +1058,19 @@
 <h2 id="https-protocol">HTTPS protocol</h2>
 <p>API is also accessible on the HTTPS protocol.</p>
 <h2 id="api-endpoint">API endpoint</h2>
-<p>Each primaERP account has its own endpoint</p>
+<p>The primaERP API runs in two locations, both with a specific endpoint. It counts also with a generic location-agnostic endpoint, which routes to the proper endpoint via the AWS&apos;s latency based geolocation routing. </p>
+<p>In most cases, the generic location handles the tenant&#x2019;s routing to the proper endpoint, however on certain conditions (e.g. VPN environment, etc), this is not possible. In this case, the API returns a 301 redirect, so that the client repeats the location request to a specific endpoint. </p>
+<p>You can also use the specific location endpoint, as long as you know the correct location value.</p>
 <h4 id="syntax">Syntax</h4>
+<p>Using the generic location endpoint</p>
 <pre><code>    https://{tenant}.api.primaerp.com/v1/
-</code></pre><p>Where <code>{tenant}</code> is the name of the primaERP account</p>
+</code></pre><p>Using specific location endpoint</p>
+<pre><code>    https://{tenant}.api.{location}.primaerp.com/v1/
+</code></pre><p>Where: </p>
+<ul>
+<li><code>{tenant}</code> is the name of the primaERP account</li>
+<li><code>{location}</code> is the specific endpoint location: <em>eu</em> or <em>us</em></li>
+</ul>
 
                     
                     </section>

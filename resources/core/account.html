@@ -53,7 +53,7 @@
         data-chapter-title="account"
         data-filepath="resources/core/account.md"
         data-basepath="../.."
-        data-revision="Fri Jan 08 2016 14:04:30 GMT+0100 (CET)"
+        data-revision="Tue Dec 13 2016 11:20:29 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -957,14 +957,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="resources/billing/timepricelist.html">
+        <li class="chapter " data-level="2.4.3" data-path="resources/billing/billvat.html">
+            
+                
+                    <a href="../../resources/billing/billvat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                        billvat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="resources/billing/timepricelist.html">
             
                 
                     <a href="../../resources/billing/timepricelist.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
                         timepricelist
                     </a>
@@ -1237,6 +1252,20 @@ https://api.primaerp.com/v1/accounts/@own
 <td>read write</td>
 <td>no</td>
 <td>VAT identification number.</td>
+</tr>
+<tr>
+<td>vatMode</td>
+<td>VatMode</td>
+<td>read write</td>
+<td>no</td>
+<td>VAT mode.</td>
+</tr>
+<tr>
+<td>vatRate</td>
+<td>Double</td>
+<td>read write</td>
+<td>no</td>
+<td>VAT rate.</td>
 </tr>
 <tr>
 <td>version</td>
@@ -1530,6 +1559,24 @@ https://api.primaerp.com/v1/accounts/@own
             <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
         },
         {
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;VatMode&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;vatMode&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;VAT mode.&quot;</span>,
+            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>,
+            <span class="hljs-string">&quot;constraints&quot;</span> : [
+                {
+                    <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Enum&quot;</span>,
+                    <span class="hljs-string">&quot;details&quot;</span> : <span class="hljs-string">&quot;DECLARE_VAT, NO_VAT&quot;</span>
+                }
+            ]
+        },
+        {
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Double&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;vatRate&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;VAT rate.&quot;</span>,
+            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
+        },
+        {
             <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Long&quot;</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;version&quot;</span>,
             <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Object version number.&quot;</span>,
@@ -1593,15 +1640,15 @@ https://api.primaerp.com/v1/accounts/@own
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;6d446180-deff-44fe-a020-2e125b5ed211&quot;</span>,
-    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1452256278609)/&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1452336558609)/&quot;</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;3df9973e-ebb8-426a-baa8-668622d1de28&quot;</span>,
+    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621209672)/&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481647129672)/&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
     <span class="hljs-string">&quot;owner&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;fc663cb7-7856-4a96-b519-39ae3150b6fd&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1452255198609)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1452336558609)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1b2e2ebe-2260-4852-97cd-fad088c59044&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621869672)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481629129672)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">9</span>,
         <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
         <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Smith&quot;</span>,
         <span class="hljs-string">&quot;nickName&quot;</span> : <span class="hljs-string">&quot;Smith, J.&quot;</span>,
@@ -1618,10 +1665,10 @@ https://api.primaerp.com/v1/accounts/@own
         <span class="hljs-string">&quot;confirmed&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;confirmedEmail&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;active&quot;</span> : <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1453071600000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1452236400000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1452268800000)/&quot;</span>,
-        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1452170958609)/&quot;</span>,
+        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1482447600000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1481612400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1481644800000)/&quot;</span>,
+        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1481535529671)/&quot;</span>,
         <span class="hljs-string">&quot;admin&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;projectManager&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Smith John&quot;</span>
@@ -1645,13 +1692,15 @@ https://api.primaerp.com/v1/accounts/@own
     <span class="hljs-string">&quot;apiKey&quot;</span> : <span class="hljs-string">&quot;0165e7d3-c99f-41b5-bf8c-03222edcf681&quot;</span>,
     <span class="hljs-string">&quot;confirmed&quot;</span> : <span class="hljs-literal">true</span>,
     <span class="hljs-string">&quot;currency&quot;</span> : <span class="hljs-string">&quot;USD&quot;</span>,
-    <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1452236400000)/&quot;</span>,
-    <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1452268800000)/&quot;</span>,
-    <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1452170958609)/&quot;</span>,
+    <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1481612400000)/&quot;</span>,
+    <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1481644800000)/&quot;</span>,
+    <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1481535529671)/&quot;</span>,
     <span class="hljs-string">&quot;source&quot;</span> : <span class="hljs-string">&quot;LINKEDIN&quot;</span>,
     <span class="hljs-string">&quot;campaign&quot;</span> : <span class="hljs-string">&quot;LINKEDIN-2013-C1&quot;</span>,
-    <span class="hljs-string">&quot;deactivationRequestedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1452257358609)/&quot;</span>,
-    <span class="hljs-string">&quot;affiliateId&quot;</span> : <span class="hljs-string">&quot;dba2ea82-b5c0-417d-a33c-76c7a4466bd6&quot;</span>,
+    <span class="hljs-string">&quot;deactivationRequestedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621929671)/&quot;</span>,
+    <span class="hljs-string">&quot;affiliateId&quot;</span> : <span class="hljs-string">&quot;b02b685c-7c23-4f9e-bc59-2816986d1954&quot;</span>,
+    <span class="hljs-string">&quot;vatMode&quot;</span> : <span class="hljs-string">&quot;DECLARE_VAT&quot;</span>,
+    <span class="hljs-string">&quot;vatRate&quot;</span> : <span class="hljs-number">20.0</span>,
     <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Example Ltd. (example-ltd)&quot;</span>
 }
 </code></pre>

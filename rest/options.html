@@ -53,7 +53,7 @@
         data-chapter-title="Query string options"
         data-filepath="rest/options.md"
         data-basepath=".."
-        data-revision="Fri Jan 08 2016 14:04:30 GMT+0100 (CET)"
+        data-revision="Tue Dec 13 2016 11:20:29 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -957,14 +957,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="resources/billing/timepricelist.html">
+        <li class="chapter " data-level="2.4.3" data-path="resources/billing/billvat.html">
+            
+                
+                    <a href="../resources/billing/billvat.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                        billvat
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="resources/billing/timepricelist.html">
             
                 
                     <a href="../resources/billing/timepricelist.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.3.</b>
+                            <b>2.4.4.</b>
                         
                         timepricelist
                     </a>
@@ -1043,22 +1058,22 @@
 </thead>
 <tbody>
 <tr>
-<td>Create</td>
+<td><a href="#create">Create</a></td>
 <td><a href="http://en.wikipedia.org/wiki/Insert_%28SQL%29" target="_blank">INSERT</a></td>
 <td><a href="http://en.wikipedia.org/wiki/POST_%28HTTP%29" target="_blank">POST</a></td>
 </tr>
 <tr>
-<td>Read (Retrieve)</td>
+<td><a href="#read-retrieve">Read (Retrieve)</a></td>
 <td><a href="http://en.wikipedia.org/wiki/Select_%28SQL%29" target="_blank">SELECT</a></td>
 <td><a href="http://en.wikipedia.org/wiki/GET_%28HTTP%29" target="_blank">GET</a></td>
 </tr>
 <tr>
-<td>Update (Modify)</td>
+<td><a href="#update-modify">Update (Modify)</a></td>
 <td><a href="http://en.wikipedia.org/wiki/Update_%28SQL%29" target="_blank">UPDATE</a></td>
 <td><a href="http://en.wikipedia.org/wiki/PUT_%28HTTP%29" target="_blank">PUT</a></td>
 </tr>
 <tr>
-<td>Delete (Destroy)</td>
+<td><a href="#delete-destroy">Delete (Destroy)</a></td>
 <td><a href="http://en.wikipedia.org/wiki/Delete_%28SQL%29" target="_blank">DELETE</a></td>
 <td><a href="http://en.wikipedia.org/wiki/DELETE_%28HTTP%29" target="_blank">DELETE</a></td>
 </tr>
@@ -1070,8 +1085,116 @@
 <li>PUT = <code>?method=PUT</code></li>
 <li>DELETE = <code>?method=DELETE</code></li>
 </ul>
-<h2 id="set">$set</h2>
-<p>This is a special case used to set values to the object&apos;s fields. This query can be used with multiple parameters.</p>
+<h3 id="create">Create</h3>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code></li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code>    POST http://{tenant}.api.primaerp.com/v1/time/timerecords
+
+    &gt; Content-Type: application/json
+</code></pre><p>Request data:</p>
+<pre><code class="lang-JSON">{
+  <span class="hljs-string">&quot;user&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;cc41790b-59f4-4520-81e1-ac10c74e9454&quot;</span>
+  },
+  <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;/Date(1479974400000)/&quot;</span>,
+  <span class="hljs-string">&quot;stop&quot;</span>: <span class="hljs-string">&quot;/Date(1479978000000)/&quot;</span>,
+  <span class="hljs-string">&quot;duration&quot;</span>: <span class="hljs-number">3600000</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;Lorem ipsum, dolor sit amet.&quot;</span>,
+  <span class="hljs-string">&quot;effective&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h3 id="read-retrieve">Read (Retrieve)</h3>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code></li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code>    GET http://{tenant}.api.primaerp.com/v1/time/projects
+
+    &gt; Accept: application/json
+</code></pre><p>Response data:</p>
+<pre><code class="lang-JSON">[
+    {
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1b8e29a2-d97d-4e9c-b0b3-7072241adf22&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">9</span>,
+        <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Content management system&quot;</span>,
+        <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;CMS&quot;</span>,
+        <span class="hljs-string">&quot;note&quot;</span> : <span class="hljs-string">&quot;core feature&quot;</span>,
+        <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1452170816188)/&quot;</span>,
+        <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1452343616188)/&quot;</span>,
+        <span class="hljs-string">&quot;timeBudget&quot;</span> : <span class="hljs-number">604800000</span>,
+        <span class="hljs-string">&quot;priceBudget&quot;</span> : <span class="hljs-number">100000.0</span>,
+        <span class="hljs-string">&quot;personal&quot;</span> : <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;owner&quot;</span> : {
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;2a99b231-e9fa-4c6c-91ca-aca539df8590&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
+            <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
+            <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Doe&quot;</span>,
+            <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;john.doe@example.com&quot;</span>,
+            ...
+        },
+        ...
+    },
+    {
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;6f23b610-92c1-4005-9235-c714d9b4a2b0&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Hardware upgrade&quot;</span>,
+        <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;HWUP&quot;</span>,
+        <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1452170816188)/&quot;</span>,
+        <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1452343616188)/&quot;</span>,
+        <span class="hljs-string">&quot;timeBudget&quot;</span> : <span class="hljs-number">172800000</span>,
+        <span class="hljs-string">&quot;priceBudget&quot;</span> : <span class="hljs-number">20000.0</span>,
+        <span class="hljs-string">&quot;personal&quot;</span> : <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;owner&quot;</span> : {
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1fc16d91-322b-4121-87ae-53c9db59dcc1&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">3</span>,
+            <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
+            <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Smith&quot;</span>,
+            <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;john.smith@example.com&quot;</span>,
+            ...
+        },
+        ...
+    },
+    ...
+]
+</code></pre>
+<h3 id="update-modify">Update (Modify)</h3>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/{id}
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code></li>
+<li><code>{id}</code> - a resource ID</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code>    PUT http://{tenant}.api.primaerp.com/v1/time/projects/6f23b610-92c1-4005-9235-c714d9b4a2b0
+
+    &gt; Content-Type: application/json
+</code></pre><p>Request data:</p>
+<pre><code class="lang-JSON">{
+  <span class="hljs-string">&quot;priceBudget&quot;</span> : <span class="hljs-number">40000.0</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-number">2</span>
+}
+</code></pre>
+<h3 id="delete-destroy">Delete (Destroy)</h3>
+<h4 id="syntax">Syntax</h4>
+<pre><code>    /{resource}/{id}
+</code></pre><p>Values:</p>
+<ul>
+<li><code>{resource}</code> - a module resource such as: <code>time/projects</code>, <code>time/timerecords</code>, <code>time/tasks</code>, etc. Or a global resource such as <code>user</code></li>
+<li><code>{id}</code> - a resource ID</li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code>    DELETE http://{tenant}.api.primaerp.com/v1/time/projects/6f23b610-92c1-4005-9235-c714d9b4a2b0
+</code></pre><h3 id="set">$set</h3>
+<p>This is a special case of PUT. It is used to set values to the object&apos;s fields. This query can be used with multiple parameters.</p>
 <h4 id="syntax">Syntax</h4>
 <pre><code>    /{resource}/{id}/$set?object_field1=value1&amp;object_field2=value2
 </code></pre><p>Values:</p>

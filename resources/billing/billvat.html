@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>contactperson | primaERP / API Documentation</title>
+        <title>billvat | primaERP / API Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.6">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../../resources/time/impulse.html" />
+    <link rel="next" href="../../resources/billing/timepricelist.html" />
     
     
-    <link rel="prev" href="../../resources/time/client.html" />
+    <link rel="prev" href="../../resources/billing/billitem.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.3.2"
-        data-chapter-title="contactperson"
-        data-filepath="resources/time/contactperson.md"
+        data-level="2.4.3"
+        data-chapter-title="billvat"
+        data-filepath="resources/billing/billvat.md"
         data-basepath="../.."
         data-revision="Tue Dec 13 2016 11:20:29 GMT+0100 (CET)"
         data-innerlanguage="">
@@ -756,7 +756,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3.2" data-path="resources/time/contactperson.html">
+        <li class="chapter " data-level="2.3.2" data-path="resources/time/contactperson.html">
             
                 
                     <a href="../../resources/time/contactperson.html">
@@ -957,7 +957,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="resources/billing/billvat.html">
+        <li class="chapter active" data-level="2.4.3" data-path="resources/billing/billvat.html">
             
                 
                     <a href="../../resources/billing/billvat.html">
@@ -1045,9 +1045,9 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="contactperson">ContactPerson</h1>
+                        <h1 id="billvat">BillVat</h1>
 <h2 id="url">URL</h2>
-<pre><code>https://api.primaerp.com/v1/time/clients/{id}/contacts
+<pre><code>https://api.primaerp.com/v1/billing/bills/{billId}/vats
 </code></pre><h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -1060,13 +1060,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>client</td>
-<td>Client</td>
-<td>read write</td>
-<td>no</td>
-<td>Provides info about client for which person works.</td>
-</tr>
 <tr>
 <td>createdAt</td>
 <td>Date</td>
@@ -1082,46 +1075,11 @@
 <td>Describes an object in human readable form.</td>
 </tr>
 <tr>
-<td>email</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Contact person&apos;s e-mail address.</td>
-</tr>
-<tr>
-<td>firstName</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Contact person&apos;s first name.</td>
-</tr>
-<tr>
 <td>id</td>
 <td>String</td>
 <td>read write</td>
 <td>no</td>
 <td>Unique object identifier.</td>
-</tr>
-<tr>
-<td>jobTitle</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Describes the job position held by a person.</td>
-</tr>
-<tr>
-<td>lastName</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Contact person&apos;s last name.</td>
-</tr>
-<tr>
-<td>phone</td>
-<td>String</td>
-<td>read write</td>
-<td>no</td>
-<td>Contact person&apos;s phone number.</td>
 </tr>
 <tr>
 <td>trashItem</td>
@@ -1138,6 +1096,20 @@
 <td>Last modified date.</td>
 </tr>
 <tr>
+<td>vatPrice</td>
+<td>Double</td>
+<td>read write</td>
+<td>no</td>
+<td>VAT calculated from related bill.</td>
+</tr>
+<tr>
+<td>vatRate</td>
+<td>Double</td>
+<td>read write</td>
+<td>no</td>
+<td>VAT rate in percent.</td>
+</tr>
+<tr>
 <td>version</td>
 <td>Long</td>
 <td>read write</td>
@@ -1148,16 +1120,9 @@
 </table>
 <h2 id="metadata">Metadata</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;ContactPerson&quot;</span>,
-    <span class="hljs-string">&quot;path&quot;</span> : <span class="hljs-string">&quot;/v1/time/clients/{id}/contacts&quot;</span>,
+    <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;BillVat&quot;</span>,
+    <span class="hljs-string">&quot;path&quot;</span> : <span class="hljs-string">&quot;/v1/billing/bills/{billId}/vats&quot;</span>,
     <span class="hljs-string">&quot;fields&quot;</span> : [
-        {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Client&quot;</span>,
-            <span class="hljs-string">&quot;path&quot;</span> : <span class="hljs-string">&quot;/v1/time/clients&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;client&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Provides info about client for which person works.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
-        },
         {
             <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Date&quot;</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;createdAt&quot;</span>,
@@ -1169,24 +1134,6 @@
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;displayName&quot;</span>,
             <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Describes an object in human readable form.&quot;</span>,
             <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_ONLY&quot;</span>
-        },
-        {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;email&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Contact person&apos;s e-mail address.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>,
-            <span class="hljs-string">&quot;constraints&quot;</span> : [
-                {
-                    <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Email&quot;</span>,
-                    <span class="hljs-string">&quot;details&quot;</span> : <span class="hljs-string">&quot;regexp .*&quot;</span>
-                }
-            ]
-        },
-        {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;firstName&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Contact person&apos;s first name.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
         },
         {
             <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
@@ -1204,24 +1151,6 @@
             ]
         },
         {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;jobTitle&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Describes the job position held by a person.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
-        },
-        {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;lastName&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Contact person&apos;s last name.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
-        },
-        {
-            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;String&quot;</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;phone&quot;</span>,
-            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Contact person&apos;s phone number.&quot;</span>,
-            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
-        },
-        {
             <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;TrashItem&quot;</span>,
             <span class="hljs-string">&quot;path&quot;</span> : <span class="hljs-string">&quot;/v1/trash&quot;</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;trashItem&quot;</span>,
@@ -1233,6 +1162,18 @@
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;updatedAt&quot;</span>,
             <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;Last modified date.&quot;</span>,
             <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_ONLY&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Double&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;vatPrice&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;VAT calculated from related bill.&quot;</span>,
+            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
+        },
+        {
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Double&quot;</span>,
+            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;vatRate&quot;</span>,
+            <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;VAT rate in percent.&quot;</span>,
+            <span class="hljs-string">&quot;access&quot;</span> : <span class="hljs-string">&quot;READ_WRITE&quot;</span>
         },
         {
             <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;Long&quot;</span>,
@@ -1253,50 +1194,13 @@
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;dd526884-2594-414b-bb8f-2a875d4c4800&quot;</span>,
-    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481620850136)/&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481704730136)/&quot;</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
-    <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;Pedro&quot;</span>,
-    <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Examplo&quot;</span>,
-    <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;pedro@example.com&quot;</span>,
-    <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;66 234 555 678&quot;</span>,
-    <span class="hljs-string">&quot;jobTitle&quot;</span> : <span class="hljs-string">&quot;deputy director&quot;</span>,
-    <span class="hljs-string">&quot;client&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;2019f09b-7770-4cfe-9d64-40f4aa52bbde&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481620550136)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481657930136)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;9fd4828d-b35f-4aaf-bea5-da48121656d0&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621630136)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481668730136)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">3</span>,
-            <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
-            <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
-            <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>
-        },
-        <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;customer-996&quot;</span>,
-        <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/customers/996&quot;</span>,
-        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621930136)/&quot;</span>,
-        <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
-        <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>,
-        <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;EXL&quot;</span>,
-        <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;info@example.com&quot;</span>,
-        <span class="hljs-string">&quot;billsCount&quot;</span> : <span class="hljs-number">2</span>,
-        <span class="hljs-string">&quot;projectsCount&quot;</span> : <span class="hljs-number">1</span>,
-        <span class="hljs-string">&quot;streetAddress&quot;</span> : <span class="hljs-string">&quot;Rua 123 Sul Avenida Lo 15&quot;</span>,
-        <span class="hljs-string">&quot;additionalAddressInfo&quot;</span> : <span class="hljs-string">&quot;&quot;</span>,
-        <span class="hljs-string">&quot;zipCode&quot;</span> : <span class="hljs-string">&quot;89020-000&quot;</span>,
-        <span class="hljs-string">&quot;city&quot;</span> : <span class="hljs-string">&quot;Palmas&quot;</span>,
-        <span class="hljs-string">&quot;state&quot;</span> : <span class="hljs-string">&quot;Tocantins&quot;</span>,
-        <span class="hljs-string">&quot;countryCode&quot;</span> : <span class="hljs-string">&quot;BRA&quot;</span>,
-        <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;+66 987 654 321&quot;</span>,
-        <span class="hljs-string">&quot;vatId&quot;</span> : <span class="hljs-string">&quot;23.456.789/0001-77&quot;</span>,
-        <span class="hljs-string">&quot;website&quot;</span> : <span class="hljs-string">&quot;http://www.example.com/&quot;</span>,
-        <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>
-    },
-    <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Examplo Pedro&quot;</span>
+    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;bdfeffc9-8d7a-43d0-a948-613b4170f0e6&quot;</span>,
+    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621689816)/&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481675929816)/&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
+    <span class="hljs-string">&quot;vatRate&quot;</span> : <span class="hljs-number">20.0</span>,
+    <span class="hljs-string">&quot;vatPrice&quot;</span> : <span class="hljs-number">500.0</span>,
+    <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;20.0&quot;</span>
 }
 </code></pre>
 
@@ -1309,10 +1213,10 @@
         </div>
 
         
-        <a href="../../resources/time/client.html" class="navigation navigation-prev " aria-label="Previous page: client"><i class="fa fa-angle-left"></i></a>
+        <a href="../../resources/billing/billitem.html" class="navigation navigation-prev " aria-label="Previous page: billitem"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../resources/time/impulse.html" class="navigation navigation-next " aria-label="Next page: impulse"><i class="fa fa-angle-right"></i></a>
+        <a href="../../resources/billing/timepricelist.html" class="navigation navigation-next " aria-label="Next page: timepricelist"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
