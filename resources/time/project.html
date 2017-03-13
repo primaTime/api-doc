@@ -53,7 +53,7 @@
         data-chapter-title="project"
         data-filepath="resources/time/project.md"
         data-basepath="../.."
-        data-revision="Tue Dec 13 2016 11:20:29 GMT+0100 (CET)"
+        data-revision="Mon Mar 13 2017 14:57:29 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1051,8 +1051,6 @@
 
 https://api.primaerp.com/v1/time/projects/{id}/$activate
 
-https://api.primaerp.com/v1/time/projects/@member
-
 https://api.primaerp.com/v1/time/projects/@own
 
 https://api.primaerp.com/v1/time/projects/{id}/$deactivate
@@ -1061,11 +1059,11 @@ https://api.primaerp.com/v1/time/projects/@trackable
 
 https://api.primaerp.com/v1/time/projects/@editable
 
+https://api.primaerp.com/v1/time/projects/@member
+
 https://api.primaerp.com/v1/time/clients/{id}/projects
 
 https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$activate
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/@member
 
 https://api.primaerp.com/v1/time/clients/{id}/projects/@own
 
@@ -1074,6 +1072,8 @@ https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$deactivate
 https://api.primaerp.com/v1/time/clients/{id}/projects/@trackable
 
 https://api.primaerp.com/v1/time/clients/{id}/projects/@editable
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/@member
 
 https://api.primaerp.com/v1/users/{id}/projects
 
@@ -1520,36 +1520,36 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;5549dbc1-05c3-4456-80ac-755784d324a9&quot;</span>,
-    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481618748548)/&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481632728548)/&quot;</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">3</span>,
+    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;9dd9fa3b-f15b-47db-985c-281d773d3859&quot;</span>,
+    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386374782)/&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489470794782)/&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
     <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;86f74878-0da5-4c37-a190-2398f7295a31&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481620248549)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481690328549)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">5</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;999e62f5-0461-426e-aa13-8d160d4f7b48&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387094783)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489467194783)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
         <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
         <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>
     },
     <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;project-221&quot;</span>,
     <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/projects/221&quot;</span>,
-    <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621928547)/&quot;</span>,
+    <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994781)/&quot;</span>,
     <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
     <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Content management system&quot;</span>,
     <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;CMS&quot;</span>,
     <span class="hljs-string">&quot;note&quot;</span> : <span class="hljs-string">&quot;core feature&quot;</span>,
-    <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1481535528547)/&quot;</span>,
-    <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1481708328547)/&quot;</span>,
+    <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1489301594781)/&quot;</span>,
+    <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1489474394781)/&quot;</span>,
     <span class="hljs-string">&quot;timeBudget&quot;</span> : <span class="hljs-number">604800000</span>,
     <span class="hljs-string">&quot;priceBudget&quot;</span> : <span class="hljs-number">100000.0</span>,
     <span class="hljs-string">&quot;personal&quot;</span> : <span class="hljs-literal">false</span>,
     <span class="hljs-string">&quot;owner&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;5bc37d04-1956-4af8-b428-2cd2b2c6929f&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481619048549)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481704728549)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;4d2cdece-5432-444c-94fe-9497205814d1&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387214782)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489413194782)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
         <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
         <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Doe&quot;</span>,
         <span class="hljs-string">&quot;nickName&quot;</span> : <span class="hljs-string">&quot;Johny D.&quot;</span>,
@@ -1566,31 +1566,31 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
         <span class="hljs-string">&quot;confirmed&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;confirmedEmail&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;active&quot;</span> : <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1483484400000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1481612400000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1481644800000)/&quot;</span>,
-        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1481535528548)/&quot;</span>,
+        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1491256800000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1489388400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1489420800000)/&quot;</span>,
+        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1489301594781)/&quot;</span>,
         <span class="hljs-string">&quot;admin&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;projectManager&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Doe John&quot;</span>
     },
     <span class="hljs-string">&quot;client&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;fb8c1c50-90a7-443a-a344-585e8ac08287&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481618688548)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481661528548)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;cce32402-ee44-49ea-bd6c-7eb94987f510&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387454782)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489438394782)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">3</span>,
         <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;5a8cd837-6fd9-4ea9-a9ad-14f6be566107&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481618388549)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481697528549)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;62316e9f-3a2a-4163-9d6a-eb58b048dc76&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489385474782)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489427594782)/&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
             <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
             <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>
         },
         <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;customer-996&quot;</span>,
         <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/customers/996&quot;</span>,
-        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1481621928547)/&quot;</span>,
+        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994781)/&quot;</span>,
         <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
         <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>,
         <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;EXL&quot;</span>,
