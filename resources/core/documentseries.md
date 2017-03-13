@@ -112,13 +112,13 @@ DocumentSeries
 
 ```JSON
 {
-	"id" : "8321205f-c857-44b2-a79a-d9af0d5c3433",
-	"createdAt" : "/Date(1481619349398)/",
-	"updatedAt" : "/Date(1481665129398)/",
-	"version" : 5,
+	"id" : "9dfc9d86-660c-4159-b21a-8ec3d875d4df",
+	"createdAt" : "/Date(1489385175231)/",
+	"updatedAt" : "/Date(1489395195231)/",
+	"version" : 8,
 	"docType" : "BILL",
-	"numberingScheme" : "${number}/2016",
-	"nextNumber" : 495,
-	"displayName" : "${number}/2016"
+	"numberingScheme" : "${number}/2017",
+	"nextNumber" : 746,
+	"displayName" : "${number}/2017"
 }
 ```

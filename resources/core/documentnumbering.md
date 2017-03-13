@@ -115,9 +115,9 @@ DocumentNumbering
 
 ```JSON
 {
-	"id" : "c1d41f1f-3d3d-466c-a36b-ebec276e77ed",
-	"createdAt" : "/Date(1481619529988)/",
-	"updatedAt" : "/Date(1481632729988)/",
+	"id" : "07225a01-22c5-463d-a8c5-31fc601e90f9",
+	"createdAt" : "/Date(1489387515311)/",
+	"updatedAt" : "/Date(1489391595311)/",
 	"version" : 5,
 	"docType" : "BILL",
 	"numberingScheme" : "BIL-{number}/{year}",

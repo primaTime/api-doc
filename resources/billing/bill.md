@@ -13,16 +13,6 @@ Bill
 
 	https://api.primaerp.com/v1/billing/bills/{id}/billitems/relations
 
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
-
 	https://api.primaerp.com/v1/time/clients/{id}/bills
 
 	https://api.primaerp.com/v1/time/clients/{id}/bills/$getNextDocNumber
@@ -32,6 +22,16 @@ Bill
 	https://api.primaerp.com/v1/time/clients/{id}/bills/$setNextDocNumberPart
 
 	https://api.primaerp.com/v1/time/clients/{id}/bills/{id}/billitems/relations
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
 
 	https://api.primaerp.com/v1/billing/billitems/{id}/bills
 
@@ -273,16 +273,16 @@ Bill
 			]
 		},
 		{
-			"cascadeType" : "REMOVE",
+			"cascadeType" : "MERGE",
 			"objectTypes" : [
-				"TrashItem",
 				"BillItem",
 				"BillVat"
 			]
 		},
 		{
-			"cascadeType" : "MERGE",
+			"cascadeType" : "REMOVE",
 			"objectTypes" : [
+				"TrashItem",
 				"BillItem",
 				"BillVat"
 			]
@@ -295,15 +295,15 @@ Bill
 
 ```JSON
 {
-	"id" : "20fd84f0-22b9-4a05-b812-3a44eda3df3a",
-	"createdAt" : "/Date(1481618448385)/",
-	"updatedAt" : "/Date(1481679528385)/",
-	"version" : 3,
+	"id" : "41da91ea-74a7-4da6-aad8-03ac30eccc35",
+	"createdAt" : "/Date(1489385114449)/",
+	"updatedAt" : "/Date(1489391594449)/",
+	"version" : 1,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1481621928385)/",
-	"vatDate" : "/Date(1481621928385)/",
-	"dueDate" : "/Date(1482831528385)/",
-	"lastPaymentDate" : "/Date(1482226728385)/",
+	"docDate" : "/Date(1489387994448)/",
+	"vatDate" : "/Date(1489387994448)/",
+	"dueDate" : "/Date(1490593994448)/",
+	"lastPaymentDate" : "/Date(1489992794448)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"vatText" : "All prices are without a VAT.",
@@ -312,22 +312,22 @@ Bill
 	"itemsPrice" : 2500.0,
 	"totalPrice" : 3000.0,
 	"client" : {
-		"id" : "347705c2-a792-439d-a9d5-841d27d4ff36",
-		"createdAt" : "/Date(1481620188385)/",
-		"updatedAt" : "/Date(1481632728385)/",
-		"version" : 5,
+		"id" : "e8bf5e26-95a3-49fc-af1d-7b2d37382e62",
+		"createdAt" : "/Date(1489386854449)/",
+		"updatedAt" : "/Date(1489456394449)/",
+		"version" : 2,
 		"externalSystem" : {
-			"id" : "c1b01f66-f6bf-493c-bc44-8f0595326107",
-			"createdAt" : "/Date(1481621388385)/",
-			"updatedAt" : "/Date(1481672328385)/",
-			"version" : 9,
+			"id" : "474345f4-92d7-48d8-b587-22f6e64f3c9e",
+			"createdAt" : "/Date(1489387214449)/",
+			"updatedAt" : "/Date(1489441994449)/",
+			"version" : 5,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1481621928385)/",
+		"externalSyncedAt" : "/Date(1489387994448)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -346,32 +346,32 @@ Bill
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "126d8506-2c6b-40f5-9742-de6efba73fdb",
-		"createdAt" : "/Date(1481619168385)/",
-		"updatedAt" : "/Date(1481701128385)/",
-		"version" : 2,
+		"id" : "12680956-1b16-40c1-8c55-468449e261c3",
+		"createdAt" : "/Date(1489386494449)/",
+		"updatedAt" : "/Date(1489441994449)/",
+		"version" : 1,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "347705c2-a792-439d-a9d5-841d27d4ff36",
-			"createdAt" : "/Date(1481620188385)/",
-			"updatedAt" : "/Date(1481632728385)/",
-			"version" : 5,
+			"id" : "e8bf5e26-95a3-49fc-af1d-7b2d37382e62",
+			"createdAt" : "/Date(1489386854449)/",
+			"updatedAt" : "/Date(1489456394449)/",
+			"version" : 2,
 			"externalSystem" : {
-				"id" : "c1b01f66-f6bf-493c-bc44-8f0595326107",
-				"createdAt" : "/Date(1481621388385)/",
-				"updatedAt" : "/Date(1481672328385)/",
-				"version" : 9,
+				"id" : "474345f4-92d7-48d8-b587-22f6e64f3c9e",
+				"createdAt" : "/Date(1489387214449)/",
+				"updatedAt" : "/Date(1489441994449)/",
+				"version" : 5,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1481621928385)/",
+			"externalSyncedAt" : "/Date(1489387994448)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -394,10 +394,10 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "b60714f0-cf0f-43a8-9ba2-146cb3c7cde5",
-			"createdAt" : "/Date(1481620608385)/",
-			"updatedAt" : "/Date(1481629128385)/",
-			"version" : 9,
+			"id" : "692e6cad-1605-4b5b-90ef-668beec12223",
+			"createdAt" : "/Date(1489387874449)/",
+			"updatedAt" : "/Date(1489470794449)/",
+			"version" : 7,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
@@ -408,10 +408,10 @@ Bill
 			"displayName" : "#0"
 		},
 		{
-			"id" : "f9496401-78aa-4d2d-8cec-da904b14dbd3",
-			"createdAt" : "/Date(1481621028386)/",
-			"updatedAt" : "/Date(1481661528386)/",
-			"version" : 5,
+			"id" : "1700574e-d43f-4c02-9b9d-3c15e5c4c2db",
+			"createdAt" : "/Date(1489385294449)/",
+			"updatedAt" : "/Date(1489431194449)/",
+			"version" : 1,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 1,
@@ -423,9 +423,9 @@ Bill
 		}
 	],
 	"author" : {
-		"id" : "61607cb3-5cb9-487f-8537-9c26fda929fa",
-		"createdAt" : "/Date(1481621028386)/",
-		"updatedAt" : "/Date(1481683128386)/",
+		"id" : "5c2848da-2e0a-4fca-9720-8ba73e6dd80f",
+		"createdAt" : "/Date(1489386374449)/",
+		"updatedAt" : "/Date(1489438394449)/",
 		"version" : 1,
 		"firstName" : "John",
 		"lastName" : "Doe",
@@ -443,10 +443,10 @@ Bill
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1483484400000)/",
-		"workingTimeStart" : "/Date(1481612400000)/",
-		"workingTimeEnd" : "/Date(1481644800000)/",
-		"created" : "/Date(1481535528385)/",
+		"birthdayRemind" : "/Date(1491256800000)/",
+		"workingTimeStart" : "/Date(1489388400000)/",
+		"workingTimeEnd" : "/Date(1489420800000)/",
+		"created" : "/Date(1489301594448)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
@@ -456,10 +456,10 @@ Bill
 	"vatMode" : "DECLARE_VAT",
 	"vats" : [
 		{
-			"id" : "96d67ad0-68ec-4850-b361-fd6cb14e6bc4",
-			"createdAt" : "/Date(1481620728386)/",
-			"updatedAt" : "/Date(1481697528386)/",
-			"version" : 3,
+			"id" : "6d127af8-32f7-431a-8165-fb3b10206799",
+			"createdAt" : "/Date(1489386314449)/",
+			"updatedAt" : "/Date(1489431194449)/",
+			"version" : 7,
 			"vatRate" : 20.0,
 			"vatPrice" : 500.0,
 			"displayName" : "20.0"

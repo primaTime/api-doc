@@ -134,10 +134,10 @@ BillItem
 
 ```JSON
 {
-	"id" : "6780ee8a-9001-4a17-8bf8-b2f1598fd191",
-	"createdAt" : "/Date(1481621268662)/",
-	"updatedAt" : "/Date(1481654328662)/",
-	"version" : 3,
+	"id" : "9faf0aca-6173-4892-b69e-eba81ec84e7b",
+	"createdAt" : "/Date(1489387155379)/",
+	"updatedAt" : "/Date(1489452795379)/",
+	"version" : 5,
 	"attributes" : "{\"project\":\"name\"}",
 	"itemGroup" : "Content management system",
 	"docIndex" : 0,

@@ -39,7 +39,7 @@ Role
 			"constraints" : [
 				{
 					"type" : "Enum",
-					"details" : "TIME_USER, OWNER, ADMIN, PROJECT_MANAGER, PRICE_EDITOR, BILLING_USER, ATTENDANCE_USER, ATTENDANCE_ADVANCED_USER, ATTENDANCE_MANAGER"
+					"details" : "TIME_USER, OWNER, ADMIN, PROJECT_MANAGER, PRICE_EDITOR, BILLING_USER, ATTENDANCE_USER, ATTENDANCE_ADVANCED_USER, ATTENDANCE_MANAGER, TEAM_OBSERVER"
 				}
 			]
 		},
@@ -135,10 +135,10 @@ Role
 
 ```JSON
 {
-	"id" : "aa6da224-0225-4422-b889-ba4990da8e9a",
-	"createdAt" : "/Date(1481620548857)/",
-	"updatedAt" : "/Date(1481621928857)/",
-	"version" : 7,
+	"id" : "d371aedb-00cc-432b-bdee-ec147d707072",
+	"createdAt" : "/Date(1489387213945)/",
+	"updatedAt" : "/Date(1489420393945)/",
+	"version" : 5,
 	"name" : "Admin",
 	"builtInRole" : "ADMIN",
 	"roleType" : "EXPLICIT",

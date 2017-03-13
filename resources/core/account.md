@@ -30,6 +30,7 @@ Account
 | language                | String    | read write | no       | Preferred language.                                                                                                           |
 | name                    | String    | read write | YES      | The Account name.                                                                                                             |
 | owner                   | User      | read write | no       | The user who has created the account.                                                                                         |
+| paymentInfo             | String    | read write | no       | Bank account and other payment information.                                                                                   |
 | phone                   | String    | read write | no       | Telephone number.                                                                                                             |
 | source                  | String    | read write | no       | The account sources for marketing purposes. For internal use only.                                                            |
 | state                   | String    | read write | no       | Name of the state or province.                                                                                                |
@@ -210,6 +211,12 @@ Account
 		},
 		{
 			"type" : "String",
+			"name" : "paymentInfo",
+			"description" : "Bank account and other payment information.",
+			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "String",
 			"name" : "phone",
 			"description" : "Telephone number.",
 			"access" : "READ_WRITE"
@@ -383,15 +390,15 @@ Account
 
 ```JSON
 {
-	"id" : "3df9973e-ebb8-426a-baa8-668622d1de28",
-	"createdAt" : "/Date(1481621209672)/",
-	"updatedAt" : "/Date(1481647129672)/",
-	"version" : 8,
+	"id" : "fe5f70d7-75f5-4056-8c62-2237affa0ba8",
+	"createdAt" : "/Date(1489386915276)/",
+	"updatedAt" : "/Date(1489416795276)/",
+	"version" : 4,
 	"owner" : {
-		"id" : "1b2e2ebe-2260-4852-97cd-fad088c59044",
-		"createdAt" : "/Date(1481621869672)/",
-		"updatedAt" : "/Date(1481629129672)/",
-		"version" : 9,
+		"id" : "f71813d0-5039-443c-b7cd-a8141405ab80",
+		"createdAt" : "/Date(1489386495276)/",
+		"updatedAt" : "/Date(1489438395276)/",
+		"version" : 2,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -408,10 +415,10 @@ Account
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1482447600000)/",
-		"workingTimeStart" : "/Date(1481612400000)/",
-		"workingTimeEnd" : "/Date(1481644800000)/",
-		"created" : "/Date(1481535529671)/",
+		"birthdayRemind" : "/Date(1490223600000)/",
+		"workingTimeStart" : "/Date(1489388400000)/",
+		"workingTimeEnd" : "/Date(1489420800000)/",
+		"created" : "/Date(1489301595276)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
@@ -427,6 +434,7 @@ Account
 	"phone" : "+55 123 456 789",
 	"website" : "http://www.example.com",
 	"vatId" : "12.345.678/0009-66",
+	"paymentInfo" : "2100 2527 33 1234567890",
 	"timeZone" : "America/Cuiaba",
 	"dateFormat" : "dd/MM/yyyy",
 	"timeFormat" : "HH:mm",
@@ -435,13 +443,13 @@ Account
 	"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 	"confirmed" : true,
 	"currency" : "USD",
-	"workingTimeStart" : "/Date(1481612400000)/",
-	"workingTimeEnd" : "/Date(1481644800000)/",
-	"created" : "/Date(1481535529671)/",
+	"workingTimeStart" : "/Date(1489388400000)/",
+	"workingTimeEnd" : "/Date(1489420800000)/",
+	"created" : "/Date(1489301595276)/",
 	"source" : "LINKEDIN",
 	"campaign" : "LINKEDIN-2013-C1",
-	"deactivationRequestedAt" : "/Date(1481621929671)/",
-	"affiliateId" : "b02b685c-7c23-4f9e-bc59-2816986d1954",
+	"deactivationRequestedAt" : "/Date(1489387995276)/",
+	"affiliateId" : "cb14714c-6430-4e1b-9a2b-4ea10701899f",
 	"vatMode" : "DECLARE_VAT",
 	"vatRate" : 20.0,
 	"displayName" : "Example Ltd. (example-ltd)"

@@ -119,15 +119,15 @@ SpendingTimeUnit
 
 ```JSON
 {
-	"id" : "e3f42251-15d5-4164-b84e-504eb85ecffb",
-	"createdAt" : "/Date(1481619169782)/",
-	"updatedAt" : "/Date(1481704729782)/",
-	"version" : 7,
+	"id" : "dcc41073-3795-4d15-b7fd-7806c7630b15",
+	"createdAt" : "/Date(1489385294008)/",
+	"updatedAt" : "/Date(1489409594008)/",
+	"version" : 2,
 	"user" : {
-		"id" : "913bbb97-2560-48ea-8364-bbde5a6db13b",
-		"createdAt" : "/Date(1481619949782)/",
-		"updatedAt" : "/Date(1481647129782)/",
-		"version" : 3,
+		"id" : "f62ca697-88f4-4228-88d2-6cf1d6d1fa20",
+		"createdAt" : "/Date(1489387034008)/",
+		"updatedAt" : "/Date(1489456394008)/",
+		"version" : 8,
 		"firstName" : "John",
 		"lastName" : "Smith",
 		"nickName" : "Smith, J.",
@@ -144,16 +144,16 @@ SpendingTimeUnit
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1482447600000)/",
-		"workingTimeStart" : "/Date(1481612400000)/",
-		"workingTimeEnd" : "/Date(1481644800000)/",
-		"created" : "/Date(1481535529782)/",
+		"birthdayRemind" : "/Date(1490223600000)/",
+		"workingTimeStart" : "/Date(1489388400000)/",
+		"workingTimeEnd" : "/Date(1489420800000)/",
+		"created" : "/Date(1489301594008)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Smith John"
 	},
-	"begin" : "/Date(1481593129782)/",
-	"end" : "/Date(1481619049782)/",
+	"begin" : "/Date(1489359194008)/",
+	"end" : "/Date(1489385114008)/",
 	"duration" : 1200000,
 	"displayName" : "20m"
 }

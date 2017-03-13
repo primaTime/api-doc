@@ -7,8 +7,6 @@ Project
 
 	https://api.primaerp.com/v1/time/projects/{id}/$activate
 
-	https://api.primaerp.com/v1/time/projects/@member
-
 	https://api.primaerp.com/v1/time/projects/@own
 
 	https://api.primaerp.com/v1/time/projects/{id}/$deactivate
@@ -17,11 +15,11 @@ Project
 
 	https://api.primaerp.com/v1/time/projects/@editable
 
+	https://api.primaerp.com/v1/time/projects/@member
+
 	https://api.primaerp.com/v1/time/clients/{id}/projects
 
 	https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$activate
-
-	https://api.primaerp.com/v1/time/clients/{id}/projects/@member
 
 	https://api.primaerp.com/v1/time/clients/{id}/projects/@own
 
@@ -30,6 +28,8 @@ Project
 	https://api.primaerp.com/v1/time/clients/{id}/projects/@trackable
 
 	https://api.primaerp.com/v1/time/clients/{id}/projects/@editable
+
+	https://api.primaerp.com/v1/time/clients/{id}/projects/@member
 
 	https://api.primaerp.com/v1/users/{id}/projects
 
@@ -305,36 +305,36 @@ Project
 
 ```JSON
 {
-	"id" : "5549dbc1-05c3-4456-80ac-755784d324a9",
-	"createdAt" : "/Date(1481618748548)/",
-	"updatedAt" : "/Date(1481632728548)/",
-	"version" : 3,
+	"id" : "9dd9fa3b-f15b-47db-985c-281d773d3859",
+	"createdAt" : "/Date(1489386374782)/",
+	"updatedAt" : "/Date(1489470794782)/",
+	"version" : 6,
 	"externalSystem" : {
-		"id" : "86f74878-0da5-4c37-a190-2398f7295a31",
-		"createdAt" : "/Date(1481620248549)/",
-		"updatedAt" : "/Date(1481690328549)/",
-		"version" : 5,
+		"id" : "999e62f5-0461-426e-aa13-8d160d4f7b48",
+		"createdAt" : "/Date(1489387094783)/",
+		"updatedAt" : "/Date(1489467194783)/",
+		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "project-221",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-	"externalSyncedAt" : "/Date(1481621928547)/",
+	"externalSyncedAt" : "/Date(1489387994781)/",
 	"externalSynced" : true,
 	"name" : "Content management system",
 	"code" : "CMS",
 	"note" : "core feature",
-	"begins" : "/Date(1481535528547)/",
-	"ends" : "/Date(1481708328547)/",
+	"begins" : "/Date(1489301594781)/",
+	"ends" : "/Date(1489474394781)/",
 	"timeBudget" : 604800000,
 	"priceBudget" : 100000.0,
 	"personal" : false,
 	"owner" : {
-		"id" : "5bc37d04-1956-4af8-b428-2cd2b2c6929f",
-		"createdAt" : "/Date(1481619048549)/",
-		"updatedAt" : "/Date(1481704728549)/",
-		"version" : 7,
+		"id" : "4d2cdece-5432-444c-94fe-9497205814d1",
+		"createdAt" : "/Date(1489387214782)/",
+		"updatedAt" : "/Date(1489413194782)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
@@ -351,31 +351,31 @@ Project
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1483484400000)/",
-		"workingTimeStart" : "/Date(1481612400000)/",
-		"workingTimeEnd" : "/Date(1481644800000)/",
-		"created" : "/Date(1481535528548)/",
+		"birthdayRemind" : "/Date(1491256800000)/",
+		"workingTimeStart" : "/Date(1489388400000)/",
+		"workingTimeEnd" : "/Date(1489420800000)/",
+		"created" : "/Date(1489301594781)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
 	},
 	"client" : {
-		"id" : "fb8c1c50-90a7-443a-a344-585e8ac08287",
-		"createdAt" : "/Date(1481618688548)/",
-		"updatedAt" : "/Date(1481661528548)/",
-		"version" : 1,
+		"id" : "cce32402-ee44-49ea-bd6c-7eb94987f510",
+		"createdAt" : "/Date(1489387454782)/",
+		"updatedAt" : "/Date(1489438394782)/",
+		"version" : 3,
 		"externalSystem" : {
-			"id" : "5a8cd837-6fd9-4ea9-a9ad-14f6be566107",
-			"createdAt" : "/Date(1481618388549)/",
-			"updatedAt" : "/Date(1481697528549)/",
-			"version" : 8,
+			"id" : "62316e9f-3a2a-4163-9d6a-eb58b048dc76",
+			"createdAt" : "/Date(1489385474782)/",
+			"updatedAt" : "/Date(1489427594782)/",
+			"version" : 6,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1481621928547)/",
+		"externalSyncedAt" : "/Date(1489387994781)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
