@@ -3,21 +3,23 @@ Authentication
 
 ## Overview
 
-You must be authorized to access our API resources so primaERP API will provide you with a [Basic access authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
-
-Take into consideration that all of the API requests must be followed by the query parameter "token"
+You have to be authenticated to access our API resources in following steps:
+1. Login with a [User credentials](#authentication-with-user-credentials) or a [Secret key](#authentication-with-a-secret-key).
+1. [Use a token](#token-example) for one hour.
+1. [Refresh a token](#token-expiration).
+1. Go to the step 2.
 
 ## Authentication with user credentials
 
-This is an authentication method which requires the user's credentials via the Basic access authentication
+This is an authentication method which requires the user's credentials by the [Basic access authentication](http://en.wikipedia.org/wiki/Basic_access_authentication)
 
 #### Syntax
 
-To receive the token you should use the API method
+To receive the token you have to use the login resource
 
 		/auth/login?apikey={yourApiKey}
 
-#### Example
+#### Login example
 
 		GET http://{tenant}.api.primaerp.com/v1/auth/login?apikey={yourApiKey}
 		
@@ -30,17 +32,18 @@ To receive the token you should use the API method
 }
 ```
 
-Once you have been authorized via the Basic access authentication, you should use the token in any API resource you are planning to use.
+Once you have been authenticated by the [Basic access authentication](http://en.wikipedia.org/wiki/Basic_access_authentication),
+you don't need the API key. You can use the token to access any API resources you are planning to use.
 
-#### Example
+#### Token example
 
 		GET http://{tenant}.api.primaerp.com/v1/time/projects?token=c0e0c951-40d5-4e4a-9789-6524c1d2f80d
 
 ## Authentication with a Secret key
 
-The secret key is an alternative authentication solution which does not require the user's credentials. It is sent via the basic authentication where it replaces the username. A password is not needed.
+The secret key is an alternative authentication solution which does not require the user's credentials. It is sent by the basic authentication where is replaced the username with a Secret key. You have to use the same login resource as in the example above. A password is not needed.
 
-The secret key is created via the [secretkey resource](../resources/core/secretkey.md)
+The secret key is created by the [secretkey resource](../resources/core/secretkey.md)
 
 #### Syntax
 
