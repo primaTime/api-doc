@@ -15,14 +15,23 @@ This is an authentication method which requires the user's credentials by the [B
 
 #### Syntax
 
-To receive the token you have to use the login resource
+To receive the token you have to use the login resource. Please, do not forget to include the standard HTTP Basic access authentication request header, you can follow instructions [how to create the request header.](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side)
 
 		/auth/login?apikey={yourApiKey}
 
 #### Login example
 
 		GET http://{tenant}.api.primaerp.com/v1/auth/login?apikey={yourApiKey}
-		
+
+for example if you are using ```curl``` HTTP comannd line client:
+
+```bash
+	$ curl http://tenant.api.primaerp.com/v1/auth/login?apikey=1af7a44b-81f1-4de1-11e7-1e675acb1221 \
+	       -H "Authorization: Basic dXNlckBkb21haW4uY29tOnBhc3N3b3Jk"
+```
+
+the response will look like:
+
 ```JSON
 {
 	"token" : "c0e0c951-40d5-4e4a-9789-6524c1d2f80d",
@@ -32,8 +41,7 @@ To receive the token you have to use the login resource
 }
 ```
 
-Once you have been authenticated by the [Basic access authentication](http://en.wikipedia.org/wiki/Basic_access_authentication),
-you don't need the API key. You can use the token to access any API resources you are planning to use.
+Once you have been authenticated you don't need the API key until your token expires. You can use the token to access any API resources you are planning to use.
 
 #### Token example
 
