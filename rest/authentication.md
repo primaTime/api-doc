@@ -23,10 +23,10 @@ To receive the token you have to use the login resource. Please, do not forget t
 
 		GET http://{tenant}.api.primaerp.com/v1/auth/login?apikey={yourApiKey}
 
-for example if you are using ```curl``` HTTP comannd line client:
+for example if you are using ```curl``` HTTP command line client:
 
-```bash
-	$ curl http://tenant.api.primaerp.com/v1/auth/login?apikey=1af7a44b-81f1-4de1-11e7-1e675acb1221 \
+```
+	$ curl http://yourtenant.api.primaerp.com/v1/auth/login?apikey=1af7a44b-81f1-4de1-11e7-1e675acb1221 \
 	       -H "Authorization: Basic dXNlckBkb21haW4uY29tOnBhc3N3b3Jk"
 ```
 
