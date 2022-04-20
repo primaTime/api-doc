@@ -656,6 +656,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.2.22" data-path="../core/subscriptionevent.html">
+            
+                <a href="../core/subscriptionevent.html">
+            
+                    
+                    subscriptionevent
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -818,6 +831,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.3.12" data-path="expensetype.html">
+            
+                <a href="expensetype.html">
+            
+                    
+                    expensetype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.13" data-path="expense.html">
+            
+                <a href="expense.html">
+            
+                    
+                    expense
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -963,6 +1002,8 @@
 
 https://api.primaerp.com/v1/time/projects/{id}/$activate
 
+https://api.primaerp.com/v1/time/projects/@member
+
 https://api.primaerp.com/v1/time/projects/@own
 
 https://api.primaerp.com/v1/time/projects/{id}/$deactivate
@@ -970,22 +1011,6 @@ https://api.primaerp.com/v1/time/projects/{id}/$deactivate
 https://api.primaerp.com/v1/time/projects/@trackable
 
 https://api.primaerp.com/v1/time/projects/@editable
-
-https://api.primaerp.com/v1/time/projects/@member
-
-https://api.primaerp.com/v1/time/clients/{id}/projects
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$activate
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/@own
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$deactivate
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/@trackable
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/@editable
-
-https://api.primaerp.com/v1/time/clients/{id}/projects/@member
 
 https://api.primaerp.com/v1/users/{id}/projects
 
@@ -1000,6 +1025,20 @@ https://api.primaerp.com/v1/users/{id}/projects/{id}/$deactivate
 https://api.primaerp.com/v1/users/{id}/projects/@trackable
 
 https://api.primaerp.com/v1/users/{id}/projects/@editable
+
+https://api.primaerp.com/v1/time/clients/{id}/projects
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$activate
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/@member
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/@own
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/{id}/$deactivate
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/@trackable
+
+https://api.primaerp.com/v1/time/clients/{id}/projects/@editable
 </code></pre><h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -1419,12 +1458,12 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
         {
             <span class="hljs-string">&quot;cascadeType&quot;</span> : <span class="hljs-string">&quot;REMOVE&quot;</span>,
             <span class="hljs-string">&quot;objectTypes&quot;</span> : [
-                <span class="hljs-string">&quot;TrashItem&quot;</span>,
-                <span class="hljs-string">&quot;ProjectMember&quot;</span>,
-                <span class="hljs-string">&quot;ProjectWorkTypeLink&quot;</span>,
-                <span class="hljs-string">&quot;TimeRecord&quot;</span>,
                 <span class="hljs-string">&quot;Task&quot;</span>,
-                <span class="hljs-string">&quot;Impulse&quot;</span>
+                <span class="hljs-string">&quot;TimeRecord&quot;</span>,
+                <span class="hljs-string">&quot;ProjectWorkTypeLink&quot;</span>,
+                <span class="hljs-string">&quot;TrashItem&quot;</span>,
+                <span class="hljs-string">&quot;Impulse&quot;</span>,
+                <span class="hljs-string">&quot;ProjectMember&quot;</span>
             ]
         }
     ]
@@ -1432,40 +1471,40 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;9dd9fa3b-f15b-47db-985c-281d773d3859&quot;</span>,
-    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386374782)/&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489470794782)/&quot;</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
+    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1b067113-3a7c-4e88-9a55-452de3a22704&quot;</span>,
+    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650449634182)/&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650521454182)/&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">4</span>,
     <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;999e62f5-0461-426e-aa13-8d160d4f7b48&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387094783)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489467194783)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;e1255a2b-e65d-4ecb-a758-3ab4ea3de273&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650451494182)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650492654182)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
         <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
         <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>
     },
     <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;project-221&quot;</span>,
     <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/projects/221&quot;</span>,
-    <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994781)/&quot;</span>,
+    <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650453054182)/&quot;</span>,
     <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
     <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Content management system&quot;</span>,
     <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;CMS&quot;</span>,
     <span class="hljs-string">&quot;note&quot;</span> : <span class="hljs-string">&quot;core feature&quot;</span>,
-    <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1489301594781)/&quot;</span>,
-    <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1489474394781)/&quot;</span>,
+    <span class="hljs-string">&quot;begins&quot;</span> : <span class="hljs-string">&quot;/Date(1650366654182)/&quot;</span>,
+    <span class="hljs-string">&quot;ends&quot;</span> : <span class="hljs-string">&quot;/Date(1650539454182)/&quot;</span>,
     <span class="hljs-string">&quot;timeBudget&quot;</span> : <span class="hljs-number">604800000</span>,
     <span class="hljs-string">&quot;priceBudget&quot;</span> : <span class="hljs-number">100000.0</span>,
     <span class="hljs-string">&quot;personal&quot;</span> : <span class="hljs-literal">false</span>,
     <span class="hljs-string">&quot;owner&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;4d2cdece-5432-444c-94fe-9497205814d1&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387214782)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489413194782)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1b9f18d4-692a-4293-bc4b-36a6e373d310&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650452454182)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650496254182)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
         <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
         <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Doe&quot;</span>,
         <span class="hljs-string">&quot;nickName&quot;</span> : <span class="hljs-string">&quot;Johny D.&quot;</span>,
-        <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;john.doe@example.com&quot;</span>,
+        <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;bnpty0a696ik_gb@testdata.com&quot;</span>,
         <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;55 234 555 678&quot;</span>,
         <span class="hljs-string">&quot;position&quot;</span> : <span class="hljs-string">&quot;Senior developer&quot;</span>,
         <span class="hljs-string">&quot;timeZone&quot;</span> : <span class="hljs-string">&quot;America/Sao_Paulo&quot;</span>,
@@ -1473,36 +1512,36 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
         <span class="hljs-string">&quot;timeFormat&quot;</span> : <span class="hljs-string">&quot;K:mm a&quot;</span>,
         <span class="hljs-string">&quot;weekStart&quot;</span> : <span class="hljs-number">7</span>,
         <span class="hljs-string">&quot;language&quot;</span> : <span class="hljs-string">&quot;pt_BR&quot;</span>,
-        <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;nuajq0t_oz2vj7_as599&quot;</span>,
         <span class="hljs-string">&quot;secretKey&quot;</span> : <span class="hljs-string">&quot;userSecretKey&quot;</span>,
         <span class="hljs-string">&quot;confirmed&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;confirmedEmail&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;active&quot;</span> : <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1491256800000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1489388400000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1489420800000)/&quot;</span>,
-        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1489301594781)/&quot;</span>,
+        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1652306400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1650434400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1650466800000)/&quot;</span>,
+        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1650366654182)/&quot;</span>,
         <span class="hljs-string">&quot;admin&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;projectManager&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Doe John&quot;</span>
     },
     <span class="hljs-string">&quot;client&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;cce32402-ee44-49ea-bd6c-7eb94987f510&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387454782)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489438394782)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">3</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;92b871a4-a890-488a-aaee-4c0fa706f5d1&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650452634182)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650492654182)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
         <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;62316e9f-3a2a-4163-9d6a-eb58b048dc76&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489385474782)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489427594782)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">6</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;748ea5d7-0dd8-4548-8c4e-524fe7bb5e69&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650452154182)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650467454182)/&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">9</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
             <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
             <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>
         },
         <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;customer-996&quot;</span>,
         <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/customers/996&quot;</span>,
-        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994781)/&quot;</span>,
+        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650453054182)/&quot;</span>,
         <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
         <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>,
         <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;EXL&quot;</span>,
@@ -1518,6 +1557,7 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
         <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;+66 987 654 321&quot;</span>,
         <span class="hljs-string">&quot;vatId&quot;</span> : <span class="hljs-string">&quot;23.456.789/0001-77&quot;</span>,
         <span class="hljs-string">&quot;website&quot;</span> : <span class="hljs-string">&quot;http://www.example.com/&quot;</span>,
+        <span class="hljs-string">&quot;consentTill&quot;</span> : <span class="hljs-string">&quot;/Date(1681989054182)/&quot;</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>
     },
     <span class="hljs-string">&quot;billable&quot;</span> : <span class="hljs-literal">true</span>,
@@ -1571,7 +1611,7 @@ https://api.primaerp.com/v1/users/{id}/projects/@editable
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"project","level":"1.3.3.5","depth":3,"next":{"title":"projectmember","level":"1.3.3.6","depth":3,"path":"resources/time/projectmember.md","ref":"resources/time/projectmember.md","articles":[]},"previous":{"title":"lock","level":"1.3.3.4","depth":3,"path":"resources/time/lock.md","ref":"resources/time/lock.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontSettings":{"size":1},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"primaERP/api-doc","theme":"default","githubHost":"https://github.com/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"primaERP / API Documentation","links":{"home":null,"about":false,"issues":false,"contribute":false,"sharing":{"google":false,"facebook":false,"twitter":false},"custom":{"www.primaerp.com":"http://www.primaerp.com"}},"gitbook":"3.x.x","description":"Official API documentation for primaERP"},"file":{"path":"resources/time/project.md","mtime":"2022-04-20T11:34:13.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T11:34:50.427Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"project","level":"1.3.3.5","depth":3,"next":{"title":"projectmember","level":"1.3.3.6","depth":3,"path":"resources/time/projectmember.md","ref":"resources/time/projectmember.md","articles":[]},"previous":{"title":"lock","level":"1.3.3.4","depth":3,"path":"resources/time/lock.md","ref":"resources/time/lock.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontSettings":{"size":1},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"primaERP/api-doc","theme":"default","githubHost":"https://github.com/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"primaERP / API Documentation","links":{"home":null,"about":false,"issues":false,"contribute":false,"sharing":{"google":false,"facebook":false,"twitter":false},"custom":{"www.primaerp.com":"http://www.primaerp.com"}},"gitbook":"3.x.x","description":"Official API documentation for primaERP"},"file":{"path":"resources/time/project.md","mtime":"2022-04-20T11:43:22.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T11:51:20.351Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

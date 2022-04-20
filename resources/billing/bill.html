@@ -656,6 +656,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.2.22" data-path="../core/subscriptionevent.html">
+            
+                <a href="../core/subscriptionevent.html">
+            
+                    
+                    subscriptionevent
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -811,6 +824,32 @@
             
                     
                     worktype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.12" data-path="../time/expensetype.html">
+            
+                <a href="../time/expensetype.html">
+            
+                    
+                    expensetype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.13" data-path="../time/expense.html">
+            
+                <a href="../time/expense.html">
+            
+                    
+                    expense
             
                 </a>
             
@@ -979,16 +1018,6 @@ https://api.primaerp.com/v1/time/clients/{id}/bills/$setNextDocNumberPart
 
 https://api.primaerp.com/v1/time/clients/{id}/bills/{id}/billitems/relations
 
-https://api.primaerp.com/v1/billing/billvats/{id}/bills
-
-https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
-
-https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
-
-https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
-
-https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
-
 https://api.primaerp.com/v1/billing/billitems/{id}/bills
 
 https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumber
@@ -998,6 +1027,16 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/$getNextDocNumberPart
 https://api.primaerp.com/v1/billing/billitems/{id}/bills/$setNextDocNumberPart
 
 https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relations
+
+https://api.primaerp.com/v1/billing/billvats/{id}/bills
+
+https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
+
+https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
+
+https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
+
+https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
 </code></pre><h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -1397,16 +1436,16 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
             ]
         },
         {
-            <span class="hljs-string">&quot;cascadeType&quot;</span> : <span class="hljs-string">&quot;MERGE&quot;</span>,
+            <span class="hljs-string">&quot;cascadeType&quot;</span> : <span class="hljs-string">&quot;REMOVE&quot;</span>,
             <span class="hljs-string">&quot;objectTypes&quot;</span> : [
                 <span class="hljs-string">&quot;BillItem&quot;</span>,
+                <span class="hljs-string">&quot;TrashItem&quot;</span>,
                 <span class="hljs-string">&quot;BillVat&quot;</span>
             ]
         },
         {
-            <span class="hljs-string">&quot;cascadeType&quot;</span> : <span class="hljs-string">&quot;REMOVE&quot;</span>,
+            <span class="hljs-string">&quot;cascadeType&quot;</span> : <span class="hljs-string">&quot;MERGE&quot;</span>,
             <span class="hljs-string">&quot;objectTypes&quot;</span> : [
-                <span class="hljs-string">&quot;TrashItem&quot;</span>,
                 <span class="hljs-string">&quot;BillItem&quot;</span>,
                 <span class="hljs-string">&quot;BillVat&quot;</span>
             ]
@@ -1416,15 +1455,15 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
 </code></pre>
 <h2 id="dummy-data">Dummy data</h2>
 <pre><code class="lang-JSON">{
-    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;41da91ea-74a7-4da6-aad8-03ac30eccc35&quot;</span>,
-    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489385114449)/&quot;</span>,
-    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489391594449)/&quot;</span>,
-    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;e51c28a9-428e-44f6-83f8-098e8e332940&quot;</span>,
+    <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650451433687)/&quot;</span>,
+    <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650528653687)/&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
     <span class="hljs-string">&quot;docNumber&quot;</span> : <span class="hljs-string">&quot;2013-01&quot;</span>,
-    <span class="hljs-string">&quot;docDate&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994448)/&quot;</span>,
-    <span class="hljs-string">&quot;vatDate&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994448)/&quot;</span>,
-    <span class="hljs-string">&quot;dueDate&quot;</span> : <span class="hljs-string">&quot;/Date(1490593994448)/&quot;</span>,
-    <span class="hljs-string">&quot;lastPaymentDate&quot;</span> : <span class="hljs-string">&quot;/Date(1489992794448)/&quot;</span>,
+    <span class="hljs-string">&quot;docDate&quot;</span> : <span class="hljs-string">&quot;/Date(1650453053687)/&quot;</span>,
+    <span class="hljs-string">&quot;vatDate&quot;</span> : <span class="hljs-string">&quot;/Date(1650453053687)/&quot;</span>,
+    <span class="hljs-string">&quot;dueDate&quot;</span> : <span class="hljs-string">&quot;/Date(1651662653687)/&quot;</span>,
+    <span class="hljs-string">&quot;lastPaymentDate&quot;</span> : <span class="hljs-string">&quot;/Date(1651057853687)/&quot;</span>,
     <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;CMS billing&quot;</span>,
     <span class="hljs-string">&quot;notes&quot;</span> : <span class="hljs-string">&quot;&quot;</span>,
     <span class="hljs-string">&quot;vatText&quot;</span> : <span class="hljs-string">&quot;All prices are without a VAT.&quot;</span>,
@@ -1433,14 +1472,14 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
     <span class="hljs-string">&quot;itemsPrice&quot;</span> : <span class="hljs-number">2500.0</span>,
     <span class="hljs-string">&quot;totalPrice&quot;</span> : <span class="hljs-number">3000.0</span>,
     <span class="hljs-string">&quot;client&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;e8bf5e26-95a3-49fc-af1d-7b2d37382e62&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386854449)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489456394449)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;a05b9707-75bc-4ce6-b28d-f09c395befde&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650449573687)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650456653687)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
         <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;474345f4-92d7-48d8-b587-22f6e64f3c9e&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387214449)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489441994449)/&quot;</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;278473d2-7c2a-4b6c-b8ed-951f17d91509&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650450773687)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650489053687)/&quot;</span>,
             <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">5</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
             <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
@@ -1448,7 +1487,7 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
         },
         <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;customer-996&quot;</span>,
         <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/customers/996&quot;</span>,
-        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994448)/&quot;</span>,
+        <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650453053687)/&quot;</span>,
         <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
         <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>,
         <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;EXL&quot;</span>,
@@ -1464,27 +1503,28 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
         <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;+66 987 654 321&quot;</span>,
         <span class="hljs-string">&quot;vatId&quot;</span> : <span class="hljs-string">&quot;23.456.789/0001-77&quot;</span>,
         <span class="hljs-string">&quot;website&quot;</span> : <span class="hljs-string">&quot;http://www.example.com/&quot;</span>,
+        <span class="hljs-string">&quot;consentTill&quot;</span> : <span class="hljs-string">&quot;/Date(1681989053686)/&quot;</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>
     },
     <span class="hljs-string">&quot;contactPerson&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;12680956-1b16-40c1-8c55-468449e261c3&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386494449)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489441994449)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;0468670c-48a3-4946-9e04-1ed31b8b777a&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650452813687)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650492653687)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
         <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;Pedro&quot;</span>,
         <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Examplo&quot;</span>,
         <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;pedro@example.com&quot;</span>,
         <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;66 234 555 678&quot;</span>,
         <span class="hljs-string">&quot;jobTitle&quot;</span> : <span class="hljs-string">&quot;deputy director&quot;</span>,
         <span class="hljs-string">&quot;client&quot;</span> : {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;e8bf5e26-95a3-49fc-af1d-7b2d37382e62&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386854449)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489456394449)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">2</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;a05b9707-75bc-4ce6-b28d-f09c395befde&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650449573687)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650456653687)/&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
             <span class="hljs-string">&quot;externalSystem&quot;</span> : {
-                <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;474345f4-92d7-48d8-b587-22f6e64f3c9e&quot;</span>,
-                <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387214449)/&quot;</span>,
-                <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489441994449)/&quot;</span>,
+                <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;278473d2-7c2a-4b6c-b8ed-951f17d91509&quot;</span>,
+                <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650450773687)/&quot;</span>,
+                <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650489053687)/&quot;</span>,
                 <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">5</span>,
                 <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Vendor system&quot;</span>,
                 <span class="hljs-string">&quot;integrationPlugin&quot;</span> : <span class="hljs-string">&quot;vendor&quot;</span>,
@@ -1492,7 +1532,7 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
             },
             <span class="hljs-string">&quot;externalResourceId&quot;</span> : <span class="hljs-string">&quot;customer-996&quot;</span>,
             <span class="hljs-string">&quot;externalBrowsableUrl&quot;</span> : <span class="hljs-string">&quot;http://www.vendor.com/customers/996&quot;</span>,
-            <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387994448)/&quot;</span>,
+            <span class="hljs-string">&quot;externalSyncedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650453053687)/&quot;</span>,
             <span class="hljs-string">&quot;externalSynced&quot;</span> : <span class="hljs-literal">true</span>,
             <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>,
             <span class="hljs-string">&quot;code&quot;</span> : <span class="hljs-string">&quot;EXL&quot;</span>,
@@ -1508,6 +1548,7 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
             <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;+66 987 654 321&quot;</span>,
             <span class="hljs-string">&quot;vatId&quot;</span> : <span class="hljs-string">&quot;23.456.789/0001-77&quot;</span>,
             <span class="hljs-string">&quot;website&quot;</span> : <span class="hljs-string">&quot;http://www.example.com/&quot;</span>,
+            <span class="hljs-string">&quot;consentTill&quot;</span> : <span class="hljs-string">&quot;/Date(1681989053686)/&quot;</span>,
             <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Example Ltd.&quot;</span>
         },
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Examplo Pedro&quot;</span>
@@ -1515,10 +1556,10 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
     <span class="hljs-string">&quot;approved&quot;</span> : <span class="hljs-literal">true</span>,
     <span class="hljs-string">&quot;items&quot;</span> : [
         {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;692e6cad-1605-4b5b-90ef-668beec12223&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489387874449)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489470794449)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;2f53e232-434b-4e59-ad88-599994c53255&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650451133687)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650478253687)/&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">9</span>,
             <span class="hljs-string">&quot;attributes&quot;</span> : <span class="hljs-string">&quot;{\&quot;project\&quot;:\&quot;name\&quot;}&quot;</span>,
             <span class="hljs-string">&quot;itemGroup&quot;</span> : <span class="hljs-string">&quot;Content management system&quot;</span>,
             <span class="hljs-string">&quot;docIndex&quot;</span> : <span class="hljs-number">0</span>,
@@ -1529,9 +1570,9 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
             <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;#0&quot;</span>
         },
         {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;1700574e-d43f-4c02-9b9d-3c15e5c4c2db&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489385294449)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489431194449)/&quot;</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;8e2224bc-e022-484c-aab7-cb63d99409cf&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650452933687)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650481853687)/&quot;</span>,
             <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
             <span class="hljs-string">&quot;attributes&quot;</span> : <span class="hljs-string">&quot;{\&quot;project\&quot;:\&quot;name\&quot;}&quot;</span>,
             <span class="hljs-string">&quot;itemGroup&quot;</span> : <span class="hljs-string">&quot;Content management system&quot;</span>,
@@ -1544,14 +1585,14 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
         }
     ],
     <span class="hljs-string">&quot;author&quot;</span> : {
-        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;5c2848da-2e0a-4fca-9720-8ba73e6dd80f&quot;</span>,
-        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386374449)/&quot;</span>,
-        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489438394449)/&quot;</span>,
-        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">1</span>,
+        <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;6e0dcb58-78bd-4722-a3b5-7ef6ef469c0e&quot;</span>,
+        <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650451673687)/&quot;</span>,
+        <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650478253687)/&quot;</span>,
+        <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">9</span>,
         <span class="hljs-string">&quot;firstName&quot;</span> : <span class="hljs-string">&quot;John&quot;</span>,
         <span class="hljs-string">&quot;lastName&quot;</span> : <span class="hljs-string">&quot;Doe&quot;</span>,
         <span class="hljs-string">&quot;nickName&quot;</span> : <span class="hljs-string">&quot;Johny D.&quot;</span>,
-        <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;john.doe@example.com&quot;</span>,
+        <span class="hljs-string">&quot;email&quot;</span> : <span class="hljs-string">&quot;iraenfr4wcxs29a@testdata.com&quot;</span>,
         <span class="hljs-string">&quot;phone&quot;</span> : <span class="hljs-string">&quot;55 234 555 678&quot;</span>,
         <span class="hljs-string">&quot;position&quot;</span> : <span class="hljs-string">&quot;Senior developer&quot;</span>,
         <span class="hljs-string">&quot;timeZone&quot;</span> : <span class="hljs-string">&quot;America/Sao_Paulo&quot;</span>,
@@ -1559,15 +1600,15 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
         <span class="hljs-string">&quot;timeFormat&quot;</span> : <span class="hljs-string">&quot;K:mm a&quot;</span>,
         <span class="hljs-string">&quot;weekStart&quot;</span> : <span class="hljs-number">7</span>,
         <span class="hljs-string">&quot;language&quot;</span> : <span class="hljs-string">&quot;pt_BR&quot;</span>,
-        <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;e1dznc1uxdgmjhxkt4jc&quot;</span>,
         <span class="hljs-string">&quot;secretKey&quot;</span> : <span class="hljs-string">&quot;userSecretKey&quot;</span>,
         <span class="hljs-string">&quot;confirmed&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;confirmedEmail&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;active&quot;</span> : <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1491256800000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1489388400000)/&quot;</span>,
-        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1489420800000)/&quot;</span>,
-        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1489301594448)/&quot;</span>,
+        <span class="hljs-string">&quot;birthdayRemind&quot;</span> : <span class="hljs-string">&quot;/Date(1652306400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeStart&quot;</span> : <span class="hljs-string">&quot;/Date(1650434400000)/&quot;</span>,
+        <span class="hljs-string">&quot;workingTimeEnd&quot;</span> : <span class="hljs-string">&quot;/Date(1650466800000)/&quot;</span>,
+        <span class="hljs-string">&quot;created&quot;</span> : <span class="hljs-string">&quot;/Date(1650366653687)/&quot;</span>,
         <span class="hljs-string">&quot;admin&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;projectManager&quot;</span> : <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;Doe John&quot;</span>
@@ -1577,10 +1618,10 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
     <span class="hljs-string">&quot;vatMode&quot;</span> : <span class="hljs-string">&quot;DECLARE_VAT&quot;</span>,
     <span class="hljs-string">&quot;vats&quot;</span> : [
         {
-            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;6d127af8-32f7-431a-8165-fb3b10206799&quot;</span>,
-            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489386314449)/&quot;</span>,
-            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1489431194449)/&quot;</span>,
-            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">7</span>,
+            <span class="hljs-string">&quot;id&quot;</span> : <span class="hljs-string">&quot;4bcb1260-47e7-49c2-b95b-0e237dff004e&quot;</span>,
+            <span class="hljs-string">&quot;createdAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650450293687)/&quot;</span>,
+            <span class="hljs-string">&quot;updatedAt&quot;</span> : <span class="hljs-string">&quot;/Date(1650499853687)/&quot;</span>,
+            <span class="hljs-string">&quot;version&quot;</span> : <span class="hljs-number">8</span>,
             <span class="hljs-string">&quot;vatRate&quot;</span> : <span class="hljs-number">20.0</span>,
             <span class="hljs-string">&quot;vatPrice&quot;</span> : <span class="hljs-number">500.0</span>,
             <span class="hljs-string">&quot;displayName&quot;</span> : <span class="hljs-string">&quot;20.0&quot;</span>
@@ -1632,7 +1673,7 @@ https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relation
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"bill","level":"1.3.4.1","depth":3,"next":{"title":"billitem","level":"1.3.4.2","depth":3,"path":"resources/billing/billitem.md","ref":"resources/billing/billitem.md","articles":[]},"previous":{"title":"BILLING","level":"1.3.4","depth":2,"path":"resources/billing/README.md","ref":"resources/billing/README.md","articles":[{"title":"bill","level":"1.3.4.1","depth":3,"path":"resources/billing/bill.md","ref":"resources/billing/bill.md","articles":[]},{"title":"billitem","level":"1.3.4.2","depth":3,"path":"resources/billing/billitem.md","ref":"resources/billing/billitem.md","articles":[]},{"title":"billvat","level":"1.3.4.3","depth":3,"path":"resources/billing/billvat.md","ref":"resources/billing/billvat.md","articles":[]},{"title":"timepricelist","level":"1.3.4.4","depth":3,"path":"resources/billing/timepricelist.md","ref":"resources/billing/timepricelist.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontSettings":{"size":1},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"primaERP/api-doc","theme":"default","githubHost":"https://github.com/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"primaERP / API Documentation","links":{"home":null,"about":false,"issues":false,"contribute":false,"sharing":{"google":false,"facebook":false,"twitter":false},"custom":{"www.primaerp.com":"http://www.primaerp.com"}},"gitbook":"3.x.x","description":"Official API documentation for primaERP"},"file":{"path":"resources/billing/bill.md","mtime":"2022-04-20T11:34:13.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T11:34:50.427Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"bill","level":"1.3.4.1","depth":3,"next":{"title":"billitem","level":"1.3.4.2","depth":3,"path":"resources/billing/billitem.md","ref":"resources/billing/billitem.md","articles":[]},"previous":{"title":"BILLING","level":"1.3.4","depth":2,"path":"resources/billing/README.md","ref":"resources/billing/README.md","articles":[{"title":"bill","level":"1.3.4.1","depth":3,"path":"resources/billing/bill.md","ref":"resources/billing/bill.md","articles":[]},{"title":"billitem","level":"1.3.4.2","depth":3,"path":"resources/billing/billitem.md","ref":"resources/billing/billitem.md","articles":[]},{"title":"billvat","level":"1.3.4.3","depth":3,"path":"resources/billing/billvat.md","ref":"resources/billing/billvat.md","articles":[]},{"title":"timepricelist","level":"1.3.4.4","depth":3,"path":"resources/billing/timepricelist.md","ref":"resources/billing/timepricelist.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontSettings":{"size":1},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"primaERP/api-doc","theme":"default","githubHost":"https://github.com/","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"primaERP / API Documentation","links":{"home":null,"about":false,"issues":false,"contribute":false,"sharing":{"google":false,"facebook":false,"twitter":false},"custom":{"www.primaerp.com":"http://www.primaerp.com"}},"gitbook":"3.x.x","description":"Official API documentation for primaERP"},"file":{"path":"resources/billing/bill.md","mtime":"2022-04-20T11:43:22.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-20T11:51:20.351Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
