@@ -14,6 +14,7 @@ Client
 | billsCount            | Long           | read only  | no       | Counts the number of bills which were issued for the client.                                        |
 | city                  | String         | read write | no       | Name of the city.                                                                                   |
 | code                  | String         | read write | no       | A code or an abbreviation of the client.                                                            |
+| consentTill           | Date           | read write | no       | Clients personal data should be deled after this date.                                              |
 | countryCode           | String         | read write | no       | Country code according to ISO 3166-1 alpha-3 standard.                                              |
 | createdAt             | Date           | read only  | no       | Date of creation.                                                                                   |
 | displayName           | String         | read only  | no       | Describes an object in human readable form.                                                         |
@@ -79,6 +80,12 @@ Client
 					"details" : "min 0, max 20"
 				}
 			]
+		},
+		{
+			"type" : "Date",
+			"name" : "consentTill",
+			"description" : "Clients personal data should be deled after this date.",
+			"access" : "READ_WRITE"
 		},
 		{
 			"type" : "String",
@@ -251,14 +258,14 @@ Client
 
 ```JSON
 {
-	"id" : "18eaa448-a0d8-44bb-9669-270577103400",
-	"createdAt" : "/Date(1489385834229)/",
-	"updatedAt" : "/Date(1489434794229)/",
+	"id" : "7095da49-af69-42fa-8a5d-64004ba64f20",
+	"createdAt" : "/Date(1650450474075)/",
+	"updatedAt" : "/Date(1650478254075)/",
 	"version" : 4,
 	"externalSystem" : {
-		"id" : "1c0a10c4-826b-4f4b-874a-89e85c8753ba",
-		"createdAt" : "/Date(1489387274229)/",
-		"updatedAt" : "/Date(1489445594229)/",
+		"id" : "3e3a9e20-1908-4886-bd1f-2ba4a200a712",
+		"createdAt" : "/Date(1650452694075)/",
+		"updatedAt" : "/Date(1650499854075)/",
 		"version" : 9,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
@@ -266,7 +273,7 @@ Client
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1489387994229)/",
+	"externalSyncedAt" : "/Date(1650453054075)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",
@@ -282,6 +289,7 @@ Client
 	"phone" : "+66 987 654 321",
 	"vatId" : "23.456.789/0001-77",
 	"website" : "http://www.example.com/",
+	"consentTill" : "/Date(1681989054075)/",
 	"displayName" : "Example Ltd."
 }
 ```

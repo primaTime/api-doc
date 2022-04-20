@@ -13,6 +13,7 @@ License
 | createdAt     | Date        | read only  | no       | Date of creation.                                                                                   |
 | displayName   | String      | read only  | no       | Describes an object in human readable form.                                                         |
 | id            | String      | read write | no       | Unique object identifier.                                                                           |
+| interval      | Interval    | read write | no       | Duration of the license. Default value is N_A.                                                      |
 | licenseNumber | String      | read write | no       | The license number.                                                                                 |
 | ownerName     | String      | read write | no       | The names of the licensed owner.                                                                    |
 | product       | Product     | read write | no       | The product which is licensed.                                                                      |
@@ -68,6 +69,19 @@ License
 			]
 		},
 		{
+			"type" : "Interval",
+			"name" : "interval",
+			"description" : "Duration of the license.",
+			"defaultValue" : "N_A",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "Enum",
+					"details" : "MONTHLY, YEARLY, N_A"
+				}
+			]
+		},
+		{
 			"type" : "String",
 			"name" : "licenseNumber",
 			"description" : "The license number.",
@@ -118,7 +132,7 @@ License
 			"constraints" : [
 				{
 					"type" : "Enum",
-					"details" : "FREE, BUY, PROMO"
+					"details" : "FREE, BUY, PROMO, CANCELED"
 				}
 			]
 		},
@@ -168,43 +182,43 @@ License
 
 ```JSON
 {
-	"id" : "70b43559-8d2a-4aed-8a28-2ab1d03fb98c",
-	"createdAt" : "/Date(1489385234861)/",
-	"updatedAt" : "/Date(1489467194861)/",
-	"version" : 9,
+	"id" : "a89596e3-f2c1-4a16-a047-67817be4be5d",
+	"createdAt" : "/Date(1650453054292)/",
+	"updatedAt" : "/Date(1650496254292)/",
+	"version" : 3,
 	"account" : {
-		"id" : "7f405240-88b5-469b-8121-d457399a2dea",
-		"createdAt" : "/Date(1489386314861)/",
-		"updatedAt" : "/Date(1489470794861)/",
-		"version" : 4,
+		"id" : "3910cdd5-26e9-4e34-a829-1da0543b0406",
+		"createdAt" : "/Date(1650452274292)/",
+		"updatedAt" : "/Date(1650503454292)/",
+		"version" : 8,
 		"owner" : {
-			"id" : "56bc0846-5c44-43fb-971d-e427855afcfa",
-			"createdAt" : "/Date(1489384814861)/",
-			"updatedAt" : "/Date(1489434794861)/",
-			"version" : 6,
+			"id" : "7ce1fdb1-fbc1-4461-a093-265b149c7a2a",
+			"createdAt" : "/Date(1650450114292)/",
+			"updatedAt" : "/Date(1650456654292)/",
+			"version" : 8,
 			"firstName" : "John",
-			"lastName" : "Smith",
-			"nickName" : "Smith, J.",
-			"email" : "john.smith@example.com",
-			"phone" : "55 123 444 567",
-			"position" : "Chief developer",
+			"lastName" : "Doe",
+			"nickName" : "Johny D.",
+			"email" : "twhx65dr3fta3gs@testdata.com",
+			"phone" : "55 234 555 678",
+			"position" : "Senior developer",
 			"timeZone" : "America/Sao_Paulo",
-			"dateFormat" : "dd/MM/yyyy",
+			"dateFormat" : "yyyy-MM-dd",
 			"timeFormat" : "K:mm a",
 			"weekStart" : 7,
-			"language" : "en_US",
-			"password" : "",
+			"language" : "pt_BR",
+			"password" : "4dyda8cb7hho_k0b2755",
 			"secretKey" : "userSecretKey",
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1490223600000)/",
-			"workingTimeStart" : "/Date(1489388400000)/",
-			"workingTimeEnd" : "/Date(1489420800000)/",
-			"created" : "/Date(1489301594860)/",
+			"birthdayRemind" : "/Date(1652306400000)/",
+			"workingTimeStart" : "/Date(1650434400000)/",
+			"workingTimeEnd" : "/Date(1650466800000)/",
+			"created" : "/Date(1650366654291)/",
 			"admin" : false,
 			"projectManager" : false,
-			"displayName" : "Smith John"
+			"displayName" : "Doe John"
 		},
 		"urlPrefix" : "example-ltd",
 		"name" : "Example Ltd.",
@@ -226,25 +240,26 @@ License
 		"apiKey" : "0165e7d3-c99f-41b5-bf8c-03222edcf681",
 		"confirmed" : true,
 		"currency" : "USD",
-		"workingTimeStart" : "/Date(1489388400000)/",
-		"workingTimeEnd" : "/Date(1489420800000)/",
-		"created" : "/Date(1489301594860)/",
+		"workingTimeStart" : "/Date(1650434400000)/",
+		"workingTimeEnd" : "/Date(1650466800000)/",
+		"created" : "/Date(1650366654291)/",
 		"source" : "LINKEDIN",
 		"campaign" : "LINKEDIN-2013-C1",
-		"deactivationRequestedAt" : "/Date(1489387994861)/",
-		"affiliateId" : "830cdecd-dfd4-4717-b4c3-415742cdc122",
+		"deactivationRequestedAt" : "/Date(1650453054291)/",
+		"affiliateId" : "4769250c-7c94-4744-930e-0ea54b340096",
 		"vatMode" : "DECLARE_VAT",
 		"displayName" : "Example Ltd. (example-ltd)"
 	},
-	"licenseNumber" : "9cce19cf-63ac-4573-92dc-873c485de64e",
+	"licenseNumber" : "56f4d607-efa8-4573-bf9e-48ff9449f7a5",
 	"usersCount" : 5,
-	"validFrom" : "/Date(1489186800000)/",
-	"validTo" : "/Date(1491861600000)/",
+	"validFrom" : "/Date(1650232800000)/",
+	"validTo" : "/Date(1652824800000)/",
 	"ownerName" : "Example Ltd.",
 	"product" : "TIME",
 	"type" : "BUY",
 	"purchaseInfo" : "{\"purchase_id\":\"1154795\"}",
 	"promoCode" : "PROMO",
-	"displayName" : "9cce19cf-63ac-4573-92dc-873c485de64e"
+	"interval" : "MONTHLY",
+	"displayName" : "56f4d607-efa8-4573-bf9e-48ff9449f7a5"
 }
 ```

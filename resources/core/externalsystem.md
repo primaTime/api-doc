@@ -12,7 +12,7 @@ ExternalSystem
 | createdAt         | Date      | read only  | no       | Date of creation.                                                                                   |
 | displayName       | String    | read only  | no       | Describes an object in human readable form.                                                         |
 | id                | String    | read write | no       | Unique object identifier.                                                                           |
-| integrationPlugin | String    | read write | no       | The name of the third-party system integrated into primaERP.                                        |
+| integrationPlugin | String    | read write | no       | The name of the third-party system integrated into prima:Time.                                      |
 | name              | String    | read write | no       | The name of the external system                                                                     |
 | trashItem         | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
 | updatedAt         | Date      | read only  | no       | Last modified date.                                                                                 |
@@ -55,7 +55,7 @@ ExternalSystem
 		{
 			"type" : "String",
 			"name" : "integrationPlugin",
-			"description" : "The name of the third-party system integrated into primaERP.",
+			"description" : "The name of the third-party system integrated into prima:Time.",
 			"access" : "READ_WRITE"
 		},
 		{
@@ -99,10 +99,10 @@ ExternalSystem
 
 ```JSON
 {
-	"id" : "cc93cd3c-537b-4710-9f23-183437635093",
-	"createdAt" : "/Date(1489387993558)/",
-	"updatedAt" : "/Date(1489409593558)/",
-	"version" : 5,
+	"id" : "25318a86-8a67-43bd-9ffc-91af1dbb2ec6",
+	"createdAt" : "/Date(1650451493825)/",
+	"updatedAt" : "/Date(1650521453825)/",
+	"version" : 3,
 	"name" : "My BaseCamp account",
 	"integrationPlugin" : "basecamp",
 	"displayName" : "My BaseCamp account"

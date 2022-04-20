@@ -142,11 +142,11 @@ User
 			"access" : "READ_ONLY",
 			"constraints" : [
 				{
-					"type" : "NotNull"
-				},
-				{
 					"type" : "Email",
 					"details" : "regexp .*"
+				},
+				{
+					"type" : "NotNull"
 				}
 			]
 		},
@@ -253,12 +253,12 @@ User
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "Pattern",
-					"details" : "regexp ^(Africa|America|Asia|Atlantic|Australia|Europe|Indian|Pacific)/.*|UTC|GMT"
-				},
-				{
 					"type" : "Required",
 					"details" : ""
+				},
+				{
+					"type" : "Pattern",
+					"details" : "regexp ^(Africa|America|Asia|Atlantic|Australia|Europe|Indian|Pacific)/.*|UTC|GMT"
 				}
 			]
 		},
@@ -288,16 +288,16 @@ User
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "Required",
-					"details" : ""
+					"type" : "Min",
+					"details" : "value 1"
 				},
 				{
 					"type" : "Max",
 					"details" : "value 7"
 				},
 				{
-					"type" : "Min",
-					"details" : "value 1"
+					"type" : "Required",
+					"details" : ""
 				}
 			]
 		},
@@ -318,11 +318,11 @@ User
 		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
-				"TrashItem",
-				"ProjectMember",
-				"SpendingTimeUnit",
 				"SecretKey",
-				"Access"
+				"Access",
+				"TrashItem",
+				"SpendingTimeUnit",
+				"ProjectMember"
 			]
 		}
 	]
@@ -333,32 +333,32 @@ User
 
 ```JSON
 {
-	"id" : "706b5042-9d0b-4ae8-a66d-6f4ff1648d03",
-	"createdAt" : "/Date(1489386915011)/",
-	"updatedAt" : "/Date(1489420395011)/",
-	"version" : 4,
+	"id" : "06d4468b-f2e4-4d22-ae01-6c194c7f46ea",
+	"createdAt" : "/Date(1650450054162)/",
+	"updatedAt" : "/Date(1650510654162)/",
+	"version" : 3,
 	"firstName" : "John",
-	"lastName" : "Smith",
-	"nickName" : "Smith, J.",
-	"email" : "john.smith@example.com",
-	"phone" : "55 123 444 567",
-	"position" : "Chief developer",
+	"lastName" : "Doe",
+	"nickName" : "Johny D.",
+	"email" : "jicgj12o9809z6f@testdata.com",
+	"phone" : "55 234 555 678",
+	"position" : "Senior developer",
 	"timeZone" : "America/Sao_Paulo",
-	"dateFormat" : "dd/MM/yyyy",
+	"dateFormat" : "yyyy-MM-dd",
 	"timeFormat" : "K:mm a",
 	"weekStart" : 7,
-	"language" : "en_US",
-	"password" : "",
+	"language" : "pt_BR",
+	"password" : "ucx0re_nvings4i001_r",
 	"secretKey" : "userSecretKey",
 	"confirmed" : false,
 	"confirmedEmail" : false,
 	"active" : false,
-	"birthdayRemind" : "/Date(1490223600000)/",
-	"workingTimeStart" : "/Date(1489388400000)/",
-	"workingTimeEnd" : "/Date(1489420800000)/",
-	"created" : "/Date(1489301595011)/",
+	"birthdayRemind" : "/Date(1652306400000)/",
+	"workingTimeStart" : "/Date(1650434400000)/",
+	"workingTimeEnd" : "/Date(1650466800000)/",
+	"created" : "/Date(1650366654162)/",
 	"admin" : false,
 	"projectManager" : false,
-	"displayName" : "Smith John"
+	"displayName" : "Doe John"
 }
 ```

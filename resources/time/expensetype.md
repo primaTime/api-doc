@@ -1,9 +1,9 @@
-ProjectWorkTypeLink
+ExpenseType
 ==
 
 ## URL
 
-	https://api.primaerp.com/v1/time/projects/{id}/worktypelinks
+	https://api.primaerp.com/v1/time/expenseTypes
 
 ## Properties
 
@@ -11,18 +11,23 @@ ProjectWorkTypeLink
 |-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
 | createdAt   | Date      | read only  | no       | Date of creation.                                                                                   |
 | displayName | String    | read only  | no       | Describes an object in human readable form.                                                         |
+| hasQuantity | Boolean   | read write | YES      | Expense is priced per unit.                                                                         |
 | id          | String    | read write | no       | Unique object identifier.                                                                           |
+| isActive    | Boolean   | read write | YES      | Whether the expense is active.                                                                      |
+| isBillable  | Boolean   | read write | YES      | Whether the expense is billable.                                                                    |
+| name        | String    | read write | YES      | String that describes the expense type.                                                             |
 | trashItem   | TrashItem | read write | no       | Informs whether an object is in the trash. An object is in the trash if a trash item was specified. |
+| unitName    | String    | read write | no       | Unit name.                                                                                          |
+| unitPrice   | Double    | read write | YES      | Price per unit.                                                                                     |
 | updatedAt   | Date      | read only  | no       | Last modified date.                                                                                 |
 | version     | Long      | read write | no       | Object version number.                                                                              |
-| workType    | WorkType  | read write | YES      | The work type which is linked with another object.                                                  |
 
 ## Metadata
 
 ```JSON
 {
-	"type" : "ProjectWorkTypeLink",
-	"path" : "/v1/time/projects/{id}/worktypelinks",
+	"type" : "ExpenseType",
+	"path" : "/v1/time/expenseTypes",
 	"fields" : [
 		{
 			"type" : "Date",
@@ -35,6 +40,17 @@ ProjectWorkTypeLink
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
 			"access" : "READ_ONLY"
+		},
+		{
+			"type" : "Boolean",
+			"name" : "hasQuantity",
+			"description" : "Expense is priced per unit.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull"
+				}
+			]
 		},
 		{
 			"type" : "String",
@@ -52,11 +68,61 @@ ProjectWorkTypeLink
 			]
 		},
 		{
+			"type" : "Boolean",
+			"name" : "isActive",
+			"description" : "Whether the expense is active.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull"
+				}
+			]
+		},
+		{
+			"type" : "Boolean",
+			"name" : "isBillable",
+			"description" : "Whether the expense is billable.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull"
+				}
+			]
+		},
+		{
+			"type" : "String",
+			"name" : "name",
+			"description" : "String that describes the expense type.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull"
+				}
+			]
+		},
+		{
 			"type" : "TrashItem",
 			"path" : "/v1/trash",
 			"name" : "trashItem",
 			"description" : "Informs whether an object is in the trash. An object is in the trash if a trash item was specified.",
 			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "String",
+			"name" : "unitName",
+			"description" : "Unit name.",
+			"access" : "READ_WRITE"
+		},
+		{
+			"type" : "Double",
+			"name" : "unitPrice",
+			"description" : "Price per unit.",
+			"access" : "READ_WRITE",
+			"constraints" : [
+				{
+					"type" : "NotNull"
+				}
+			]
 		},
 		{
 			"type" : "Date",
@@ -69,18 +135,6 @@ ProjectWorkTypeLink
 			"name" : "version",
 			"description" : "Object version number.",
 			"access" : "READ_WRITE"
-		},
-		{
-			"type" : "WorkType",
-			"path" : "/v1/time/worktypes",
-			"name" : "workType",
-			"description" : "The work type which is linked with another object.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull"
-				}
-			]
 		}
 	],
 	"cascades" : [
@@ -98,33 +152,16 @@ ProjectWorkTypeLink
 
 ```JSON
 {
-	"id" : "5aede3d5-9f1f-49e7-a5a5-16a91ba56c1e",
-	"createdAt" : "/Date(1650451553626)/",
-	"updatedAt" : "/Date(1650521453626)/",
-	"version" : 4,
-	"workType" : {
-		"id" : "01d28cae-5879-4ef0-a386-fd0d0ad795d5",
-		"createdAt" : "/Date(1650452273626)/",
-		"updatedAt" : "/Date(1650460253626)/",
-		"version" : 7,
-		"externalSystem" : {
-			"id" : "760e043a-31e9-49d9-a9a4-b7fe8a44189e",
-			"createdAt" : "/Date(1650451613626)/",
-			"updatedAt" : "/Date(1650471053626)/",
-			"version" : 3,
-			"name" : "Vendor system",
-			"integrationPlugin" : "vendor",
-			"displayName" : "Vendor system"
-		},
-		"externalResourceId" : "wt-058",
-		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1650453053626)/",
-		"externalSynced" : true,
-		"name" : "Software development",
-		"code" : "SW",
-		"category" : "WORK",
-		"displayName" : "Software development"
-	},
-	"displayName" : "Software development"
+	"id" : "3f49056c-312b-46cd-b4f4-8207bd6499c5",
+	"createdAt" : "/Date(1650449994196)/",
+	"updatedAt" : "/Date(1650503454196)/",
+	"version" : 6,
+	"name" : "Gas",
+	"hasQuantity" : true,
+	"unitPrice" : 125.0,
+	"unitName" : "km",
+	"isActive" : true,
+	"isBillable" : true,
+	"displayName" : "Gas"
 }
 ```

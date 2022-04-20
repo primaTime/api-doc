@@ -91,8 +91,8 @@ Department
 		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
-				"TrashItem",
-				"DepartmentMember"
+				"DepartmentMember",
+				"TrashItem"
 			]
 		}
 	]
@@ -103,39 +103,39 @@ Department
 
 ```JSON
 {
-	"id" : "0fb8409d-22b9-4f67-9c1c-761e6df539c8",
-	"createdAt" : "/Date(1489386675348)/",
-	"updatedAt" : "/Date(1489387995348)/",
-	"version" : 9,
+	"id" : "bef3ece7-2181-473a-b30d-106018a46345",
+	"createdAt" : "/Date(1650451614033)/",
+	"updatedAt" : "/Date(1650532254033)/",
+	"version" : 2,
 	"name" : "Development",
 	"manager" : {
-		"id" : "fcb904c5-5aa5-4946-a11c-e0a67f88b423",
-		"createdAt" : "/Date(1489385475348)/",
-		"updatedAt" : "/Date(1489463595348)/",
-		"version" : 2,
+		"id" : "e7f38f13-1a47-4bdc-8e6b-c1377b4472ba",
+		"createdAt" : "/Date(1650452994033)/",
+		"updatedAt" : "/Date(1650474654033)/",
+		"version" : 0,
 		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
+		"lastName" : "Doe",
+		"nickName" : "Johny D.",
+		"email" : "puqnsv2v0i1kbdd@testdata.com",
+		"phone" : "55 234 555 678",
+		"position" : "Senior developer",
 		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
+		"dateFormat" : "yyyy-MM-dd",
 		"timeFormat" : "K:mm a",
 		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
+		"language" : "pt_BR",
+		"password" : "56zi33pt5v4_ghd6_wdu",
 		"secretKey" : "userSecretKey",
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1490223600000)/",
-		"workingTimeStart" : "/Date(1489388400000)/",
-		"workingTimeEnd" : "/Date(1489420800000)/",
-		"created" : "/Date(1489301595348)/",
+		"birthdayRemind" : "/Date(1652306400000)/",
+		"workingTimeStart" : "/Date(1650434400000)/",
+		"workingTimeEnd" : "/Date(1650466800000)/",
+		"created" : "/Date(1650366654033)/",
 		"admin" : false,
 		"projectManager" : false,
-		"displayName" : "Smith John"
+		"displayName" : "Doe John"
 	},
 	"displayName" : "Development"
 }

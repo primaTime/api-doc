@@ -13,15 +13,15 @@ TimeRecord
 
 	https://api.primaerp.com/v1/time/timerecords/{id}/$updateprice
 
-	https://api.primaerp.com/v1/time/projects/{id}/timerecords
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords
 
-	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$calculateprice
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$calculateprice
 
-	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilled
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilled
 
-	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilledsummary
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilledsummary
 
-	https://api.primaerp.com/v1/time/projects/{id}/timerecords/{id}/$updateprice
+	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/{id}/$updateprice
 
 	https://api.primaerp.com/v1/time/tasks/{id}/timerecords
 
@@ -53,15 +53,15 @@ TimeRecord
 
 	https://api.primaerp.com/v1/time/tags/{id}/timerecords/{id}/$updateprice
 
-	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords
 
-	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$calculateprice
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$calculateprice
 
-	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilled
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilled
 
-	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/$unbilledsummary
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/$unbilledsummary
 
-	https://api.primaerp.com/v1/time/worktypes/{id}/timerecords/{id}/$updateprice
+	https://api.primaerp.com/v1/time/projects/{id}/timerecords/{id}/$updateprice
 
 ## Properties
 
@@ -75,7 +75,7 @@ TimeRecord
 | description          | String         | read write | no       | Some description of the record.                                                                       |
 | displayName          | String         | read only  | no       | Describes an object in human readable form.                                                           |
 | duration             | Long           | read write | no       | Recording length (in milliseconds).                                                                   |
-| effective            | Boolean        | read write | YES      | Determines whether the record is effective. Default value is true.                                    |
+| effective            | Boolean        | read write | YES      | Determines whether the record is beneficial. Default value is true.                                   |
 | externalBrowsableUrl | String         | read write | no       | Human accessible link in external system.                                                             |
 | externalResourceId   | String         | read write | no       | Unique external system identifier.                                                                    |
 | externalSynced       | Boolean        | write only | no       | Determines whether an object was synced with the external system.                                     |
@@ -162,7 +162,7 @@ TimeRecord
 		{
 			"type" : "Boolean",
 			"name" : "effective",
-			"description" : "Determines whether the record is effective.",
+			"description" : "Determines whether the record is beneficial.",
 			"defaultValue" : "true",
 			"access" : "READ_WRITE",
 			"constraints" : [
@@ -333,87 +333,87 @@ TimeRecord
 
 ```JSON
 {
-	"id" : "0a9c3af3-4bf7-4435-b4e7-cb66da031996",
-	"createdAt" : "/Date(1489386674660)/",
-	"updatedAt" : "/Date(1489409594660)/",
-	"version" : 3,
+	"id" : "0b809292-ced9-421e-b0fe-80639a692f57",
+	"createdAt" : "/Date(1650450653799)/",
+	"updatedAt" : "/Date(1650510653799)/",
+	"version" : 9,
 	"externalSystem" : {
-		"id" : "fd5c03c7-ef81-4b45-b88b-521bcd0d154c",
-		"createdAt" : "/Date(1489384574660)/",
-		"updatedAt" : "/Date(1489416794660)/",
-		"version" : 4,
+		"id" : "fdc20630-6df4-4a66-af2b-56a23e1b8737",
+		"createdAt" : "/Date(1650452033799)/",
+		"updatedAt" : "/Date(1650485453799)/",
+		"version" : 1,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "time-55567",
 	"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334/time/55567",
-	"externalSyncedAt" : "/Date(1489387994659)/",
+	"externalSyncedAt" : "/Date(1650453053799)/",
 	"externalSynced" : true,
 	"user" : {
-		"id" : "36e159ad-fc4f-46bf-8085-1e1cf1f5a40f",
-		"createdAt" : "/Date(1489385294660)/",
-		"updatedAt" : "/Date(1489391594660)/",
-		"version" : 4,
+		"id" : "6c5c06b3-f65a-48e2-a4ea-1aad7e988d31",
+		"createdAt" : "/Date(1650451493799)/",
+		"updatedAt" : "/Date(1650521453799)/",
+		"version" : 3,
 		"firstName" : "John",
-		"lastName" : "Smith",
-		"nickName" : "Smith, J.",
-		"email" : "john.smith@example.com",
-		"phone" : "55 123 444 567",
-		"position" : "Chief developer",
+		"lastName" : "Doe",
+		"nickName" : "Johny D.",
+		"email" : "6f6ap67op34mguq@testdata.com",
+		"phone" : "55 234 555 678",
+		"position" : "Senior developer",
 		"timeZone" : "America/Sao_Paulo",
-		"dateFormat" : "dd/MM/yyyy",
+		"dateFormat" : "yyyy-MM-dd",
 		"timeFormat" : "K:mm a",
 		"weekStart" : 7,
-		"language" : "en_US",
-		"password" : "",
+		"language" : "pt_BR",
+		"password" : "l6tr9l85cg9k4puhk6s4",
 		"secretKey" : "userSecretKey",
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1490223600000)/",
-		"workingTimeStart" : "/Date(1489388400000)/",
-		"workingTimeEnd" : "/Date(1489420800000)/",
-		"created" : "/Date(1489301594659)/",
+		"birthdayRemind" : "/Date(1652306400000)/",
+		"workingTimeStart" : "/Date(1650434400000)/",
+		"workingTimeEnd" : "/Date(1650466800000)/",
+		"created" : "/Date(1650366653799)/",
 		"admin" : false,
 		"projectManager" : false,
-		"displayName" : "Smith John"
+		"displayName" : "Doe John"
 	},
 	"project" : {
-		"id" : "3ee814df-75c2-4024-8e79-2390c5d0dfdf",
-		"createdAt" : "/Date(1489385594660)/",
-		"updatedAt" : "/Date(1489456394660)/",
-		"version" : 4,
+		"id" : "887d47d3-c5cf-4e5e-88dc-11d3e257ead5",
+		"createdAt" : "/Date(1650452513799)/",
+		"updatedAt" : "/Date(1650532253799)/",
+		"version" : 1,
 		"externalSystem" : {
-			"id" : "e8accba6-acd6-41b2-b794-c76060278ff3",
-			"createdAt" : "/Date(1489386554660)/",
-			"updatedAt" : "/Date(1489438394660)/",
-			"version" : 7,
+			"id" : "e9e0379b-cbf2-4219-bde8-9375e2ebdbb8",
+			"createdAt" : "/Date(1650452753799)/",
+			"updatedAt" : "/Date(1650453053799)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "project-221",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-		"externalSyncedAt" : "/Date(1489387994659)/",
+		"externalSyncedAt" : "/Date(1650453053799)/",
 		"externalSynced" : true,
 		"name" : "Content management system",
 		"code" : "CMS",
 		"note" : "core feature",
-		"begins" : "/Date(1489301594659)/",
-		"ends" : "/Date(1489474394659)/",
+		"begins" : "/Date(1650366653799)/",
+		"ends" : "/Date(1650539453799)/",
 		"timeBudget" : 604800000,
 		"priceBudget" : 100000.0,
 		"personal" : true,
 		"owner" : {
-			"id" : "120ca8db-7029-4829-8118-e047c9726278",
-			"createdAt" : "/Date(1489385894660)/",
-			"updatedAt" : "/Date(1489449194660)/",
+			"id" : "fbdb3332-894c-4676-9aa2-eebbc49c42a4",
+			"createdAt" : "/Date(1650452273799)/",
+			"updatedAt" : "/Date(1650460253799)/",
 			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
-			"email" : "john.doe@example.com",
+			"email" : "e7axl_yc3_4capt@testdata.com",
 			"phone" : "55 234 555 678",
 			"position" : "Senior developer",
 			"timeZone" : "America/Sao_Paulo",
@@ -421,36 +421,36 @@ TimeRecord
 			"timeFormat" : "K:mm a",
 			"weekStart" : 7,
 			"language" : "pt_BR",
-			"password" : "",
+			"password" : "jak4mmrjsz4oyz15ya8l",
 			"secretKey" : "userSecretKey",
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1491256800000)/",
-			"workingTimeStart" : "/Date(1489388400000)/",
-			"workingTimeEnd" : "/Date(1489420800000)/",
-			"created" : "/Date(1489301594659)/",
+			"birthdayRemind" : "/Date(1652306400000)/",
+			"workingTimeStart" : "/Date(1650434400000)/",
+			"workingTimeEnd" : "/Date(1650466800000)/",
+			"created" : "/Date(1650366653799)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"client" : {
-			"id" : "c8be8ad2-3439-4782-88d4-2aa7bb3a1581",
-			"createdAt" : "/Date(1489387034660)/",
-			"updatedAt" : "/Date(1489405994660)/",
-			"version" : 3,
+			"id" : "d3796c25-7193-4273-b1b6-c449fa05b4df",
+			"createdAt" : "/Date(1650449933799)/",
+			"updatedAt" : "/Date(1650453053799)/",
+			"version" : 2,
 			"externalSystem" : {
-				"id" : "b6bf58fd-75e6-4307-8227-806a30c1c7f4",
-				"createdAt" : "/Date(1489385474660)/",
-				"updatedAt" : "/Date(1489459994660)/",
-				"version" : 8,
+				"id" : "5341dd5d-f686-4d75-837d-b249faa7fbf4",
+				"createdAt" : "/Date(1650452633799)/",
+				"updatedAt" : "/Date(1650467453799)/",
+				"version" : 6,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1489387994659)/",
+			"externalSyncedAt" : "/Date(1650453053799)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -466,6 +466,7 @@ TimeRecord
 			"phone" : "+66 987 654 321",
 			"vatId" : "23.456.789/0001-77",
 			"website" : "http://www.example.com/",
+			"consentTill" : "/Date(1681989053799)/",
 			"displayName" : "Example Ltd."
 		},
 		"billable" : true,
@@ -476,58 +477,58 @@ TimeRecord
 		"displayName" : "Content management system"
 	},
 	"task" : {
-		"id" : "42930c1e-ab0b-4f37-869d-9a0e45d03896",
-		"createdAt" : "/Date(1489387274660)/",
-		"updatedAt" : "/Date(1489441994660)/",
-		"version" : 1,
+		"id" : "ffb08180-79a4-447e-b056-184729f05752",
+		"createdAt" : "/Date(1650450113799)/",
+		"updatedAt" : "/Date(1650499853799)/",
+		"version" : 8,
 		"externalSystem" : {
-			"id" : "b2ec0def-6a44-4106-b09c-442ff7975802",
-			"createdAt" : "/Date(1489386134660)/",
-			"updatedAt" : "/Date(1489391594660)/",
-			"version" : 9,
+			"id" : "234f7b20-aa9e-4a8f-a86b-0d46e51f62ab",
+			"createdAt" : "/Date(1650450833799)/",
+			"updatedAt" : "/Date(1650453053799)/",
+			"version" : 4,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "task-334",
 		"externalBrowsableUrl" : "http://www.vendor.com/projects/221/tasks/334",
-		"externalSyncedAt" : "/Date(1489387994659)/",
+		"externalSyncedAt" : "/Date(1650453053799)/",
 		"externalSynced" : true,
 		"project" : {
-			"id" : "3ee814df-75c2-4024-8e79-2390c5d0dfdf",
-			"createdAt" : "/Date(1489385594660)/",
-			"updatedAt" : "/Date(1489456394660)/",
-			"version" : 4,
+			"id" : "887d47d3-c5cf-4e5e-88dc-11d3e257ead5",
+			"createdAt" : "/Date(1650452513799)/",
+			"updatedAt" : "/Date(1650532253799)/",
+			"version" : 1,
 			"externalSystem" : {
-				"id" : "e8accba6-acd6-41b2-b794-c76060278ff3",
-				"createdAt" : "/Date(1489386554660)/",
-				"updatedAt" : "/Date(1489438394660)/",
-				"version" : 7,
+				"id" : "e9e0379b-cbf2-4219-bde8-9375e2ebdbb8",
+				"createdAt" : "/Date(1650452753799)/",
+				"updatedAt" : "/Date(1650453053799)/",
+				"version" : 8,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "project-221",
 			"externalBrowsableUrl" : "http://www.vendor.com/projects/221",
-			"externalSyncedAt" : "/Date(1489387994659)/",
+			"externalSyncedAt" : "/Date(1650453053799)/",
 			"externalSynced" : true,
 			"name" : "Content management system",
 			"code" : "CMS",
 			"note" : "core feature",
-			"begins" : "/Date(1489301594659)/",
-			"ends" : "/Date(1489474394659)/",
+			"begins" : "/Date(1650366653799)/",
+			"ends" : "/Date(1650539453799)/",
 			"timeBudget" : 604800000,
 			"priceBudget" : 100000.0,
 			"personal" : true,
 			"owner" : {
-				"id" : "120ca8db-7029-4829-8118-e047c9726278",
-				"createdAt" : "/Date(1489385894660)/",
-				"updatedAt" : "/Date(1489449194660)/",
+				"id" : "fbdb3332-894c-4676-9aa2-eebbc49c42a4",
+				"createdAt" : "/Date(1650452273799)/",
+				"updatedAt" : "/Date(1650460253799)/",
 				"version" : 4,
 				"firstName" : "John",
 				"lastName" : "Doe",
 				"nickName" : "Johny D.",
-				"email" : "john.doe@example.com",
+				"email" : "e7axl_yc3_4capt@testdata.com",
 				"phone" : "55 234 555 678",
 				"position" : "Senior developer",
 				"timeZone" : "America/Sao_Paulo",
@@ -535,36 +536,36 @@ TimeRecord
 				"timeFormat" : "K:mm a",
 				"weekStart" : 7,
 				"language" : "pt_BR",
-				"password" : "",
+				"password" : "jak4mmrjsz4oyz15ya8l",
 				"secretKey" : "userSecretKey",
 				"confirmed" : false,
 				"confirmedEmail" : false,
 				"active" : false,
-				"birthdayRemind" : "/Date(1491256800000)/",
-				"workingTimeStart" : "/Date(1489388400000)/",
-				"workingTimeEnd" : "/Date(1489420800000)/",
-				"created" : "/Date(1489301594659)/",
+				"birthdayRemind" : "/Date(1652306400000)/",
+				"workingTimeStart" : "/Date(1650434400000)/",
+				"workingTimeEnd" : "/Date(1650466800000)/",
+				"created" : "/Date(1650366653799)/",
 				"admin" : false,
 				"projectManager" : false,
 				"displayName" : "Doe John"
 			},
 			"client" : {
-				"id" : "c8be8ad2-3439-4782-88d4-2aa7bb3a1581",
-				"createdAt" : "/Date(1489387034660)/",
-				"updatedAt" : "/Date(1489405994660)/",
-				"version" : 3,
+				"id" : "d3796c25-7193-4273-b1b6-c449fa05b4df",
+				"createdAt" : "/Date(1650449933799)/",
+				"updatedAt" : "/Date(1650453053799)/",
+				"version" : 2,
 				"externalSystem" : {
-					"id" : "b6bf58fd-75e6-4307-8227-806a30c1c7f4",
-					"createdAt" : "/Date(1489385474660)/",
-					"updatedAt" : "/Date(1489459994660)/",
-					"version" : 8,
+					"id" : "5341dd5d-f686-4d75-837d-b249faa7fbf4",
+					"createdAt" : "/Date(1650452633799)/",
+					"updatedAt" : "/Date(1650467453799)/",
+					"version" : 6,
 					"name" : "Vendor system",
 					"integrationPlugin" : "vendor",
 					"displayName" : "Vendor system"
 				},
 				"externalResourceId" : "customer-996",
 				"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-				"externalSyncedAt" : "/Date(1489387994659)/",
+				"externalSyncedAt" : "/Date(1650453053799)/",
 				"externalSynced" : true,
 				"name" : "Example Ltd.",
 				"code" : "EXL",
@@ -580,6 +581,7 @@ TimeRecord
 				"phone" : "+66 987 654 321",
 				"vatId" : "23.456.789/0001-77",
 				"website" : "http://www.example.com/",
+				"consentTill" : "/Date(1681989053799)/",
 				"displayName" : "Example Ltd."
 			},
 			"billable" : true,
@@ -594,14 +596,14 @@ TimeRecord
 		"note" : "form with validation",
 		"done" : false,
 		"author" : {
-			"id" : "120ca8db-7029-4829-8118-e047c9726278",
-			"createdAt" : "/Date(1489385894660)/",
-			"updatedAt" : "/Date(1489449194660)/",
+			"id" : "fbdb3332-894c-4676-9aa2-eebbc49c42a4",
+			"createdAt" : "/Date(1650452273799)/",
+			"updatedAt" : "/Date(1650460253799)/",
 			"version" : 4,
 			"firstName" : "John",
 			"lastName" : "Doe",
 			"nickName" : "Johny D.",
-			"email" : "john.doe@example.com",
+			"email" : "e7axl_yc3_4capt@testdata.com",
 			"phone" : "55 234 555 678",
 			"position" : "Senior developer",
 			"timeZone" : "America/Sao_Paulo",
@@ -609,69 +611,69 @@ TimeRecord
 			"timeFormat" : "K:mm a",
 			"weekStart" : 7,
 			"language" : "pt_BR",
-			"password" : "",
+			"password" : "jak4mmrjsz4oyz15ya8l",
 			"secretKey" : "userSecretKey",
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1491256800000)/",
-			"workingTimeStart" : "/Date(1489388400000)/",
-			"workingTimeEnd" : "/Date(1489420800000)/",
-			"created" : "/Date(1489301594659)/",
+			"birthdayRemind" : "/Date(1652306400000)/",
+			"workingTimeStart" : "/Date(1650434400000)/",
+			"workingTimeEnd" : "/Date(1650466800000)/",
+			"created" : "/Date(1650366653799)/",
 			"admin" : false,
 			"projectManager" : false,
 			"displayName" : "Doe John"
 		},
 		"owner" : {
-			"id" : "36e159ad-fc4f-46bf-8085-1e1cf1f5a40f",
-			"createdAt" : "/Date(1489385294660)/",
-			"updatedAt" : "/Date(1489391594660)/",
-			"version" : 4,
+			"id" : "6c5c06b3-f65a-48e2-a4ea-1aad7e988d31",
+			"createdAt" : "/Date(1650451493799)/",
+			"updatedAt" : "/Date(1650521453799)/",
+			"version" : 3,
 			"firstName" : "John",
-			"lastName" : "Smith",
-			"nickName" : "Smith, J.",
-			"email" : "john.smith@example.com",
-			"phone" : "55 123 444 567",
-			"position" : "Chief developer",
+			"lastName" : "Doe",
+			"nickName" : "Johny D.",
+			"email" : "6f6ap67op34mguq@testdata.com",
+			"phone" : "55 234 555 678",
+			"position" : "Senior developer",
 			"timeZone" : "America/Sao_Paulo",
-			"dateFormat" : "dd/MM/yyyy",
+			"dateFormat" : "yyyy-MM-dd",
 			"timeFormat" : "K:mm a",
 			"weekStart" : 7,
-			"language" : "en_US",
-			"password" : "",
+			"language" : "pt_BR",
+			"password" : "l6tr9l85cg9k4puhk6s4",
 			"secretKey" : "userSecretKey",
 			"confirmed" : false,
 			"confirmedEmail" : false,
 			"active" : false,
-			"birthdayRemind" : "/Date(1490223600000)/",
-			"workingTimeStart" : "/Date(1489388400000)/",
-			"workingTimeEnd" : "/Date(1489420800000)/",
-			"created" : "/Date(1489301594659)/",
+			"birthdayRemind" : "/Date(1652306400000)/",
+			"workingTimeStart" : "/Date(1650434400000)/",
+			"workingTimeEnd" : "/Date(1650466800000)/",
+			"created" : "/Date(1650366653799)/",
 			"admin" : false,
 			"projectManager" : false,
-			"displayName" : "Smith John"
+			"displayName" : "Doe John"
 		},
 		"timeBudget" : 86400000,
 		"priceBudget" : 1000.0,
 		"displayName" : "Article editation"
 	},
 	"workType" : {
-		"id" : "238120aa-549c-43f7-ab40-478407060dad",
-		"createdAt" : "/Date(1489387454660)/",
-		"updatedAt" : "/Date(1489387994660)/",
-		"version" : 6,
+		"id" : "7d6a5b13-9d28-4e81-aac1-a153aa327cfe",
+		"createdAt" : "/Date(1650450653799)/",
+		"updatedAt" : "/Date(1650510653799)/",
+		"version" : 3,
 		"externalSystem" : {
-			"id" : "6ca27342-7063-4f1b-b632-281deaa78537",
-			"createdAt" : "/Date(1489386914660)/",
-			"updatedAt" : "/Date(1489398794660)/",
-			"version" : 6,
+			"id" : "865f425f-4b32-4e14-a2a9-22a24620c5c4",
+			"createdAt" : "/Date(1650451673799)/",
+			"updatedAt" : "/Date(1650525053799)/",
+			"version" : 8,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "wt-058",
 		"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-		"externalSyncedAt" : "/Date(1489387994659)/",
+		"externalSyncedAt" : "/Date(1650453053799)/",
 		"externalSynced" : true,
 		"name" : "Software development",
 		"code" : "SW",
@@ -679,22 +681,22 @@ TimeRecord
 		"displayName" : "Software development"
 	},
 	"client" : {
-		"id" : "c8be8ad2-3439-4782-88d4-2aa7bb3a1581",
-		"createdAt" : "/Date(1489387034660)/",
-		"updatedAt" : "/Date(1489405994660)/",
-		"version" : 3,
+		"id" : "d3796c25-7193-4273-b1b6-c449fa05b4df",
+		"createdAt" : "/Date(1650449933799)/",
+		"updatedAt" : "/Date(1650453053799)/",
+		"version" : 2,
 		"externalSystem" : {
-			"id" : "b6bf58fd-75e6-4307-8227-806a30c1c7f4",
-			"createdAt" : "/Date(1489385474660)/",
-			"updatedAt" : "/Date(1489459994660)/",
-			"version" : 8,
+			"id" : "5341dd5d-f686-4d75-837d-b249faa7fbf4",
+			"createdAt" : "/Date(1650452633799)/",
+			"updatedAt" : "/Date(1650467453799)/",
+			"version" : 6,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1489387994659)/",
+		"externalSyncedAt" : "/Date(1650453053799)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -710,10 +712,11 @@ TimeRecord
 		"phone" : "+66 987 654 321",
 		"vatId" : "23.456.789/0001-77",
 		"website" : "http://www.example.com/",
+		"consentTill" : "/Date(1681989053799)/",
 		"displayName" : "Example Ltd."
 	},
-	"start" : "/Date(1489301594659)/",
-	"stop" : "/Date(1489323194659)/",
+	"start" : "/Date(1650366653799)/",
+	"stop" : "/Date(1650388253799)/",
 	"duration" : 21600000,
 	"description" : "Form validations and CRUD.",
 	"billable" : true,
@@ -724,6 +727,6 @@ TimeRecord
 	"approved" : true,
 	"billed" : false,
 	"recordType" : "ATTENDANCE",
-	"displayName" : "Smith John"
+	"displayName" : "Doe John"
 }
 ```

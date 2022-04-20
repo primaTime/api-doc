@@ -166,8 +166,8 @@ WorkType
 		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
-				"TrashItem",
-				"ProjectWorkTypeLink"
+				"ProjectWorkTypeLink",
+				"TrashItem"
 			]
 		}
 	]
@@ -178,22 +178,22 @@ WorkType
 
 ```JSON
 {
-	"id" : "e11a2189-1fe9-42af-b0f2-e7a174e030a3",
-	"createdAt" : "/Date(1489384634058)/",
-	"updatedAt" : "/Date(1489452794058)/",
+	"id" : "9b897c05-8210-40d6-bfaa-12ea8a7c6382",
+	"createdAt" : "/Date(1650450294149)/",
+	"updatedAt" : "/Date(1650460254149)/",
 	"version" : 6,
 	"externalSystem" : {
-		"id" : "d6abecfa-390e-467a-bf44-5f0ea626c998",
-		"createdAt" : "/Date(1489385714058)/",
-		"updatedAt" : "/Date(1489409594058)/",
-		"version" : 5,
+		"id" : "43349c56-4695-47cb-983f-837ce83c4b6e",
+		"createdAt" : "/Date(1650449634149)/",
+		"updatedAt" : "/Date(1650532254149)/",
+		"version" : 6,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "wt-058",
 	"externalBrowsableUrl" : "http://www.vendor.com/worktypes/058",
-	"externalSyncedAt" : "/Date(1489387994058)/",
+	"externalSyncedAt" : "/Date(1650453054149)/",
 	"externalSynced" : true,
 	"name" : "Software development",
 	"code" : "SW",

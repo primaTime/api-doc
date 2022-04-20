@@ -51,11 +51,11 @@ DocumentNumbering
 			"access" : "READ_WRITE",
 			"constraints" : [
 				{
-					"type" : "Enum",
-					"details" : "BILL"
+					"type" : "NotNull"
 				},
 				{
-					"type" : "NotNull"
+					"type" : "Enum",
+					"details" : "BILL"
 				}
 			]
 		},
@@ -115,10 +115,10 @@ DocumentNumbering
 
 ```JSON
 {
-	"id" : "07225a01-22c5-463d-a8c5-31fc601e90f9",
-	"createdAt" : "/Date(1489387515311)/",
-	"updatedAt" : "/Date(1489391595311)/",
-	"version" : 5,
+	"id" : "2fdf9e97-a67c-44f6-8820-59f8b17a7aa5",
+	"createdAt" : "/Date(1650452753902)/",
+	"updatedAt" : "/Date(1650528653902)/",
+	"version" : 4,
 	"docType" : "BILL",
 	"numberingScheme" : "BIL-{number}/{year}",
 	"autoNumbering" : true,
