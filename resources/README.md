@@ -1,17 +1,5 @@
 # API Resources
 
-# API Resources
-
-# API Resources
-
-# API Resources
-
-# API Resources
-
-# API Resources
-
-# API Resources
-
 ## CORE
 | Name                                           | URL                                                    |
 |------------------------------------------------|--------------------------------------------------------|
