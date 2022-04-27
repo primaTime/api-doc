@@ -11,7 +11,6 @@ ExpenseType
 |-------------|-----------|------------|----------|-----------------------------------------------------------------------------------------------------|
 | createdAt   | Date      | read only  | no       | Date of creation.                                                                                   |
 | displayName | String    | read only  | no       | Describes an object in human readable form.                                                         |
-| hasQuantity | Boolean   | read write | YES      | Expense is priced per unit.                                                                         |
 | id          | String    | read write | no       | Unique object identifier.                                                                           |
 | isActive    | Boolean   | read write | YES      | Whether the expense is active.                                                                      |
 | isBillable  | Boolean   | read write | YES      | Whether the expense is billable.                                                                    |
@@ -40,17 +39,6 @@ ExpenseType
 			"name" : "displayName",
 			"description" : "Describes an object in human readable form.",
 			"access" : "READ_ONLY"
-		},
-		{
-			"type" : "Boolean",
-			"name" : "hasQuantity",
-			"description" : "Expense is priced per unit.",
-			"access" : "READ_WRITE",
-			"constraints" : [
-				{
-					"type" : "NotNull"
-				}
-			]
 		},
 		{
 			"type" : "String",
@@ -152,12 +140,11 @@ ExpenseType
 
 ```JSON
 {
-	"id" : "3f49056c-312b-46cd-b4f4-8207bd6499c5",
-	"createdAt" : "/Date(1650449994196)/",
-	"updatedAt" : "/Date(1650503454196)/",
-	"version" : 6,
+	"id" : "d209f605-b586-4f79-b34e-c0775b143347",
+	"createdAt" : "/Date(1651048107020)/",
+	"updatedAt" : "/Date(1651097307020)/",
+	"version" : 0,
 	"name" : "Gas",
-	"hasQuantity" : true,
 	"unitPrice" : 125.0,
 	"unitName" : "km",
 	"isActive" : true,

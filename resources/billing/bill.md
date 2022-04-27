@@ -13,6 +13,16 @@ Bill
 
 	https://api.primaerp.com/v1/billing/bills/{id}/billitems/relations
 
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
+
+	https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
+
 	https://api.primaerp.com/v1/time/clients/{id}/bills
 
 	https://api.primaerp.com/v1/time/clients/{id}/bills/$getNextDocNumber
@@ -32,16 +42,6 @@ Bill
 	https://api.primaerp.com/v1/billing/billitems/{id}/bills/$setNextDocNumberPart
 
 	https://api.primaerp.com/v1/billing/billitems/{id}/bills/{id}/billitems/relations
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumber
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$getNextDocNumberPart
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/$setNextDocNumberPart
-
-	https://api.primaerp.com/v1/billing/billvats/{id}/bills/{id}/billitems/relations
 
 ## Properties
 
@@ -266,17 +266,17 @@ Bill
 	],
 	"cascades" : [
 		{
-			"cascadeType" : "PERSIST",
-			"objectTypes" : [
-				"BillItem",
-				"BillVat"
-			]
-		},
-		{
 			"cascadeType" : "REMOVE",
 			"objectTypes" : [
 				"BillItem",
 				"TrashItem",
+				"BillVat"
+			]
+		},
+		{
+			"cascadeType" : "PERSIST",
+			"objectTypes" : [
+				"BillItem",
 				"BillVat"
 			]
 		},
@@ -295,15 +295,15 @@ Bill
 
 ```JSON
 {
-	"id" : "e51c28a9-428e-44f6-83f8-098e8e332940",
-	"createdAt" : "/Date(1650451433687)/",
-	"updatedAt" : "/Date(1650528653687)/",
-	"version" : 7,
+	"id" : "95553428-cf1d-4cc1-910a-1c485bdf74cc",
+	"createdAt" : "/Date(1651050327363)/",
+	"updatedAt" : "/Date(1651068507363)/",
+	"version" : 3,
 	"docNumber" : "2013-01",
-	"docDate" : "/Date(1650453053687)/",
-	"vatDate" : "/Date(1650453053687)/",
-	"dueDate" : "/Date(1651662653687)/",
-	"lastPaymentDate" : "/Date(1651057853687)/",
+	"docDate" : "/Date(1651050507363)/",
+	"vatDate" : "/Date(1651050507363)/",
+	"dueDate" : "/Date(1652260107363)/",
+	"lastPaymentDate" : "/Date(1651655307363)/",
 	"description" : "CMS billing",
 	"notes" : "",
 	"vatText" : "All prices are without a VAT.",
@@ -312,22 +312,22 @@ Bill
 	"itemsPrice" : 2500.0,
 	"totalPrice" : 3000.0,
 	"client" : {
-		"id" : "a05b9707-75bc-4ce6-b28d-f09c395befde",
-		"createdAt" : "/Date(1650449573687)/",
-		"updatedAt" : "/Date(1650456653687)/",
-		"version" : 7,
+		"id" : "fc5f0172-e6d0-4e3d-b898-0a671ecad1dd",
+		"createdAt" : "/Date(1651049367363)/",
+		"updatedAt" : "/Date(1651126107363)/",
+		"version" : 6,
 		"externalSystem" : {
-			"id" : "278473d2-7c2a-4b6c-b8ed-951f17d91509",
-			"createdAt" : "/Date(1650450773687)/",
-			"updatedAt" : "/Date(1650489053687)/",
-			"version" : 5,
+			"id" : "3bcbdca2-3b22-4419-a078-ba1bd6e6b5ba",
+			"createdAt" : "/Date(1651048047363)/",
+			"updatedAt" : "/Date(1651097307363)/",
+			"version" : 6,
 			"name" : "Vendor system",
 			"integrationPlugin" : "vendor",
 			"displayName" : "Vendor system"
 		},
 		"externalResourceId" : "customer-996",
 		"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-		"externalSyncedAt" : "/Date(1650453053687)/",
+		"externalSyncedAt" : "/Date(1651050507363)/",
 		"externalSynced" : true,
 		"name" : "Example Ltd.",
 		"code" : "EXL",
@@ -343,36 +343,36 @@ Bill
 		"phone" : "+66 987 654 321",
 		"vatId" : "23.456.789/0001-77",
 		"website" : "http://www.example.com/",
-		"consentTill" : "/Date(1681989053686)/",
+		"consentTill" : "/Date(1682586507363)/",
 		"displayName" : "Example Ltd."
 	},
 	"contactPerson" : {
-		"id" : "0468670c-48a3-4946-9e04-1ed31b8b777a",
-		"createdAt" : "/Date(1650452813687)/",
-		"updatedAt" : "/Date(1650492653687)/",
-		"version" : 8,
+		"id" : "30501f6a-bac0-4ce4-b528-b1474fed6b3a",
+		"createdAt" : "/Date(1651048647363)/",
+		"updatedAt" : "/Date(1651050507363)/",
+		"version" : 4,
 		"firstName" : "Pedro",
 		"lastName" : "Examplo",
 		"email" : "pedro@example.com",
 		"phone" : "66 234 555 678",
 		"jobTitle" : "deputy director",
 		"client" : {
-			"id" : "a05b9707-75bc-4ce6-b28d-f09c395befde",
-			"createdAt" : "/Date(1650449573687)/",
-			"updatedAt" : "/Date(1650456653687)/",
-			"version" : 7,
+			"id" : "fc5f0172-e6d0-4e3d-b898-0a671ecad1dd",
+			"createdAt" : "/Date(1651049367363)/",
+			"updatedAt" : "/Date(1651126107363)/",
+			"version" : 6,
 			"externalSystem" : {
-				"id" : "278473d2-7c2a-4b6c-b8ed-951f17d91509",
-				"createdAt" : "/Date(1650450773687)/",
-				"updatedAt" : "/Date(1650489053687)/",
-				"version" : 5,
+				"id" : "3bcbdca2-3b22-4419-a078-ba1bd6e6b5ba",
+				"createdAt" : "/Date(1651048047363)/",
+				"updatedAt" : "/Date(1651097307363)/",
+				"version" : 6,
 				"name" : "Vendor system",
 				"integrationPlugin" : "vendor",
 				"displayName" : "Vendor system"
 			},
 			"externalResourceId" : "customer-996",
 			"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-			"externalSyncedAt" : "/Date(1650453053687)/",
+			"externalSyncedAt" : "/Date(1651050507363)/",
 			"externalSynced" : true,
 			"name" : "Example Ltd.",
 			"code" : "EXL",
@@ -388,7 +388,7 @@ Bill
 			"phone" : "+66 987 654 321",
 			"vatId" : "23.456.789/0001-77",
 			"website" : "http://www.example.com/",
-			"consentTill" : "/Date(1681989053686)/",
+			"consentTill" : "/Date(1682586507363)/",
 			"displayName" : "Example Ltd."
 		},
 		"displayName" : "Examplo Pedro"
@@ -396,10 +396,10 @@ Bill
 	"approved" : true,
 	"items" : [
 		{
-			"id" : "2f53e232-434b-4e59-ad88-599994c53255",
-			"createdAt" : "/Date(1650451133687)/",
-			"updatedAt" : "/Date(1650478253687)/",
-			"version" : 9,
+			"id" : "b06c7123-ad18-4803-a213-6b9f7d28e2d1",
+			"createdAt" : "/Date(1651049727363)/",
+			"updatedAt" : "/Date(1651100907363)/",
+			"version" : 1,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 0,
@@ -410,10 +410,10 @@ Bill
 			"displayName" : "#0"
 		},
 		{
-			"id" : "8e2224bc-e022-484c-aab7-cb63d99409cf",
-			"createdAt" : "/Date(1650452933687)/",
-			"updatedAt" : "/Date(1650481853687)/",
-			"version" : 1,
+			"id" : "c55b73ee-b10f-4ab6-bd53-0082dd5ba39f",
+			"createdAt" : "/Date(1651048887363)/",
+			"updatedAt" : "/Date(1651054107363)/",
+			"version" : 8,
 			"attributes" : "{\"project\":\"name\"}",
 			"itemGroup" : "Content management system",
 			"docIndex" : 1,
@@ -425,14 +425,14 @@ Bill
 		}
 	],
 	"author" : {
-		"id" : "6e0dcb58-78bd-4722-a3b5-7ef6ef469c0e",
-		"createdAt" : "/Date(1650451673687)/",
-		"updatedAt" : "/Date(1650478253687)/",
-		"version" : 9,
+		"id" : "8dbaba13-0a17-4fb0-b9b2-280be5df3614",
+		"createdAt" : "/Date(1651049247363)/",
+		"updatedAt" : "/Date(1651079307363)/",
+		"version" : 6,
 		"firstName" : "John",
 		"lastName" : "Doe",
 		"nickName" : "Johny D.",
-		"email" : "iraenfr4wcxs29a@testdata.com",
+		"email" : "5px6egqf9w8r6hb@testdata.com",
 		"phone" : "55 234 555 678",
 		"position" : "Senior developer",
 		"timeZone" : "America/Sao_Paulo",
@@ -440,15 +440,15 @@ Bill
 		"timeFormat" : "K:mm a",
 		"weekStart" : 7,
 		"language" : "pt_BR",
-		"password" : "e1dznc1uxdgmjhxkt4jc",
+		"password" : "8lbo5b9wc2aj1elt86oa",
 		"secretKey" : "userSecretKey",
 		"confirmed" : false,
 		"confirmedEmail" : false,
 		"active" : false,
-		"birthdayRemind" : "/Date(1652306400000)/",
-		"workingTimeStart" : "/Date(1650434400000)/",
-		"workingTimeEnd" : "/Date(1650466800000)/",
-		"created" : "/Date(1650366653687)/",
+		"birthdayRemind" : "/Date(1652911200000)/",
+		"workingTimeStart" : "/Date(1651039200000)/",
+		"workingTimeEnd" : "/Date(1651071600000)/",
+		"created" : "/Date(1650964107363)/",
 		"admin" : false,
 		"projectManager" : false,
 		"displayName" : "Doe John"
@@ -458,10 +458,10 @@ Bill
 	"vatMode" : "DECLARE_VAT",
 	"vats" : [
 		{
-			"id" : "4bcb1260-47e7-49c2-b95b-0e237dff004e",
-			"createdAt" : "/Date(1650450293687)/",
-			"updatedAt" : "/Date(1650499853687)/",
-			"version" : 8,
+			"id" : "781797aa-bca9-4af5-a9a3-53fe695f2884",
+			"createdAt" : "/Date(1651049247363)/",
+			"updatedAt" : "/Date(1651072107363)/",
+			"version" : 3,
 			"vatRate" : 20.0,
 			"vatPrice" : 500.0,
 			"displayName" : "20.0"

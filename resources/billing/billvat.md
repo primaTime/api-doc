@@ -99,10 +99,10 @@ BillVat
 
 ```JSON
 {
-	"id" : "00ee65b0-98bc-47e7-97fe-fff286fda85d",
-	"createdAt" : "/Date(1650451313980)/",
-	"updatedAt" : "/Date(1650514253980)/",
-	"version" : 3,
+	"id" : "9e857e65-6572-4400-87f9-8c2299dfefd6",
+	"createdAt" : "/Date(1651049006765)/",
+	"updatedAt" : "/Date(1651075706765)/",
+	"version" : 2,
 	"vatRate" : 20.0,
 	"vatPrice" : 500.0,
 	"displayName" : "20.0"

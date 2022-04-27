@@ -258,22 +258,22 @@ Client
 
 ```JSON
 {
-	"id" : "7095da49-af69-42fa-8a5d-64004ba64f20",
-	"createdAt" : "/Date(1650450474075)/",
-	"updatedAt" : "/Date(1650478254075)/",
-	"version" : 4,
+	"id" : "5cf71a82-0a55-4da1-a4fb-6250c36f1565",
+	"createdAt" : "/Date(1651048467007)/",
+	"updatedAt" : "/Date(1651050507007)/",
+	"version" : 5,
 	"externalSystem" : {
-		"id" : "3e3a9e20-1908-4886-bd1f-2ba4a200a712",
-		"createdAt" : "/Date(1650452694075)/",
-		"updatedAt" : "/Date(1650499854075)/",
-		"version" : 9,
+		"id" : "1a703e5b-b593-46ef-9aaa-a92485d7e666",
+		"createdAt" : "/Date(1651048167007)/",
+		"updatedAt" : "/Date(1651072107007)/",
+		"version" : 8,
 		"name" : "Vendor system",
 		"integrationPlugin" : "vendor",
 		"displayName" : "Vendor system"
 	},
 	"externalResourceId" : "customer-996",
 	"externalBrowsableUrl" : "http://www.vendor.com/customers/996",
-	"externalSyncedAt" : "/Date(1650453054075)/",
+	"externalSyncedAt" : "/Date(1651050507007)/",
 	"externalSynced" : true,
 	"name" : "Example Ltd.",
 	"code" : "EXL",
@@ -289,7 +289,7 @@ Client
 	"phone" : "+66 987 654 321",
 	"vatId" : "23.456.789/0001-77",
 	"website" : "http://www.example.com/",
-	"consentTill" : "/Date(1681989054075)/",
+	"consentTill" : "/Date(1682586507007)/",
 	"displayName" : "Example Ltd."
 }
 ```
