@@ -1,7 +1,7 @@
 Examples
 ==
 
-The examples below are written in the [Groovy language](http://groovy.codehaus.org/).
+The examples bellow are written in the [Groovy language](http://groovy.codehaus.org/).
 
 ## Data import
 
