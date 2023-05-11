@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/primaerp/devdoc"
+    "url": "https://github.com/primatime/devdoc"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/primaerp/devdoc/issues"
+    "url": "https://github.com/primatime/devdoc/issues"
   },
-  "homepage": "https://github.com/primaerp/devdoc",
+  "homepage": "https://github.com/primatime/devdoc",
   "dependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-clean": "^0.6.0",

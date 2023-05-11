@@ -11,7 +11,7 @@ For testing the API you can use a CHROME application: https://chrome.google.com/
 
 ## Authorize & connect
 
-To authorize to the API just send a GET request: http://XXXXXX.api.primaerp.com/v1/auth/login?apikey=XXXXXX
+To authorize to the API just send a GET request: http://XXXXXX.api.primatime.com/v1/auth/login?apikey=XXXXXX
 
 with headers: `Authorization: Basic {xxx}`
 
@@ -25,5 +25,5 @@ Then you will receive an token and with that token you can ask our API for every
 
 Examples:
 
-* List of projects: `http://{tenant}.api.primaerp.com/v1/time/projects?token={token}`
-* List of clients: `http://{tenant}.api.primaerp.com/v1/time/clients?token={token}`
+* List of projects: `http://{tenant}.api.primatime.com/v1/time/projects?token={token}`
+* List of clients: `http://{tenant}.api.primatime.com/v1/time/clients?token={token}`
